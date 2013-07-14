@@ -1,0 +1,6 @@
+SELECT 
+	DATEDIFF(expiration, CURDATE()) as days
+FROM
+	expirations
+WHERE
+	expirations.email = ?

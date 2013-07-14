@@ -1,0 +1,1 @@
+DELETE FROM captcha WHERE mark < DATE_SUB(now(), INTERVAL 2 HOUR);

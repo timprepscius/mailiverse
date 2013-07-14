@@ -1,0 +1,1 @@
+INSERT INTO captcha (token) values (?)

@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS expirations (
+	email VARCHAR(255) NOT NULL,
+	expiration DATE NOT NULL,
+	PRIMARY KEY (email)
+);
+
+CREATE TABLE IF NOT EXISTS `device` (
+  `email` VARCHAR(255) NOT NULL,
+  `notification_type` ENUM('NONE','SHORT','LONG') NOT NULL,
+  `device_type` VARCHAR(255) DEFAULT NULL,
+  `device_id` VARCHAR(255) DEFAULT NULL,
+  `mark` date NOT NULL,
+  PRIMARY KEY (`email`),
+  KEY `device` (`device_type`,`device_id`)
+);

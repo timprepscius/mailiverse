@@ -1,0 +1,8 @@
+SELECT
+	key_block.*
+FROM
+	user,
+	key_block
+WHERE
+	key_block.user_id = user.id AND
+	user.name = ?

@@ -1,0 +1,10 @@
+Portions of this code are release GPL and portions are released BSD.
+
+Anything to do with the web is GPLv3 Affero + keep my name in the code.
+Anything to do with the iPhone is BSD + keep my name in the code.
+Anything to do with the Android is GPLv3 Affero + keep my name in the code.
+
+License documentation will be placed in each file accordingly.
+
+
+If you need a different license, please contact me.

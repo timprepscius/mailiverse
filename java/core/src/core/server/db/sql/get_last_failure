@@ -1,0 +1,8 @@
+SELECT 
+	failure.mark 
+FROM 
+	user, 
+	failure 
+WHERE 
+	user.name = ? AND
+	failure.user_id = user.id

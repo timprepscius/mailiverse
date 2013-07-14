@@ -1,0 +1,10 @@
+SET @email = ?, @days = ?;
+
+INSERT INTO expirations (email, expiration) VALUES(@email, DATE_ADD(CURDATE(), INTERVAL @days DAY))
+ON DUPLICATE KEY UPDATE
+	expiration = 
+		IF(
+			DATEDIFF(expiration, CURDATE())>0,
+			DATE_ADD(expiration, INTERVAL @days DAY),
+			VALUES(expiration)
+		)

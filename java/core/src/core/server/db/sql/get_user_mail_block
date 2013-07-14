@@ -1,0 +1,8 @@
+SELECT
+	mail_block.*
+FROM
+	user,
+	mail_block
+WHERE
+	mail_block.user_id = user.id AND
+	user.name = ?

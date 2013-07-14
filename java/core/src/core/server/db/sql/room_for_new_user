@@ -1,0 +1,4 @@
+select
+	count(*) < (select convert(v, unsigned integer) from registry where k="max_users") as room
+from
+	user 
