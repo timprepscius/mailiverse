@@ -1,0 +1,149 @@
+/**
+ * Author: Timothy Prepscius
+ * License: GPLv3 Affero + keep my name in the code!
+ */
+package mail.client.core;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Properties;
+
+import javax.mail.BodyPart;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+
+import com.sun.mail.util.BASE64DecoderStream;
+
+import core.util.Arrays;
+import core.util.LogNull;
+import core.util.LogNull;
+import core.util.Pair;
+import core.util.Streams;
+import core.util.Triple;
+
+public class Original
+{
+	static LogNull log = new LogNull(Original.class);
+
+	String path;
+	boolean loaded;
+	
+	Exception exception;
+	byte[] data;
+	
+	public Original (String path)
+	{
+		this.path = path;
+	}
+	
+	public String getPath ()
+	{
+		return path;
+	}
+	
+	public void setData (byte[] data)
+	{
+		this.data = data;
+		this.loaded = true;
+	}
+	
+	public boolean hasData ()
+	{
+		return data!=null;
+	}
+	
+	public String getDataAsString () throws UnsupportedEncodingException
+	{
+		return new String(data);
+	}
+	
+	public boolean isLoaded ()
+	{
+		return loaded;
+	}
+	
+	public boolean hasException()
+	{
+		return exception!=null;
+	}
+
+	public void setException(Exception exception)
+	{
+		this.exception = exception;
+		this.loaded = true;
+	}
+	
+	public Exception getException()
+	{
+		return exception;
+	}
+	
+	List<Attachment> attachments;
+	
+	public void loadAttachments (Attachments attachments) throws Exception
+	{
+		log.debug("loadAttachments a ", data.length, " "+ new Date());
+		
+		Session s = Session.getDefaultInstance(new Properties());
+		MimeMessage message = new MimeMessage(s, new ByteArrayInputStream(data));
+		
+		log.debug("loadAttachments b ", new Date());
+		List<Triple<String, String, Object>> contents = new ArrayList<Triple<String, String, Object>>();
+		contents.add(new Triple<String,String,Object>(message.getDisposition(), message.getContentID(), message.getContent()));
+		while (contents.size() > 0)
+		{
+			log.debug("loadAttachments c ", new Date());
+
+			Triple<String, String, Object> p = contents.get(0);
+			contents.remove(0);
+			
+			String disposition = p.first;
+			String id = p.second;
+			Object content = p.third;
+			
+			if (content instanceof InputStream)
+			{
+				String attachmentId = Attachment.getAttachmentId(disposition, id);
+				
+				Attachment attachment = attachments.getAttachment(attachmentId);
+				if (attachment != null)
+				{
+					attachment.setData (Streams.readFullyBytes((InputStream)content));
+				}
+			}
+			else
+			if (content instanceof MimeMultipart)
+			{
+				MimeMultipart m = (MimeMultipart)content;
+				for (int i=0; i<m.getCount(); ++i)
+				{
+					BodyPart b = m.getBodyPart(i);
+					
+					contents.add(
+						new Triple<String, String, Object>(
+							Arrays.firstOrNull(b.getHeader("Content-Disposition")), 
+							Arrays.firstOrNull(b.getHeader("Content-Id")), 
+							b.getContent()
+						)
+					);
+				}
+			}
+		}
+		
+		log.debug("loadAttachments d ", new Date());
+		attachments.setLoaded(true);
+	}
+	
+	public List<Attachment> getAttachments ()
+	{
+		log.debug("getAttachments", new Date());
+		return attachments;
+	}
+}

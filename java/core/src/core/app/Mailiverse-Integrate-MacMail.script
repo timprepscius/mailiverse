@@ -1,0 +1,13 @@
+tell application "Mail"
+	
+	set _password to ""
+	set _name to "#NAME#"
+	set _email to "#NAME#@mailiverse.com"
+	set _fullname to "#NAME#"
+	
+	set newacct to make new pop account with properties {name:"Mailiverse.#NAME#", user name:_name, password:_password, uses ssl:false, server name:"localhost", port:3110, full name:_fullname, email addresses:{_email}}
+	set addsmtp to make new smtp server with properties {name:"Mailiverse.#NAME#", server name:"localhost", uses ssl:false, port:3025, user name:_name, password:"", authentication:("axct" as constant)}
+	
+	set smtp server of newacct to addsmtp
+	
+end tell

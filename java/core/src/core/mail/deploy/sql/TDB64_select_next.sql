@@ -1,0 +1,1 @@
+select * from %s where converted=false limit 1;

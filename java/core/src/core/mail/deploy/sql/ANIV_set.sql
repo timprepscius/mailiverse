@@ -1,0 +1,1 @@
+update %s set block_conv=?, converted=1 where user_id=?
