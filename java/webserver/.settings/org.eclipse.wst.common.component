@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Mailiverse.Mail-WebServer">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="Mailiverse.Ext.BouncyCastle.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Mailiverse.Ext.BouncyCastle/Mailiverse.Ext.BouncyCastle">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Mailiverse.Ext.Json.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Mailiverse.Ext.Json/Mailiverse.Ext.Json">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/Mailiverse.Mail-WebServer/build/classes"/>
+        <property name="context-root" value="Mailiverse.Mail-WebServer"/>
+    </wb-module>
+</project-modules>

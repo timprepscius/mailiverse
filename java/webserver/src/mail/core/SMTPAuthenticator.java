@@ -1,0 +1,1 @@
+../../../../core/src/mail/core/SMTPAuthenticator.java
