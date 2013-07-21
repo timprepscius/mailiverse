@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Sign up - Mailiverse</title>
+
+<LINK_META>
+<LINK_SCRIPTS>
+
+<link rel="stylesheet" type="text/css" href="rev/__VERSION__/signup.css">
+<script language="JavaScript" src="rev/__VERSION__/signup.js"></script>
+
+<LINK_GWT>
+  
+</head>
+
+<body>
+	<div id="_mLoading" class="modal-container">
+		<div class="modal">
+			<div class="modal-body">
+				<div id="_mService_loading" class="loadingInProgress">Loading javascript...</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="_mSignUpExecute" class="modal-container initially-hidden">
+		<div class="modal bootstrap-modal">
+			<div class="modal-header">
+				<h3>Sign up</h3>
+			</div>
+			<div class="modal-body">
+				<h4><span id="_mSignUpExecute_label">Starting...</span></h4>
+				<span id="_mSignUpExecute_failure" style="display:none">
+				</span>
+				<span id="_mSignUpExecute_success" style="display:none">
+					<h4>Successfully signed up!<br/>
+					<b class='red'>Please write down your password somewhere safe.</b><br/>
+				</h4>
+				<br/>
+				Since this service is actually private, we cannot retrieve or reset lost passwords.
+				<br/>
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button onClick="mSignUp.exitPage();" id="_mSignUpExecute_navigate_away" class="btn" disabled>Login</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="_mSignUp" class="container">
+
+		<table id="_SignInUp"><tbody><tr>
+			<td class="title">
+				Mailiverse! <span class="version">(__VERSION__)</span>
+			</td>
+			<td class="offer">
+				Already have an account? <a href="index.html" class="button">Sign in</a>
+			</td>
+		</tr></tbody></table>
+
+<!--
+		<div id="mMain_no_web_container"><a id="mMain_no_web" href="../downloads.html">I don't want a web client.</a></div>
+		<div style="display: none">
+			<div id="no_web_description">
+				You can also sign up by downloading the POP client and installing from there.
+			</div>
+		</div>
+		<script>
+			$('#mMain_no_web').popover({'placement':'bottom','content':$("#no_web_description")});
+		</script>
+-->
+		<div class="signup">
+			<h1>Sign Up!</h1>
+			<br />
+			It is best to use <b>Chrome</b> during sign up.  Safari and Firefox are very slow in generating the RSA key.
+			<div class="grey">
+			<table><tbody>
+			
+				<tr id="row-step-1">
+					<td class="left-side">
+						<div class="inner-td">
+
+							<h2>Step 1.</h2>
+
+							<h3>Pick your user name and password</h3>
+							<br /> Your user name must be alpha numeric.<br /> (no
+							punctuation or non english characters)<br /> <br /> Your
+							password password should be longer than 6 characters and include one number.
+
+						</div>
+					</td>
+
+					<td class="right-side">
+						<div class="inner-td">
+							<div id="_mSignUp_name_ctl" class="control-group">
+								<label class="control-label">Name</label>
+								<div class="controls">
+									<input type="text" id="_mSignUp_name" placeholder="name" 
+										onKeyDown="onNextTick(function() { mSignUp.onNameChange(); });"
+										onPaste="onNextTick(function() { mSignUp.onNameChange(); });">
+									<span id="_mSignUp_name_help" class="help-inline"></span>
+								</div>
+							</div>
+
+
+							<div id="_mSignUp_password_ctl"  class="control-group">
+								<label class="control-label">Password</label>
+								<div class="controls">
+									<input type="password" id="_mSignUp_password" placeholder="password"
+										onKeyDown="onNextTick(function() { mSignUp.onPasswordChange(); });"
+										onPaste="onNextTick(function() { mSignUp.onPasswordChange(); });"> 
+									<span id="_mSignUp_password_help" class="help-inline"></span>
+								</div>
+							</div>
+
+							<div id="_mSignUp_password_check_ctl" class="control-group">
+								<label class="control-label">Password</label>
+								<div class="controls">
+									<input type="password" id="_mSignUp_password_check" placeholder="password"
+										onKeyDown="onNextTick(function() { mSignUp.onPasswordChange(); });"
+										onPaste="onNextTick(function() { mSignUp.onPasswordChange(); });">
+									<span id="_mSignUp_password_check_help" class="help-inline"></span>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="left-side">
+						<div class="inactive"></div>
+						<div class="inner-td">
+							<h2>Step 2.</h2>
+							<h3>Complete this captcha</h3>
+					</td>
+
+					<td class="right-side">
+						<div class="inactive"></div>
+						<div class="inner-td">
+						
+							<div id="_mSignUp_captcha">
+								<div id="recaptcha_container"></div>
+								<script type="text/javascript"
+									src="https://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+								<script>
+									Recaptcha
+										.create(
+											"6LcNeNISAAAAAOll_n6Mj_YC0lVvjIgiEHNFAjV1",
+											"recaptcha_container",
+											{
+												theme : "red",
+												callback: function() {
+													$('#recaptcha_response_field').change(function() { mSignUp.submitCaptcha(); });
+												}
+											}
+										);
+								</script>
+								<button id="_mSignUp_captcha_submit" class="btn" onClick="onNextTick(function () { mSignUp.submitCaptcha(); });">Submit</button>
+								<span id="_mSignUp_captcha_help" class="help-inline"></span>
+							</div>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="left-side">
+						<div class="inner-td">
+							<h2>Step 3.</h2>
+							<h3>Pick and authorize storage</h3>
+						</div>
+					</td>
+					<td class="right-side">
+						<div class="inner-td">
+							I want to use the storage provider:<br/>
+							<label class="checkbox inline"><input name="storage" type="radio" onchange="mSignUp.onStorageChange();" value="mailiverse" checked>Mailiverse</label>
+							<label class="checkbox inline"><input name="storage" type="radio" onchange="mSignUp.onStorageChange();" value="dropbox">Dropbox</label>
+						</div>
+					</td>
+				</tr>
+				
+				<tr id="storage_mailiverse" class="storage-option">
+					<td class="left-side">
+						<div class="inner-td">
+							<h4>Mailiverse storage</h4>
+							We provide infinite mail storage.
+						</div>
+					</td>
+					<td class="right-side">
+						<div class="inner-td">
+							Mailiverse storage is simple, no hassle.  We take care of everything.<br/>
+							<br/>
+							Pick the region you are closest to most of the time.<br/>
+							<select id="storage_mailiverse_region">
+								<option value="US_Standard" selected="selected">US Standard</option>
+								<option value="US_West">US-West (Northern California)</option>
+								<option value="US_West_2">US-West-2 (Oregon)</option>
+								<option value="EU_Ireland">EU (Ireland)</option>
+								<option value="AP_Singapore">Asia Pacific (Singapore)</option>
+								<option value="AP_Sydney">Asia Pacific (Sydney)</option>
+								<option value="AP_Tokyo">Asia Pacific (Tokyo)</option>
+								<option value="SA_SaoPaulo">South America (Sao Paulo)</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+
+				<tr id="storage_dropbox" class="storage-option" style="display:none">
+					<td class="left-side">
+						<div class="inner-td">
+							<h4>Dropbox storage</h4>
+							
+							Store your mail on your own dropbox account.  
+							It's easy, just click on the button to open a new tab to link Mailiverse to Dropbox.<br/>
+							<br/>
+							Enter the authorization verification code recieved.
+							<br/>
+							<br/>
+							<p class="warning">Note:  Dropbox occasionally has service outages.  During these
+							outages, you will NOT be able to access your mail, and/or your mailbox may appear "out of sync."
+							</p>
+							<br/>
+						</div>
+					</td>
+					<td class="right-side">
+						<div class="inner-td">
+							<div id="_mSignUp_dropbox_ctl" class="control-group">
+								<div class="controls">
+									<a href="javascript:void" id="_mSignUp_dropbox" target="_blank" class="btn" disabled>Open Dropbox Authorization</a>
+	
+									<br/>
+									<br/>
+									<label class="control-label">Authorization Token</label>
+									<input type="text" id="_mSignUp_dropbox_authorization" placeholder="authorization token"
+										onKeyDown="onNextTick(function() { mSignUp.onDropboxAuthorization(); });"
+										onPaste="onNextTick(function() { mSignUp.onDropboxAuthorization(); });">
+									<span id="_mSignUp_dropbox_authorization_help" class="help-inline"></span>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="left-side">
+						<div class="inner-td">
+							<h2>Step 4.</h2>
+							<h3>Terms of service</h3>
+						</div>
+					</td>
+					<td class="right-side">
+						<div class="inner-td">
+
+							<a target="blank" href="tos.html" class="tos">Terms of service</a><br/>
+							<br/>
+							<div class="tosDiv">
+								<input id="_mSignUp_tosCheck" type="checkbox" onchange="mSignUp.onTosCheck();">
+								I have read and agree to the terms of service.
+							</div>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="left-side">
+						<div class="inner-td">
+							<h2>Step 5.</h2>
+							<h3>Done!</h3>
+						</div>
+					</td>
+					<td class="right-side">
+						<div class="inner-td">
+
+							<button id="_mSignUp_submit" class="btn" value="Sign Up!" disabled
+								onClick="mSignUp.signUp();">Sign Up!</button>
+
+						</div>
+					</td>
+				</tr>
+
+
+			</tbody></table>
+			</div>
+			<footer>
+				<p>&copy; Benith Inc. __THIS_YEAR__</p>
+			</footer>
+		</div>
+
+	</div>
+	
+	 <LINK_TEST_BROWSER>
+	
+</body>
+</html>

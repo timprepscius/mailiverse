@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>How Mailiverse Works - Mailiverse</title>
+<LINK_META>
+<link rel="stylesheet" type="text/css" href="rev/__VERSION__/learnmore.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+		<h1>How Mailiverse Works: Technical Version<span class="version">(__VERSION__)</span></h1>
+		<h2>Server</h2>
+	
+		<h3>Receiving mail from an external source</h3>
+		When mail is received from an external source it is accepted using an SSL connection
+		manufactured via an authority issued SSL certificate.
+		<p>		
+		We must use an authority based SSL certificate 
+		as option, because some mail servers (hotmail,others) refuse to deliver mail when the SSL certificate
+		has been self generated.  
+
+		<p>
+		In the future, we will set up another mail receiving server which does not use an authority issued SSL certificate.
+		All external mail will first attempt on the non authority issued SSL certificate.
+
+		
+		<p>
+		For the time being, the second non authority based SSL certificate server does not exist.  
+		We will update this page when it does.
+		
+		<h3>Receiving mail from an internal source (two internal users mailing each other)</h3>
+		When mail is sent from one user to another, the mail never passes through an external server.
+		It also is sent to our server using an RSA public key which we have created privately.
+		<p>
+		Mail from one internal user to another never passes through an external network unencrypted, or encrypted using any
+		authority issued encryption key.
+		
+		<h3>Writing mail</h3>
+		
+		When mail is received by our server, whether internally or externally, the server
+		looks up the client's RSA PublicKey, encrypts (RSA-AES-CBC-256-EmbedIV) 
+		the mail and writes it to the user's store.
+		<p>
+		Because of performance problems surrounding the javascript client parsing actual Mime messages,
+		the server also parses the mail into a JSON container, encrypts the JSON string with the RSA PublicKey
+		(RSA-AES-CBC-256-EmbedIV) and writes that as well to the user's store.
+		
+		<h2>Client</h2>
+		
+		<h3>Sign up</h3>
+		The javascript client creates all of the RSA keys and configuration locally.<br/>
+		It also uses the user's password to generate a 
+		VerificationKey and CryptoKey [PKDF2-HMAC-SHA256,#iter=131072,kl=256,public salts].
+		<p>
+		
+		In order to transfer the VerificationKey the client uses an RSA Public Key we have
+		created privately.  The VerificationKey never is transmitted plain text or encrypted with an
+		authority issued encryption key.
+		<p>
+		
+		The client block is first encrypted using the CryptoKey and then 
+		transfered to the server using an SRP encrypted connection based on the VerificationKey. 
+		
+		<h3>Login</h3>
+		The javascript client logs into our server using SRP.  (SRP provides protection from MIM attacks.)
+		<ul>
+			<li>Use password to generate VerificationKey and CryptoKey [PKDF2-HMAC-SHA256,#iter=131072,kl=256,public salts]</li>
+			<li>Use the VerificationKey as the password for SRP authentication</li>
+			<li>Use the CryptorKey to decrypt the user block (AES-CBC-256-EmbedIV)</li>
+			<li>Obtain the user RSA KeyPair from the decrypted block</li>
+		</ul>
+		
+		<h3>Parsing Mail</h3>
+		
+		The client uses the RSA Private Key to decrypt (RSA-AES-CBC-256-EmbedIV) json container mail stored on 
+		the user's storage.  It then creates cache files to allow information to be more quickly loaded.
+		<p>
+		These cache files are encrypted (AES-CBC-256-EmbedIV) with an AES key, generated from
+		a combination of a secret seed and the file name.
+		
+		<h2>iOS Client</h2>
+		The iOS client works exactly like the web client.  No caches are stored on the device.
+	
+		<footer>
+		  <p>&copy; Benith Inc. __THIS_YEAR__</p>
+		</footer>
+	</div>
+</body>
+</html>

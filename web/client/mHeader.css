@@ -1,0 +1,125 @@
+/*******************************************************************************/
+
+#_mHeader_service_time.warning {
+	background-color: orange;
+}
+
+#_mHeader_service_time.error {
+	background-color: red;
+}
+
+#_mHeader {
+	width: 100%; 
+	position: relative;
+	display:none;
+}
+
+#_mHeader table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#_mHeader tr {
+	margin:0;
+	padding:0;
+}
+
+#_mHeader .top-banner {
+	text-align:right;
+}
+
+#_mHeader .top-banner td {
+	border-bottom: 1px solid #C3D9FF;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	background-color: #F0F0FF;
+}
+
+#_mHeader td.after-top-banner  {
+	height:15px;
+}
+
+#_mHeader td.title {
+	padding-left:20px;
+	width: 220px;
+}
+
+#_mHeader td.title h1 {
+	line-height: 35px;
+	font-size: 40px;
+	margin: 0;
+}
+
+#_mHeader td.search {
+	width: 300px;
+	padding-right:10px;
+	vertical-align: bottom;
+}
+
+#_mHeader .search input {
+	height: 20px;
+	width: 100%;
+	padding-top:5px;
+	font-size: 16px;
+}
+
+span.deleteicon input {
+    padding-right: 16px;
+    padding-bottom: 5px;
+}
+
+span.deleteicon {
+    position: relative;
+}
+span.deleteicon span {
+    position: absolute;
+    display: block;
+	top: 1px;
+	right: 2px;
+	width: 20px;
+	height: 20px;
+	background: url('img/sprites.png') 0 -690px;
+    cursor: pointer;
+}
+
+#_mHeader td.info {
+	width: auto;
+	padding-right: 11px;	
+}
+
+#_mHeader .status {
+	vertical-align: middle;
+	display: block;
+	text-align: right; 
+}
+
+#_mHeader .status div {
+	display:inline;
+}
+
+#_mHeader .status img.icon {
+	height: 20px;
+	vertical-align: middle;
+}
+
+#_mHeader .status span.icon {
+	width: 20px;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+}
+
+#_mHeader .status .overlay {
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-color:rgba(1,1,1,0.5);
+}
+
+
+#_mHeader .status .btn {
+	vertical-align: middle;
+	margin:0;
+}
+
+/****************************************************************/

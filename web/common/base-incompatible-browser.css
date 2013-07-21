@@ -1,0 +1,20 @@
+
+#_browser_incompatible {
+	position: fixed;
+	z-index: 10000;
+	background: rgba(235, 13, 13, 0.81);
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	text-align:center;
+
+}
+
+#_browser_incompatible .inner {
+	background: black;
+	color:white;
+	font-size:24px;
+}

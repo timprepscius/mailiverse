@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Refill - Mailiverse</title>
+
+<LINK_META>
+<LINK_SCRIPTS>
+
+<link rel="stylesheet" type="text/css" href="rev/__VERSION__/refill.css">
+<script language="JavaScript" src="rev/__VERSION__/refill.js"></script>
+
+<script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+
+<LINK_GWT>
+  
+</head>
+
+<body>
+	<div id="_mLoading" class="modal-container">
+		<div class="modal">
+			<div class="modal-body">
+				<div id="_mService_loading" class="loadingInProgress">Loading javascript...</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="_mRefillExecute" class="modal-container">
+		<div class="modal bootstrap-modal">
+			<div class="modal-header">
+				<h3>Mailiverse Refill</h3>
+			</div>
+			<div class="modal-body">
+				<h4><span id="_mRefillExecute_label">Starting...</span></h4>
+				<span id="_mRefillExecute_success" style="display:none">
+				<h4>
+					<br/>
+					<b class='red'>Make sure to save your receipt.  For any refund, complaint, etc, you must provide it, as
+					we do not keep this in our logs.
+					</b><br/>
+				</h4>
+				</span>
+			</div>
+		</div>
+	</div>
+	<!-- ---------------------------------------------------------------------------------  -->
+	<!-- ---------------------------------------------------------------------------------  -->
+	
+	<div id="_mMain" class="container">
+		<div class="refill">
+		<h1>Refill your account <span class="version">(__VERSION__)</span></h1>
+		<br />
+		<div class="grey">
+			<table>
+				<tbody>
+					<tr id="row-step-1">
+						<td class="left-side">
+							<div class="inner-td">
+
+								<h2>Step 1.</h2>
+
+								<h3>Enter the user name to refill</h3>
+
+							</div>
+						</td>
+
+						<td class="right-side">
+							<div class="inner-td">
+								<div id="_mRefill_name_ctl" class="control-group">
+									<label class="control-label">Name</label>
+									<div class="controls">
+										<input type="text" id="_mRefill_name" placeholder="name" 
+											onKeyDown="onNextTick(function() { mRefill.onNameChange(); });"
+											onPaste="onNextTick(function() { mRefill.onNameChange(); });">
+										<span id="_mRefill_name_help" class="help-inline"></span>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="left-side">
+							<div class="inner-td">
+								<h2>Step 2.</h2>
+								<h3>Payment</h3>
+								<span id="_mRefill_why_no_free">Why isn't there a free trial?</span>
+								<div style="display: none">
+									<div id="_mRefill_why_no_free_explanation">
+										There is no free trial in order to prevent spammers from abusing this service.<br/>
+										<br/>
+										If spammers were to send e-mails from our service, other e-mail services may
+										start assuming all of our users are spammers, and could possibly ban this domain.
+									</div>
+								</div>
+								<script>
+									$('#_mRefill_why_no_free').popover({'placement':'bottom','content':$("#_mRefill_why_no_free_explanation")});
+								</script>
+							</div>
+						</td>
+						<td class="right-side">
+							<div class="inner-td">
+								I want to pay using:<br/>
+								<label class="checkbox inline"><input name="payment" type="radio" onchange="mRefill.onPaymentChange();" value="stripe" checked>Credit Card</label>
+								<label class="checkbox inline"><input name="payment" type="radio" onchange="mRefill.onPaymentChange();" value="bitcoin">BitCoin</label>
+							</div>
+						</td>
+					</tr>
+
+					<tr id="payment_bitcoin" class="payment-option" style="display:none">
+						<td class="left-side">
+							<div class="inner-td">
+								<h4>BitCoin</h4>
+								We accept payment in bitcoin.<br/>
+								<br/>
+								BitCoin allows for anonymous payments.  If you are a journalist, a whistle blower,
+								a political dissident, etc, <b>use bitcoin</b> for all transactions when ever possible.
+							</div>
+						</td>
+						<td class="right-side">
+							<div class="inner-td">
+								<div id="_mRefill_bitcoin_ctl" class="control-group">
+									<div class="controls">
+									  	Time span:<br/>
+									  	<label class="checkbox inline"><input onchange="mRefill.onBitPayAmountChange();" name="amount_bitpay" type="radio" value="1">$1 (1 month)</label>
+									  	<label class="checkbox inline"><input onchange="mRefill.onBitPayAmountChange();" name="amount_bitpay" type="radio" value="6">$6 (6 months)</label>
+									  	<label class="checkbox inline"><input onchange="mRefill.onBitPayAmountChange();" name="amount_bitpay" type="radio" value="12" checked>$12 (12 months)</label>
+									  	<br/>
+									  	<br/>
+										<a href="javascript:void" onclick="mRefill.onBitPayRequestInvoice();" id="_mRefill_bitpay_request_invoice" target="_blank" class="btn" disabled>Get BitCoin Payment Information</a>
+										<div id="bitpay_embedded_dialog">
+										
+										</div>																	  	
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+
+					<tr id="payment_stripe" class="payment-option">
+						<td class="left-side">
+							<div class="inner-td">
+								<h4>Credit Card</h4>					
+								<br/>			
+								We accept credit cards via <b>Stripe</b>.
+								Your credit card information is <b>never</b> transmitted to, or stored by our servers.
+								<br/>
+								<br/>
+								Because Stripe's minimum fee per transaction is $0.30, there is a minimum charge of
+								$6 for 6 months of service.
+								<br/>
+								<br/>
+								<b>This a single non recurring payment.</b>
+								<br/>
+								<br/>
+								<i>
+								While we do not keep any logs matching transactions to accounts, we will give you a reciept
+								with which you can prove a purchase was made.  To request a refund, you must keep this receipt.
+								</i>
+							</div>
+						</td>
+						<td class="right-side">
+							<div class="inner-td">
+									Time span:<br /> 
+									<label class="checkbox inline">
+										<input onchange="mRefill.onStripeAmountChange();" name="amount_stripe" type="radio" value="6">
+										$6 (6 months)
+									</label> 
+									<label class="checkbox inline">
+										<input onchange="mRefill.onStripeAmountChange();" name="amount_stripe" type="radio" value="12" checked>
+										$12 (12	months)
+									</label>
+									<br /><br/>
+									<table class="card-table">
+										<tr>
+											<td>
+												<div id="_mRefill_stripe_card_number_ctl" class="control-group">
+												<label class="control-label">Card Number</label>
+												<div class="controls">
+													<input 
+														onKeyDown="onNextTick(function() { mRefill.onStripeCardNumberChange(); });"
+														onPaste="onNextTick(function() { mRefill.onStripeCardNumberChange(); });"
+														id="stripe_card_number" type="text" size="20" autocomplete="off" class="card-number" />
+												</div>
+												</div>
+											</td>
+											<td>
+												<div id="_mRefill_stripe_card_cvc_ctl" class="control-group">
+												<label class="control-label">CVC</label>
+												<div class="controls">
+													<input 
+														onKeyDown="onNextTick(function() { mRefill.onStripeCardCVCChange(); });"
+														onPaste="onNextTick(function() { mRefill.onStripeCardCVCChange(); });"
+														id="stripe_card_cvc" type="text" size="4" autocomplete="off" class="card-cvc" />
+												</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<div id="_mRefill_stripe_card_expiry_ctl" class="control-group">
+												<label class="control-label">Expiration (MM/YYYY)</label>
+												<div class="controls">
+													 <input 
+														onKeyDown="onNextTick(function() { mRefill.onStripeCardExpiryChange(); });"
+														onPaste="onNextTick(function() { mRefill.onStripeCardExpiryChange() });"
+													 	id="stripe_card_expiry_month" type="text" size="2" class="card-expiry-month" /> <span> / </span> 
+													 <input	
+													 	onKeyDown="onNextTick(function() { mRefill.onStripeCardExpiryChange(); });"
+														onPaste="onNextTick(function() { mRefill.onStripeCardExpiryChange() });"
+													 	id="stripe_card_expiry_year" type="text" size="4" class="card-expiry-year" />
+												</div>
+												</div>
+											</td>
+										</tr>
+									</table>
+								</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="left-side">
+							<div class="inner-td">
+								<h2>Step 3.</h2>
+								<h3>Finish</h3>
+							</div>
+						</td>
+						<td class="right-side">
+							<div class="inner-td">
+								<button id="_mRefill_submit" class="btn" value="Refill!" disabled
+									onClick="mRefill.makePayment();">Refill!</button>
+							</div>
+						</td>
+					</tr>
+
+			</tbody>
+			</table>
+		</div>
+		</div>
+	</div>
+	
+	<LINK_TEST_BROWSER>
+	<LINK_DISABLE_DURING_BETA>
+	
+</body>
+</html>

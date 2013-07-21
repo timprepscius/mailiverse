@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!--
+	Author: Tim Prepscius 
+	License: GPLv3 Affero + keep my name in code 
+-->
+
+<html lang="en">
+<head>
+
+<title>Mailiverse</title>
+
+<LINK_META>
+<LINK_SCRIPTS>
+<LINK_SCRIPTS_SAVEAS>
+
+<link rel="stylesheet" type="text/css" href="rev/__VERSION__/client.css">
+<script language="JavaScript" src="rev/__VERSION__/client.js"></script>
+
+<LINK_GWT>
+
+</head>
+<body>
+	 <LINK_TEST_BROWSER>
+
+	<!-- ---------------------------------------------------------------------------------  -->
+	<!-- ---------------------------------------------------------------------------------  -->
+
+	<div id="_mLogin_backdrop">
+		<div id="_mLogin_backdrop_rotating"></div>
+	</div>
+	
+	<div id="_mLogin">
+		<table id="_SignInUp"><tbody><tr>
+			<td class="title">
+				Mailiverse! <span class="version">(__VERSION__)</span>
+			</td>
+			<td class="offer">
+				New to Mailiverse? <a href="signup.html" class="button button-signup">Create an account</a>
+			</td>
+		</tr></tbody></table>
+		
+		<table class="signin-table"><tbody><tr>
+		
+		<td class="left">
+		<div class="welcome">
+			<h1>Mailiverse</h1>
+			<p>Secure mail for everyone.</p>
+			<ul class="features">
+			  <li>
+			  <img src="img/lock-clipped.png" alt="">
+			  <p class="title">Private</p>
+			  <p>Nobody reads your email but you.</p>
+			  <p class="learnmore"><a href="learnmore.html">Learn more.</a></p>
+			  </li>
+
+			  <li>
+			  <img src="img/filing_cabinet-g42.png" alt="">
+			  <p class="title">A lot of space</p>
+			  <p>We provide 1000 mb storage per year.<br/> Or use your <b>own</b> storage!</p>
+			  </li>
+
+			  <li>
+			  <img src="img/dollar-small.png" alt="">
+			  <p class="title">$1 a month.
+			  <br><span class="beta-testing-free">(Beta testing is free)</span></p>
+			  <p>No ads, no tracking, no big brother.</p>
+			  </li>
+			</ul>	
+		</div>
+		</td>
+		
+		<td class="right">
+		<div class="signin">
+			<h2>Sign in</h2>
+			<form onSubmit="return false;">
+				<div class="email-div">
+				  <label for="Email"><strong class="email-label">Username</strong></label>
+				  <input spellcheck="false" id="_mLogin_name" value="" placeholder="user name">
+				</div>
+				<div class="passwd-div">
+				  <label for="Passwd"><strong class="passwd-label">Password</strong></label>
+				  <input type="password" id="_mLogin_password" placeholder="password" value="">
+				</div>			
+				<div class="controls">
+					<button id="_mLogin_button" class="btn btn-lightblue">Sign in</button>
+				</div>
+			</form>
+			<div id="mLogin_footer_left">
+				<div id="_mLogin_loading" class="loading">Loading javascript ... </div>
+				<div id="_mLogin_status"></div>
+			</div>
+		</div>
+		</td>
+		
+		</tr></tbody></table>
+	</div>
+	<!-- ---------------------------------------------------------------------------------  -->
+	<!-- ---------------------------------------------------------------------------------  -->
+
+	<div id="_mHeader">
+		<table><tbody>
+		<tr class="service top-banner"><td colspan="10">
+			<div class="service_check">
+				<div id="_mHeader_service_time"><a target="_blank" href="refill.html">You have <span id="_mHeader_service_time_value">?</span> more days of service.</a>
+				<a href="javascript:void" onClick="mMain.refreshDaysLeft();"><img src="img/refresh-mini.png"/></a>
+				| <a href="javascript:void" onClick="mMain.showSettings();">Settings</a>
+				| <a href="javascript:void" onClick="mMain.signOut();">Sign out</a>
+				</div>
+				<div style="display: none">
+					<div id="_mHeader_service_time_description">
+						At the end of your service time, you will still be able to read your e-mail for 7 days.
+						After 7 days, your account will be deleted.<br/>
+						<br/>
+						Click to add more time.
+					</div>
+				</div>
+				<script>
+//					$('#_mHeader_service_time').popover({'placement':'left','content':$("#_mHeader_service_time_description")});
+				</script>
+			</div>
+			
+		</td></tr>
+		<tr><td class="after-top-banner"></td></tr>
+		<tr>
+		
+			<td class="title">
+				<h1>Mailiverse</h1>
+			</td>
+			<td class="search">
+				<input id="_mHeader_search" 
+				class="deletable" placeholder="search" 
+					onkeydown="keyedTimer( 'search', function() { mThreads.onSearch($('#_mHeader_search').val()); }, 100);" 
+					onchange="mThreads.onSearch(this.value);" />
+			</td>
+			<td class="info">
+				<div class="status">
+					<div id="_mHeader_network_error"></div>
+					<div id="_mMain_checkMail_message"></div>
+					<span class="icon">
+						<img id="_mHeader_check_image_off" class="icon" src="img/check-mail-off.png">
+						<img id="_mHeader_check_image_on" class="icon initially-hidden" src="img/check-mail.png">
+					</span>
+					<span class="icon">
+						<img id="_mHeader_downloading_off" class="icon" src="img/downloading-off.png">
+						<img id="_mHeader_downloading_on" class="icon initially-hidden" src="img/downloading.png">
+					</span>
+					<span class="icon">
+						<img id="_mHeader_uploading_off" class="icon" src="img/uploading-off.png">
+						<img id="_mHeader_uploading_on" class="icon initially-hidden" src="img/uploading.png">
+					</span>
+					<span class="icon">
+						<img id="_mHeader_cacheDirty_off" class="icon" src="img/cache-dirty-off.png">
+						<img id="_mHeader_cacheDirty_on" class="icon initially-hidden" src="img/cache-dirty.png">
+					</span>
+					<span class="icon">
+						<img id="_mHeader_caching_off" class="icon" src="img/caching-off.png">
+						<img id="_mHeader_caching_on" class="icon initially-hidden" src="img/caching.png">
+					</span>
+					<span class="icon">
+						<img id="_mHeader_calculating_off" class="icon" src="img/calculator-off.png">
+						<img id="_mHeader_calculating_on" class="icon initially-hidden" src="img/calculator.png">
+					</span>
+					
+					<!-- 
+					<button onClick="mMain.client.debugStore()">Debug</button>
+					<button onClick="mMain.client.updateStore()">Update</button>
+					<button onClick="mMain.client.flushStore()">Flush</button>
+					-->
+					
+					<button id="_mHeader_checkMail_button" onClick="mMain.checkMail()" class="btn">Check Mail</button>
+				</div>
+			</td>
+			</tr></tbody></table>
+		</div>
+	</div>
+
+	<table id="_mMain">
+	<tbody>
+	<tr id="_mMain_row">
+		<td id="_mMain_sidebar">
+			<table id="_mMain_sidebar_embed">
+				<tbody>
+					<tr>
+						<td><button class="compose btn" onClick="mMain.compose()">Compose</button></td>
+					</tr>
+				</tbody>
+				
+				<tbody id="_mMain_systemFolders"></tbody>
+				
+				<tbody><tr><td class="userFolderSpacer"></td></tr></tbody>
+				
+				<tbody id="_mMain_userFolders"></tbody>
+				
+				<tbody id="_mMain_userFoldersAdd">
+					<tr><td>
+						<button id="_mMain_userFoldersAdd_newUserFolder" class="btn" onClick="mFolders.newUserFolder();">+</button>
+						<button id="_mMain_userFoldersAdd_deleteUserFolder" class="btn" onClick="mFolders.deleteUserFolder();">-</button>
+						<button id="_mMain_userFoldersAdd_renameUserFolder" class="btn" onClick="mFolders.renameUserFolder();"><img src="img/change-name.png"/></button>
+					</td></tr>
+				</tbody>
+			</table>
+		</td>
+		
+		<td id="_mMain_content">
+			<div id="_mMain_content_header">
+				<div id="_mThreads_content_header">
+				<table width="100%">
+				<tbody>
+					<tr>
+					<td width="70%">
+						<span id="_mThreads_content_header_select_all_span"><input id="_mThreads_content_header_select_all" onChange="mThreads.onSelectAll();" type="checkbox"></input></span>
+						<button id="_mThreads_content_header_delete" onClick="mThreads.onDelete();" class="btn">Delete</button>
+						<button id="_mThreads_content_header_destroy" onClick="mThreads.onDestroy();" class="btn">Delete Forever</button>
+						<button id="_mThreads_content_header_undelete" onClick="mThreads.onUndelete();" class="btn">Undelete</button>
+
+						<select id="_mThreads_content_header_moreActions" onchange="mThreads.onMoreAction(this.value); return false;">
+							<option value="none">More Actions...</option>
+							<option value="rd">Mark as read</option>
+							<option value="urd">Mark as unread</option>
+							<option value="sp">Mark as spam</option>
+							<option value="nsp">Mark as not spam</option>
+							<option value="rem">Remove from this folder</option>
+							<optgroup label="Add to folder" id="_mThreads_content_header_moreActions_folders">
+							</optgroup>
+						</select>
+					</td>
+					<td width="30%">
+						<div id="_mMain_content_header_range">
+							<span id="_mMain_content_header_range_links">
+								<a href="#" onClick="mThreads.onNewest(); return false;">Newest</a>
+								<a href="#" onClick="mThreads.onMove(-1); return false;">Newer</a>
+							</span>
+							<span id="_mMain_content_header_range_numbers"></span>
+							<span id="_mMain_content_header_range_links">
+								<a href="#" onClick="mThreads.onMove(1); return false;">Older</a>
+								<a href="#" onClick="mThreads.onOldest(); return false;">Oldest</a>
+							</span>
+						</div>
+					</td>
+					</tr>
+				</tbody>
+				</table>
+				</div>
+				
+				<div id="_mReader_content_header">
+				<table width="100%">
+				<tbody>
+					<tr>
+					<td width="100%">
+						<div id="_mReader_content_header_navigation">
+						</div>
+						<button id="_mReader_content_header_destroy" onClick="mReader.destroyConversation();" class="btn">Delete Forever</button>
+						<button id="_mReader_content_header_undelete" onClick="mReader.undeleteConversation();" class="btn">Undelete</button>
+						<button id="_mReader_content_header_delete" onClick="mReader.deleteConversation();" class="btn">Delete</button>
+
+						<select id="_mReader_content_header_moreActions" onchange="mReader.onMoreAction(this.value); return false;">
+							<option value="none">More Actions...</option>
+							<option value="sp">Mark as spam</option>
+							<option value="nsp">Mark as not spam</option>
+							<optgroup label="Add to folder" id="_mReader_content_header_moreActions_folders">
+						</select>
+					</td>
+					</tr>
+				</tbody>
+				</table>
+				
+				</div>
+				
+				<div id="_mCompose_content_header">
+				<table width="100%">
+				<tbody>
+					<tr>
+					<td width="100%">
+						<div id="_mCompose_content_header_navigation">
+						</div>
+						<button onClick="mCompose.send()" class="btn">Send</button>
+						<button onClick="mCompose.save()" class="btn">Save Draft</button>
+						<button id="_mComposeEditorDiscard" onClick="mCompose.discard()" class="btn">Discard</button>
+					</td>
+					</tr>
+				</tbody>
+				</table>
+				</div>				
+			</div>
+			
+			<div id="_mThreads_container">
+				<table cellpadding="0" cellspacing="0" border="0" width="100%"
+					id="_mThreads"></table>
+			</div>
+
+			<div id="_mReader">
+				<div class="thread">
+					<div id="_mReader_subject" class="subject"></div>
+					<div id="_mReader_items" class="item"></div>
+				</div>
+			</div>
+			
+			<div id="_mOriginal">
+				<div id="_mOriginal_header"></div>
+				<pre id="_mOriginal_content"></pre>
+			</div>
+			
+			<div id="_mCompose">
+				<table>
+				<tbody>
+					<tr>
+						<td class="label">To:</td>
+						<td class="value" id="_mCompose_to_td"><textarea id="_mCompose_to"></textarea></td>
+					</tr>
+					<tr>
+						<td class="label">Cc:</td>
+						<td class="value" id="_mCompose_cc_td"><textarea id="_mCompose_cc"></textarea></td>
+					</tr>
+					<tr>
+						<td class="label">Bcc:</td>
+						<td class="value" id="_mCompose_bcc_td"><textarea id="_mCompose_bcc"></textarea></td>
+					</tr>
+					<tr>
+						<td class="label">Subject:</td>
+						<td class="value" id="_mCompose_subject_td"><textarea id="_mCompose_subject"></textarea></td>
+					</tr>
+					<!-- 
+					
+					<tr>
+						<td class="label"></td>
+						<td class="value" id="_mCompose_attachments_td">Attachments: 
+							<input type="file" id="files" name="files[]" multiple />
+							<ul id="_mCompose_attachment_list"></ul>	
+						</td>
+					</tr>
+					
+					 -->
+					 
+					<tr>
+						<td class="label"></td>
+						<td class="value" id="_mCompose_body_td"><textarea id="_mCompose_body"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="2" class="buttons">
+							<button id="_mComposeEditor_send" onClick="mCompose.send()" class="btn">Send</button>
+							<button id="_mComposeEditor_save" onClick="mCompose.save()" class="btn">Save Draft</button>
+							<button id="_mComposeEditor_discard" onClick="mCompose.discard()" class="btn">Discard</button>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+			
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	
+	<div id="_mMain_settings" class="modal-container initially-hidden">
+		<div class="modal bootstrap-modal">
+			<div class="modal-header">
+				<h3>Settings</h3>
+			</div>
+			<div class="modal-body">
+			  <form onsubmit="return false;">
+			    <label for="name">Name (used in outgoing mail)</label>
+			    <input type="text" name="name" id="_mMain_settings_name" class="text ui-widget-content ui-corner-all" />
+			  </form>
+			  
+			  <br/>
+			  <br/>
+			  <a href="delete.html">Delete this account</a>
+			</div>
+			<div class="modal-footer">
+				<button onClick="mMain.onSettingsFinished(false);" class="btn">Cancel</a>
+				<button onClick="mMain.onSettingsFinished(true);" class="btn">Ok</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="_mMain_userFolders_renameForm" class="modal-container initially-hidden">
+		<div class="modal bootstrap-modal">
+			<div class="modal-header">
+				<h3>Rename Folder</h3>
+			</div>
+			<div class="modal-body">
+			  <form onsubmit="return false;">
+			    <label for="name">Name</label>
+			    <input type="text" name="name" id="_mMain_userFolders_renameForm_name" class="text ui-widget-content ui-corner-all" />
+			  </form>
+			</div>
+			<div class="modal-footer">
+				<button onClick="mFolders.onRenameFinished(false);" class="btn">Cancel</a>
+				<button onClick="mFolders.onRenameFinished(true);" class="btn">Ok</a>
+			</div>
+		</div>
+
+	</div>
+	
+	
+	<div id="_mMain_footer">
+		<footer>
+			<p>&copy; Benith __THIS_YEAR__</p>
+		</footer>
+	</div>
+
+	 <script>
+	 	mInitializer.onDocumentPartial();
+	 </script>
+	 	 
+</body>
+</html>
+

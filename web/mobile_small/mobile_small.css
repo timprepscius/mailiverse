@@ -1,0 +1,22 @@
+#__log__ {
+	z-index:1000;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 75%;
+	background: black; /* rgba(0,0,0,0.5);*/
+	color: white;
+}
+
+#_mLogin .signin {
+	width: 85%;
+	float:none;
+	margin:0;
+	padding: 25px 25px 25px 25px;
+};
+
+
+#_mMain {
+
+	display:none;
+}

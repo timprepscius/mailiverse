@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Delete - Mailiverse</title>
+
+<LINK_META>
+<LINK_SCRIPTS>
+
+<link rel="stylesheet" type="text/css" href="rev/__VERSION__/delete.css">
+<script language="JavaScript" src="rev/__VERSION__/delete.js"></script>
+
+<LINK_GWT>
+  
+</head>
+
+<body>
+	<div id="_mLoading" class="modal-container">
+		<div class="modal">
+			<div class="modal-body">
+				<div id="_mService_loading" class="loadingInProgress">Loading javascript...</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="_mDeleteExecute" class="modal-container"">
+		<div class="modal bootstrap-modal">
+			<div class="modal-header">
+				<h3>Delete</h3>
+			</div>
+			<div class="modal-body">
+				<h4><span id="_mDeleteExecute_label">Starting...</span></h4>
+				<span id="_mDeleteExecute_failure" style="display:none">
+				</span>
+				<span id="_mDeleteExecute_success" style="display:none">
+					<h4>Successfully deleted.</h4>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="_mDelete" class="container">
+		<div class="delete">
+			<h1>Delete</h1>
+			<h2>Your account will be permanently deleted.</h2>
+			<h3>
+			Your account will be marked for deletion.  
+			Within a few hours a garbage disposal script will remove all storage and login information. 
+			</h3>
+			<div class="grey">
+			<table><tbody>
+			
+				<tr id="row-step-1">
+					<td class="left-side">
+						<div class="inner-td">
+							<h2>Step 1.</h2>
+							<h3>Enter your user name and password</h3>
+						</div>
+					</td>
+
+					<td class="right-side">
+						<div class="inner-td">
+							<div id="_mDelete_name_ctl" class="control-group">
+								<label class="control-label">Name</label>
+								<div class="controls">
+									<input type="text" id="_mDelete_name" placeholder="name" 
+										onKeyDown="onNextTick(function() { mDelete.onNameChange(); });"
+										onPaste="onNextTick(function() { mDelete.onNameChange(); });">
+								</div>
+							</div>
+
+
+							<div id="_mDelete_password_ctl"  class="control-group">
+								<label class="control-label">Password</label>
+								<div class="controls">
+									<input type="password" id="_mDelete_password" placeholder="password" 
+										onKeyDown="onNextTick(function() { mDelete.onPasswordChange(); });"
+										onPaste="onNextTick(function() { mDelete.onPasswordChange(); });"> 
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="left-side">
+						<div class="inner-td">
+							<h2>Step 2.</h2>
+							<h3>Press delete.</h3>
+						</div>
+					</td>
+					<td class="right-side">
+						<div class="inner-td">
+
+							<button id="_mDelete_submit" class="btn" value="Delete" disabled
+								onClick="mDelete.doDelete();">Delete</button>
+
+						</div>
+					</td>
+				</tr>
+
+
+			</tbody></table>
+			</div>
+			<footer>
+				<p>&copy; Benith Inc. __THIS_YEAR__</p>
+			</footer>
+		</div>
+
+	</div>
+	
+	 <LINK_TEST_BROWSER>
+	
+</body>
+</html>

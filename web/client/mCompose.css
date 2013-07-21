@@ -1,0 +1,54 @@
+/***** mCompose.css *****/
+
+#_mCompose {
+	background-color:#e0ecff;
+}
+
+#_mCompose table {
+	width: 100%;
+}
+
+#_mCompose .label {
+	padding-top:6px;
+	width:55px;
+	font-weight:bold;
+	vertical-align: top;
+	text-align: right;
+}
+
+#_mCompose .value textarea {
+	width: 99%;
+	font-size: 13px;
+	height: 21px;
+	padding: 1px;
+}
+
+#mCompose_to {
+	height: 36px;
+}
+
+#mCompose_cc {
+	height: 18px;
+}
+
+#mCompose_bcc {
+	height: 18px;
+}
+
+#mCompose_bcc {
+	height: 18px;
+}
+
+#mCompose_subject {
+	height: 18px;
+}
+
+#mCompose_body {
+	height: 300px;
+}
+
+.ui-menu .ui-menu-item a {
+	font-size: 12px;
+}
+
+/***** mCompose.css *****/

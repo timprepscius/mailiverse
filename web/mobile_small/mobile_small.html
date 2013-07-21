@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Client - Mailiverse</title>
+
+<LINK_META>
+<LINK_SCRIPTS>
+
+<link rel="stylesheet" type="text/css" href="mobile.css">
+<script language="JavaScript" src="mobile.js"></script>
+
+<LINK_GWT>
+ 
+</head>
+<body>
+	<div id="__log__">
+		<button onclick="location.reload();">Reload</button>
+		<button onclick="mDispatch.startNative();">Start Native</button>
+		<div id="__log_content__"></div>
+	</div>
+	<!-- ---------------------------------------------------------------------------------  -->
+	<!-- ---------------------------------------------------------------------------------  -->
+
+	<div id="_mLogin">
+		<div class="signin">
+		<h2>Mailiverse</h2>
+		<form onSubmit="return false;">
+			<div class="email-div">
+			  <label for="Email"><strong class="email-label">Username</strong></label>
+			  <input type="email" spellcheck="false" id="_mLogin_name" value="" placeholder="user name">
+			</div>
+			<div class="passwd-div">
+			  <label for="Passwd"><strong class="passwd-label">Password</strong></label>
+			  <input type="password" id="_mLogin_password" placeholder="password" value="jamesbond007">
+			</div>			
+			<div class="controls">
+				<button id="_mLogin_button">Sign in</button>
+			</div>
+		</form>
+		<div id="mLogin_footer_left">
+			<div id="_mLogin_loading" class="loading">Loading javascript ... </div>
+			<div id="_mLogin_status"></div>
+		</div>
+		</div>
+	</div>
+	<!-- ---------------------------------------------------------------------------------  -->
+	<!-- ---------------------------------------------------------------------------------  -->
+
+	<div id="_mHeader">
+		<table><tbody>
+		<tr class="service"><td colspan="10">
+			<div class="service_check">
+				<div id="_mHeader_service_time"><a target="_blank" href="refill.html">You have <span id="_mHeader_service_time_value">?</span> more days of service.</a>
+				<a href="javascript:void" onClick="mMain.refreshDaysLeft();"><img src="img/refresh-mini.png"/></a>
+				</div>
+				<div style="display: none">
+					<div id="_mHeader_service_time_description">
+						At the end of your service time, you will still be able to read your e-mail for 7 days.
+						After 7 days, your account will be deleted.<br/>
+						<br/>
+						Click to add more time.
+					</div>
+				</div>
+				<script>
+					$('#_mHeader_service_time').popover({'placement':'left','content':$("#_mHeader_service_time_description")});
+				</script>
+			</div>
+		
+		</td></tr>
+		<tr>
+		
+			<td class="title">
+				<h1>Mailiverse</h1>
+			</td>
+			<td class="search">
+				<input id="_mHeader_search" 
+				class="deletable" placeholder="search" 
+					onkeydown="keyedTimer( 'search', function() { mThreads.onSearch($('#_mHeader_search').val()); }, 100);" 
+					onchange="mThreads.onSearch(this.value);" />
+			</td>
+			<td class="info">
+				<div class="status">
+					<div id="_mHeader_network_error"></div>
+					<img id="_mHeader_check_image" class="icon initially-hidden" src="img/check-mail.png">
+					<img id="_mHeader_downloading" class="icon initially-hidden" src="img/downloading.png">
+					<img id="_mHeader_uploading" class="icon initially-hidden" src="img/uploading.png">
+					<img id="_mHeader_cacheDirty" class="icon initially-hidden" src="img/cache-dirty.png">
+					<img id="_mHeader_caching" class="icon initially-hidden" src="img/caching.png">
+					<img id="_mHeader_calculating" class="icon initially-hidden" src="img/calculator.png">
+					<button id="_mHeader_checkMail_button" onClick="mMain.checkMail()" class="btn">Check Mail</button>
+				</div>
+			</td>
+			</tr></tbody></table>
+		</div>
+	</div>
+
+	<div id="_mMain">
+		<div id="_mMain_folders">
+		</div>
+		
+		
+		<div id="_mMain_content">
+			<div id="_mMain_content_header">
+				<div id="_mThreads_content_header">
+				<table width="100%">
+				<tbody>
+					<tr>
+					<td width="70%">
+						<span id="_mThreads_content_header_select_all_span"><input id="_mThreads_content_header_select_all" onChange="mThreads.onSelectAll();" type="checkbox"></input></span>
+						<button id="_mThreads_content_header_delete" onClick="mThreads.onDelete();" class="btn">Delete</button>
+						<button id="_mThreads_content_header_undelete" onClick="mThreads.onUndelete();" class="btn">Undelete</button>
+
+						<select id="_mThreads_content_header_moreActions" onchange="mThreads.onMoreAction(this.value); return false;">
+							<option value="none">More Actions...</option>
+							<option value="rd">Mark as read</option>
+							<option value="urd">Mark as unread</option>
+							<option value="sp">Mark as spam</option>
+							<option value="nsp">Mark as not spam</option>
+						</select>
+					</td>
+					<td width="30%">
+						<div id="_mMain_content_header_range">
+							<span id="_mMain_content_header_range_links">
+								<a href="#" onClick="mThreads.onNewest(); return false;">Newest</a>
+								<a href="#" onClick="mThreads.onMove(-1); return false;">Newer</a>
+							</span>
+							<span id="_mMain_content_header_range_numbers"></span>
+							<span id="_mMain_content_header_range_links">
+								<a href="#" onClick="mThreads.onMove(1); return false;">Older</a>
+								<a href="#" onClick="mThreads.onOldest(); return false;">Oldest</a>
+							</span>
+						</div>
+					</td>
+					</tr>
+				</tbody>
+				</table>
+				</div>
+				
+				<div id="_mReader_content_header">
+				<table width="100%">
+				<tbody>
+					<tr>
+					<td width="100%">
+						<div id="_mReader_content_header_navigation">
+						</div>
+						<button id="_mReader_content_header_undelete" onClick="mReader.undeleteConversation();" class="btn">Undelete</button>
+						<button id="_mReader_content_header_delete" onClick="mReader.deleteConversation();" class="btn">Delete</button>
+
+						<select id="_mReader_content_header_moreActions" onchange="mReader.onMoreAction(this.value); return false;">
+							<option value="none">More Actions...</option>
+							<option value="sp">Mark as spam</option>
+							<option value="nsp">Mark as not spam</option>
+						</select>
+					</td>
+					</tr>
+				</tbody>
+				</table>
+				
+				</div>
+				
+				<div id="_mCompose_content_header">
+				<table width="100%">
+				<tbody>
+					<tr>
+					<td width="100%">
+						<div id="_mCompose_content_header_navigation">
+						</div>
+						<button onClick="mCompose.send()" class="btn">Send</button>
+						<button onClick="mCompose.save()" class="btn">Save Draft</button>
+						<button id="_mComposeEditorDiscard" onClick="mCompose.discard()" class="btn">Discard</button>
+					</td>
+					</tr>
+				</tbody>
+				</table>
+				</div>				
+			</div>
+			
+			<div id="_mThreads_container">
+				<table cellpadding="0" cellspacing="0" border="0" width="100%"
+					id="_mThreads"></table>
+			</div>
+
+			<div id="_mReader">
+				<div class="thread">
+					<div id="_mReader_subject" class="subject"></div>
+					<div id="_mReader_items" class="item"></div>
+				</div>
+			</div>
+			
+			<div id="_mOriginal">
+				<div id="_mOriginal_header"></div>
+				<pre id="_mOriginal_content"></pre>
+			</div>
+			
+			<div id="_mCompose">
+				<table>
+				<tbody>
+					<tr>
+						<td class="label">To:</td>
+						<td class="value" id="_mCompose_to_td"><textarea id="_mCompose_to"></textarea></td>
+					</tr>
+					<tr>
+						<td class="label">Cc:</td>
+						<td class="value" id="_mCompose_cc_td"><textarea id="_mCompose_cc"></textarea></td>
+					</tr>
+					<tr>
+						<td class="label">Bcc:</td>
+						<td class="value" id="_mCompose_bcc_td"><textarea id="_mCompose_bcc"></textarea></td>
+					</tr>
+					<tr>
+						<td class="label">Subject:</td>
+						<td class="value" id="_mCompose_subject_td"><textarea id="_mCompose_subject"></textarea></td>
+					</tr>
+					<!-- 
+					
+					<tr>
+						<td class="label"></td>
+						<td class="value" id="_mCompose_attachments_td">Attachments: 
+							<input type="file" id="files" name="files[]" multiple />
+							<ul id="_mCompose_attachment_list"></ul>	
+						</td>
+					</tr>
+					
+					 -->
+					 
+					<tr>
+						<td class="label"></td>
+						<td class="value" id="_mCompose_body_td"><textarea id="_mCompose_body"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="2" class="buttons">
+							<button id="_mComposeEditor_send" onClick="mCompose.send()" class="btn">Send</button>
+							<button id="_mComposeEditor_save" onClick="mCompose.save()" class="btn">Save Draft</button>
+							<button id="_mComposeEditor_discard" onClick="mCompose.discard()" class="btn">Discard</button>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<div id="_mMain_footer">
+		<footer>
+			<p>&copy; Benith 2012</p>
+		</footer>
+	</div>
+
+	 <script>
+	 	mInitializer.onDocumentPartial();
+	 </script>
+	 
+	 <LINK_TEST_BROWSER>	 
+	 
+</body>
+</html>
+

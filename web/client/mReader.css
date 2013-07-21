@@ -1,0 +1,150 @@
+/***** mReader.css *****/
+
+#_mReader_content_header_navigation {
+	font-size: 13px;	
+	font-weight: bold;
+	display: inline;
+	vertical-align: middle;
+}
+
+#_mReader_content_header_navigation a {
+	margin-right:10px;
+}
+
+#_mReader .mQuickReply {
+	margin-top: 10px;
+	border: 1px solid #999;
+}
+
+#_mReader .spacer {
+	height: 10px;
+}
+
+#_mReader .subject {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 5px;
+}
+
+#_mReader .header {
+	background-color: #EFEFEF;
+	padding-left:5px;
+	padding-top: 5px;
+	position: relative;
+	clear: both;
+}
+
+#_mReader .header .From {
+}
+
+#_mReader .header .email_div {
+	padding-bottom: 1px;
+}
+
+#_mReader .header .date {
+	right: 5px;
+	position: absolute;
+	top: 5px;
+}
+
+#_mReader .header .address {
+	margin-left: 5px;
+	color: black;
+}
+
+#_mReader .header .name {
+	margin-left: 5px;
+	color: #00681C;
+	font-weight: bold;
+}
+
+#_mReader .mail {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border: 1px solid #999;
+}
+
+#_mReader .mail .body blockquote {
+	display: none;
+}
+
+#_mReader .mail .body  {
+	padding: 5px;	
+}
+
+#_mReader .mail .body pre {
+	word-wrap: break-word;
+	white-space: pre-line;	
+}
+
+#_mReader .mail .body pre {
+	font-family: arial, sans-serif;	
+	font-size: 12px;
+	line-height: normal;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	background-color: white;
+	padding: 0;
+	border:0;
+	margin: 0;
+}
+
+#_mReader .mail .replyBanner {
+	background-color: #EFEFEF;
+	color: #00C;
+	font-size: 11px;
+	padding-left: 5px;
+	padding-top: 4px;;
+}
+
+#_mReader .mail .replyBanner a {
+	color: inherit;
+}
+
+#_mReader .mail .attachments {
+	width: %100;
+	padding: 5px;
+	position:relative;
+}
+
+#_mReader .mail .attachments .disable_overlay {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:1;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+#_mReader .mail .attachments .progress {
+	display:none;
+	height:25px;
+	margin:0;
+	margin-right:10px;
+}
+
+#_mReader .mail .attachments.loading .progress {
+	display:inline;
+}
+
+#_mReader .mail .attachments.loaded {
+	background-color: #D3E9FF;
+}
+
+#_mReader .mail .attachments.loaded .disable_overlay {
+	display:none;
+}
+
+#_mReader .mail .attachments div {
+	display:inline;
+	margin-right: 15px;
+}
+
+#_mReader .mail .attachments img {
+	height: 25px;
+	margin-right: 10px;
+}
+
+/***** mReader.css *****/

@@ -1,0 +1,68 @@
+
+#_mLogin {
+	-webkit-animation: whiteFadeOut 5s;
+	-moz-animation: whiteFadeOut 5s;
+	-o-animation: whiteFadeOut 5s;
+}
+
+
+@keyframes whiteFadeOut
+{
+from {background:white;}
+to {background:rgba(0,0,0,0);}
+}
+
+@-moz-keyframes whiteFadeOut
+{
+from {background: white;}
+to {background:rgba(0,0,0,0);}
+}
+
+@-webkit-keyframes whiteFadeOut 
+{
+from {background: white;}
+to {background:rgba(0,0,0,0);}
+}
+
+@-o-keyframes whiteFadeOut
+{
+from {background: white;}
+to {background:rgba(0,0,0,0);}
+}
+
+/***********************************************/
+
+#_mLogin_backdrop_rotating {
+	height: 1500px;
+	width: 1500px;
+	margin:0;
+	padding:0;
+	background-image:url('../../img/spiral-galaxy-bg.jpg');
+	background-size: cover;
+
+	-webkit-animation: movingBackground 100s;
+	-moz-animation: movingBackground 100s;
+	-o-animation: movingBackground 100s;
+}
+
+@-webkit-keyframes movingBackground /* Safari and Chrome */
+{
+from { -webkit-transform: rotate(0deg);  }
+to { -webkit-transform: rotate(100deg); }
+}
+
+@-moz-keyframes movingBackground /* Safari and Chrome */
+{
+from { -moz-transform: rotate(0deg);  }
+to { -moz-transform: rotate(100deg); }
+}
+
+
+@-o-keyframes movingBackground /* Safari and Chrome */
+{
+from { -o-transform: rotate(0deg);  }
+to { -o-transform: rotate(100deg); }
+}
+
+
+

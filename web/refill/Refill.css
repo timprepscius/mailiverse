@@ -1,0 +1,185 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+a {
+	text-decoration:none;
+}
+
+table {
+	background-color:white;
+}
+
+.control-group {
+	margin-top:10px;
+}
+
+input {
+	margin-top:3px;
+	
+}
+
+input[type="password"], input[type="text"] {
+	height:20px;
+	width:200px;
+}
+
+
+/*******************************************************/
+
+#_mRefillExecute {
+	display:none;
+	position:fixed;
+	background-color: rgba(0,0,0,0.5);
+}
+
+
+#_mRefillExecute .modal {
+	padding:10px;
+}
+
+#_mRefillExecute_failure {
+	color: red;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#_mRefillExecute .modal {
+	top: 350px;
+}
+
+/*******************************************************/
+
+#_mLoading .modal {
+	position: absolute;
+	color: red;
+	bottom: 0;
+	right:0;
+}
+
+.loading {
+	color:red;
+}
+
+/********************************************************/
+
+.red {
+	color:red;
+}
+
+.warning {
+	color:red;
+}
+
+.checkbox.inline input {
+	margin-bottom: 7px;
+	margin-right: 5px;	
+}
+
+
+.refill {
+	margin: 50px;
+}
+
+.refill .grey {
+	background-color:#CCC;
+	padding:10px;
+}
+
+.refill table {
+	width:100%;	
+}
+
+.refill table td {
+	position:relative;
+	background-color:white;
+}
+
+
+.left-side {
+	width:50%;
+	vertical-align: top;
+}
+
+.left-side .inner-td {
+	margin:10px;
+}
+
+.right-side .inner-td {
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:20px;
+	margin-top:10px;
+	margin-bottom:10px;
+	border-left: 1px solid;
+}
+
+.right-side {
+	
+}
+
+#captcha_container {
+	height:129px;
+}
+
+.success {
+	color: #468847
+}
+
+.error {
+	color: #F00;
+}
+
+.help-suggest {
+	font-size: smallest;
+}
+
+
+.storage-option 
+{
+	height:220px;
+	min-height:220px;
+	max-height:220px;
+	
+}
+
+.payment-option 
+{
+	height:270px;
+	min-height:270px;
+	max-height:270px;
+	
+}
+
+input.card-expiry-month 
+{
+	width: 20px;	
+}
+
+
+input.card-expiry-year
+{
+	width: 30px;
+}
+
+input.card-cvc 
+{
+	width: 50px;
+}
+
+table.card-table
+{
+	width: auto;	
+}
+
+#bitpay_embedded_dialog {
+	text-align:center;
+	minimum-height: 100px;
+}
+
+iframe.bitpay-iframe {
+	width: 300px;
+	minimum-height: 300px;
+	height: 300px;
+}

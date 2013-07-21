@@ -1,0 +1,30 @@
+
+body {
+	padding-bottom: 40px;
+}
+
+footer {
+	width:100%;
+	text-align:right;
+	
+}
+
+[class*="span"] {
+	margin: 0px;
+	float: none;
+}
+
+body, table td, select, button {
+	font-family: arial, sans-serif;
+	font-size: 13px;
+}
+
+.version {
+	font-size:8px;
+	color:grey;
+}
+
+.initially-hidden {
+	display:none;
+}
+

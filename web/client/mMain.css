@@ -1,0 +1,140 @@
+/***** mMain.css *****/
+
+.popover
+{
+	z-index: 1050;
+}
+
+body
+{
+	padding: 0;
+	margin: 0;
+}
+
+#_mMain {
+	width:98%;
+	margin:1%;
+	min-height: 550px;
+	display:none;
+}
+
+#_mMain {
+	border-collapse: collapse;
+}
+
+#_mMain_sidebar_embed {
+	border-collapse: collapse;
+}
+
+#_mMain_systemFolders td {
+	height:18px;
+}
+
+#_mMain_userFolders td {
+	height:18px;
+}
+
+#_mMain_sidebar {
+	margin:0;
+}
+
+#_mMain_row {
+	vertical-align: top;
+}
+
+#_mMain_sidebar {
+	width:100px;
+	min-width: 100px;
+	max-width: 100px;
+	padding-right: 0;
+}
+
+#_mMain_sidebar_embed {
+	width: 100%;
+}
+
+#_mMain_sidebar_embed .userFolderSpacer {
+	padding-top:9px;
+}
+
+#_mMain_userFoldersAdd .btn {
+	height: 27px;
+	line-height: 13px;
+	width: 25px;
+	padding: 0;
+}
+
+#_mMain_userFoldersAdd .btn img {
+	width:100%;	
+}
+
+#_mMain_sidebar a {
+	color: #00C;
+}
+
+#_mMain_sidebar_embed td {
+	width: 100%;
+}
+
+#_mMain_sidebar .selected {
+	background-color: #C3D9FF;	
+}
+
+#_mMain_sidebar .compose {
+	margin-bottom:10px;
+}
+
+#_mMain_content {
+	border-left: 5px solid #C3D9FF;
+	padding: 0;
+}
+
+#_mMain_content_header {
+	background-color: #C3D9FF;
+}
+
+#_mThreads_content_header_select_all_span {	
+	background-color:#E8EEF7;
+	padding:4px;
+	vertical-align: middle;
+	line-height:12px; /* no idea why this works */
+}
+
+#_mThreads_content_header_select_all {
+	vertical-align: baseline; /* no idea why this works */
+}
+
+#_mMain_content_header button, #_mMain_content_header select {
+	height: 22px;
+	font-size: 11px;
+}
+
+#_mMain_content_header button {
+	margin: 5px;
+	padding-top:0;
+	padding-bottom:0;	
+}
+
+#_mMain_content_header select {
+	margin: 0px;
+	padding: 0px;
+}
+
+a.btn-select {
+	margin: 0px;
+}
+
+#_mMain_content_header_range {
+	text-align:right;
+}
+
+#_mMain_footer {
+	clear:both;
+	
+}
+
+#work-area {
+	display:none;
+}
+
+/***** mMain.css *****/

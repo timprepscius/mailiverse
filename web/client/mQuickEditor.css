@@ -1,0 +1,70 @@
+/***** mQuickEditor.css *****/
+
+
+#_mReader .mQuickEditor {
+	margin-bottom: 0px;
+	background-color: #EEEEEE;
+	position:relative;
+}
+
+#_mReader .mQuickEditor .header {
+	padding-left:5px;
+	padding-top: 5px;
+	position: relative;
+	clear:none;
+	background-color: rgba(0,0,0,0);
+}
+
+#_mReader .mQuickEditor .header .date {
+	bottom: 0px;
+	top: auto;
+}
+
+.mQuickEditor .quick-label {
+	margin-left:5px;
+	padding-top:5px;
+	font-weight: bold;
+}
+
+.mQuickEditor .more-options {
+	float:right;
+	right:0;
+	bottom:0;
+	top: 0;
+}
+
+.mQuickEditor .compose-btn {
+}
+
+.mQuickEditor .header {
+}
+
+.mQuickEditor .editor {
+	width: 100%;
+}
+
+.mQuickEditor .textedit {
+	width: 100%;
+}
+
+.mQuickEditor .textedit textarea {
+	width: 100%;
+}
+
+.mQuickEditor .footer {
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left: 5px;
+	background-color: #C3D9FF;
+}
+
+.mQuickEditor .footer span {
+	margin-right:10px;
+}
+
+.mQuickEditor .includeText {
+	margin-left:5px;
+	vertical-align: middle;
+}
+
+/***** mQuickEditor.css *****/

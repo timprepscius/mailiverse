@@ -1,0 +1,81 @@
+/***** mThreads.css *****/
+
+#_mThreads_container {
+	min-height:516px;
+}
+
+#_mThreads .important_tag {
+	color: red;
+	margin-left: 5px;
+}
+
+#_mThreads .subject {
+	color: rgb(0, 0, 204);
+	font-weight: bold;
+}
+
+#_mThreads .brief {
+	padding-left: 10px;
+	color:#7777CC;
+}
+
+#_mThreads .read td {
+	background-color: #E8EEF7;
+}
+
+#_mThreads td {
+	border-bottom: 1px solid #bbb;
+}
+
+#_mThreads .loading {
+	border-bottom: 0;
+	background-color: #FCFCFC;
+	color: #FCFCFC;
+}
+
+#_mThreads .select {
+	width:10px;
+}
+
+#_mThreads .selector {
+	margin-right: 10px;
+	margin-left: 5px;
+}
+
+#_mThreads .participants {
+	width: 18%;
+	color: black;
+	font-weight: bold;
+}
+
+#_mThreads a {
+	text-decoration: none;	
+
+	height: 14px;
+	overflow: hidden;
+	display: block;
+}
+
+#_mThreads .content {
+	max-width:1px; /* i have no idea why this works */
+}	
+
+#_mThreads .date {
+	text-align: left;
+	width: 70px;
+	min-width: 70px;
+	color: black;
+	font-weight: bold;
+}
+
+#_mThreads .thread_icon {
+	width: 15px;
+	height: 15px;
+	margin-left: 5px;
+}
+
+#_mThreads tr {
+	height:24px;	
+}
+
+/***** mThreads.css *****/

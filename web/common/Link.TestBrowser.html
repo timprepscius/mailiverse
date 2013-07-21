@@ -1,0 +1,28 @@
+
+
+<div id="_browser_incompatible" class="initially-hidden">
+
+<div class="inner">
+<br/>
+You are using a known incompatible browser.<br/>
+<br/>
+
+Please upgrade to the latest release, or switch to another browser.<br/>
+<br/>
+</div>
+</div>
+
+<script>
+	if (!('WebSocket' in window))
+		$('#_browser_incompatible').show();
+</script>
+
+<script>
+var ua = navigator.userAgent.toLowerCase();
+var isAndroid = (ua.indexOf("android") != -1);
+var isIos = (ua.indexOf("iphone") != -1) || (ua.indexOf("ipod") != -1);
+
+if(isAndroid || isIos) {
+  window.location = 'mobile.html';
+}
+</script>

@@ -1,0 +1,30 @@
+
+.version {
+	font-size: 8px;
+	color: grey;
+}
+
+ol,ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;	
+}
+
+li {
+	margin-top:20px;
+}
+
+.faq {
+	font-size:15px;
+		
+}
+
+.question {
+	color: #000055;
+	font-weight: bold;
+
+}
+
+.answer {
+	color: black;
+}

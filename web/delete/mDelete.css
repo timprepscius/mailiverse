@@ -1,0 +1,177 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+a {
+	text-decoration:none;
+}
+
+table {
+	background-color:white;
+}
+
+.control-group {
+	margin-top:10px;
+}
+
+input {
+	margin-top:3px;
+	
+}
+
+input[type="password"], input[type="text"] {
+	height:20px;
+	width:200px;
+}
+
+/**********************************************************/
+
+.modal-container {
+	width: 100%;
+	height: 100%;
+
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 1;
+	background-color: rgba(210,210,255,0.2);
+}
+
+.bootstrap-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 1050;
+	width: 560px;
+	margin: -250px 0 0 -280px;
+	overflow: auto;
+	background-color: #ffffff;
+	border: 1px solid #999;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+/*******************************************************/
+
+#_mDeleteExecute {
+	display:none;
+	position:fixed;
+	background-color: rgba(0,0,0,0.5);
+}
+
+#_mDeleteExecute .modal {
+	padding:10px;
+}
+
+#_mDeleteExecute_failure {
+	color: red;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#_mDeleteExecute .modal {
+	top: 350px;
+}
+
+/*******************************************************/
+
+#_mLoading .modal {
+	position: absolute;
+	color: red;
+	bottom: 0;
+	right:0;
+}
+
+.loading {
+	color:red;
+}
+
+/********************************************************/
+
+.red {
+	color:red;
+}
+
+.warning {
+	color:red;
+}
+
+.checkbox.inline input {
+	margin-bottom: 7px;
+	margin-right: 5px;	
+}
+
+
+.delete {
+	margin: 50px;
+}
+
+.delete .grey {
+	background-color:#CCC;
+	padding:10px;
+}
+
+.delete table {
+	width:100%;	
+}
+
+.delete table td {
+	position:relative;
+	background-color:white;
+}
+
+
+.left-side {
+	width:50%;
+	vertical-align: top;
+}
+
+.left-side .inner-td {
+	margin:10px;
+}
+
+.right-side .inner-td {
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:20px;
+	margin-top:10px;
+	margin-bottom:10px;
+	border-left: 1px solid;
+}
+
+.right-side {
+	
+}
+
+#captcha_container {
+	height:129px;
+}
+
+.success {
+	color: #468847
+}
+
+.error {
+	color: #F00;
+}
+
+.help-suggest {
+	font-size: smallest;
+}
+
+.storage-option 
+{
+	height:230px;
+	min-height:220px;
+	max-height:220px;
+}
+
