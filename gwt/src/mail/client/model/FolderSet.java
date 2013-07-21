@@ -1,0 +1,1 @@
+../../../../../java/core/src/mail/client/model/FolderSet.java

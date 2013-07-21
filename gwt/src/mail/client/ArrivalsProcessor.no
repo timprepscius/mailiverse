@@ -1,0 +1,27 @@
+package mail.client;
+
+import java.io.ByteArrayInputStream;
+import java.util.Date;
+
+import mail.client.core.Direction;
+
+public class ArrivalsProcessor extends Servent<Master> {
+
+	public boolean alreadyProcessed(String path) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public void processSuccess(Direction direction, String path, Date date,
+			ByteArrayInputStream byteArrayInputStream) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void processFailure(Direction direction, String path, Date date,
+			Exception e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

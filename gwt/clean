@@ -1,0 +1,5 @@
+rm -rf gwt-unitCache
+rm -rf war/WEB-INF/classes/
+rm -rf war/WEB-INF/deploy/
+
+rm war/mailiverse_gwt/*.cache.html

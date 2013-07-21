@@ -1,0 +1,8 @@
+.gwt
+gwt-unitCache
+war/WEB-INF
+war/mailiverse_gwt
+war/*.html
+war/*.js
+war/*.css
+war/rev/
