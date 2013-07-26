@@ -1,0 +1,14 @@
+#!/bin/bash 
+
+cp $1 Icon-iPhone.png
+sips --resampleHeightWidth 57 57 Icon-iPhone.png
+
+cp $1 Icon-iPhone-2x.png
+sips --resampleHeightWidth 114 114 Icon-iPhone-2x.png
+
+cp $1 Icon-iPad.png
+sips --resampleHeightWidth 72 72 Icon-iPad.png
+
+cp $1 Icon-iPad-2x.png
+sips --resampleHeightWidth 144 144 Icon-iPad-2x.png
+

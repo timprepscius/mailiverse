@@ -1,0 +1,305 @@
+/*
+ * Parser.cpp
+ *
+ *  Created on: Oct 27, 2012
+ *      Author: tprepscius
+ */
+
+#include "Parser.h"
+
+#include <mimetic/mimetic.h>
+#include <mimetic/codec/qp.h>
+#include <mimetic/rfc822/datetime.h>
+#include <ctime>
+
+#include "mailiverse/core/crypt/Hash.h"
+
+#include <boost/date_time/posix_time/posix_time.hpp>
+#include <boost/algorithm/string/finder.hpp>
+#include <boost/algorithm/string/replace.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/locale.hpp>
+#include <boost/locale/encoding.hpp>
+
+#include <boost/foreach.hpp>
+#include "mailiverse/utilities/Strings.h"
+
+#include "../model/Mail.h"
+
+using namespace boost::posix_time;
+
+using namespace mailiverse::mail::manager;
+using namespace mailiverse::mail;
+using namespace mailiverse::core;
+using namespace mailiverse::utilities;
+using namespace mailiverse;
+using namespace mimetic;
+
+Parser::Parser ()
+{
+
+}
+
+Parser::~Parser ()
+{
+
+}
+
+std::string doubleDigit (int i)
+{
+	if (i < 10)
+		return "0" + toString(i);
+
+	return toString(i);
+}
+
+std::string toUtfFrom (const std::string &_body, const std::string &encoding, const std::string &charset)
+{
+	std::string body = _body;
+
+	if (encoding == ContentTransferEncoding::quoted_printable || encoding == "Q")
+	{
+		mimetic::QP::Decoder decoder;
+		std::ostringstream out;
+		decoder.process(body.begin(), body.end(), std::ostreambuf_iterator<char>(out));
+		body = out.str();
+	}
+	else
+	if (encoding == ContentTransferEncoding::base64 || encoding == "B")
+	{
+		mimetic::Base64::Decoder decoder;
+		std::ostringstream out;
+		decoder.process(body.begin(), body.end(), std::ostreambuf_iterator<char>(out));
+		body = out.str();
+	}
+
+	if (charset != "NONE")
+	{
+		body = boost::locale::conv::to_utf<char>(body,charset);
+	}
+
+	return body;
+}
+
+std::string toUtfFromEmbed (const std::string &_body)
+{
+	std::string body = _body;
+	if (body.find("=?")==0)
+	{
+		int Q1 = 1;
+		int Q2 = body.find("?", Q1+1);
+		int Q3 = body.find("?", Q2+1);
+		int Q4 = body.find("?=", Q3+1);
+
+		if (Q1 != -1 && Q2 != -1 && Q3 != -1 && Q4 != -1)
+		{
+			std::string charset = body.substr(Q1+1, Q2-(Q1+1));
+			std::string encoding = body.substr(Q2+1, Q3-(Q2+1));
+			std::string text = body.substr(Q3+1, Q4-(Q3+1));
+
+			body = toUtfFrom(text, encoding, charset);
+		}
+	}
+
+	return body;
+}
+
+void handleNewAddress (
+	const Mailbox &mb,
+	model::IdentityList &addressList
+)
+{
+	std::string email = toUtfFromEmbed(mb.mailbox()+"@"+mb.domain());
+	std::string name = toUtfFromEmbed(mb.label());
+
+	std::ostringstream ss;
+	ss << name;
+	if (!name.empty())
+		ss << " ";
+	ss << "<" << email << ">";
+
+	addressList.add(new model::UnregisteredIdentity(ss.str()));
+}
+
+
+model::Mail *Parser::parse (Direction::Enum direction, const String &externalKey, const Date &date, const Block &content)
+{
+	LogDebug(mailiverse::mail::manager::Parser, "parse " << toString(content));
+	
+	MimeEntity me(content.begin(), content.end());
+
+	struct {
+		model::IdentityPtr author;
+		model::RecipientsPtr recipients;
+		DatePtr date;
+		model::BodyPtr body;
+		StringPtr subject;
+		StringPtr uidl;
+		model::TransportStatePtr transportState;
+		model::AttachmentsPtr attachments;
+	} M;
+
+	const Header &header = me.header();
+
+	{
+		model::IdentityList from;
+		model::IdentityList to, cc, bcc, replyTo;
+
+		if (header.hasField("From"))
+		{
+			std::vector<Mailbox>::const_iterator i;
+			for (i=header.from().begin(); i!=header.from().end(); ++i)
+				handleNewAddress(*i, from);
+		}
+
+		if (!from.empty())
+			M.author = from.front();
+
+		{
+			mimetic::AddressList::const_iterator i;
+
+			if (header.hasField("To"))
+			{
+				for (i=header.to().begin(); i!=header.to().end(); ++i)
+				{
+					handleNewAddress(i->mailbox(), to);
+				}
+			}
+
+			if (header.hasField("Cc"))
+			{
+				for (i=header.cc().begin(); i!=header.cc().end(); ++i)
+				{
+					handleNewAddress(i->mailbox(), cc);
+				}
+			}
+
+			if (header.hasField("Bcc"))
+			{
+				for (i=header.bcc().begin(); i!=header.bcc().end(); ++i)
+				{
+					handleNewAddress(i->mailbox(), bcc);
+				}
+			}
+			if (header.hasField("Reply-To"))
+			{
+				for (i=header.replyto().begin(); i!=header.replyto().end(); ++i)
+				{
+					handleNewAddress(i->mailbox(), replyTo);
+				}
+			}
+		}
+
+		M.recipients = new model::Recipients(to,cc,bcc,replyTo);
+	}
+
+	{
+		if (me.header().hasField("Date"))
+		{
+			DateTime dateTime(me.header().field("Date").value());
+
+			std::ostringstream oss;
+			oss <<
+				dateTime.year() << "-" <<
+				doubleDigit(dateTime.month().ordinal()) << "-" <<
+				doubleDigit(dateTime.day()) << " " <<
+				doubleDigit(dateTime.hour()) << ":" <<
+				doubleDigit(dateTime.minute()) << ":" <<
+				doubleDigit(dateTime.second()) << " " << dateTime.zone().name();
+
+			 M.date = new Date(mailiverse::utilities::parseDate(oss.str(), "%Y-%m-%d %H:%M:%S", true));
+		}
+		else
+		{
+			M.date = new Date(date);
+		}
+	}
+
+	{
+		std::string text, html;
+
+		List<MimeEntity *> entities;
+		entities.push_back(&me);
+		
+		while (!entities.empty())
+		{
+			// look for the html
+			MimeEntity *p = entities.front();
+			entities.pop_front();
+			
+			const Header &h = p->header();
+			const ContentType &contentType = h.contentType();
+			const std::string &typeString = contentType.type();
+			const std::string &subType = contentType.subtype();
+
+			std::string charset =
+				(!contentType.param("charset").empty()) ?
+					contentType.param("charset") :
+					"ISO-8859-1";
+
+			std::string encoding =
+				h.hasField(ContentTransferEncoding::label) ?
+					h.contentTransferEncoding().mechanism() :
+					"NONE";
+					
+			if (typeString == "text" && subType == "html" && html.empty())
+			{
+				html = toUtfFrom(toString(p->body()), encoding, charset);
+			}
+			else
+			if (typeString == "text" && subType == "plain" && text.empty())
+			{
+				text = toUtfFrom(toString(p->body()), encoding, charset);
+			}
+			
+			MimeEntityList &mel = p->body().parts();
+			for (MimeEntityList::iterator i=mel.begin(); i!=mel.end(); ++i)
+				entities.push_back((*i));
+		}
+
+		M.body = 
+			new model::Body(
+				text.empty() ?
+					NULL:new String(text), 
+				html.empty() ?
+					NULL : new String(html)
+			);
+	}
+
+	{
+		if (me.header().hasField("Subject"))
+			M.subject = new String(toUtfFromEmbed(me.header().subject()));
+	}
+
+	{
+		if (me.header().hasField("Message-ID"))
+			M.uidl = new String(me.header().field("Message-ID").value());
+	}
+
+	M.transportState =
+		Direction::IN ?
+			model::TransportState::fromString(model::TransportState::RECEIVED) :
+			model::TransportState::fromString(model::TransportState::SENT);
+
+	M.attachments = new model::Attachments();
+
+	model::Mail *mail = 
+		new model::Mail(
+			new model::Header(
+				new String(externalKey),
+				M.uidl,
+				M.author,
+				M.recipients,
+				M.subject,
+				M.date,
+				M.transportState,
+				M.body->calculateBrief()
+			),
+			M.body,
+			M.attachments
+		);
+		
+	mail->getHeader()->setDictionary (new model::Dictionary(mail));
+	
+	return mail;
+}

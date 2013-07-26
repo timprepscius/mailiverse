@@ -1,0 +1,1422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F60A685D16CFE5EA0096D52A /* Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F60A685C16CFE5EA0096D52A /* Constants.cpp */; };
+		F60A685F16CFEA630096D52A /* Types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F60A685E16CFEA620096D52A /* Types.cpp */; };
+		F60A686216D007140096D52A /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F60A686116D007130096D52A /* Time.cpp */; };
+		F60B5C5D16C4BE28008BDDCC /* CacheFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F60B5C5C16C4BE27008BDDCC /* CacheFactory.cpp */; };
+		F61EBB5D16D401B600D3777A /* MasterCacheSerializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F61EBB5C16D401B500D3777A /* MasterCacheSerializer.cpp */; };
+		F627E44216D2D6A3006911E7 /* CryptorRSAAES.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F627E44116D2D6A2006911E7 /* CryptorRSAAES.cpp */; };
+		F62A18C016DE9925002C2B42 /* Identity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F62A18BF16DE9925002C2B42 /* Identity.cpp */; };
+		F62F9B5016D84C9800DF7868 /* ConstantsSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F62F9B4F16D84C9800DF7868 /* ConstantsSettings.cpp */; };
+		F63FA71816C6056800BFF827 /* ModelSerializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F63FA71716C6056800BFF827 /* ModelSerializer.cpp */; };
+		F6504EE816C9EE810072E818 /* IndexedCacheSerializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6504EE716C9EE810072E818 /* IndexedCacheSerializer.cpp */; };
+		F662CF7B16D2743B0016BF2B /* ConstantsMailJson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F662CF7A16D2743B0016BF2B /* ConstantsMailJson.cpp */; };
+		F6723E6816B1775800A11EA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6723E6716B1775800A11EA3 /* Foundation.framework */; };
+		F6723F7916B1789800A11EA3 /* pugiconfig.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F6723E7E16B1789800A11EA3 /* pugiconfig.hpp */; };
+		F6723F7A16B1789800A11EA3 /* pugixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723E7F16B1789800A11EA3 /* pugixml.cpp */; };
+		F6723F7B16B1789800A11EA3 /* pugixml.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F6723E8016B1789800A11EA3 /* pugixml.hpp */; };
+		F6723F7C16B1789800A11EA3 /* Authenticator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723E8316B1789800A11EA3 /* Authenticator.cpp */; };
+		F6723F7D16B1789800A11EA3 /* Authenticator.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E8416B1789800A11EA3 /* Authenticator.h */; };
+		F6723F7E16B1789800A11EA3 /* StreamSessionClientGet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723E8516B1789800A11EA3 /* StreamSessionClientGet.cpp */; };
+		F6723F7F16B1789800A11EA3 /* StreamSessionClientGet.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E8616B1789800A11EA3 /* StreamSessionClientGet.h */; };
+		F6723F8016B1789800A11EA3 /* Block.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E8816B1789800A11EA3 /* Block.h */; };
+		F6723F8116B1789800A11EA3 /* BlockCompression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723E8916B1789800A11EA3 /* BlockCompression.cpp */; };
+		F6723F8216B1789800A11EA3 /* BlockCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E8A16B1789800A11EA3 /* BlockCompression.h */; };
+		F6723F8316B1789800A11EA3 /* BlockIO.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E8B16B1789800A11EA3 /* BlockIO.h */; };
+		F6723F8416B1789800A11EA3 /* AsyncStoreConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E8D16B1789800A11EA3 /* AsyncStoreConnector.h */; };
+		F6723F8516B1789800A11EA3 /* AsyncStoreConnectorSynth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723E8E16B1789800A11EA3 /* AsyncStoreConnectorSynth.cpp */; };
+		F6723F8616B1789800A11EA3 /* AsyncStoreConnectorSynth.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E8F16B1789800A11EA3 /* AsyncStoreConnectorSynth.h */; };
+		F6723F8716B1789800A11EA3 /* ConnectorException.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E9016B1789800A11EA3 /* ConnectorException.h */; };
+		F6723F8816B1789800A11EA3 /* FileInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E9116B1789800A11EA3 /* FileInfo.h */; };
+		F6723F8916B1789800A11EA3 /* Lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723E9216B1789800A11EA3 /* Lib.cpp */; };
+		F6723F8A16B1789800A11EA3 /* Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E9316B1789800A11EA3 /* Lib.h */; };
+		F6723F8B16B1789800A11EA3 /* StoreConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723E9416B1789800A11EA3 /* StoreConnector.cpp */; };
+		F6723F8C16B1789800A11EA3 /* StoreConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E9516B1789800A11EA3 /* StoreConnector.h */; };
+		F6723F8D16B1789800A11EA3 /* StoreConnectorEncrypted.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E9616B1789800A11EA3 /* StoreConnectorEncrypted.h */; };
+		F6723F8E16B1789800A11EA3 /* StoreConnectorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723E9716B1789800A11EA3 /* StoreConnectorInfo.cpp */; };
+		F6723F8F16B1789800A11EA3 /* StoreConnectorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E9816B1789800A11EA3 /* StoreConnectorInfo.h */; };
+		F6723F9016B1789800A11EA3 /* Base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723E9A16B1789800A11EA3 /* Base64.cpp */; };
+		F6723F9116B1789800A11EA3 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E9B16B1789800A11EA3 /* Base64.h */; };
+		F6723F9216B1789800A11EA3 /* CryptoException.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E9C16B1789800A11EA3 /* CryptoException.h */; };
+		F6723F9316B1789800A11EA3 /* Cryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E9D16B1789800A11EA3 /* Cryptor.h */; };
+		F6723F9416B1789800A11EA3 /* CryptorAESIV.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723E9E16B1789800A11EA3 /* CryptorAESIV.cpp */; };
+		F6723F9516B1789800A11EA3 /* CryptorAESIV.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723E9F16B1789800A11EA3 /* CryptorAESIV.h */; };
+		F6723F9616B1789800A11EA3 /* CryptorNone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EA016B1789800A11EA3 /* CryptorNone.cpp */; };
+		F6723F9716B1789800A11EA3 /* CryptorNone.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EA116B1789800A11EA3 /* CryptorNone.h */; };
+		F6723F9816B1789800A11EA3 /* CryptorRSA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EA216B1789800A11EA3 /* CryptorRSA.cpp */; };
+		F6723F9916B1789800A11EA3 /* CryptorRSA.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EA316B1789800A11EA3 /* CryptorRSA.h */; };
+		F6723F9A16B1789800A11EA3 /* CryptorRSAFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EA516B1789800A11EA3 /* CryptorRSAFactory.h */; };
+		F6723F9B16B1789800A11EA3 /* CryptorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EA616B1789800A11EA3 /* CryptorUtil.h */; };
+		F6723F9C16B1789800A11EA3 /* Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EA716B1789800A11EA3 /* Hash.cpp */; };
+		F6723F9D16B1789800A11EA3 /* Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EA816B1789800A11EA3 /* Hash.h */; };
+		F6723F9E16B1789800A11EA3 /* KeyPairFromPassword.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EA916B1789800A11EA3 /* KeyPairFromPassword.cpp */; };
+		F6723F9F16B1789800A11EA3 /* KeyPairFromPassword.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EAA16B1789800A11EA3 /* KeyPairFromPassword.h */; };
+		F6723FA016B1789800A11EA3 /* Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EAB16B1789800A11EA3 /* Lib.h */; };
+		F6723FA116B1789800A11EA3 /* PBE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EAC16B1789800A11EA3 /* PBE.cpp */; };
+		F6723FA216B1789800A11EA3 /* PBE.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EAD16B1789800A11EA3 /* PBE.h */; };
+		F6723FA316B1789800A11EA3 /* SRPClientSession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EAF16B1789800A11EA3 /* SRPClientSession.cpp */; };
+		F6723FA416B1789800A11EA3 /* SRPClientSession.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EB016B1789800A11EA3 /* SRPClientSession.h */; };
+		F6723FA516B1789800A11EA3 /* SRPConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EB116B1789800A11EA3 /* SRPConstants.cpp */; };
+		F6723FA616B1789800A11EA3 /* SRPConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EB216B1789800A11EA3 /* SRPConstants.h */; };
+		F6723FA716B1789800A11EA3 /* SRPFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EB316B1789800A11EA3 /* SRPFactory.cpp */; };
+		F6723FA816B1789800A11EA3 /* SRPFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EB416B1789800A11EA3 /* SRPFactory.h */; };
+		F6723FA916B1789800A11EA3 /* SRPPackets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EB516B1789800A11EA3 /* SRPPackets.cpp */; };
+		F6723FAA16B1789800A11EA3 /* SRPPackets.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EB616B1789800A11EA3 /* SRPPackets.h */; };
+		F6723FAB16B1789800A11EA3 /* SRPPacketSerializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EB716B1789800A11EA3 /* SRPPacketSerializer.cpp */; };
+		F6723FAC16B1789800A11EA3 /* SRPPacketSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EB816B1789800A11EA3 /* SRPPacketSerializer.h */; };
+		F6723FAD16B1789800A11EA3 /* SRPServerSession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EB916B1789800A11EA3 /* SRPServerSession.cpp */; };
+		F6723FAE16B1789800A11EA3 /* SRPServerSession.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EBA16B1789800A11EA3 /* SRPServerSession.h */; };
+		F6723FAF16B1789800A11EA3 /* SRPUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EBB16B1789800A11EA3 /* SRPUtils.cpp */; };
+		F6723FB016B1789800A11EA3 /* SRPUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EBC16B1789800A11EA3 /* SRPUtils.h */; };
+		F6723FB116B1789800A11EA3 /* SRPVerifier.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EBD16B1789800A11EA3 /* SRPVerifier.h */; };
+		F6723FB216B1789800A11EA3 /* StreamSessionSRPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EBE16B1789800A11EA3 /* StreamSessionSRPClient.cpp */; };
+		F6723FB316B1789800A11EA3 /* StreamSessionSRPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EBF16B1789800A11EA3 /* StreamSessionSRPClient.h */; };
+		F6723FB416B1789800A11EA3 /* StreamSessionSRPServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EC016B1789800A11EA3 /* StreamSessionSRPServer.cpp */; };
+		F6723FB516B1789800A11EA3 /* StreamSessionSRPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EC116B1789800A11EA3 /* StreamSessionSRPServer.h */; };
+		F6723FB616B1789800A11EA3 /* Environment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EC416B1789800A11EA3 /* Environment.cpp */; };
+		F6723FB716B1789800A11EA3 /* Environment.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EC516B1789800A11EA3 /* Environment.h */; };
+		F6723FB816B1789800A11EA3 /* Lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EC616B1789800A11EA3 /* Lib.cpp */; };
+		F6723FB916B1789800A11EA3 /* Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EC716B1789800A11EA3 /* Lib.h */; };
+		F6723FBA16B1789800A11EA3 /* StoreConnectorAWS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EC816B1789800A11EA3 /* StoreConnectorAWS.cpp */; };
+		F6723FBB16B1789800A11EA3 /* StoreConnectorAWS.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EC916B1789800A11EA3 /* StoreConnectorAWS.h */; };
+		F6723FBC16B1789800A11EA3 /* StoreConnectorDropbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723ECA16B1789800A11EA3 /* StoreConnectorDropbox.cpp */; };
+		F6723FBD16B1789800A11EA3 /* StoreConnectorDropbox.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723ECB16B1789800A11EA3 /* StoreConnectorDropbox.h */; };
+		F6723FBE16B1789800A11EA3 /* StoreConnectorFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723ECC16B1789800A11EA3 /* StoreConnectorFactory.cpp */; };
+		F6723FBF16B1789800A11EA3 /* StoreConnectorFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723ECD16B1789800A11EA3 /* StoreConnectorFactory.h */; };
+		F6723FC416B1789800A11EA3 /* IO.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723ED316B1789800A11EA3 /* IO.h */; };
+		F6723FC516B1789800A11EA3 /* StreamLineSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723ED416B1789800A11EA3 /* StreamLineSocket.cpp */; };
+		F6723FC616B1789800A11EA3 /* StreamLineSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723ED516B1789800A11EA3 /* StreamLineSocket.h */; };
+		F6723FC716B1789800A11EA3 /* StreamSession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723ED616B1789800A11EA3 /* StreamSession.cpp */; };
+		F6723FC816B1789800A11EA3 /* StreamSession.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723ED716B1789800A11EA3 /* StreamSession.h */; };
+		F6723FC916B1789800A11EA3 /* StreamSessionSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723ED816B1789800A11EA3 /* StreamSessionSocket.h */; };
+		F6723FCA16B1789800A11EA3 /* StreamSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723ED916B1789800A11EA3 /* StreamSocket.cpp */; };
+		F6723FCB16B1789800A11EA3 /* StreamSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EDA16B1789800A11EA3 /* StreamSocket.h */; };
+		F6723FCC16B1789800A11EA3 /* Types.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EDB16B1789800A11EA3 /* Types.h */; };
+		F6723FCD16B1789800A11EA3 /* Callback.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EDE16B1789800A11EA3 /* Callback.h */; };
+		F6723FCE16B1789800A11EA3 /* HttpDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EDF16B1789800A11EA3 /* HttpDelegate.h */; };
+		F6723FCF16B1789800A11EA3 /* Versioning.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EE116B1789800A11EA3 /* Versioning.h */; };
+		F6723FD016B1789800A11EA3 /* Exception.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EE216B1789800A11EA3 /* Exception.h */; };
+		F6723FD116B1789800A11EA3 /* Cache.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EE516B1789800A11EA3 /* Cache.h */; };
+		F6723FD216B1789800A11EA3 /* CacheFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EE616B1789800A11EA3 /* CacheFactory.h */; };
+		F6723FD416B1789800A11EA3 /* IndexedCache.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EE816B1789800A11EA3 /* IndexedCache.h */; };
+		F6723FD516B1789800A11EA3 /* IndexedCacheSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EE916B1789800A11EA3 /* IndexedCacheSerializer.h */; };
+		F6723FD616B1789800A11EA3 /* IndexedItems.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EEA16B1789800A11EA3 /* IndexedItems.h */; };
+		F6723FD716B1789800A11EA3 /* Info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EEB16B1789800A11EA3 /* Info.cpp */; };
+		F6723FD816B1789800A11EA3 /* Info.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EEC16B1789800A11EA3 /* Info.h */; };
+		F6723FD916B1789800A11EA3 /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EED16B1789800A11EA3 /* Item.cpp */; };
+		F6723FDA16B1789800A11EA3 /* Item.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EEE16B1789800A11EA3 /* Item.h */; };
+		F6723FDB16B1789800A11EA3 /* ItemFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EEF16B1789800A11EA3 /* ItemFactory.h */; };
+		F6723FDC16B1789800A11EA3 /* ItemFactoryStandard.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EF016B1789800A11EA3 /* ItemFactoryStandard.h */; };
+		F6723FDD16B1789800A11EA3 /* ItemSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EF116B1789800A11EA3 /* ItemSerializer.h */; };
+		F6723FDE16B1789800A11EA3 /* ID.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EF216B1789800A11EA3 /* ID.cpp */; };
+		F6723FDF16B1789800A11EA3 /* ID.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EF316B1789800A11EA3 /* ID.h */; };
+		F6723FE116B1789800A11EA3 /* Lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EF516B1789800A11EA3 /* Lib.cpp */; };
+		F6723FE216B1789800A11EA3 /* Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EF616B1789800A11EA3 /* Lib.h */; };
+		F6723FE316B1789800A11EA3 /* Store.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EF716B1789800A11EA3 /* Store.cpp */; };
+		F6723FE416B1789800A11EA3 /* Store.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EF816B1789800A11EA3 /* Store.h */; };
+		F6723FE616B1789800A11EA3 /* StoreLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EFA16B1789800A11EA3 /* StoreLibrary.h */; };
+		F6723FE716B1789800A11EA3 /* StoreMemory.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EFB16B1789800A11EA3 /* StoreMemory.h */; };
+		F6723FE816B1789800A11EA3 /* StoreMemoryFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EFC16B1789800A11EA3 /* StoreMemoryFactory.h */; };
+		F6723FE916B1789800A11EA3 /* StoreMemorySerializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EFD16B1789800A11EA3 /* StoreMemorySerializer.cpp */; };
+		F6723FEA16B1789800A11EA3 /* StoreMemorySerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723EFE16B1789800A11EA3 /* StoreMemorySerializer.h */; };
+		F6723FEB16B1789800A11EA3 /* Value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723EFF16B1789800A11EA3 /* Value.cpp */; };
+		F6723FEC16B1789800A11EA3 /* Value.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F0016B1789800A11EA3 /* Value.h */; };
+		F6723FED16B1789800A11EA3 /* Version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F0116B1789800A11EA3 /* Version.cpp */; };
+		F6723FEE16B1789800A11EA3 /* Version.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F0216B1789800A11EA3 /* Version.h */; };
+		F6723FEF16B1789800A11EA3 /* Actions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F0416B1789800A11EA3 /* Actions.cpp */; };
+		F6723FF016B1789800A11EA3 /* Actions.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F0516B1789800A11EA3 /* Actions.h */; };
+		F6723FF116B1789800A11EA3 /* ArrivalsMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F0616B1789800A11EA3 /* ArrivalsMonitor.h */; };
+		F6723FF216B1789800A11EA3 /* ArrivalsMonitorDefault.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F0716B1789800A11EA3 /* ArrivalsMonitorDefault.cpp */; };
+		F6723FF316B1789800A11EA3 /* ArrivalsMonitorDefault.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F0816B1789800A11EA3 /* ArrivalsMonitorDefault.h */; };
+		F6723FF416B1789800A11EA3 /* ArrivalsProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F0916B1789800A11EA3 /* ArrivalsProcessor.cpp */; };
+		F6723FF516B1789800A11EA3 /* ArrivalsProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F0A16B1789800A11EA3 /* ArrivalsProcessor.h */; };
+		F6723FF616B1789800A11EA3 /* CacheManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F0B16B1789800A11EA3 /* CacheManager.cpp */; };
+		F6723FF716B1789800A11EA3 /* CacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F0C16B1789800A11EA3 /* CacheManager.h */; };
+		F6723FF816B1789800A11EA3 /* Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F0D16B1789800A11EA3 /* Constants.cpp */; };
+		F6723FF916B1789800A11EA3 /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F0E16B1789800A11EA3 /* Constants.h */; };
+		F6723FFA16B1789800A11EA3 /* Direction.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F0F16B1789800A11EA3 /* Direction.h */; };
+		F6723FFB16B1789800A11EA3 /* EventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F1016B1789800A11EA3 /* EventDispatcher.h */; };
+		F6723FFC16B1789800A11EA3 /* EventDispatcherThreaded.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F1116B1789800A11EA3 /* EventDispatcherThreaded.cpp */; };
+		F6723FFD16B1789800A11EA3 /* EventDispatcherThreaded.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F1216B1789800A11EA3 /* EventDispatcherThreaded.h */; };
+		F6723FFE16B1789800A11EA3 /* EventPropagator.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F1316B1789800A11EA3 /* EventPropagator.h */; };
+		F6723FFF16B1789800A11EA3 /* Events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F1416B1789800A11EA3 /* Events.cpp */; };
+		F672400016B1789800A11EA3 /* Events.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F1516B1789800A11EA3 /* Events.h */; };
+		F672400116B1789800A11EA3 /* FolderQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F1616B1789800A11EA3 /* FolderQuery.h */; };
+		F672400216B1789800A11EA3 /* Indexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F1716B1789800A11EA3 /* Indexer.cpp */; };
+		F672400316B1789800A11EA3 /* Indexer.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F1816B1789800A11EA3 /* Indexer.h */; };
+		F672400416B1789800A11EA3 /* Initializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F1916B1789800A11EA3 /* Initializer.cpp */; };
+		F672400516B1789800A11EA3 /* Initializer.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F1A16B1789800A11EA3 /* Initializer.h */; };
+		F672400616B1789800A11EA3 /* Lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F1B16B1789800A11EA3 /* Lib.cpp */; };
+		F672400716B1789800A11EA3 /* Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F1C16B1789800A11EA3 /* Lib.h */; };
+		F672400816B1789800A11EA3 /* Mailer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F1D16B1789800A11EA3 /* Mailer.cpp */; };
+		F672400916B1789800A11EA3 /* Mailer.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F1E16B1789800A11EA3 /* Mailer.h */; };
+		F672400A16B1789800A11EA3 /* Master.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F1F16B1789800A11EA3 /* Master.cpp */; };
+		F672400B16B1789800A11EA3 /* Master.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F2016B1789800A11EA3 /* Master.h */; };
+		F672400E16B1789800A11EA3 /* Servent.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F2316B1789800A11EA3 /* Servent.h */; };
+		F672400F16B1789800A11EA3 /* Store.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F2416B1789800A11EA3 /* Store.cpp */; };
+		F672401016B1789800A11EA3 /* Store.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F2516B1789800A11EA3 /* Store.h */; };
+		F672401116B1789800A11EA3 /* TrackingConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F2616B1789800A11EA3 /* TrackingConnector.h */; };
+		F672401216B1789800A11EA3 /* AddressBook.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F2816B1789800A11EA3 /* AddressBook.h */; };
+		F672401316B1789800A11EA3 /* Attachment.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F2916B1789800A11EA3 /* Attachment.h */; };
+		F672401416B1789800A11EA3 /* Attachments.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F2A16B1789800A11EA3 /* Attachments.h */; };
+		F672401516B1789800A11EA3 /* Body.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F2B16B1789800A11EA3 /* Body.cpp */; };
+		F672401616B1789800A11EA3 /* Body.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F2C16B1789800A11EA3 /* Body.h */; };
+		F672401716B1789800A11EA3 /* Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F2D16B1789800A11EA3 /* Constants.cpp */; };
+		F672401816B1789800A11EA3 /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F2E16B1789800A11EA3 /* Constants.h */; };
+		F672401916B1789800A11EA3 /* Conversation.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F2F16B1789800A11EA3 /* Conversation.h */; };
+		F672401A16B1789800A11EA3 /* Dictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F3016B1789800A11EA3 /* Dictionary.cpp */; };
+		F672401D16B1789800A11EA3 /* Folder.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F3316B1789800A11EA3 /* Folder.h */; };
+		F672401E16B1789800A11EA3 /* FolderDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F3416B1789800A11EA3 /* FolderDefinition.h */; };
+		F672401F16B1789800A11EA3 /* ModelFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F3516B1789800A11EA3 /* ModelFactory.h */; };
+		F672402016B1789800A11EA3 /* FolderFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F3616B1789800A11EA3 /* FolderFilter.h */; };
+		F672402116B1789800A11EA3 /* FolderFilterSimple.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F3716B1789800A11EA3 /* FolderFilterSimple.h */; };
+		F672402216B1789800A11EA3 /* FolderImplBase.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F3816B1789800A11EA3 /* FolderImplBase.h */; };
+		F672402316B1789800A11EA3 /* FolderMaster.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F3916B1789800A11EA3 /* FolderMaster.h */; };
+		F672402416B1789800A11EA3 /* FolderRepository.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F3A16B1789800A11EA3 /* FolderRepository.h */; };
+		F672402516B1789800A11EA3 /* FolderSet.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F3B16B1789800A11EA3 /* FolderSet.h */; };
+		F672402616B1789800A11EA3 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F3C16B1789800A11EA3 /* Header.cpp */; };
+		F672402716B1789800A11EA3 /* Header.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F3D16B1789800A11EA3 /* Header.h */; };
+		F672402816B1789800A11EA3 /* Identity.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F3E16B1789800A11EA3 /* Identity.h */; };
+		F672402916B1789800A11EA3 /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F3F16B1789800A11EA3 /* Model.cpp */; };
+		F672402A16B1789800A11EA3 /* Model.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F4016B1789800A11EA3 /* Model.h */; };
+		F672402B16B1789800A11EA3 /* Lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F4116B1789800A11EA3 /* Lib.cpp */; };
+		F672402C16B1789800A11EA3 /* Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F4216B1789800A11EA3 /* Lib.h */; };
+		F672402D16B1789800A11EA3 /* Library.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F4316B1789800A11EA3 /* Library.h */; };
+		F672402E16B1789800A11EA3 /* Mail.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F4416B1789800A11EA3 /* Mail.h */; };
+		F672403116B1789800A11EA3 /* Original.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F4716B1789800A11EA3 /* Original.h */; };
+		F672403216B1789800A11EA3 /* Recipients.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F4816B1789800A11EA3 /* Recipients.h */; };
+		F672403316B1789800A11EA3 /* Record.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F4916B1789800A11EA3 /* Record.h */; };
+		F672403416B1789800A11EA3 /* TransportState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F4A16B1789800A11EA3 /* TransportState.cpp */; };
+		F672403516B1789800A11EA3 /* TransportState.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F4B16B1789800A11EA3 /* TransportState.h */; };
+		F672403616B1789800A11EA3 /* UnregisteredIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F4C16B1789800A11EA3 /* UnregisteredIdentity.h */; };
+		F672403716B1789800A11EA3 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F4E16B1789800A11EA3 /* JSON.h */; };
+		F672403816B1789800A11EA3 /* JsonSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F4F16B1789800A11EA3 /* JsonSerializer.h */; };
+		F672403916B1789800A11EA3 /* JsonSerializerStandard.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F5016B1789800A11EA3 /* JsonSerializerStandard.h */; };
+		F672403A16B1789800A11EA3 /* Lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F5116B1789800A11EA3 /* Lib.cpp */; };
+		F672403B16B1789800A11EA3 /* Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F5216B1789800A11EA3 /* Lib.h */; };
+		F672403C16B1789800A11EA3 /* TypeFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F5316B1789800A11EA3 /* TypeFactory.h */; };
+		F672403D16B1789800A11EA3 /* TypeSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F5416B1789800A11EA3 /* TypeSerializer.h */; };
+		F672403E16B1789800A11EA3 /* ZipSerializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F5516B1789800A11EA3 /* ZipSerializer.cpp */; };
+		F672403F16B1789800A11EA3 /* ZipSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F5616B1789800A11EA3 /* ZipSerializer.h */; };
+		F672404816B1789800A11EA3 /* Types.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F6016B1789800A11EA3 /* Types.h */; };
+		F672404916B1789800A11EA3 /* Algorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F6216B1789800A11EA3 /* Algorithm.cpp */; };
+		F672404A16B1789800A11EA3 /* Algorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F6316B1789800A11EA3 /* Algorithm.h */; };
+		F672404B16B1789800A11EA3 /* Connector.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F6416B1789800A11EA3 /* Connector.h */; };
+		F672404C16B1789800A11EA3 /* Exception.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F6516B1789800A11EA3 /* Exception.h */; };
+		F672404D16B1789800A11EA3 /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F6616B1789800A11EA3 /* File.cpp */; };
+		F672404E16B1789800A11EA3 /* File.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F6716B1789800A11EA3 /* File.h */; };
+		F672404F16B1789800A11EA3 /* FilledArray.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F6816B1789800A11EA3 /* FilledArray.h */; };
+		F672405016B1789800A11EA3 /* Functions.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F6916B1789800A11EA3 /* Functions.h */; };
+		F672405116B1789800A11EA3 /* GenericFile.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F6A16B1789800A11EA3 /* GenericFile.h */; };
+		F672405216B1789800A11EA3 /* Json.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F6B16B1789800A11EA3 /* Json.h */; };
+		F672405316B1789800A11EA3 /* Lock.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F6C16B1789800A11EA3 /* Lock.h */; };
+		F672405416B1789800A11EA3 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F6E16B1789800A11EA3 /* Log.cpp */; };
+		F672405516B1789800A11EA3 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F6F16B1789800A11EA3 /* Log.h */; };
+		F672405616B1789800A11EA3 /* Monitor.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F7016B1789800A11EA3 /* Monitor.h */; };
+		F672405716B1789800A11EA3 /* SafeIteration.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F7116B1789800A11EA3 /* SafeIteration.h */; };
+		F672405816B1789800A11EA3 /* SmartPtr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F7216B1789800A11EA3 /* SmartPtr.cpp */; };
+		F672405916B1789800A11EA3 /* SmartPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F7316B1789800A11EA3 /* SmartPtr.h */; };
+		F672405A16B1789800A11EA3 /* Streams.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F7416B1789800A11EA3 /* Streams.h */; };
+		F672405B16B1789800A11EA3 /* Strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6723F7516B1789800A11EA3 /* Strings.cpp */; };
+		F672405C16B1789800A11EA3 /* Strings.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F7616B1789800A11EA3 /* Strings.h */; };
+		F672405D16B1789800A11EA3 /* Thread.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F7716B1789800A11EA3 /* Thread.h */; };
+		F672405E16B1789800A11EA3 /* Types.h in Headers */ = {isa = PBXBuildFile; fileRef = F6723F7816B1789800A11EA3 /* Types.h */; };
+		F676EBA616C5EF5E00AC9905 /* Types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F676EBA516C5EF5D00AC9905 /* Types.cpp */; };
+		F67B873516D67FFC0064EECB /* InternalResource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F67B873416D67FFC0064EECB /* InternalResource.cpp */; };
+		F67B873716D680E00064EECB /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F67B873616D680E00064EECB /* Settings.cpp */; };
+		F67B873916D6819A0064EECB /* HttpDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F67B873816D6819A0064EECB /* HttpDelegate.cpp */; };
+		F67B874416D689730064EECB /* ConstantsClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F67B874016D6896E0064EECB /* ConstantsClient.cpp */; };
+		F67B874516D689730064EECB /* ConstantsClient.h in Headers */ = {isa = PBXBuildFile; fileRef = F67B874116D6896F0064EECB /* ConstantsClient.h */; };
+		F67B874616D689730064EECB /* ConstantsServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F67B874216D689700064EECB /* ConstantsServer.cpp */; };
+		F67B874716D689730064EECB /* ConstantsServer.h in Headers */ = {isa = PBXBuildFile; fileRef = F67B874316D689710064EECB /* ConstantsServer.h */; };
+		F67B874A16D693820064EECB /* ConstantsEnvironmentKeys.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F67B874916D693820064EECB /* ConstantsEnvironmentKeys.cpp */; };
+		F67B874C16D6939C0064EECB /* ConstantsEnvironmentKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = F67B874B16D6939B0064EECB /* ConstantsEnvironmentKeys.h */; };
+		F6850B6E16DA5EE200E42708 /* Manipulations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6850B6D16DA5EE200E42708 /* Manipulations.cpp */; };
+		F687FEDA16D7D77D00562F8E /* ConstantsPushNotifications.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F687FED916D7D77D00562F8E /* ConstantsPushNotifications.cpp */; };
+		F6899EF816C7F71F00048D7D /* Core-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = F6899EF716C7F71F00048D7D /* Core-Prefix.pch */; };
+		F6A6315E16C5666A00A68192 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6A6315D16C5666900A68192 /* Random.cpp */; };
+		F6B8568216C5D39A00524C6E /* CryptorAES.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6B8568116C5D39A00524C6E /* CryptorAES.cpp */; };
+		F6BD959416C7529E008C6BC7 /* StoreConnectorCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BD959316C7529D008C6BC7 /* StoreConnectorCommon.cpp */; };
+		F6DF723F16C6CD8100F1F90D /* Base16.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6DF723E16C6CD8100F1F90D /* Base16.cpp */; };
+		F6E792D816D3BE2400E1AC12 /* AsyncActions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6E792D716D3BE2400E1AC12 /* AsyncActions.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F60A685A16CFE5D40096D52A /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = core/mailiverse/mail/cache/Constants.h; sourceTree = SOURCE_ROOT; };
+		F60A685C16CFE5EA0096D52A /* Constants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Constants.cpp; path = core/mailiverse/mail/cache/Constants.cpp; sourceTree = SOURCE_ROOT; };
+		F60A685E16CFEA620096D52A /* Types.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Types.cpp; path = core/mailiverse/Types.cpp; sourceTree = SOURCE_ROOT; };
+		F60A686016D006D60096D52A /* Time.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Time.h; path = core/mailiverse/utilities/Time.h; sourceTree = SOURCE_ROOT; };
+		F60A686116D007130096D52A /* Time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Time.cpp; path = core/mailiverse/utilities/Time.cpp; sourceTree = SOURCE_ROOT; };
+		F60B5C5C16C4BE27008BDDCC /* CacheFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CacheFactory.cpp; path = core/mailiverse/mail/cache/CacheFactory.cpp; sourceTree = SOURCE_ROOT; };
+		F61EBB5A16D3FD0100D3777A /* MasterCacheSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MasterCacheSerializer.h; path = core/mailiverse/mail/manager/MasterCacheSerializer.h; sourceTree = SOURCE_ROOT; };
+		F61EBB5C16D401B500D3777A /* MasterCacheSerializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MasterCacheSerializer.cpp; path = core/mailiverse/mail/manager/MasterCacheSerializer.cpp; sourceTree = SOURCE_ROOT; };
+		F627E43D16D2A9FA006911E7 /* CryptorRSAAES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CryptorRSAAES.h; path = core/mailiverse/core/crypt/CryptorRSAAES.h; sourceTree = SOURCE_ROOT; };
+		F627E44116D2D6A2006911E7 /* CryptorRSAAES.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CryptorRSAAES.cpp; path = core/mailiverse/core/crypt/CryptorRSAAES.cpp; sourceTree = SOURCE_ROOT; };
+		F62A18BF16DE9925002C2B42 /* Identity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Identity.cpp; path = core/mailiverse/mail/model/Identity.cpp; sourceTree = SOURCE_ROOT; };
+		F62F9B4D16D84C8700DF7868 /* ConstantsSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ConstantsSettings.h; path = core/mailiverse/core/constants/ConstantsSettings.h; sourceTree = SOURCE_ROOT; };
+		F62F9B4F16D84C9800DF7868 /* ConstantsSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConstantsSettings.cpp; path = core/mailiverse/core/constants/ConstantsSettings.cpp; sourceTree = SOURCE_ROOT; };
+		F63FA71716C6056800BFF827 /* ModelSerializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelSerializer.cpp; path = core/mailiverse/mail/model/ModelSerializer.cpp; sourceTree = SOURCE_ROOT; };
+		F6504EE716C9EE810072E818 /* IndexedCacheSerializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IndexedCacheSerializer.cpp; path = core/mailiverse/mail/cache/IndexedCacheSerializer.cpp; sourceTree = SOURCE_ROOT; };
+		F6592AA516C475DB00663587 /* Type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Type.h; path = core/mailiverse/mail/cache/Type.h; sourceTree = SOURCE_ROOT; };
+		F6592AA716C47E6500663587 /* Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Types.h; path = core/mailiverse/mail/model/Types.h; sourceTree = SOURCE_ROOT; };
+		F662CF7616D271E00016BF2B /* JSON_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSON_.h; path = core/mailiverse/utilities/JSON_.h; sourceTree = SOURCE_ROOT; };
+		F662CF7916D273CD0016BF2B /* ConstantsMailJson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ConstantsMailJson.h; path = core/mailiverse/core/constants/ConstantsMailJson.h; sourceTree = SOURCE_ROOT; };
+		F662CF7A16D2743B0016BF2B /* ConstantsMailJson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConstantsMailJson.cpp; path = core/mailiverse/core/constants/ConstantsMailJson.cpp; sourceTree = SOURCE_ROOT; };
+		F662CF7C16D274590016BF2B /* Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Lib.h; path = core/mailiverse/core/constants/Lib.h; sourceTree = SOURCE_ROOT; };
+		F66C2FCE16C53CA800ED318E /* ModelSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ModelSerializer.h; path = core/mailiverse/mail/model/ModelSerializer.h; sourceTree = SOURCE_ROOT; };
+		F66C2FCF16C54B2800ED318E /* FolderPart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FolderPart.h; path = core/mailiverse/mail/model/FolderPart.h; sourceTree = SOURCE_ROOT; };
+		F66E9CBC16CD1D29001B0308 /* Dictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Dictionary.h; path = core/mailiverse/mail/model/Dictionary.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723E6416B1775800A11EA3 /* libCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6723E6716B1775800A11EA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F6723E7E16B1789800A11EA3 /* pugiconfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugiconfig.hpp; sourceTree = "<group>"; };
+		F6723E7F16B1789800A11EA3 /* pugixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pugixml.cpp; sourceTree = "<group>"; };
+		F6723E8016B1789800A11EA3 /* pugixml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; lineEnding = 0; path = pugixml.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		F6723E8316B1789800A11EA3 /* Authenticator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = Authenticator.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		F6723E8416B1789800A11EA3 /* Authenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Authenticator.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723E8516B1789800A11EA3 /* StreamSessionClientGet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreamSessionClientGet.cpp; sourceTree = "<group>"; };
+		F6723E8616B1789800A11EA3 /* StreamSessionClientGet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamSessionClientGet.h; sourceTree = "<group>"; };
+		F6723E8816B1789800A11EA3 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		F6723E8916B1789800A11EA3 /* BlockCompression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = BlockCompression.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		F6723E8A16B1789800A11EA3 /* BlockCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BlockCompression.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723E8B16B1789800A11EA3 /* BlockIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockIO.h; sourceTree = "<group>"; };
+		F6723E8D16B1789800A11EA3 /* AsyncStoreConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AsyncStoreConnector.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723E8E16B1789800A11EA3 /* AsyncStoreConnectorSynth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AsyncStoreConnectorSynth.cpp; sourceTree = "<group>"; };
+		F6723E8F16B1789800A11EA3 /* AsyncStoreConnectorSynth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AsyncStoreConnectorSynth.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723E9016B1789800A11EA3 /* ConnectorException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectorException.h; sourceTree = "<group>"; };
+		F6723E9116B1789800A11EA3 /* FileInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileInfo.h; sourceTree = "<group>"; };
+		F6723E9216B1789800A11EA3 /* Lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lib.cpp; sourceTree = "<group>"; };
+		F6723E9316B1789800A11EA3 /* Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
+		F6723E9416B1789800A11EA3 /* StoreConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = StoreConnector.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		F6723E9516B1789800A11EA3 /* StoreConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreConnector.h; sourceTree = "<group>"; };
+		F6723E9616B1789800A11EA3 /* StoreConnectorEncrypted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreConnectorEncrypted.h; sourceTree = "<group>"; };
+		F6723E9716B1789800A11EA3 /* StoreConnectorInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StoreConnectorInfo.cpp; sourceTree = "<group>"; };
+		F6723E9816B1789800A11EA3 /* StoreConnectorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreConnectorInfo.h; sourceTree = "<group>"; };
+		F6723E9A16B1789800A11EA3 /* Base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Base64.cpp; sourceTree = "<group>"; };
+		F6723E9B16B1789800A11EA3 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		F6723E9C16B1789800A11EA3 /* CryptoException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoException.h; sourceTree = "<group>"; };
+		F6723E9D16B1789800A11EA3 /* Cryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cryptor.h; sourceTree = "<group>"; };
+		F6723E9E16B1789800A11EA3 /* CryptorAESIV.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CryptorAESIV.cpp; sourceTree = "<group>"; };
+		F6723E9F16B1789800A11EA3 /* CryptorAESIV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptorAESIV.h; sourceTree = "<group>"; };
+		F6723EA016B1789800A11EA3 /* CryptorNone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CryptorNone.cpp; sourceTree = "<group>"; };
+		F6723EA116B1789800A11EA3 /* CryptorNone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptorNone.h; sourceTree = "<group>"; };
+		F6723EA216B1789800A11EA3 /* CryptorRSA.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CryptorRSA.cpp; sourceTree = "<group>"; };
+		F6723EA316B1789800A11EA3 /* CryptorRSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptorRSA.h; sourceTree = "<group>"; };
+		F6723EA516B1789800A11EA3 /* CryptorRSAFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptorRSAFactory.h; sourceTree = "<group>"; };
+		F6723EA616B1789800A11EA3 /* CryptorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptorUtil.h; sourceTree = "<group>"; };
+		F6723EA716B1789800A11EA3 /* Hash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hash.cpp; sourceTree = "<group>"; };
+		F6723EA816B1789800A11EA3 /* Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hash.h; sourceTree = "<group>"; };
+		F6723EA916B1789800A11EA3 /* KeyPairFromPassword.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeyPairFromPassword.cpp; sourceTree = "<group>"; };
+		F6723EAA16B1789800A11EA3 /* KeyPairFromPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyPairFromPassword.h; sourceTree = "<group>"; };
+		F6723EAB16B1789800A11EA3 /* Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
+		F6723EAC16B1789800A11EA3 /* PBE.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PBE.cpp; sourceTree = "<group>"; };
+		F6723EAD16B1789800A11EA3 /* PBE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBE.h; sourceTree = "<group>"; };
+		F6723EAF16B1789800A11EA3 /* SRPClientSession.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SRPClientSession.cpp; sourceTree = "<group>"; };
+		F6723EB016B1789800A11EA3 /* SRPClientSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SRPClientSession.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723EB116B1789800A11EA3 /* SRPConstants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SRPConstants.cpp; sourceTree = "<group>"; };
+		F6723EB216B1789800A11EA3 /* SRPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRPConstants.h; sourceTree = "<group>"; };
+		F6723EB316B1789800A11EA3 /* SRPFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SRPFactory.cpp; sourceTree = "<group>"; };
+		F6723EB416B1789800A11EA3 /* SRPFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRPFactory.h; sourceTree = "<group>"; };
+		F6723EB516B1789800A11EA3 /* SRPPackets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SRPPackets.cpp; sourceTree = "<group>"; };
+		F6723EB616B1789800A11EA3 /* SRPPackets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRPPackets.h; sourceTree = "<group>"; };
+		F6723EB716B1789800A11EA3 /* SRPPacketSerializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SRPPacketSerializer.cpp; sourceTree = "<group>"; };
+		F6723EB816B1789800A11EA3 /* SRPPacketSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRPPacketSerializer.h; sourceTree = "<group>"; };
+		F6723EB916B1789800A11EA3 /* SRPServerSession.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SRPServerSession.cpp; sourceTree = "<group>"; };
+		F6723EBA16B1789800A11EA3 /* SRPServerSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SRPServerSession.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723EBB16B1789800A11EA3 /* SRPUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SRPUtils.cpp; sourceTree = "<group>"; };
+		F6723EBC16B1789800A11EA3 /* SRPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRPUtils.h; sourceTree = "<group>"; };
+		F6723EBD16B1789800A11EA3 /* SRPVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRPVerifier.h; sourceTree = "<group>"; };
+		F6723EBE16B1789800A11EA3 /* StreamSessionSRPClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreamSessionSRPClient.cpp; sourceTree = "<group>"; };
+		F6723EBF16B1789800A11EA3 /* StreamSessionSRPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamSessionSRPClient.h; sourceTree = "<group>"; };
+		F6723EC016B1789800A11EA3 /* StreamSessionSRPServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreamSessionSRPServer.cpp; sourceTree = "<group>"; };
+		F6723EC116B1789800A11EA3 /* StreamSessionSRPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamSessionSRPServer.h; sourceTree = "<group>"; };
+		F6723EC316B1789800A11EA3 /* AWSAuthenticationTest_main.cpp.no */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AWSAuthenticationTest_main.cpp.no; sourceTree = "<group>"; };
+		F6723EC416B1789800A11EA3 /* Environment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = Environment.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		F6723EC516B1789800A11EA3 /* Environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Environment.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723EC616B1789800A11EA3 /* Lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lib.cpp; sourceTree = "<group>"; };
+		F6723EC716B1789800A11EA3 /* Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
+		F6723EC816B1789800A11EA3 /* StoreConnectorAWS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StoreConnectorAWS.cpp; sourceTree = "<group>"; };
+		F6723EC916B1789800A11EA3 /* StoreConnectorAWS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreConnectorAWS.h; sourceTree = "<group>"; };
+		F6723ECA16B1789800A11EA3 /* StoreConnectorDropbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StoreConnectorDropbox.cpp; sourceTree = "<group>"; };
+		F6723ECB16B1789800A11EA3 /* StoreConnectorDropbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreConnectorDropbox.h; sourceTree = "<group>"; };
+		F6723ECC16B1789800A11EA3 /* StoreConnectorFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StoreConnectorFactory.cpp; sourceTree = "<group>"; };
+		F6723ECD16B1789800A11EA3 /* StoreConnectorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreConnectorFactory.h; sourceTree = "<group>"; };
+		F6723ED316B1789800A11EA3 /* IO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IO.h; sourceTree = "<group>"; };
+		F6723ED416B1789800A11EA3 /* StreamLineSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreamLineSocket.cpp; sourceTree = "<group>"; };
+		F6723ED516B1789800A11EA3 /* StreamLineSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamLineSocket.h; sourceTree = "<group>"; };
+		F6723ED616B1789800A11EA3 /* StreamSession.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreamSession.cpp; sourceTree = "<group>"; };
+		F6723ED716B1789800A11EA3 /* StreamSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamSession.h; sourceTree = "<group>"; };
+		F6723ED816B1789800A11EA3 /* StreamSessionSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamSessionSocket.h; sourceTree = "<group>"; };
+		F6723ED916B1789800A11EA3 /* StreamSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreamSocket.cpp; sourceTree = "<group>"; };
+		F6723EDA16B1789800A11EA3 /* StreamSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamSocket.h; sourceTree = "<group>"; };
+		F6723EDB16B1789800A11EA3 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		F6723EDC16B1789800A11EA3 /* Types.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Types.inl; sourceTree = "<group>"; };
+		F6723EDE16B1789800A11EA3 /* Callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Callback.h; sourceTree = "<group>"; };
+		F6723EDF16B1789800A11EA3 /* HttpDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpDelegate.h; sourceTree = "<group>"; };
+		F6723EE116B1789800A11EA3 /* Versioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Versioning.h; sourceTree = "<group>"; };
+		F6723EE216B1789800A11EA3 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		F6723EE516B1789800A11EA3 /* Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Cache.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723EE616B1789800A11EA3 /* CacheFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheFactory.h; sourceTree = "<group>"; };
+		F6723EE816B1789800A11EA3 /* IndexedCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexedCache.h; sourceTree = "<group>"; };
+		F6723EE916B1789800A11EA3 /* IndexedCacheSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexedCacheSerializer.h; sourceTree = "<group>"; };
+		F6723EEA16B1789800A11EA3 /* IndexedItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexedItems.h; sourceTree = "<group>"; };
+		F6723EEB16B1789800A11EA3 /* Info.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Info.cpp; sourceTree = "<group>"; };
+		F6723EEC16B1789800A11EA3 /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
+		F6723EED16B1789800A11EA3 /* Item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Item.cpp; sourceTree = "<group>"; };
+		F6723EEE16B1789800A11EA3 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		F6723EEF16B1789800A11EA3 /* ItemFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemFactory.h; sourceTree = "<group>"; };
+		F6723EF016B1789800A11EA3 /* ItemFactoryStandard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemFactoryStandard.h; sourceTree = "<group>"; };
+		F6723EF116B1789800A11EA3 /* ItemSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemSerializer.h; sourceTree = "<group>"; };
+		F6723EF216B1789800A11EA3 /* ID.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ID.cpp; sourceTree = "<group>"; };
+		F6723EF316B1789800A11EA3 /* ID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ID.h; sourceTree = "<group>"; };
+		F6723EF516B1789800A11EA3 /* Lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lib.cpp; sourceTree = "<group>"; };
+		F6723EF616B1789800A11EA3 /* Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
+		F6723EF716B1789800A11EA3 /* Store.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Store.cpp; sourceTree = "<group>"; };
+		F6723EF816B1789800A11EA3 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		F6723EFA16B1789800A11EA3 /* StoreLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = StoreLibrary.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723EFB16B1789800A11EA3 /* StoreMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = StoreMemory.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723EFC16B1789800A11EA3 /* StoreMemoryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreMemoryFactory.h; sourceTree = "<group>"; };
+		F6723EFD16B1789800A11EA3 /* StoreMemorySerializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StoreMemorySerializer.cpp; sourceTree = "<group>"; };
+		F6723EFE16B1789800A11EA3 /* StoreMemorySerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = StoreMemorySerializer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723EFF16B1789800A11EA3 /* Value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Value.cpp; sourceTree = "<group>"; };
+		F6723F0016B1789800A11EA3 /* Value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Value.h; sourceTree = "<group>"; };
+		F6723F0116B1789800A11EA3 /* Version.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Version.cpp; sourceTree = "<group>"; };
+		F6723F0216B1789800A11EA3 /* Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Version.h; sourceTree = "<group>"; };
+		F6723F0416B1789800A11EA3 /* Actions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = Actions.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		F6723F0516B1789800A11EA3 /* Actions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actions.h; sourceTree = "<group>"; };
+		F6723F0616B1789800A11EA3 /* ArrivalsMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivalsMonitor.h; sourceTree = "<group>"; };
+		F6723F0716B1789800A11EA3 /* ArrivalsMonitorDefault.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ArrivalsMonitorDefault.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		F6723F0816B1789800A11EA3 /* ArrivalsMonitorDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivalsMonitorDefault.h; sourceTree = "<group>"; };
+		F6723F0916B1789800A11EA3 /* ArrivalsProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrivalsProcessor.cpp; sourceTree = "<group>"; };
+		F6723F0A16B1789800A11EA3 /* ArrivalsProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivalsProcessor.h; sourceTree = "<group>"; };
+		F6723F0B16B1789800A11EA3 /* CacheManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CacheManager.cpp; sourceTree = "<group>"; };
+		F6723F0C16B1789800A11EA3 /* CacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
+		F6723F0D16B1789800A11EA3 /* Constants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constants.cpp; sourceTree = "<group>"; };
+		F6723F0E16B1789800A11EA3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		F6723F0F16B1789800A11EA3 /* Direction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Direction.h; sourceTree = "<group>"; };
+		F6723F1016B1789800A11EA3 /* EventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDispatcher.h; sourceTree = "<group>"; };
+		F6723F1116B1789800A11EA3 /* EventDispatcherThreaded.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventDispatcherThreaded.cpp; sourceTree = "<group>"; };
+		F6723F1216B1789800A11EA3 /* EventDispatcherThreaded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDispatcherThreaded.h; sourceTree = "<group>"; };
+		F6723F1316B1789800A11EA3 /* EventPropagator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EventPropagator.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F1416B1789800A11EA3 /* Events.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Events.cpp; sourceTree = "<group>"; };
+		F6723F1516B1789800A11EA3 /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
+		F6723F1616B1789800A11EA3 /* FolderQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FolderQuery.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F1716B1789800A11EA3 /* Indexer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = Indexer.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		F6723F1816B1789800A11EA3 /* Indexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Indexer.h; sourceTree = "<group>"; };
+		F6723F1916B1789800A11EA3 /* Initializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Initializer.cpp; sourceTree = "<group>"; };
+		F6723F1A16B1789800A11EA3 /* Initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Initializer.h; sourceTree = "<group>"; };
+		F6723F1B16B1789800A11EA3 /* Lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lib.cpp; sourceTree = "<group>"; };
+		F6723F1C16B1789800A11EA3 /* Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
+		F6723F1D16B1789800A11EA3 /* Mailer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mailer.cpp; sourceTree = "<group>"; };
+		F6723F1E16B1789800A11EA3 /* Mailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mailer.h; sourceTree = "<group>"; };
+		F6723F1F16B1789800A11EA3 /* Master.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Master.cpp; sourceTree = "<group>"; };
+		F6723F2016B1789800A11EA3 /* Master.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Master.h; sourceTree = "<group>"; };
+		F6723F2316B1789800A11EA3 /* Servent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Servent.h; sourceTree = "<group>"; };
+		F6723F2416B1789800A11EA3 /* Store.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Store.cpp; sourceTree = "<group>"; };
+		F6723F2516B1789800A11EA3 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		F6723F2616B1789800A11EA3 /* TrackingConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingConnector.h; sourceTree = "<group>"; };
+		F6723F2816B1789800A11EA3 /* AddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AddressBook.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F2916B1789800A11EA3 /* Attachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attachment.h; sourceTree = "<group>"; };
+		F6723F2A16B1789800A11EA3 /* Attachments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Attachments.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F2B16B1789800A11EA3 /* Body.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Body.cpp; sourceTree = "<group>"; };
+		F6723F2C16B1789800A11EA3 /* Body.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Body.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F2D16B1789800A11EA3 /* Constants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constants.cpp; sourceTree = "<group>"; };
+		F6723F2E16B1789800A11EA3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		F6723F2F16B1789800A11EA3 /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Conversation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F3016B1789800A11EA3 /* Dictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = Dictionary.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		F6723F3316B1789800A11EA3 /* Folder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Folder.h; sourceTree = "<group>"; };
+		F6723F3416B1789800A11EA3 /* FolderDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderDefinition.h; sourceTree = "<group>"; };
+		F6723F3516B1789800A11EA3 /* ModelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelFactory.h; sourceTree = "<group>"; };
+		F6723F3616B1789800A11EA3 /* FolderFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderFilter.h; sourceTree = "<group>"; };
+		F6723F3716B1789800A11EA3 /* FolderFilterSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderFilterSimple.h; sourceTree = "<group>"; };
+		F6723F3816B1789800A11EA3 /* FolderImplBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FolderImplBase.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F3916B1789800A11EA3 /* FolderMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderMaster.h; sourceTree = "<group>"; };
+		F6723F3A16B1789800A11EA3 /* FolderRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderRepository.h; sourceTree = "<group>"; };
+		F6723F3B16B1789800A11EA3 /* FolderSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FolderSet.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F3C16B1789800A11EA3 /* Header.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Header.cpp; sourceTree = "<group>"; };
+		F6723F3D16B1789800A11EA3 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Header.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F3E16B1789800A11EA3 /* Identity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Identity.h; sourceTree = "<group>"; };
+		F6723F3F16B1789800A11EA3 /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
+		F6723F4016B1789800A11EA3 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		F6723F4116B1789800A11EA3 /* Lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lib.cpp; sourceTree = "<group>"; };
+		F6723F4216B1789800A11EA3 /* Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
+		F6723F4316B1789800A11EA3 /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
+		F6723F4416B1789800A11EA3 /* Mail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mail.h; sourceTree = "<group>"; };
+		F6723F4716B1789800A11EA3 /* Original.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Original.h; sourceTree = "<group>"; };
+		F6723F4816B1789800A11EA3 /* Recipients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Recipients.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F4916B1789800A11EA3 /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
+		F6723F4A16B1789800A11EA3 /* TransportState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransportState.cpp; sourceTree = "<group>"; };
+		F6723F4B16B1789800A11EA3 /* TransportState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TransportState.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F4C16B1789800A11EA3 /* UnregisteredIdentity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnregisteredIdentity.h; sourceTree = "<group>"; };
+		F6723F4E16B1789800A11EA3 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JSON.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F4F16B1789800A11EA3 /* JsonSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonSerializer.h; sourceTree = "<group>"; };
+		F6723F5016B1789800A11EA3 /* JsonSerializerStandard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonSerializerStandard.h; sourceTree = "<group>"; };
+		F6723F5116B1789800A11EA3 /* Lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lib.cpp; sourceTree = "<group>"; };
+		F6723F5216B1789800A11EA3 /* Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
+		F6723F5316B1789800A11EA3 /* TypeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeFactory.h; sourceTree = "<group>"; };
+		F6723F5416B1789800A11EA3 /* TypeSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeSerializer.h; sourceTree = "<group>"; };
+		F6723F5516B1789800A11EA3 /* ZipSerializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZipSerializer.cpp; sourceTree = "<group>"; };
+		F6723F5616B1789800A11EA3 /* ZipSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipSerializer.h; sourceTree = "<group>"; };
+		F6723F6016B1789800A11EA3 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Types.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F6216B1789800A11EA3 /* Algorithm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Algorithm.cpp; sourceTree = "<group>"; };
+		F6723F6316B1789800A11EA3 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
+		F6723F6416B1789800A11EA3 /* Connector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connector.h; sourceTree = "<group>"; };
+		F6723F6516B1789800A11EA3 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		F6723F6616B1789800A11EA3 /* File.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = File.cpp; sourceTree = "<group>"; };
+		F6723F6716B1789800A11EA3 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
+		F6723F6816B1789800A11EA3 /* FilledArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilledArray.h; sourceTree = "<group>"; };
+		F6723F6916B1789800A11EA3 /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
+		F6723F6A16B1789800A11EA3 /* GenericFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericFile.h; sourceTree = "<group>"; };
+		F6723F6B16B1789800A11EA3 /* Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Json.h; sourceTree = "<group>"; };
+		F6723F6C16B1789800A11EA3 /* Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lock.h; sourceTree = "<group>"; };
+		F6723F6D16B1789800A11EA3 /* Lock.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lock.inl; sourceTree = "<group>"; };
+		F6723F6E16B1789800A11EA3 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
+		F6723F6F16B1789800A11EA3 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		F6723F7016B1789800A11EA3 /* Monitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monitor.h; sourceTree = "<group>"; };
+		F6723F7116B1789800A11EA3 /* SafeIteration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 2; path = SafeIteration.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F7216B1789800A11EA3 /* SmartPtr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SmartPtr.cpp; sourceTree = "<group>"; };
+		F6723F7316B1789800A11EA3 /* SmartPtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SmartPtr.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F7416B1789800A11EA3 /* Streams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Streams.h; sourceTree = "<group>"; };
+		F6723F7516B1789800A11EA3 /* Strings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = Strings.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		F6723F7616B1789800A11EA3 /* Strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Strings.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F6723F7716B1789800A11EA3 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
+		F6723F7816B1789800A11EA3 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		F676EBA416C5E70700AC9905 /* FolderFilterSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FolderFilterSet.h; path = core/mailiverse/mail/model/FolderFilterSet.h; sourceTree = SOURCE_ROOT; };
+		F676EBA516C5EF5D00AC9905 /* Types.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Types.cpp; path = core/mailiverse/mail/model/Types.cpp; sourceTree = SOURCE_ROOT; };
+		F67B873216D67FAF0064EECB /* InternalResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InternalResource.h; path = core/mailiverse/core/util/InternalResource.h; sourceTree = SOURCE_ROOT; };
+		F67B873416D67FFC0064EECB /* InternalResource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InternalResource.cpp; path = core/mailiverse/core/util/InternalResource.cpp; sourceTree = SOURCE_ROOT; };
+		F67B873616D680E00064EECB /* Settings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Settings.cpp; path = core/mailiverse/mail/model/Settings.cpp; sourceTree = SOURCE_ROOT; };
+		F67B873816D6819A0064EECB /* HttpDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpDelegate.cpp; path = core/mailiverse/core/util/HttpDelegate.cpp; sourceTree = SOURCE_ROOT; };
+		F67B874016D6896E0064EECB /* ConstantsClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConstantsClient.cpp; path = core/mailiverse/core/constants/ConstantsClient.cpp; sourceTree = SOURCE_ROOT; };
+		F67B874116D6896F0064EECB /* ConstantsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConstantsClient.h; path = core/mailiverse/core/constants/ConstantsClient.h; sourceTree = SOURCE_ROOT; };
+		F67B874216D689700064EECB /* ConstantsServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConstantsServer.cpp; path = core/mailiverse/core/constants/ConstantsServer.cpp; sourceTree = SOURCE_ROOT; };
+		F67B874316D689710064EECB /* ConstantsServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConstantsServer.h; path = core/mailiverse/core/constants/ConstantsServer.h; sourceTree = SOURCE_ROOT; };
+		F67B874916D693820064EECB /* ConstantsEnvironmentKeys.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConstantsEnvironmentKeys.cpp; path = core/mailiverse/core/constants/ConstantsEnvironmentKeys.cpp; sourceTree = SOURCE_ROOT; };
+		F67B874B16D6939B0064EECB /* ConstantsEnvironmentKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConstantsEnvironmentKeys.h; path = core/mailiverse/core/constants/ConstantsEnvironmentKeys.h; sourceTree = SOURCE_ROOT; };
+		F6830C4D16D5290B00A23B10 /* Throws.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Throws.h; path = core/mailiverse/utilities/Throws.h; sourceTree = SOURCE_ROOT; };
+		F6850B6B16DA5C9700E42708 /* Manipulations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Manipulations.h; path = core/mailiverse/mail/model/Manipulations.h; sourceTree = SOURCE_ROOT; };
+		F6850B6D16DA5EE200E42708 /* Manipulations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Manipulations.cpp; path = core/mailiverse/mail/model/Manipulations.cpp; sourceTree = SOURCE_ROOT; };
+		F687FED716D7D76E00562F8E /* ConstantsPushNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ConstantsPushNotifications.h; path = core/mailiverse/core/constants/ConstantsPushNotifications.h; sourceTree = SOURCE_ROOT; };
+		F687FED916D7D77D00562F8E /* ConstantsPushNotifications.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConstantsPushNotifications.cpp; path = core/mailiverse/core/constants/ConstantsPushNotifications.cpp; sourceTree = SOURCE_ROOT; };
+		F6899EF716C7F71F00048D7D /* Core-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Core-Prefix.pch"; path = "core/Core-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		F6899EFA16C7F75400048D7D /* Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Lib.h; path = core/mailiverse/core/Lib.h; sourceTree = SOURCE_ROOT; };
+		F6899EFB16C7F7BB00048D7D /* Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Lib.h; path = core/mailiverse/core/srp/Lib.h; sourceTree = SOURCE_ROOT; };
+		F6899EFC16C7F84300048D7D /* Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Lib.h; path = core/mailiverse/core/streams/Lib.h; sourceTree = SOURCE_ROOT; };
+		F6899EFD16C7F87300048D7D /* Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Lib.h; path = core/mailiverse/core/util/Lib.h; sourceTree = SOURCE_ROOT; };
+		F6899EFE16C7F9AA00048D7D /* Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Lib.h; path = core/mailiverse/mail/Lib.h; sourceTree = SOURCE_ROOT; };
+		F6899EFF16C7F9D400048D7D /* Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Lib.h; path = core/mailiverse/Lib.h; sourceTree = SOURCE_ROOT; };
+		F6899F0016C7FA0200048D7D /* Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Lib.h; path = core/mailiverse/client/Lib.h; sourceTree = SOURCE_ROOT; };
+		F6899F0116C7FCC000048D7D /* Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Lib.h; path = core/mailiverse/utilities/Lib.h; sourceTree = SOURCE_ROOT; };
+		F68B3D3216C5B69100EC3A89 /* ItemCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ItemCollection.h; path = core/mailiverse/mail/cache/ItemCollection.h; sourceTree = SOURCE_ROOT; };
+		F6A240B016D93F27004A107A /* External.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = External.h; path = core/mailiverse/External.h; sourceTree = SOURCE_ROOT; };
+		F6A6315B16C5660800A68192 /* Random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Random.h; path = core/mailiverse/core/util/Random.h; sourceTree = SOURCE_ROOT; };
+		F6A6315D16C5666900A68192 /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Random.cpp; path = core/mailiverse/core/util/Random.cpp; sourceTree = SOURCE_ROOT; };
+		F6AB7D4116CFD7750011069E /* Lock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Lock.h; path = core/mailiverse/core/connector/Lock.h; sourceTree = SOURCE_ROOT; };
+		F6AFD25216B48E7D00EC7158 /* SRPClientSessionSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRPClientSessionSerializer.h; sourceTree = "<group>"; };
+		F6B60D8C16C5A20F00991302 /* CryptorSeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CryptorSeed.h; path = core/mailiverse/core/crypt/CryptorSeed.h; sourceTree = SOURCE_ROOT; };
+		F6B8568016C5D2C100524C6E /* CryptorAES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CryptorAES.h; path = core/mailiverse/core/crypt/CryptorAES.h; sourceTree = SOURCE_ROOT; };
+		F6B8568116C5D39A00524C6E /* CryptorAES.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CryptorAES.cpp; path = core/mailiverse/core/crypt/CryptorAES.cpp; sourceTree = SOURCE_ROOT; };
+		F6BD959216C751FD008C6BC7 /* StoreConnectorCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StoreConnectorCommon.h; path = core/mailiverse/core/store/StoreConnectorCommon.h; sourceTree = SOURCE_ROOT; };
+		F6BD959316C7529D008C6BC7 /* StoreConnectorCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StoreConnectorCommon.cpp; path = core/mailiverse/core/store/StoreConnectorCommon.cpp; sourceTree = SOURCE_ROOT; };
+		F6DF723C16C6CD4900F1F90D /* Base16.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Base16.h; path = core/mailiverse/core/crypt/Base16.h; sourceTree = SOURCE_ROOT; };
+		F6DF723E16C6CD8100F1F90D /* Base16.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Base16.cpp; path = core/mailiverse/core/crypt/Base16.cpp; sourceTree = SOURCE_ROOT; };
+		F6E792D516D3BE1700E1AC12 /* AsyncActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AsyncActions.h; path = core/mailiverse/mail/manager/AsyncActions.h; sourceTree = SOURCE_ROOT; };
+		F6E792D716D3BE2400E1AC12 /* AsyncActions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AsyncActions.cpp; path = core/mailiverse/mail/manager/AsyncActions.cpp; sourceTree = SOURCE_ROOT; };
+		F6E792D916D3F7A100E1AC12 /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = core/mailiverse/mail/model/Settings.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6723E6116B1775800A11EA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6723E6816B1775800A11EA3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F662CF7816D2739D0016BF2B /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				F67B874B16D6939B0064EECB /* ConstantsEnvironmentKeys.h */,
+				F67B874916D693820064EECB /* ConstantsEnvironmentKeys.cpp */,
+				F67B874016D6896E0064EECB /* ConstantsClient.cpp */,
+				F67B874116D6896F0064EECB /* ConstantsClient.h */,
+				F62F9B4D16D84C8700DF7868 /* ConstantsSettings.h */,
+				F62F9B4F16D84C9800DF7868 /* ConstantsSettings.cpp */,
+				F67B874216D689700064EECB /* ConstantsServer.cpp */,
+				F67B874316D689710064EECB /* ConstantsServer.h */,
+				F662CF7916D273CD0016BF2B /* ConstantsMailJson.h */,
+				F662CF7A16D2743B0016BF2B /* ConstantsMailJson.cpp */,
+				F687FED716D7D76E00562F8E /* ConstantsPushNotifications.h */,
+				F687FED916D7D77D00562F8E /* ConstantsPushNotifications.cpp */,
+				F662CF7C16D274590016BF2B /* Lib.h */,
+			);
+			name = constants;
+			sourceTree = "<group>";
+		};
+		F6723E5916B1775800A11EA3 = {
+			isa = PBXGroup;
+			children = (
+				F6723E7C16B1789700A11EA3 /* Core */,
+				F6723E6616B1775800A11EA3 /* Frameworks */,
+				F6723E6516B1775800A11EA3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6723E6516B1775800A11EA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6723E6416B1775800A11EA3 /* libCore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6723E6616B1775800A11EA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6723E6716B1775800A11EA3 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6723E7C16B1789700A11EA3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F6899EF716C7F71F00048D7D /* Core-Prefix.pch */,
+				F6723E7D16B1789700A11EA3 /* ext */,
+				F6723E8116B1789800A11EA3 /* mailiverse */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F6723E7D16B1789700A11EA3 /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				F6723E7E16B1789800A11EA3 /* pugiconfig.hpp */,
+				F6723E7F16B1789800A11EA3 /* pugixml.cpp */,
+				F6723E8016B1789800A11EA3 /* pugixml.hpp */,
+			);
+			path = ext;
+			sourceTree = "<group>";
+		};
+		F6723E8116B1789800A11EA3 /* mailiverse */ = {
+			isa = PBXGroup;
+			children = (
+				F6723E8216B1789800A11EA3 /* client */,
+				F6723E8716B1789800A11EA3 /* core */,
+				F6723EE216B1789800A11EA3 /* Exception.h */,
+				F6723EE316B1789800A11EA3 /* mail */,
+				F6723F6016B1789800A11EA3 /* Types.h */,
+				F60A685E16CFEA620096D52A /* Types.cpp */,
+				F6723F6116B1789800A11EA3 /* utilities */,
+				F6899EFF16C7F9D400048D7D /* Lib.h */,
+				F6A240B016D93F27004A107A /* External.h */,
+			);
+			path = mailiverse;
+			sourceTree = "<group>";
+		};
+		F6723E8216B1789800A11EA3 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				F6723E8316B1789800A11EA3 /* Authenticator.cpp */,
+				F6723E8416B1789800A11EA3 /* Authenticator.h */,
+				F6723E8516B1789800A11EA3 /* StreamSessionClientGet.cpp */,
+				F6723E8616B1789800A11EA3 /* StreamSessionClientGet.h */,
+				F6899F0016C7FA0200048D7D /* Lib.h */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		F6723E8716B1789800A11EA3 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				F662CF7816D2739D0016BF2B /* constants */,
+				F6723E8816B1789800A11EA3 /* Block.h */,
+				F6723E8916B1789800A11EA3 /* BlockCompression.cpp */,
+				F6723E8A16B1789800A11EA3 /* BlockCompression.h */,
+				F6723E8B16B1789800A11EA3 /* BlockIO.h */,
+				F6723E8C16B1789800A11EA3 /* connector */,
+				F6723E9916B1789800A11EA3 /* crypt */,
+				F6723EAE16B1789800A11EA3 /* srp */,
+				F6723EC216B1789800A11EA3 /* store */,
+				F6723ED216B1789800A11EA3 /* streams */,
+				F6723EDB16B1789800A11EA3 /* Types.h */,
+				F6723EDC16B1789800A11EA3 /* Types.inl */,
+				F6723EDD16B1789800A11EA3 /* util */,
+				F6723EE016B1789800A11EA3 /* version */,
+				F6899EFA16C7F75400048D7D /* Lib.h */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		F6723E8C16B1789800A11EA3 /* connector */ = {
+			isa = PBXGroup;
+			children = (
+				F6723E8D16B1789800A11EA3 /* AsyncStoreConnector.h */,
+				F6723E8E16B1789800A11EA3 /* AsyncStoreConnectorSynth.cpp */,
+				F6723E8F16B1789800A11EA3 /* AsyncStoreConnectorSynth.h */,
+				F6723E9016B1789800A11EA3 /* ConnectorException.h */,
+				F6723E9116B1789800A11EA3 /* FileInfo.h */,
+				F6723E9216B1789800A11EA3 /* Lib.cpp */,
+				F6723E9316B1789800A11EA3 /* Lib.h */,
+				F6AB7D4116CFD7750011069E /* Lock.h */,
+				F6723E9416B1789800A11EA3 /* StoreConnector.cpp */,
+				F6723E9516B1789800A11EA3 /* StoreConnector.h */,
+				F6723E9616B1789800A11EA3 /* StoreConnectorEncrypted.h */,
+				F6723E9716B1789800A11EA3 /* StoreConnectorInfo.cpp */,
+				F6723E9816B1789800A11EA3 /* StoreConnectorInfo.h */,
+			);
+			path = connector;
+			sourceTree = "<group>";
+		};
+		F6723E9916B1789800A11EA3 /* crypt */ = {
+			isa = PBXGroup;
+			children = (
+				F6DF723C16C6CD4900F1F90D /* Base16.h */,
+				F6DF723E16C6CD8100F1F90D /* Base16.cpp */,
+				F6723E9B16B1789800A11EA3 /* Base64.h */,
+				F6723E9A16B1789800A11EA3 /* Base64.cpp */,
+				F6723E9C16B1789800A11EA3 /* CryptoException.h */,
+				F6723E9D16B1789800A11EA3 /* Cryptor.h */,
+				F6B8568016C5D2C100524C6E /* CryptorAES.h */,
+				F6B8568116C5D39A00524C6E /* CryptorAES.cpp */,
+				F6723E9E16B1789800A11EA3 /* CryptorAESIV.cpp */,
+				F6723E9F16B1789800A11EA3 /* CryptorAESIV.h */,
+				F6723EA016B1789800A11EA3 /* CryptorNone.cpp */,
+				F6723EA116B1789800A11EA3 /* CryptorNone.h */,
+				F6723EA216B1789800A11EA3 /* CryptorRSA.cpp */,
+				F6723EA316B1789800A11EA3 /* CryptorRSA.h */,
+				F627E43D16D2A9FA006911E7 /* CryptorRSAAES.h */,
+				F627E44116D2D6A2006911E7 /* CryptorRSAAES.cpp */,
+				F6723EA516B1789800A11EA3 /* CryptorRSAFactory.h */,
+				F6B60D8C16C5A20F00991302 /* CryptorSeed.h */,
+				F6723EA616B1789800A11EA3 /* CryptorUtil.h */,
+				F6723EA716B1789800A11EA3 /* Hash.cpp */,
+				F6723EA816B1789800A11EA3 /* Hash.h */,
+				F6723EA916B1789800A11EA3 /* KeyPairFromPassword.cpp */,
+				F6723EAA16B1789800A11EA3 /* KeyPairFromPassword.h */,
+				F6723EAB16B1789800A11EA3 /* Lib.h */,
+				F6723EAC16B1789800A11EA3 /* PBE.cpp */,
+				F6723EAD16B1789800A11EA3 /* PBE.h */,
+			);
+			path = crypt;
+			sourceTree = "<group>";
+		};
+		F6723EAE16B1789800A11EA3 /* srp */ = {
+			isa = PBXGroup;
+			children = (
+				F6723EAF16B1789800A11EA3 /* SRPClientSession.cpp */,
+				F6723EB016B1789800A11EA3 /* SRPClientSession.h */,
+				F6723EB116B1789800A11EA3 /* SRPConstants.cpp */,
+				F6723EB216B1789800A11EA3 /* SRPConstants.h */,
+				F6723EB316B1789800A11EA3 /* SRPFactory.cpp */,
+				F6723EB416B1789800A11EA3 /* SRPFactory.h */,
+				F6723EB516B1789800A11EA3 /* SRPPackets.cpp */,
+				F6723EB616B1789800A11EA3 /* SRPPackets.h */,
+				F6723EB716B1789800A11EA3 /* SRPPacketSerializer.cpp */,
+				F6723EB816B1789800A11EA3 /* SRPPacketSerializer.h */,
+				F6723EB916B1789800A11EA3 /* SRPServerSession.cpp */,
+				F6723EBA16B1789800A11EA3 /* SRPServerSession.h */,
+				F6723EBB16B1789800A11EA3 /* SRPUtils.cpp */,
+				F6723EBC16B1789800A11EA3 /* SRPUtils.h */,
+				F6723EBD16B1789800A11EA3 /* SRPVerifier.h */,
+				F6723EBE16B1789800A11EA3 /* StreamSessionSRPClient.cpp */,
+				F6723EBF16B1789800A11EA3 /* StreamSessionSRPClient.h */,
+				F6723EC016B1789800A11EA3 /* StreamSessionSRPServer.cpp */,
+				F6723EC116B1789800A11EA3 /* StreamSessionSRPServer.h */,
+				F6AFD25216B48E7D00EC7158 /* SRPClientSessionSerializer.h */,
+				F6899EFB16C7F7BB00048D7D /* Lib.h */,
+			);
+			path = srp;
+			sourceTree = "<group>";
+		};
+		F6723EC216B1789800A11EA3 /* store */ = {
+			isa = PBXGroup;
+			children = (
+				F6723EC316B1789800A11EA3 /* AWSAuthenticationTest_main.cpp.no */,
+				F6723EC416B1789800A11EA3 /* Environment.cpp */,
+				F6723EC516B1789800A11EA3 /* Environment.h */,
+				F6723EC616B1789800A11EA3 /* Lib.cpp */,
+				F6723EC716B1789800A11EA3 /* Lib.h */,
+				F6723EC816B1789800A11EA3 /* StoreConnectorAWS.cpp */,
+				F6723EC916B1789800A11EA3 /* StoreConnectorAWS.h */,
+				F6723ECA16B1789800A11EA3 /* StoreConnectorDropbox.cpp */,
+				F6723ECB16B1789800A11EA3 /* StoreConnectorDropbox.h */,
+				F6723ECC16B1789800A11EA3 /* StoreConnectorFactory.cpp */,
+				F6723ECD16B1789800A11EA3 /* StoreConnectorFactory.h */,
+				F6BD959216C751FD008C6BC7 /* StoreConnectorCommon.h */,
+				F6BD959316C7529D008C6BC7 /* StoreConnectorCommon.cpp */,
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
+		F6723ED216B1789800A11EA3 /* streams */ = {
+			isa = PBXGroup;
+			children = (
+				F6723ED316B1789800A11EA3 /* IO.h */,
+				F6723ED416B1789800A11EA3 /* StreamLineSocket.cpp */,
+				F6723ED516B1789800A11EA3 /* StreamLineSocket.h */,
+				F6723ED616B1789800A11EA3 /* StreamSession.cpp */,
+				F6723ED716B1789800A11EA3 /* StreamSession.h */,
+				F6723ED816B1789800A11EA3 /* StreamSessionSocket.h */,
+				F6723ED916B1789800A11EA3 /* StreamSocket.cpp */,
+				F6723EDA16B1789800A11EA3 /* StreamSocket.h */,
+				F6899EFC16C7F84300048D7D /* Lib.h */,
+			);
+			path = streams;
+			sourceTree = "<group>";
+		};
+		F6723EDD16B1789800A11EA3 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				F6723EDE16B1789800A11EA3 /* Callback.h */,
+				F6723EDF16B1789800A11EA3 /* HttpDelegate.h */,
+				F67B873816D6819A0064EECB /* HttpDelegate.cpp */,
+				F6A6315B16C5660800A68192 /* Random.h */,
+				F6A6315D16C5666900A68192 /* Random.cpp */,
+				F6899EFD16C7F87300048D7D /* Lib.h */,
+				F67B873216D67FAF0064EECB /* InternalResource.h */,
+				F67B873416D67FFC0064EECB /* InternalResource.cpp */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		F6723EE016B1789800A11EA3 /* version */ = {
+			isa = PBXGroup;
+			children = (
+				F6723EE116B1789800A11EA3 /* Versioning.h */,
+			);
+			path = version;
+			sourceTree = "<group>";
+		};
+		F6723EE316B1789800A11EA3 /* mail */ = {
+			isa = PBXGroup;
+			children = (
+				F6723EE416B1789800A11EA3 /* cache */,
+				F6723F0316B1789800A11EA3 /* manager */,
+				F6723F2716B1789800A11EA3 /* model */,
+				F6723F4D16B1789800A11EA3 /* serializers */,
+				F6899EFE16C7F9AA00048D7D /* Lib.h */,
+			);
+			path = mail;
+			sourceTree = "<group>";
+		};
+		F6723EE416B1789800A11EA3 /* cache */ = {
+			isa = PBXGroup;
+			children = (
+				F6723EE516B1789800A11EA3 /* Cache.h */,
+				F6723EE616B1789800A11EA3 /* CacheFactory.h */,
+				F60B5C5C16C4BE27008BDDCC /* CacheFactory.cpp */,
+				F60A685A16CFE5D40096D52A /* Constants.h */,
+				F60A685C16CFE5EA0096D52A /* Constants.cpp */,
+				F6723EE816B1789800A11EA3 /* IndexedCache.h */,
+				F6723EE916B1789800A11EA3 /* IndexedCacheSerializer.h */,
+				F6504EE716C9EE810072E818 /* IndexedCacheSerializer.cpp */,
+				F6723EEA16B1789800A11EA3 /* IndexedItems.h */,
+				F6723EEB16B1789800A11EA3 /* Info.cpp */,
+				F6723EEC16B1789800A11EA3 /* Info.h */,
+				F6723EED16B1789800A11EA3 /* Item.cpp */,
+				F6723EEE16B1789800A11EA3 /* Item.h */,
+				F68B3D3216C5B69100EC3A89 /* ItemCollection.h */,
+				F6723EEF16B1789800A11EA3 /* ItemFactory.h */,
+				F6723EF016B1789800A11EA3 /* ItemFactoryStandard.h */,
+				F6723EF116B1789800A11EA3 /* ItemSerializer.h */,
+				F6723EF216B1789800A11EA3 /* ID.cpp */,
+				F6723EF316B1789800A11EA3 /* ID.h */,
+				F6723EF516B1789800A11EA3 /* Lib.cpp */,
+				F6723EF616B1789800A11EA3 /* Lib.h */,
+				F6723EF716B1789800A11EA3 /* Store.cpp */,
+				F6723EF816B1789800A11EA3 /* Store.h */,
+				F6723EFA16B1789800A11EA3 /* StoreLibrary.h */,
+				F6723EFB16B1789800A11EA3 /* StoreMemory.h */,
+				F6723EFC16B1789800A11EA3 /* StoreMemoryFactory.h */,
+				F6723EFD16B1789800A11EA3 /* StoreMemorySerializer.cpp */,
+				F6723EFE16B1789800A11EA3 /* StoreMemorySerializer.h */,
+				F6723EFF16B1789800A11EA3 /* Value.cpp */,
+				F6723F0016B1789800A11EA3 /* Value.h */,
+				F6723F0116B1789800A11EA3 /* Version.cpp */,
+				F6723F0216B1789800A11EA3 /* Version.h */,
+				F6592AA516C475DB00663587 /* Type.h */,
+			);
+			path = cache;
+			sourceTree = "<group>";
+		};
+		F6723F0316B1789800A11EA3 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				F6723F0416B1789800A11EA3 /* Actions.cpp */,
+				F6723F0516B1789800A11EA3 /* Actions.h */,
+				F6723F0616B1789800A11EA3 /* ArrivalsMonitor.h */,
+				F6723F0716B1789800A11EA3 /* ArrivalsMonitorDefault.cpp */,
+				F6723F0816B1789800A11EA3 /* ArrivalsMonitorDefault.h */,
+				F6723F0916B1789800A11EA3 /* ArrivalsProcessor.cpp */,
+				F6723F0A16B1789800A11EA3 /* ArrivalsProcessor.h */,
+				F6E792D516D3BE1700E1AC12 /* AsyncActions.h */,
+				F6E792D716D3BE2400E1AC12 /* AsyncActions.cpp */,
+				F6723F0B16B1789800A11EA3 /* CacheManager.cpp */,
+				F6723F0C16B1789800A11EA3 /* CacheManager.h */,
+				F6723F0D16B1789800A11EA3 /* Constants.cpp */,
+				F6723F0E16B1789800A11EA3 /* Constants.h */,
+				F6723F0F16B1789800A11EA3 /* Direction.h */,
+				F6723F1016B1789800A11EA3 /* EventDispatcher.h */,
+				F6723F1116B1789800A11EA3 /* EventDispatcherThreaded.cpp */,
+				F6723F1216B1789800A11EA3 /* EventDispatcherThreaded.h */,
+				F6723F1316B1789800A11EA3 /* EventPropagator.h */,
+				F6723F1416B1789800A11EA3 /* Events.cpp */,
+				F6723F1516B1789800A11EA3 /* Events.h */,
+				F6723F1616B1789800A11EA3 /* FolderQuery.h */,
+				F6723F1716B1789800A11EA3 /* Indexer.cpp */,
+				F6723F1816B1789800A11EA3 /* Indexer.h */,
+				F6723F1916B1789800A11EA3 /* Initializer.cpp */,
+				F6723F1A16B1789800A11EA3 /* Initializer.h */,
+				F6723F1B16B1789800A11EA3 /* Lib.cpp */,
+				F6723F1C16B1789800A11EA3 /* Lib.h */,
+				F6723F1D16B1789800A11EA3 /* Mailer.cpp */,
+				F6723F1E16B1789800A11EA3 /* Mailer.h */,
+				F6723F1F16B1789800A11EA3 /* Master.cpp */,
+				F6723F2016B1789800A11EA3 /* Master.h */,
+				F61EBB5A16D3FD0100D3777A /* MasterCacheSerializer.h */,
+				F61EBB5C16D401B500D3777A /* MasterCacheSerializer.cpp */,
+				F6723F2316B1789800A11EA3 /* Servent.h */,
+				F6723F2416B1789800A11EA3 /* Store.cpp */,
+				F6723F2516B1789800A11EA3 /* Store.h */,
+				F6723F2616B1789800A11EA3 /* TrackingConnector.h */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		F6723F2716B1789800A11EA3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F6723F2816B1789800A11EA3 /* AddressBook.h */,
+				F6723F2916B1789800A11EA3 /* Attachment.h */,
+				F6723F2A16B1789800A11EA3 /* Attachments.h */,
+				F6723F2B16B1789800A11EA3 /* Body.cpp */,
+				F6723F2C16B1789800A11EA3 /* Body.h */,
+				F6723F2D16B1789800A11EA3 /* Constants.cpp */,
+				F6723F2E16B1789800A11EA3 /* Constants.h */,
+				F6723F2F16B1789800A11EA3 /* Conversation.h */,
+				F6723F3016B1789800A11EA3 /* Dictionary.cpp */,
+				F66E9CBC16CD1D29001B0308 /* Dictionary.h */,
+				F6723F3316B1789800A11EA3 /* Folder.h */,
+				F6723F3416B1789800A11EA3 /* FolderDefinition.h */,
+				F6723F3616B1789800A11EA3 /* FolderFilter.h */,
+				F6723F3716B1789800A11EA3 /* FolderFilterSimple.h */,
+				F676EBA416C5E70700AC9905 /* FolderFilterSet.h */,
+				F6723F3816B1789800A11EA3 /* FolderImplBase.h */,
+				F6723F3916B1789800A11EA3 /* FolderMaster.h */,
+				F66C2FCF16C54B2800ED318E /* FolderPart.h */,
+				F6723F3A16B1789800A11EA3 /* FolderRepository.h */,
+				F6723F3B16B1789800A11EA3 /* FolderSet.h */,
+				F6723F3C16B1789800A11EA3 /* Header.cpp */,
+				F6723F3D16B1789800A11EA3 /* Header.h */,
+				F6723F3E16B1789800A11EA3 /* Identity.h */,
+				F62A18BF16DE9925002C2B42 /* Identity.cpp */,
+				F6850B6B16DA5C9700E42708 /* Manipulations.h */,
+				F6850B6D16DA5EE200E42708 /* Manipulations.cpp */,
+				F6723F3F16B1789800A11EA3 /* Model.cpp */,
+				F6723F4016B1789800A11EA3 /* Model.h */,
+				F6723F3516B1789800A11EA3 /* ModelFactory.h */,
+				F66C2FCE16C53CA800ED318E /* ModelSerializer.h */,
+				F63FA71716C6056800BFF827 /* ModelSerializer.cpp */,
+				F6723F4116B1789800A11EA3 /* Lib.cpp */,
+				F6723F4216B1789800A11EA3 /* Lib.h */,
+				F6723F4316B1789800A11EA3 /* Library.h */,
+				F6723F4416B1789800A11EA3 /* Mail.h */,
+				F6723F4716B1789800A11EA3 /* Original.h */,
+				F6723F4816B1789800A11EA3 /* Recipients.h */,
+				F6723F4916B1789800A11EA3 /* Record.h */,
+				F6723F4A16B1789800A11EA3 /* TransportState.cpp */,
+				F6723F4B16B1789800A11EA3 /* TransportState.h */,
+				F6723F4C16B1789800A11EA3 /* UnregisteredIdentity.h */,
+				F6592AA716C47E6500663587 /* Types.h */,
+				F676EBA516C5EF5D00AC9905 /* Types.cpp */,
+				F6E792D916D3F7A100E1AC12 /* Settings.h */,
+				F67B873616D680E00064EECB /* Settings.cpp */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F6723F4D16B1789800A11EA3 /* serializers */ = {
+			isa = PBXGroup;
+			children = (
+				F6723F4E16B1789800A11EA3 /* JSON.h */,
+				F6723F4F16B1789800A11EA3 /* JsonSerializer.h */,
+				F6723F5016B1789800A11EA3 /* JsonSerializerStandard.h */,
+				F6723F5116B1789800A11EA3 /* Lib.cpp */,
+				F6723F5216B1789800A11EA3 /* Lib.h */,
+				F6723F5316B1789800A11EA3 /* TypeFactory.h */,
+				F6723F5416B1789800A11EA3 /* TypeSerializer.h */,
+				F6723F5516B1789800A11EA3 /* ZipSerializer.cpp */,
+				F6723F5616B1789800A11EA3 /* ZipSerializer.h */,
+			);
+			path = serializers;
+			sourceTree = "<group>";
+		};
+		F6723F6116B1789800A11EA3 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F6723F6216B1789800A11EA3 /* Algorithm.cpp */,
+				F6723F6316B1789800A11EA3 /* Algorithm.h */,
+				F6723F6416B1789800A11EA3 /* Connector.h */,
+				F6723F6516B1789800A11EA3 /* Exception.h */,
+				F6723F6616B1789800A11EA3 /* File.cpp */,
+				F6723F6716B1789800A11EA3 /* File.h */,
+				F6723F6816B1789800A11EA3 /* FilledArray.h */,
+				F6723F6916B1789800A11EA3 /* Functions.h */,
+				F6723F6A16B1789800A11EA3 /* GenericFile.h */,
+				F6723F6B16B1789800A11EA3 /* Json.h */,
+				F662CF7616D271E00016BF2B /* JSON_.h */,
+				F6723F6C16B1789800A11EA3 /* Lock.h */,
+				F6723F6D16B1789800A11EA3 /* Lock.inl */,
+				F6723F6E16B1789800A11EA3 /* Log.cpp */,
+				F6723F6F16B1789800A11EA3 /* Log.h */,
+				F6723F7016B1789800A11EA3 /* Monitor.h */,
+				F6723F7116B1789800A11EA3 /* SafeIteration.h */,
+				F6723F7216B1789800A11EA3 /* SmartPtr.cpp */,
+				F6723F7316B1789800A11EA3 /* SmartPtr.h */,
+				F6723F7416B1789800A11EA3 /* Streams.h */,
+				F6723F7516B1789800A11EA3 /* Strings.cpp */,
+				F6723F7616B1789800A11EA3 /* Strings.h */,
+				F6723F7716B1789800A11EA3 /* Thread.h */,
+				F6723F7816B1789800A11EA3 /* Types.h */,
+				F6899F0116C7FCC000048D7D /* Lib.h */,
+				F60A686016D006D60096D52A /* Time.h */,
+				F60A686116D007130096D52A /* Time.cpp */,
+				F6830C4D16D5290B00A23B10 /* Throws.h */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F6723E6216B1775800A11EA3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6723F7916B1789800A11EA3 /* pugiconfig.hpp in Headers */,
+				F6723F7B16B1789800A11EA3 /* pugixml.hpp in Headers */,
+				F6723F7D16B1789800A11EA3 /* Authenticator.h in Headers */,
+				F6723F7F16B1789800A11EA3 /* StreamSessionClientGet.h in Headers */,
+				F6723F8016B1789800A11EA3 /* Block.h in Headers */,
+				F6723F8216B1789800A11EA3 /* BlockCompression.h in Headers */,
+				F6723F8316B1789800A11EA3 /* BlockIO.h in Headers */,
+				F6723F8416B1789800A11EA3 /* AsyncStoreConnector.h in Headers */,
+				F6723F8616B1789800A11EA3 /* AsyncStoreConnectorSynth.h in Headers */,
+				F6723F8716B1789800A11EA3 /* ConnectorException.h in Headers */,
+				F6723F8816B1789800A11EA3 /* FileInfo.h in Headers */,
+				F6723F8A16B1789800A11EA3 /* Lib.h in Headers */,
+				F6723F8C16B1789800A11EA3 /* StoreConnector.h in Headers */,
+				F6723F8D16B1789800A11EA3 /* StoreConnectorEncrypted.h in Headers */,
+				F6723F8F16B1789800A11EA3 /* StoreConnectorInfo.h in Headers */,
+				F6723F9116B1789800A11EA3 /* Base64.h in Headers */,
+				F6723F9216B1789800A11EA3 /* CryptoException.h in Headers */,
+				F6723F9316B1789800A11EA3 /* Cryptor.h in Headers */,
+				F6723F9516B1789800A11EA3 /* CryptorAESIV.h in Headers */,
+				F6723F9716B1789800A11EA3 /* CryptorNone.h in Headers */,
+				F6723F9916B1789800A11EA3 /* CryptorRSA.h in Headers */,
+				F6723F9A16B1789800A11EA3 /* CryptorRSAFactory.h in Headers */,
+				F6723F9B16B1789800A11EA3 /* CryptorUtil.h in Headers */,
+				F6723F9D16B1789800A11EA3 /* Hash.h in Headers */,
+				F6723F9F16B1789800A11EA3 /* KeyPairFromPassword.h in Headers */,
+				F6723FA016B1789800A11EA3 /* Lib.h in Headers */,
+				F6723FA216B1789800A11EA3 /* PBE.h in Headers */,
+				F6723FA416B1789800A11EA3 /* SRPClientSession.h in Headers */,
+				F6723FA616B1789800A11EA3 /* SRPConstants.h in Headers */,
+				F6723FA816B1789800A11EA3 /* SRPFactory.h in Headers */,
+				F6723FAA16B1789800A11EA3 /* SRPPackets.h in Headers */,
+				F6723FAC16B1789800A11EA3 /* SRPPacketSerializer.h in Headers */,
+				F6723FAE16B1789800A11EA3 /* SRPServerSession.h in Headers */,
+				F6723FB016B1789800A11EA3 /* SRPUtils.h in Headers */,
+				F6723FB116B1789800A11EA3 /* SRPVerifier.h in Headers */,
+				F6723FB316B1789800A11EA3 /* StreamSessionSRPClient.h in Headers */,
+				F6723FB516B1789800A11EA3 /* StreamSessionSRPServer.h in Headers */,
+				F6723FB716B1789800A11EA3 /* Environment.h in Headers */,
+				F6723FB916B1789800A11EA3 /* Lib.h in Headers */,
+				F6723FBB16B1789800A11EA3 /* StoreConnectorAWS.h in Headers */,
+				F6723FBD16B1789800A11EA3 /* StoreConnectorDropbox.h in Headers */,
+				F6723FBF16B1789800A11EA3 /* StoreConnectorFactory.h in Headers */,
+				F6723FC416B1789800A11EA3 /* IO.h in Headers */,
+				F6723FC616B1789800A11EA3 /* StreamLineSocket.h in Headers */,
+				F6723FC816B1789800A11EA3 /* StreamSession.h in Headers */,
+				F6723FC916B1789800A11EA3 /* StreamSessionSocket.h in Headers */,
+				F6723FCB16B1789800A11EA3 /* StreamSocket.h in Headers */,
+				F6723FCC16B1789800A11EA3 /* Types.h in Headers */,
+				F6723FCD16B1789800A11EA3 /* Callback.h in Headers */,
+				F6723FCE16B1789800A11EA3 /* HttpDelegate.h in Headers */,
+				F6723FCF16B1789800A11EA3 /* Versioning.h in Headers */,
+				F6723FD016B1789800A11EA3 /* Exception.h in Headers */,
+				F6723FD116B1789800A11EA3 /* Cache.h in Headers */,
+				F6723FD216B1789800A11EA3 /* CacheFactory.h in Headers */,
+				F6723FD416B1789800A11EA3 /* IndexedCache.h in Headers */,
+				F6723FD516B1789800A11EA3 /* IndexedCacheSerializer.h in Headers */,
+				F6723FD616B1789800A11EA3 /* IndexedItems.h in Headers */,
+				F6723FD816B1789800A11EA3 /* Info.h in Headers */,
+				F6723FDA16B1789800A11EA3 /* Item.h in Headers */,
+				F6723FDB16B1789800A11EA3 /* ItemFactory.h in Headers */,
+				F6723FDC16B1789800A11EA3 /* ItemFactoryStandard.h in Headers */,
+				F6723FDD16B1789800A11EA3 /* ItemSerializer.h in Headers */,
+				F6723FDF16B1789800A11EA3 /* ID.h in Headers */,
+				F6723FE216B1789800A11EA3 /* Lib.h in Headers */,
+				F6723FE416B1789800A11EA3 /* Store.h in Headers */,
+				F6723FE616B1789800A11EA3 /* StoreLibrary.h in Headers */,
+				F6723FE716B1789800A11EA3 /* StoreMemory.h in Headers */,
+				F6723FE816B1789800A11EA3 /* StoreMemoryFactory.h in Headers */,
+				F6723FEA16B1789800A11EA3 /* StoreMemorySerializer.h in Headers */,
+				F6723FEC16B1789800A11EA3 /* Value.h in Headers */,
+				F6723FEE16B1789800A11EA3 /* Version.h in Headers */,
+				F6723FF016B1789800A11EA3 /* Actions.h in Headers */,
+				F6723FF116B1789800A11EA3 /* ArrivalsMonitor.h in Headers */,
+				F6723FF316B1789800A11EA3 /* ArrivalsMonitorDefault.h in Headers */,
+				F6723FF516B1789800A11EA3 /* ArrivalsProcessor.h in Headers */,
+				F6723FF716B1789800A11EA3 /* CacheManager.h in Headers */,
+				F6723FF916B1789800A11EA3 /* Constants.h in Headers */,
+				F6723FFA16B1789800A11EA3 /* Direction.h in Headers */,
+				F6723FFB16B1789800A11EA3 /* EventDispatcher.h in Headers */,
+				F6723FFD16B1789800A11EA3 /* EventDispatcherThreaded.h in Headers */,
+				F6723FFE16B1789800A11EA3 /* EventPropagator.h in Headers */,
+				F672400016B1789800A11EA3 /* Events.h in Headers */,
+				F672400116B1789800A11EA3 /* FolderQuery.h in Headers */,
+				F672400316B1789800A11EA3 /* Indexer.h in Headers */,
+				F672400516B1789800A11EA3 /* Initializer.h in Headers */,
+				F672400716B1789800A11EA3 /* Lib.h in Headers */,
+				F672400916B1789800A11EA3 /* Mailer.h in Headers */,
+				F672400B16B1789800A11EA3 /* Master.h in Headers */,
+				F672400E16B1789800A11EA3 /* Servent.h in Headers */,
+				F672401016B1789800A11EA3 /* Store.h in Headers */,
+				F672401116B1789800A11EA3 /* TrackingConnector.h in Headers */,
+				F672401216B1789800A11EA3 /* AddressBook.h in Headers */,
+				F672401316B1789800A11EA3 /* Attachment.h in Headers */,
+				F672401416B1789800A11EA3 /* Attachments.h in Headers */,
+				F672401616B1789800A11EA3 /* Body.h in Headers */,
+				F672401816B1789800A11EA3 /* Constants.h in Headers */,
+				F672401916B1789800A11EA3 /* Conversation.h in Headers */,
+				F672401D16B1789800A11EA3 /* Folder.h in Headers */,
+				F672401E16B1789800A11EA3 /* FolderDefinition.h in Headers */,
+				F672401F16B1789800A11EA3 /* ModelFactory.h in Headers */,
+				F672402016B1789800A11EA3 /* FolderFilter.h in Headers */,
+				F672402116B1789800A11EA3 /* FolderFilterSimple.h in Headers */,
+				F672402216B1789800A11EA3 /* FolderImplBase.h in Headers */,
+				F672402316B1789800A11EA3 /* FolderMaster.h in Headers */,
+				F672402416B1789800A11EA3 /* FolderRepository.h in Headers */,
+				F672402516B1789800A11EA3 /* FolderSet.h in Headers */,
+				F672402716B1789800A11EA3 /* Header.h in Headers */,
+				F672402816B1789800A11EA3 /* Identity.h in Headers */,
+				F672402A16B1789800A11EA3 /* Model.h in Headers */,
+				F672402C16B1789800A11EA3 /* Lib.h in Headers */,
+				F672402D16B1789800A11EA3 /* Library.h in Headers */,
+				F672402E16B1789800A11EA3 /* Mail.h in Headers */,
+				F672403116B1789800A11EA3 /* Original.h in Headers */,
+				F672403216B1789800A11EA3 /* Recipients.h in Headers */,
+				F672403316B1789800A11EA3 /* Record.h in Headers */,
+				F672403516B1789800A11EA3 /* TransportState.h in Headers */,
+				F672403616B1789800A11EA3 /* UnregisteredIdentity.h in Headers */,
+				F672403716B1789800A11EA3 /* JSON.h in Headers */,
+				F672403816B1789800A11EA3 /* JsonSerializer.h in Headers */,
+				F672403916B1789800A11EA3 /* JsonSerializerStandard.h in Headers */,
+				F672403B16B1789800A11EA3 /* Lib.h in Headers */,
+				F672403C16B1789800A11EA3 /* TypeFactory.h in Headers */,
+				F672403D16B1789800A11EA3 /* TypeSerializer.h in Headers */,
+				F672403F16B1789800A11EA3 /* ZipSerializer.h in Headers */,
+				F672404816B1789800A11EA3 /* Types.h in Headers */,
+				F672404A16B1789800A11EA3 /* Algorithm.h in Headers */,
+				F672404B16B1789800A11EA3 /* Connector.h in Headers */,
+				F672404C16B1789800A11EA3 /* Exception.h in Headers */,
+				F672404E16B1789800A11EA3 /* File.h in Headers */,
+				F672404F16B1789800A11EA3 /* FilledArray.h in Headers */,
+				F672405016B1789800A11EA3 /* Functions.h in Headers */,
+				F672405116B1789800A11EA3 /* GenericFile.h in Headers */,
+				F672405216B1789800A11EA3 /* Json.h in Headers */,
+				F672405316B1789800A11EA3 /* Lock.h in Headers */,
+				F672405516B1789800A11EA3 /* Log.h in Headers */,
+				F672405616B1789800A11EA3 /* Monitor.h in Headers */,
+				F672405716B1789800A11EA3 /* SafeIteration.h in Headers */,
+				F672405916B1789800A11EA3 /* SmartPtr.h in Headers */,
+				F672405A16B1789800A11EA3 /* Streams.h in Headers */,
+				F672405C16B1789800A11EA3 /* Strings.h in Headers */,
+				F672405D16B1789800A11EA3 /* Thread.h in Headers */,
+				F672405E16B1789800A11EA3 /* Types.h in Headers */,
+				F6899EF816C7F71F00048D7D /* Core-Prefix.pch in Headers */,
+				F67B874516D689730064EECB /* ConstantsClient.h in Headers */,
+				F67B874716D689730064EECB /* ConstantsServer.h in Headers */,
+				F67B874C16D6939C0064EECB /* ConstantsEnvironmentKeys.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F6723E6316B1775800A11EA3 /* Core */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6723E7116B1775800A11EA3 /* Build configuration list for PBXNativeTarget "Core" */;
+			buildPhases = (
+				F6723E6016B1775800A11EA3 /* Sources */,
+				F6723E6116B1775800A11EA3 /* Frameworks */,
+				F6723E6216B1775800A11EA3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Core;
+			productName = Core;
+			productReference = F6723E6416B1775800A11EA3 /* libCore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6723E5B16B1775800A11EA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = F6723E5E16B1775800A11EA3 /* Build configuration list for PBXProject "Core" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F6723E5916B1775800A11EA3;
+			productRefGroup = F6723E6516B1775800A11EA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6723E6316B1775800A11EA3 /* Core */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6723E6016B1775800A11EA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6723F7A16B1789800A11EA3 /* pugixml.cpp in Sources */,
+				F6723F7C16B1789800A11EA3 /* Authenticator.cpp in Sources */,
+				F6723F7E16B1789800A11EA3 /* StreamSessionClientGet.cpp in Sources */,
+				F6723F8116B1789800A11EA3 /* BlockCompression.cpp in Sources */,
+				F6723F8516B1789800A11EA3 /* AsyncStoreConnectorSynth.cpp in Sources */,
+				F6723F8916B1789800A11EA3 /* Lib.cpp in Sources */,
+				F6723F8B16B1789800A11EA3 /* StoreConnector.cpp in Sources */,
+				F6723F8E16B1789800A11EA3 /* StoreConnectorInfo.cpp in Sources */,
+				F6723F9016B1789800A11EA3 /* Base64.cpp in Sources */,
+				F6723F9416B1789800A11EA3 /* CryptorAESIV.cpp in Sources */,
+				F6723F9616B1789800A11EA3 /* CryptorNone.cpp in Sources */,
+				F6723F9816B1789800A11EA3 /* CryptorRSA.cpp in Sources */,
+				F6723F9C16B1789800A11EA3 /* Hash.cpp in Sources */,
+				F6723F9E16B1789800A11EA3 /* KeyPairFromPassword.cpp in Sources */,
+				F6723FA116B1789800A11EA3 /* PBE.cpp in Sources */,
+				F6723FA316B1789800A11EA3 /* SRPClientSession.cpp in Sources */,
+				F6723FA516B1789800A11EA3 /* SRPConstants.cpp in Sources */,
+				F6723FA716B1789800A11EA3 /* SRPFactory.cpp in Sources */,
+				F6723FA916B1789800A11EA3 /* SRPPackets.cpp in Sources */,
+				F6723FAB16B1789800A11EA3 /* SRPPacketSerializer.cpp in Sources */,
+				F6723FAD16B1789800A11EA3 /* SRPServerSession.cpp in Sources */,
+				F6723FAF16B1789800A11EA3 /* SRPUtils.cpp in Sources */,
+				F6723FB216B1789800A11EA3 /* StreamSessionSRPClient.cpp in Sources */,
+				F6723FB416B1789800A11EA3 /* StreamSessionSRPServer.cpp in Sources */,
+				F6723FB616B1789800A11EA3 /* Environment.cpp in Sources */,
+				F6723FB816B1789800A11EA3 /* Lib.cpp in Sources */,
+				F6723FBA16B1789800A11EA3 /* StoreConnectorAWS.cpp in Sources */,
+				F6723FBC16B1789800A11EA3 /* StoreConnectorDropbox.cpp in Sources */,
+				F6723FBE16B1789800A11EA3 /* StoreConnectorFactory.cpp in Sources */,
+				F6723FC516B1789800A11EA3 /* StreamLineSocket.cpp in Sources */,
+				F6723FC716B1789800A11EA3 /* StreamSession.cpp in Sources */,
+				F6723FCA16B1789800A11EA3 /* StreamSocket.cpp in Sources */,
+				F6723FD716B1789800A11EA3 /* Info.cpp in Sources */,
+				F6723FD916B1789800A11EA3 /* Item.cpp in Sources */,
+				F6723FDE16B1789800A11EA3 /* ID.cpp in Sources */,
+				F6723FE116B1789800A11EA3 /* Lib.cpp in Sources */,
+				F6723FE316B1789800A11EA3 /* Store.cpp in Sources */,
+				F6723FE916B1789800A11EA3 /* StoreMemorySerializer.cpp in Sources */,
+				F6723FEB16B1789800A11EA3 /* Value.cpp in Sources */,
+				F6723FED16B1789800A11EA3 /* Version.cpp in Sources */,
+				F6723FEF16B1789800A11EA3 /* Actions.cpp in Sources */,
+				F6723FF216B1789800A11EA3 /* ArrivalsMonitorDefault.cpp in Sources */,
+				F6723FF416B1789800A11EA3 /* ArrivalsProcessor.cpp in Sources */,
+				F6723FF616B1789800A11EA3 /* CacheManager.cpp in Sources */,
+				F6723FF816B1789800A11EA3 /* Constants.cpp in Sources */,
+				F6723FFC16B1789800A11EA3 /* EventDispatcherThreaded.cpp in Sources */,
+				F6723FFF16B1789800A11EA3 /* Events.cpp in Sources */,
+				F672400216B1789800A11EA3 /* Indexer.cpp in Sources */,
+				F672400416B1789800A11EA3 /* Initializer.cpp in Sources */,
+				F672400616B1789800A11EA3 /* Lib.cpp in Sources */,
+				F672400816B1789800A11EA3 /* Mailer.cpp in Sources */,
+				F672400A16B1789800A11EA3 /* Master.cpp in Sources */,
+				F672400F16B1789800A11EA3 /* Store.cpp in Sources */,
+				F672401516B1789800A11EA3 /* Body.cpp in Sources */,
+				F672401716B1789800A11EA3 /* Constants.cpp in Sources */,
+				F672401A16B1789800A11EA3 /* Dictionary.cpp in Sources */,
+				F672402616B1789800A11EA3 /* Header.cpp in Sources */,
+				F672402916B1789800A11EA3 /* Model.cpp in Sources */,
+				F672402B16B1789800A11EA3 /* Lib.cpp in Sources */,
+				F672403416B1789800A11EA3 /* TransportState.cpp in Sources */,
+				F672403A16B1789800A11EA3 /* Lib.cpp in Sources */,
+				F672403E16B1789800A11EA3 /* ZipSerializer.cpp in Sources */,
+				F672404916B1789800A11EA3 /* Algorithm.cpp in Sources */,
+				F672404D16B1789800A11EA3 /* File.cpp in Sources */,
+				F672405416B1789800A11EA3 /* Log.cpp in Sources */,
+				F672405816B1789800A11EA3 /* SmartPtr.cpp in Sources */,
+				F672405B16B1789800A11EA3 /* Strings.cpp in Sources */,
+				F60B5C5D16C4BE28008BDDCC /* CacheFactory.cpp in Sources */,
+				F6A6315E16C5666A00A68192 /* Random.cpp in Sources */,
+				F6B8568216C5D39A00524C6E /* CryptorAES.cpp in Sources */,
+				F676EBA616C5EF5E00AC9905 /* Types.cpp in Sources */,
+				F63FA71816C6056800BFF827 /* ModelSerializer.cpp in Sources */,
+				F6DF723F16C6CD8100F1F90D /* Base16.cpp in Sources */,
+				F6BD959416C7529E008C6BC7 /* StoreConnectorCommon.cpp in Sources */,
+				F6504EE816C9EE810072E818 /* IndexedCacheSerializer.cpp in Sources */,
+				F60A685D16CFE5EA0096D52A /* Constants.cpp in Sources */,
+				F60A685F16CFEA630096D52A /* Types.cpp in Sources */,
+				F60A686216D007140096D52A /* Time.cpp in Sources */,
+				F662CF7B16D2743B0016BF2B /* ConstantsMailJson.cpp in Sources */,
+				F627E44216D2D6A3006911E7 /* CryptorRSAAES.cpp in Sources */,
+				F6E792D816D3BE2400E1AC12 /* AsyncActions.cpp in Sources */,
+				F61EBB5D16D401B600D3777A /* MasterCacheSerializer.cpp in Sources */,
+				F67B873516D67FFC0064EECB /* InternalResource.cpp in Sources */,
+				F67B873716D680E00064EECB /* Settings.cpp in Sources */,
+				F67B873916D6819A0064EECB /* HttpDelegate.cpp in Sources */,
+				F67B874416D689730064EECB /* ConstantsClient.cpp in Sources */,
+				F67B874616D689730064EECB /* ConstantsServer.cpp in Sources */,
+				F67B874A16D693820064EECB /* ConstantsEnvironmentKeys.cpp in Sources */,
+				F687FEDA16D7D77D00562F8E /* ConstantsPushNotifications.cpp in Sources */,
+				F62F9B5016D84C9800DF7868 /* ConstantsSettings.cpp in Sources */,
+				F6850B6E16DA5EE200E42708 /* Manipulations.cpp in Sources */,
+				F62A18C016DE9925002C2B42 /* Identity.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F6723E6F16B1775800A11EA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"_DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					Lib,
+					Core,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		F6723E7016B1775800A11EA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					Lib,
+					Core,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6723E7216B1775800A11EA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				DSTROOT = /tmp/Core.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Core/Core-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		F6723E7316B1775800A11EA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				DSTROOT = /tmp/Core.dst;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Core/Core-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6723E5E16B1775800A11EA3 /* Build configuration list for PBXProject "Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6723E6F16B1775800A11EA3 /* Debug */,
+				F6723E7016B1775800A11EA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6723E7116B1775800A11EA3 /* Build configuration list for PBXNativeTarget "Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6723E7216B1775800A11EA3 /* Debug */,
+				F6723E7316B1775800A11EA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6723E5B16B1775800A11EA3 /* Project object */;
+}

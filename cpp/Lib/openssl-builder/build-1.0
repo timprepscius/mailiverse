@@ -1,0 +1,51 @@
+#tar zxvf openssl-1.0.1c.tar.gz
+
+rm -rf openssl-x86
+rm -rf openssl-arm6
+rm -rf openssl-arm7
+rm -rf openssl-arm7s
+
+cp -R openssl-1.0.1c openssl-x86
+cp -R openssl-1.0.1c openssl-arm6
+cp -R openssl-1.0.1c openssl-arm7
+cp -R openssl-1.0.1c openssl-arm7s
+ 
+export SDK_VERSION="6.1"
+ 
+cd openssl-x86
+perl -i~ -pe 's!sig_atomic_t intr_signal!int intr_signal!' crypto/ui/ui_openssl.c
+CC="/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc -arch i386" ./Configure BSD-generic32 --openssldir=output
+perl -i~ -pe 's!^CFLAG=!$&-isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator$ENV{"SDK_VERSION"}.sdk!' Makefile
+make; make install
+ 
+cd ../openssl-arm6
+perl -i~ -pe 's!sig_atomic_t intr_signal!int intr_signal!' crypto/ui/ui_openssl.c
+CC="/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc -arch armv6" ./Configure BSD-generic32 --openssldir=output
+perl -i~ -pe 's!^CFLAG=!$&-isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS$ENV{"SDK_VERSION"}.sdk!' Makefile
+make; make install
+ 
+cd ../openssl-arm7
+CC="/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc -arch armv7" ./Configure BSD-generic32 --openssldir=output
+perl -i~ -pe 's!^CFLAG=!$&-isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS$ENV{"SDK_VERSION"}.sdk!' Makefile
+make; make install
+ 
+cd ../openssl-arm7s
+CC="/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc -arch armv7s" ./Configure BSD-generic32 --openssldir=output
+perl -i~ -pe 's!^CFLAG=!$&-isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS$ENV{"SDK_VERSION"}.sdk!' Makefile
+make; make install
+ 
+cd ../
+HOME=""
+cp -R -L openssl-x86/include/openssl ${HOME}/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDK_VERSION}.sdk/usr/include/
+cp -R -L openssl-x86/include/openssl ${HOME}/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${SDK_VERSION}.sdk/usr/include/
+cp openssl-x86/libcrypto.a ${HOME}/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDK_VERSION}.sdk/usr/lib
+cp openssl-x86/libssl.a ${HOME}/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDK_VERSION}.sdk/usr/lib
+lipo \
+	-create openssl-arm6/libcrypto.a openssl-arm7/libcrypto.a openssl-arm7s/libcrypto.a \
+	-output ${HOME}/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${SDK_VERSION}.sdk/usr/lib/libcrypto.a
+
+lipo \
+	-create openssl-arm6/libssl.a openssl-arm7/libssl.a openssl-arm7s/libcrypto.a \
+	-output ${HOME}/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${SDK_VERSION}.sdk/usr/lib/libssl.a
+ 
+ 

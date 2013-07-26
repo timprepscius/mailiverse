@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F61DE0A416B065A90003CC3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61DE0A316B065A90003CC3C /* UIKit.framework */; };
+		F61DE0A616B065A90003CC3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61DE0A516B065A90003CC3C /* Foundation.framework */; };
+		F61DE0A816B065A90003CC3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61DE0A716B065A90003CC3C /* CoreGraphics.framework */; };
+		F61DE0AE16B065A90003CC3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F61DE0AC16B065A90003CC3C /* InfoPlist.strings */; };
+		F61DE0B016B065A90003CC3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F61DE0AF16B065A90003CC3C /* main.m */; };
+		F61DE0B416B065A90003CC3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F61DE0B316B065A90003CC3C /* AppDelegate.m */; };
+		F61DE0B716B065A90003CC3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F61DE0B616B065A90003CC3C /* ViewController.m */; };
+		F61DE0BA16B065A90003CC3C /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F61DE0B816B065A90003CC3C /* ViewController_iPhone.xib */; };
+		F61DE0BD16B065A90003CC3C /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F61DE0BB16B065A90003CC3C /* ViewController_iPad.xib */; };
+		F628A61216B583A200243E51 /* libBotan.IPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6743C0316B52ABE0084280F /* libBotan.IPhone.a */; };
+		F628A61316B583A800243E51 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6743BF716B52AA90084280F /* libCore.a */; };
+		F69F4F3616B086A300674AA1 /* NativeMethods.mm in Sources */ = {isa = PBXBuildFile; fileRef = F69F4F3516B086A300674AA1 /* NativeMethods.mm */; };
+		F6C393CD16B187FC0029808E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C393CC16B187FC0029808E /* libz.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6743BF616B52AA90084280F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6743BEF16B52AA80084280F /* Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6723E6416B1775800A11EA3;
+			remoteInfo = Core;
+		};
+		F6743C0016B52ABE0084280F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6743BF816B52ABC0084280F /* Botan.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F67CE44A15C3457C008BEDD2;
+			remoteInfo = Botan;
+		};
+		F6743C0216B52ABE0084280F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6743BF816B52ABC0084280F /* Botan.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F67CF98615C3544A008BEDD2;
+			remoteInfo = Botan.IPhone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F61DE09F16B065A90003CC3C /* MailiverseWeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailiverseWeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F61DE0A316B065A90003CC3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F61DE0A516B065A90003CC3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F61DE0A716B065A90003CC3C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F61DE0AB16B065A90003CC3C /* MailiverseWeb-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MailiverseWeb-Info.plist"; sourceTree = "<group>"; };
+		F61DE0AD16B065A90003CC3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F61DE0AF16B065A90003CC3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F61DE0B116B065A90003CC3C /* MailiverseWeb-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailiverseWeb-Prefix.pch"; sourceTree = "<group>"; };
+		F61DE0B216B065A90003CC3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F61DE0B316B065A90003CC3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F61DE0B516B065A90003CC3C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F61DE0B616B065A90003CC3C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F61DE0B916B065A90003CC3C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		F61DE0BC16B065A90003CC3C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		F6743BEF16B52AA80084280F /* Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Core.xcodeproj; path = ../Core.xcodeproj; sourceTree = "<group>"; };
+		F6743BF816B52ABC0084280F /* Botan.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Botan.xcodeproj; path = ../../../Botan/Botan.xcodeproj; sourceTree = "<group>"; };
+		F69F4F3416B086A300674AA1 /* NativeMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeMethods.h; sourceTree = "<group>"; };
+		F69F4F3516B086A300674AA1 /* NativeMethods.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NativeMethods.mm; sourceTree = "<group>"; };
+		F6C393CC16B187FC0029808E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F61DE09C16B065A80003CC3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F628A61316B583A800243E51 /* libCore.a in Frameworks */,
+				F628A61216B583A200243E51 /* libBotan.IPhone.a in Frameworks */,
+				F6C393CD16B187FC0029808E /* libz.dylib in Frameworks */,
+				F61DE0A416B065A90003CC3C /* UIKit.framework in Frameworks */,
+				F61DE0A616B065A90003CC3C /* Foundation.framework in Frameworks */,
+				F61DE0A816B065A90003CC3C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F61DE09416B065A80003CC3C = {
+			isa = PBXGroup;
+			children = (
+				F6743BF816B52ABC0084280F /* Botan.xcodeproj */,
+				F6743BEF16B52AA80084280F /* Core.xcodeproj */,
+				F6C393CC16B187FC0029808E /* libz.dylib */,
+				F61DE0A916B065A90003CC3C /* MailiverseWeb */,
+				F61DE0A216B065A90003CC3C /* Frameworks */,
+				F61DE0A016B065A90003CC3C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F61DE0A016B065A90003CC3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F61DE09F16B065A90003CC3C /* MailiverseWeb.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F61DE0A216B065A90003CC3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F61DE0A316B065A90003CC3C /* UIKit.framework */,
+				F61DE0A516B065A90003CC3C /* Foundation.framework */,
+				F61DE0A716B065A90003CC3C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F61DE0A916B065A90003CC3C /* MailiverseWeb */ = {
+			isa = PBXGroup;
+			children = (
+				F61DE0B216B065A90003CC3C /* AppDelegate.h */,
+				F61DE0B316B065A90003CC3C /* AppDelegate.m */,
+				F61DE0B516B065A90003CC3C /* ViewController.h */,
+				F61DE0B616B065A90003CC3C /* ViewController.m */,
+				F61DE0B816B065A90003CC3C /* ViewController_iPhone.xib */,
+				F61DE0BB16B065A90003CC3C /* ViewController_iPad.xib */,
+				F61DE0AA16B065A90003CC3C /* Supporting Files */,
+				F69F4F3416B086A300674AA1 /* NativeMethods.h */,
+				F69F4F3516B086A300674AA1 /* NativeMethods.mm */,
+			);
+			path = MailiverseWeb;
+			sourceTree = "<group>";
+		};
+		F61DE0AA16B065A90003CC3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F61DE0AB16B065A90003CC3C /* MailiverseWeb-Info.plist */,
+				F61DE0AC16B065A90003CC3C /* InfoPlist.strings */,
+				F61DE0AF16B065A90003CC3C /* main.m */,
+				F61DE0B116B065A90003CC3C /* MailiverseWeb-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6743BF016B52AA80084280F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6743BF716B52AA90084280F /* libCore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6743BF916B52ABC0084280F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6743C0116B52ABE0084280F /* Botan.dylib */,
+				F6743C0316B52ABE0084280F /* libBotan.IPhone.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F61DE09E16B065A80003CC3C /* MailiverseWeb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F61DE0C016B065A90003CC3C /* Build configuration list for PBXNativeTarget "MailiverseWeb" */;
+			buildPhases = (
+				F61DE09B16B065A80003CC3C /* Sources */,
+				F61DE09C16B065A80003CC3C /* Frameworks */,
+				F61DE09D16B065A80003CC3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MailiverseWeb;
+			productName = MailiverseWeb;
+			productReference = F61DE09F16B065A90003CC3C /* MailiverseWeb.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F61DE09616B065A80003CC3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = F61DE09916B065A80003CC3C /* Build configuration list for PBXProject "MailiverseWeb" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F61DE09416B065A80003CC3C;
+			productRefGroup = F61DE0A016B065A90003CC3C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F6743BF916B52ABC0084280F /* Products */;
+					ProjectRef = F6743BF816B52ABC0084280F /* Botan.xcodeproj */;
+				},
+				{
+					ProductGroup = F6743BF016B52AA80084280F /* Products */;
+					ProjectRef = F6743BEF16B52AA80084280F /* Core.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F61DE09E16B065A80003CC3C /* MailiverseWeb */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F6743BF716B52AA90084280F /* libCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCore.a;
+			remoteRef = F6743BF616B52AA90084280F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6743C0116B52ABE0084280F /* Botan.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = Botan.dylib;
+			remoteRef = F6743C0016B52ABE0084280F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6743C0316B52ABE0084280F /* libBotan.IPhone.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBotan.IPhone.a;
+			remoteRef = F6743C0216B52ABE0084280F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F61DE09D16B065A80003CC3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61DE0AE16B065A90003CC3C /* InfoPlist.strings in Resources */,
+				F61DE0BA16B065A90003CC3C /* ViewController_iPhone.xib in Resources */,
+				F61DE0BD16B065A90003CC3C /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F61DE09B16B065A80003CC3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61DE0B016B065A90003CC3C /* main.m in Sources */,
+				F61DE0B416B065A90003CC3C /* AppDelegate.m in Sources */,
+				F61DE0B716B065A90003CC3C /* ViewController.m in Sources */,
+				F69F4F3616B086A300674AA1 /* NativeMethods.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F61DE0AC16B065A90003CC3C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F61DE0AD16B065A90003CC3C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F61DE0B816B065A90003CC3C /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F61DE0B916B065A90003CC3C /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		F61DE0BB16B065A90003CC3C /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F61DE0BC16B065A90003CC3C /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F61DE0BE16B065A90003CC3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../Lib,
+					../Core,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F61DE0BF16B065A90003CC3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../Lib,
+					../Core,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F61DE0C116B065A90003CC3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MailiverseWeb/MailiverseWeb-Prefix.pch";
+				INFOPLIST_FILE = "MailiverseWeb/MailiverseWeb-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F61DE0C216B065A90003CC3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MailiverseWeb/MailiverseWeb-Prefix.pch";
+				INFOPLIST_FILE = "MailiverseWeb/MailiverseWeb-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F61DE09916B065A80003CC3C /* Build configuration list for PBXProject "MailiverseWeb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F61DE0BE16B065A90003CC3C /* Debug */,
+				F61DE0BF16B065A90003CC3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F61DE0C016B065A90003CC3C /* Build configuration list for PBXNativeTarget "MailiverseWeb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F61DE0C116B065A90003CC3C /* Debug */,
+				F61DE0C216B065A90003CC3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F61DE09616B065A80003CC3C /* Project object */;
+}

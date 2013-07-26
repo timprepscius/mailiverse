@@ -1,0 +1,38 @@
+#include <botan/botan.h>
+#include <iostream>
+
+// from http://s3.amazonaws.com/doc/s3-developer-guide/RESTAuthentication.html
+
+int main (int argc, char *argv[])
+{
+	std::string stringToBeSigned =
+		"PUT\nc8fdb181845a4ca6b8fec737b3581d76\ntext/html\nThu, 17 Nov 2005 18:49:58 GMT\nx-amz-magic:abracadabra\nx-amz-meta-author:foo@bar.com\n/quotes/nelson";
+		
+	std::string awsSecretKey =
+		"OtxrzxIsfpFjA7SwPzILwy8Bw21TLhquhboDYROV";
+		
+	std::string resultingSignatureShouldBe =
+		"jZNOcbfWmD/A/f3hSvVzXZjM2HU=";
+		
+	std::string algorithmToUse = "HMAC(SHA-1)";
+	
+	Botan::SymmetricKey botanSymmetricKey = 
+		Botan::SymmetricKey(
+			reinterpret_cast<Botan::byte const *>(awsSecretKey.data()), awsSecretKey.size()
+		);
+
+	Botan::Pipe pipe(
+		new Botan::Chain(
+			new Botan::MAC_Filter(algorithmToUse, botanSymmetricKey), 
+			new Botan::Base64_Encoder
+		)
+	);
+
+	pipe.process_msg(stringToBeSigned);
+	std::string result = pipe.read_all_as_string(0);
+
+	std::cout << "Correct result is: " << resultingSignatureShouldBe << std::endl;
+	std::cout << "Got result: " << result << std::endl;
+
+	return 0;
+}
