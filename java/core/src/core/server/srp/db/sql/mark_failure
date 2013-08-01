@@ -1,0 +1,8 @@
+REPLACE INTO failure (user_id, mark)
+SELECT
+	id as user_id,
+	now() as mark
+FROM
+	user
+WHERE
+	name = ?
