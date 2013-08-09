@@ -1,0 +1,1 @@
+s3cmd del --recursive s3://USER.YOUR_ACCOUNT/Cache

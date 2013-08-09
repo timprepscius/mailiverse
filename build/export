@@ -1,0 +1,8 @@
+rm exported/KeyStreamServer.jar
+ant -buildfile exportScripts/KeyStreamServer.xml
+
+rm exported/MailStreamServer.jar
+ant -buildfile exportScripts/MailStreamServer.xml
+
+rm exported/Tools.jar
+ant -buildfile exportScripts/Tools.xml

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+V=$1
+M=$2
+dst=../gwt/war
+
+function replaceStrings() {
+	sed -i '' -f replace_js_$M.sed $1
+	sed -i '' -e s/__VERSION__/$V/g $1
+	sed -i '' -e s/__THIS_YEAR__/2013/g $1
+}
+
+echo Replacing Strings
+replaceStrings $dst/rev/$V/client.js
+replaceStrings $dst/rev/$V/signup.js
+replaceStrings $dst/rev/$V/refill.js
+replaceStrings $dst/rev/$V/delete.js
+replaceStrings $dst/rev/$V/mobile_large.js
+replaceStrings $dst/rev/$V/mobile_small.js
+

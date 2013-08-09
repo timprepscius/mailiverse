@@ -1,4 +1,5 @@
 lib/
+xcuserdata
 
 # Compiled source #
 ###################
@@ -23,7 +24,6 @@ lib/
 # git has its own built in compression methods
 *.7z
 *.dmg
-*.gz
 *.iso
 *.rar
 *.tar

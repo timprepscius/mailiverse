@@ -1,1 +1,0 @@
-INSERT INTO user (version, name, v, s) VALUES (?, ?, ?, ?) 
