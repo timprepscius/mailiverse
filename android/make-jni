@@ -1,0 +1,4 @@
+cd Mailiverse/src
+javac core/crypt/PBEPlatform.java
+javah -d ../jni core.crypt.PBEPlatform
+rm core/crypt/PBEPlatform.class
