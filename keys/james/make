@@ -1,0 +1,2 @@
+keytool -genkeypair -alias james -keyalg RSA -keysize 2048 -keystore mail_mailiverse_com.jks
+keytool -certreq -alias james -keyalg RSA -file mail_mailiverse_com.csr -keystore mail_mailiverse_com.jks

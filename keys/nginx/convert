@@ -1,0 +1,12 @@
+set -x
+
+JKSSTORE=mail_mailiverse_com.jks
+cp $JKSSTORE store.jks
+
+keytool -importkeystore -srckeystore store.jks -srcstoretype JKS -deststoretype PKCS12 -destkeystore store.p12
+openssl pkcs12 -in store.p12 -nocerts -out store.key
+openssl rsa -in store.key -out final.key
+
+cat mail_mailiverse_com.crt > final.crt
+cat PositiveSSLCA2.crt >> final.crt
+cat AddTrustExternalCARoot.crt >> final.crt

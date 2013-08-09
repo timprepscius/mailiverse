@@ -1,0 +1,10 @@
+*.jks
+*.crt
+*.b64
+*.p12
+*.csr
+*.keystore
+
+*.cer
+*.key
+*.certSigningRequest

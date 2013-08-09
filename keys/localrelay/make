@@ -1,0 +1,3 @@
+keytool -genkeypair -alias localrelay.mailiverse -keyalg RSA -keysize 2048 -keystore keystore.jks
+keytool -export -alias localrelay.mailiverse -keystore keystore.jks -rfc -file selfsignedcert.cer
+keytool -import -alias localrelay.mailiverse -file selfsignedcert.cer -keystore truststore.jks
