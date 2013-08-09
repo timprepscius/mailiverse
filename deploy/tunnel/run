@@ -1,0 +1,4 @@
+if [ "$HOSTNAME" == "blue" ] ; then
+        echo running proxy
+	nohup ./run-tunnel-sudo > ~/run.log 2>&1 &
+fi

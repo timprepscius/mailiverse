@@ -1,0 +1,24 @@
+if [ -z "$1" ]; then echo "Must supply name"; exit 0; fi
+
+server="red"
+
+echo stopping...
+ssh $1@$server "cd deploy && ./shutdown"
+
+echo transfering
+rsync -avzL --delete $1/ $1@$server:deploy
+
+echo cataloging
+ssh $1@$server "cd deploy && ./catalog"
+
+echo starting...
+ssh $1@$server "cd deploy && ./run"
+
+echo tailing...
+sleep 2
+ssh $1@$server "tail run.log"
+
+echo ...
+echo "***** remember to restart mail-user if you restart-james  *****"
+
+

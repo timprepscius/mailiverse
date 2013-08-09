@@ -1,0 +1,8 @@
+if [ -z "$1" ]; then echo "Must supply name"; exit 0; fi
+
+server="blue"
+
+echo stopping...
+ssh $1@$server "cd deploy && ./shutdown"
+
+

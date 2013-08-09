@@ -1,0 +1,2 @@
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+$DIR/run > ~tunnel/client-run.log 2>&1

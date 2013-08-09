@@ -1,0 +1,5 @@
+if [ -z "$1" ]; then echo "Must supply name"; exit 0; fi
+
+server="blue"
+
+ssh $1@$server "tail -n 100 -f run.log"

@@ -1,0 +1,5 @@
+mkdir /usr/local/nginx
+mkdir /usr/local/nginx/conf
+cp nginx.conf /usr/local/nginx/conf
+cp nginx-ssl.* /usr/local/nginx/conf
+

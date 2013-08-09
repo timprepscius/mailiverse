@@ -1,0 +1,42 @@
+#####
+# server dmz
+#
+# Timothy Prepscius v20130326
+
+# Allow the server to forward ips
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+# bring up the tap
+ifconfig tap0 up
+# put an ip on it so we can route traffic through it
+ifconfig tap0 192.168.2.5
+
+# route all traffic for 192.168.2.* through it
+# this is done implicitly when we add the ip to the tap0
+#ip route add 192.168.2.0/24 dev tap0
+
+#####
+# server iptables
+
+iptables -F
+iptables -t nat -F
+
+# forward traffic between DMZ and LAN
+iptables -A FORWARD -i eth0 -o tap0 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+iptables -A FORWARD -i tap0 -o eth0 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+
+# Route incoming port to DMZ server 192.168.2.1
+#iptables -t nat -A PREROUTING -p tcp -i eth0 --dport 8000 -j DNAT --to-destination 192.168.2.1:8000
+
+# do not need since nginx is performing this
+#iptables -t nat -A PREROUTING -p tcp -i eth0 --dport 80 -j DNAT --to-destination 192.168.2.1:8080
+
+iptables -t nat -A PREROUTING -p tcp -i eth0 --dport 25 -j DNAT --to-destination 192.168.2.1:10025
+iptables -t nat -A PREROUTING -p tcp -i eth0 --dport 7000 -j DNAT --to-destination 192.168.2.1:7000
+iptables -t nat -A PREROUTING -p tcp -i eth0 --dport 7001 -j DNAT --to-destination 192.168.2.1:7001
+
+# When the traffic goes back out, make sure it has our IP and not the DMZ
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+### End Server ####
+

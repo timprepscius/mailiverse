@@ -1,0 +1,7 @@
+apt-get update
+apt-get install telnet
+
+echo "PermitTunnel yes" >> /etc/ssh/sshd_config
+/etc/init.d/ssh restart
+
+./install-nginx

@@ -1,0 +1,5 @@
+
+server="blue"
+
+echo restarting...
+ssh tomcat@$server "cd deploy && ./restart"

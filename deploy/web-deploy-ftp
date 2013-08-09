@@ -1,0 +1,2 @@
+./web-deploy
+sitecopy --update mailiverse.com -k

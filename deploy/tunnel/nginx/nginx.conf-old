@@ -1,0 +1,19 @@
+server {
+
+    listen 443; # default_server doesn't work
+    server_name mail.mailiverse.com;
+
+    ssl on;
+    ssl_certificate /etc/nginx/conf.d/nginx-ssl.crt;
+    ssl_certificate_key /etc/nginx/conf.d/nginx-ssl.key;
+    ssl_session_cache shared:SSL:10m;
+
+    location / {
+
+        proxy_pass http://192.168.2.1:8080; # my existing apache instance
+        proxy_set_header Host $host;
+
+        # re-write redirects to http as to https, example: /home
+        proxy_redirect http:// https://;
+    }
+}

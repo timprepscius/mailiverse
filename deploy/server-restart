@@ -1,0 +1,20 @@
+if [ -z "$1" ]; then echo "Must supply name"; exit 0; fi
+
+server="blue"
+
+echo stopping...
+ssh $1@$server "cd deploy && ./shutdown"
+
+sleep 2
+
+echo starting...
+ssh $1@$server "cd deploy && ./run"
+
+echo tailing...
+sleep 2
+ssh $1@$server "tail run.log"
+
+echo ...
+echo "***** remember to restart mail-user if you restart-james  *****"
+
+

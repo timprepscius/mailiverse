@@ -1,0 +1,4 @@
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+cd $DIR/vpn-ssh
+
+while [ "true" ]; echo starting; do ./run-server; echo died; sleep 30; done;

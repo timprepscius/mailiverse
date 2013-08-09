@@ -1,0 +1,3 @@
+cd ~
+cp deploy/proxy.js server/proxy.js
+

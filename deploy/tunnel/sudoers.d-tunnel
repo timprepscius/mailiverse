@@ -1,0 +1,1 @@
+tunnel ALL = (root) NOPASSWD :/bin/bash /home/tunnel/deploy/run-tunnel,/bin/bash /home/tunnel/deploy/stop-tunnel

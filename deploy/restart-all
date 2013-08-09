@@ -1,0 +1,5 @@
+./server-restart tomcat
+./server-restart james
+./server-restart mail-user
+./server-restart mail-key
+

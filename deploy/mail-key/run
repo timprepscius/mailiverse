@@ -1,0 +1,7 @@
+./setup
+
+echo "----------------------------------------------" >> ../run.log
+date >> ../run.log
+echo "----------------------------------------------" >> ../run.log
+
+nohup java -jar KeyStreamServer.jar >> ../run.log 2>&1 &

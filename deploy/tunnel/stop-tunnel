@@ -1,0 +1,2 @@
+pkill -f "/bin/bash /home/tunnel/deploy/run-tunnel"
+killall autossh

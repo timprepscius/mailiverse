@@ -1,0 +1,18 @@
+apt-get install build-essential
+
+rm -rf nginx-build
+mkdir nginx-build
+cd nginx-build
+wget http://nginx.org/download/nginx-1.3.15.tar.gz
+wget http://downloads.sourceforge.net/project/pcre/pcre/8.32/pcre-8.32.tar.gz
+wget http://zlib.net/zlib-1.2.7.tar.gz
+wget http://www.openssl.org/source/openssl-1.0.1e.tar.gz
+
+tar -xzf nginx-1.3.15.tar.gz
+tar -xzf pcre-8.32.tar.gz
+tar -xzf zlib-1.2.7.tar.gz
+tar -xzf openssl-1.0.1e.tar.gz
+
+cd nginx-1.3.15
+./configure --with-http_ssl_module --with-pcre=../pcre-8.32 --with-zlib=../zlib-1.2.7 --with-openssl=../openssl-1.0.1e
+make install

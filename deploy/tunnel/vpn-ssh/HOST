@@ -1,0 +1,5 @@
+HOSTNAME=mail.mailiverse.com
+HOST=`nslookup $HOSTNAME | grep Address | tail -n 1 | cut -d " " -f 2`
+
+export HOST
+

@@ -1,0 +1,2 @@
+killall -w -user james java
+

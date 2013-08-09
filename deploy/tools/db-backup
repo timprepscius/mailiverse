@@ -1,0 +1,7 @@
+V=`date "+%Y%m%d_%H%M%S"`
+mysqldump -u root -p --all-databases > all.database.$V.sql
+
+scp all.database.$V.sql mailiverse-backup@red:db-backup && rm all.database.$V.sql
+
+ssh mailiverse-backup@red ./db-backup-finished
+

@@ -1,0 +1,11 @@
+source ./HOST
+
+autossh \
+	-i green.pem root@$HOST \
+	-D 23232 \
+	-w 0:0 \
+	-o Tunnel=ethernet \
+	-o ServerAliveInterval=30 \
+	-o PermitLocalCommand=yes \
+	-o LocalCommand="./client/run-to-log" \
+	./run-to-log

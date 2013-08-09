@@ -1,0 +1,18 @@
+#####
+# client vpn
+#
+# Timothy Prepscius v20130326
+#####
+
+# Allow the client to forward ips
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+# bring up the tap
+ifconfig tap0 up
+# put an ip on it so we can listen
+ifconfig tap0 192.168.2.1
+
+# route all traffic from 192.168.2.1 through 192.168.2.5
+ip rule add from 192.168.2.1 table 42
+ip route add default via 192.168.2.5 table 42
+

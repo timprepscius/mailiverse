@@ -1,0 +1,2 @@
+sudo /bin/bash /home/tunnel/deploy/stop-tunnel
+

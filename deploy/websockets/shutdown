@@ -1,0 +1,2 @@
+killall -user websockets node
+

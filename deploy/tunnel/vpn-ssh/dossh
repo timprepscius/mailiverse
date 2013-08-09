@@ -1,0 +1,3 @@
+source ./HOST
+
+ssh -i green.pem root@$HOST $@

@@ -1,0 +1,5 @@
+source ./HOST
+
+scp -i green.pem ../nginx-ssl.* root@$HOST:
+scp -i green.pem server/* root@$HOST:
+ssh -i green.pem root@$HOST ./install

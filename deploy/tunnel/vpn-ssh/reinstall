@@ -1,0 +1,4 @@
+source ./HOST
+
+scp -i green.pem ../nginx/* root@$HOST:
+scp -i green.pem server/* root@$HOST:

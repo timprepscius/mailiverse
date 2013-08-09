@@ -1,0 +1,6 @@
+cd ~
+ln -fs deploy/resources
+ln -fs deploy/apache-james-conf
+ln -fs deploy/apache-james-mailbox-memory.jar
+ln -fs deploy/apache-james-server-mailets.jar
+

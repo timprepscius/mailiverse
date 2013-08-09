@@ -1,0 +1,11 @@
+./setup
+
+cd ~/server
+
+echo ---------------------------------------- >> ../run.log 
+date >> ~/run.log
+echo ---------------------------------------- >> ../run.log 
+
+node proxy.js >> ~/run.log 2>&1 &
+
+
