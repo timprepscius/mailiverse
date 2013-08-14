@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="Mailiverse.App.Tools">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../../Desktop/eclipse"/>
+    <property name="Mailiverse.Ext.Apache.location" value="../../ext/apache"/>
+    <property name="Mailiverse.Ext.BouncyCastle.location" value="../../ext/lcrypto-jdk15on-148"/>
+    <property name="Mailiverse.Ext.JordanZimmerman.location" value="../../ext/jordanzimmerman"/>
+    <property name="Mailiverse.Ext.Json.location" value="../../ext/json"/>
+    <property name="Mailiverse.Core.location" value="../../core"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="EAR Libraries.libraryclasspath"/>
+    <path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/annotations-api.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/catalina-ant.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/catalina-ha.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/catalina-tribes.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/catalina.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/ecj-4.2.1.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/el-api.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/jasper-el.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/jasper.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/jsp-api.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/servlet-api.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-api.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-coyote.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-dbcp.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-i18n-es.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-i18n-fr.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-i18n-ja.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-jdbc.jar"/>
+        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-util.jar"/>
+    </path>
+    <path id="Mailiverse.Ext.BouncyCastle.classpath">
+        <pathelement location="${Mailiverse.Ext.BouncyCastle.location}/bin"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <path refid="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath"/>
+    </path>
+    <path id="Mailiverse.Ext.JordanZimmerman.classpath">
+        <pathelement location="${Mailiverse.Ext.JordanZimmerman.location}/bin"/>
+        <path refid="Mailiverse.Ext.BouncyCastle.classpath"/>
+    </path>
+    <path id="Mailiverse.Ext.Json.classpath">
+        <pathelement location="${Mailiverse.Ext.Json.location}/bin"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <path refid="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath"/>
+    </path>
+    <path id="Mailiverse.Ext.Apache.classpath">
+        <pathelement location="${Mailiverse.Ext.Apache.location}/bin"/>
+    </path>
+    <path id="Mailiverse.Core.classpath">
+        <pathelement location="${Mailiverse.Core.location}/bin"/>
+        <path refid="Mailiverse.Ext.BouncyCastle.classpath"/>
+        <path refid="Mailiverse.Ext.JordanZimmerman.classpath"/>
+        <path refid="Mailiverse.Ext.Json.classpath"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/dropbox-java-sdk-1.3.jar"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/aws-java-sdk.jar"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/javamail-1.4.jar"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/activation-1.1.1.jar"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/slf4j-api-1.3.1.jar"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/slf4j-simple-1.3.1.jar"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/mysql-connector-java-3.1.14-bin.jar"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/mina-core-2.0.4.jar"/>
+        <path refid="Mailiverse.Ext.Apache.classpath"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/commons-codec-1.4.jar"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/commons-logging-1.1.1.jar"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/httpclient-4.1.1.jar"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/httpcore-4.1.jar"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/JavaPNS_2.2.jar"/>
+        <pathelement location="${Mailiverse.Core.location}/lib/log4j-1.2.15.jar"/>
+    </path>
+    <path id="Mailiverse.App.Tools.classpath">
+        <pathelement location="bin"/>
+        <path refid="Mailiverse.Core.classpath"/>
+        <path refid="Mailiverse.Ext.BouncyCastle.classpath"/>
+        <path refid="Mailiverse.Ext.JordanZimmerman.classpath"/>
+        <path refid="Mailiverse.Ext.Json.classpath"/>
+        <pathelement location="lib/dropbox-java-sdk-1.3.jar"/>
+        <pathelement location="lib/json_simple-1.1.jar"/>
+        <pathelement location="lib/log4j-1.2.15.jar"/>
+        <pathelement location="lib/mysql-connector-java-3.1.14-bin.jar"/>
+        <pathelement location="lib/slf4j-api-1.3.1.jar"/>
+        <pathelement location="lib/slf4j-simple-1.3.1.jar"/>
+        <pathelement location="lib/JavaPNS_2.2.jar"/>
+        <pathelement location="lib/bcprov-jdk15on-148.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall">
+        <ant antfile="build.xml" dir="${Mailiverse.Ext.Apache.location}" inheritAll="false" target="clean"/>
+        <ant antfile="build.xml" dir="${Mailiverse.Ext.BouncyCastle.location}" inheritAll="false" target="clean"/>
+        <ant antfile="build.xml" dir="${Mailiverse.Ext.JordanZimmerman.location}" inheritAll="false" target="clean"/>
+        <ant antfile="build.xml" dir="${Mailiverse.Ext.Json.location}" inheritAll="false" target="clean"/>
+        <ant antfile="build.xml" dir="${Mailiverse.Core.location}" inheritAll="false" target="clean"/>
+    </target>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects">
+        <ant antfile="build.xml" dir="${Mailiverse.Ext.Apache.location}" inheritAll="false" target="build-project">
+            <propertyset>
+                <propertyref name="build.compiler"/>
+            </propertyset>
+        </ant>
+        <ant antfile="build.xml" dir="${Mailiverse.Ext.BouncyCastle.location}" inheritAll="false" target="build-project">
+            <propertyset>
+                <propertyref name="build.compiler"/>
+            </propertyset>
+        </ant>
+        <ant antfile="build.xml" dir="${Mailiverse.Ext.JordanZimmerman.location}" inheritAll="false" target="build-project">
+            <propertyset>
+                <propertyref name="build.compiler"/>
+            </propertyset>
+        </ant>
+        <ant antfile="build.xml" dir="${Mailiverse.Ext.Json.location}" inheritAll="false" target="build-project">
+            <propertyset>
+                <propertyref name="build.compiler"/>
+            </propertyset>
+        </ant>
+        <ant antfile="build.xml" dir="${Mailiverse.Core.location}" inheritAll="false" target="build-project">
+            <propertyset>
+                <propertyref name="build.compiler"/>
+            </propertyset>
+        </ant>
+    </target>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="Mailiverse.App.Tools.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>

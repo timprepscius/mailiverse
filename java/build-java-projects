@@ -1,0 +1,7 @@
+pushd core
+ant clean && ant
+popd
+
+pushd webserver
+ant clean && ant
+popd

@@ -68,5 +68,8 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/Mailiverse.Ext.BouncyCastle"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Mailiverse.Ext.JordanZimmerman"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Mailiverse.Ext.Json"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

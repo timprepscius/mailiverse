@@ -277,7 +277,7 @@ public class S3Connector extends AsyncStoreConnectorHelper
 		return new CallbackDefault(includeResponseData) {
 			public void onSuccess(Object... arguments) throws Exception {
 				
-				boolean includeResponseData = V(0);
+				boolean includeResponseData = (Boolean)V(0);
 				String[][] headers = (String[][])arguments[1];
 				
 				for (String[] pair : headers)
