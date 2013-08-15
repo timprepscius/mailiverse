@@ -10,10 +10,6 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
-import com.sun.org.apache.xml.internal.security.utils.Base64;
-
-import sun.reflect.ReflectionFactory.GetReflectionFactoryAction;
-
 import mail.client.CacheManager;
 import mail.client.Events;
 
@@ -21,6 +17,7 @@ import core.constants.ConstantsMailJson;
 import core.crypt.CryptorAES;
 import core.crypt.CryptorRSAAES;
 import core.crypt.CryptorRSAFactory;
+import core.util.Base64;
 import core.util.JSON_;
 import core.util.LogNull;
 import core.util.Pair;
