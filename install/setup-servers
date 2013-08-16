@@ -1,0 +1,9 @@
+set -x
+source ../host.config
+
+./create-server-accounts $M_HOST_PROD
+./create-server-accounts $M_HOST_DEV
+
+./setup-james $M_HOST_PROD
+./setup-james $M_HOST_DEV
+

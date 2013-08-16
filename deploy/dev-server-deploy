@@ -1,6 +1,7 @@
 if [ -z "$1" ]; then echo "Must supply name"; exit 0; fi
 
-server="red"
+source ../config.hosts
+server=$M_HOST_DEV
 
 echo stopping...
 ssh $1@$server "cd deploy && ./shutdown"

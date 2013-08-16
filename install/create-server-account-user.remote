@@ -1,0 +1,13 @@
+set -x
+
+USER=$1
+
+sudo useradd -m $USER
+sudo usermod -s /bin/bash $USER
+sudo mkdir ../$USER/.ssh
+sudo cp authorized_keys ../$USER/.ssh
+
+sudo chown $USER ../$USER/.ssh ../$USER/.ssh/*
+sudo chgrp $USER ../$USER/.ssh ../$USER/.ssh/*
+sudo chmod 0700 ../$USER/.ssh
+sudo chmod 0644 ../$USER/.ssh/authorized_keys

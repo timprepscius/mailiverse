@@ -1,5 +1,6 @@
 
-server="red"
+source ../config.hosts
+server=$M_HOST_DEV 
 
 echo restarting...
 ssh tomcat@$server "cd deploy && ./restart"

@@ -1,0 +1,23 @@
+Things you must do for this to work out of the box:
+
+
+1.  You must have .ssh keys for this account..
+
+If you don't have them, generate them by googling "generate .ssh keys" and doing whatever it says.
+
+
+
+
+
+2.  You must go into the requirements directory and
+
+   a.  run "./get_rsa_pub"
+
+   b.  if you are going to install to an ec2 instance, 
+       you must create the prod and dev instance and copy the key.pem file into requirements.
+       and then soft link the ec2-key.pem to your file.
+
+   c.  and then, this is really important, you must 
+
+MUAHAHAHAHHAHAHA... just kidding, I'll write the rest soon.  
+
