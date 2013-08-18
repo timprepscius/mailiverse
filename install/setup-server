@@ -1,0 +1,10 @@
+if [ -z "$1" ]; then echo "Must supply name"; exit 0; fi
+
+set -x
+
+M_HOST=$1
+
+./create-server-accounts $M_HOST
+./setup-james $M_HOST
+./setup-java $M_HOST
+

@@ -5,7 +5,7 @@ USER=$1
 sudo useradd -m $USER
 sudo usermod -s /bin/bash $USER
 sudo mkdir ../$USER/.ssh
-sudo cp authorized_keys ../$USER/.ssh
+cat authorized_keys | sudo tee -a ../$USER/.ssh/authorized_keys
 
 sudo chown $USER ../$USER/.ssh ../$USER/.ssh/*
 sudo chgrp $USER ../$USER/.ssh ../$USER/.ssh/*
