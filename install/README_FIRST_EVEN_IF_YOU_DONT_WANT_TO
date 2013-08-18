@@ -31,6 +31,9 @@ to the target machine.
 installing off of.  Take a look at "enable_ec2_login" for what this means.
 
 
+6.  You MUST have your passwords setup, if you are just running this as a test it is easiest to run
+	"make" from within the mailiverse/passwords directory.  This will create passwords using /dev/urandom
+
 ---
 
 Ok now you are ready to go.
@@ -39,6 +42,13 @@ from the install directory type in
 
 ./setup-server YOUR-SERVER-IP-NAME-WHATEVER
 
-and it should create the various accounts for the system and enable ssh publickey access to them.
-it should download apache james and enable it
+and it should 
 
+1. create the various accounts for the system and enable ssh publickey access to them 
+from the computer/account you are running on now
+
+2. it should download apache james
+
+4. it should download and install java (oracle, don't use others with apache james, they crash)
+
+3. it should download and install mysql and set up the users and databases.

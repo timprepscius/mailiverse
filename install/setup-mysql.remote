@@ -1,0 +1,6 @@
+set -x
+
+sudo apt-get install mysql-server --yes
+
+mysql -u root < setup-mysql.sql
+rm setup-mysql.sql
