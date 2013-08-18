@@ -1,2 +1,2 @@
-rsync -avL --exclude="WEB-INF" --delete ../gwt/war/ tprepscius@red:www/
+rsync -avL --exclude="WEB-INF" --delete ../gwt/war/ red:www/
 

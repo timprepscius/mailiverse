@@ -1,0 +1,8 @@
+echo `./make-single-password` > captcha
+echo `./make-single-password` > james
+echo `./make-single-password` > mail
+echo `./make-single-password` > mail-pbe
+echo `./make-single-password` > mail_extra
+echo `./make-single-password` > push-certificate
+
+

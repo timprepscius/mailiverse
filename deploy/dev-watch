@@ -1,6 +1,6 @@
 if [ -z "$1" ]; then echo "Must supply name"; exit 0; fi
 
-source ../config.hosts
+source ./config.hosts
 server=$M_HOST_DEV 
 
 ssh $1@$server "tail -n 100 -f run.log"

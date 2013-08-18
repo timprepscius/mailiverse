@@ -1,5 +1,5 @@
 
-source ../config.hosts
+source ./config.hosts
 server=$M_HOST_DEV 
 
 echo restarting...
