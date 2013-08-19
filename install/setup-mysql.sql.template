@@ -1,6 +1,6 @@
-CREATE DATABASE mail CHARACTER SET utf8;
-CREATE DATABASE mail_extra CHARACTER SET utf8;
-CREATE DATABASE captcha CHARACTER SET utf8;
+CREATE DATABASE mail DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+CREATE DATABASE mail_extra DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+CREATE DATABASE captcha DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
 CREATE DATABASE james CHARACTER SET utf8;
 
 CREATE USER 'mail'@'localhost' IDENTIFIED BY 'MAIL_PASSWORD';
@@ -8,7 +8,7 @@ CREATE USER 'mail_extra'@'localhost' IDENTIFIED BY 'MAIL_EXTRA_PASSWORD';
 CREATE USER 'captcha'@'localhost' IDENTIFIED BY 'CAPTCHA_PASSWORD';
 CREATE USER 'james'@'localhost' IDENTIFIED BY 'JAMES_PASSWORD';
 
-GRANT ALL PRIVILEGES ON *.mail TO 'mail'@'localhost';
-GRANT ALL PRIVILEGES ON *.mail_extra TO 'mail_extra'@'localhost';
-GRANT ALL PRIVILEGES ON *.captcha TO 'captcha'@'localhost';
-GRANT ALL PRIVILEGES ON *.james TO 'james'@'localhost';
+GRANT ALL PRIVILEGES ON mail.* TO 'mail'@'localhost';
+GRANT ALL PRIVILEGES ON mail_extra.* TO 'mail_extra'@'localhost';
+GRANT ALL PRIVILEGES ON captcha.* TO 'captcha'@'localhost';
+GRANT ALL PRIVILEGES ON james.* TO 'james'@'localhost';

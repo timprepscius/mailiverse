@@ -25,15 +25,13 @@ public class ProxySelectorRegex extends ProxySelector
 		"localhost",
 		"127\\.0.*",
 		"192\\.168\\.1\\..*",
-		".*piratemail\\.se",
-		"blue",
-		".*mailiverse\\.com",
 		".*\\.dropbox\\.com",
 		"s3\\.amazonaws\\.com",
 		"s3\\.amazonaws\\.com\\.",
 		".*\\.s3\\.amazonaws\\.com",
 		".*\\.s3\\.amazonaws\\.com\\.",
-		".*\\.push\\.apple\\.com"
+		".*\\.push\\.apple\\.com",
+		".*" + (Hosts.getHostFor("primary_prod").replace(".", "\\."))
 	} ;
 		
 	List<Proxy> NoProxy = Arrays.asList(new Proxy[] { Proxy.NO_PROXY });

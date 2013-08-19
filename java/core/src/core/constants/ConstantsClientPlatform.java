@@ -1,5 +1,7 @@
 package core.constants;
 
+import core.util.Hosts;
+
 public class ConstantsClientPlatform
 {
 	public static final boolean DEBUG = false;
@@ -10,17 +12,17 @@ public class ConstantsClientPlatform
 	{
 		if (DEBUG)
 		{
-			HOST = "mailiverse.com";
-			AUTH_HOST = "red";
-			TOMCAT_HOST = "YOUR_DEV_TOMCAT:8080";
-			WEB_HOST = "YOUR_DEV_WEB:8000";
+			HOST = Hosts.getHostFor("primary_dev");
+			AUTH_HOST = Hosts.getHostFor("auth_dev");
+			TOMCAT_HOST = Hosts.getHostFor("tomcat_dev");
+			WEB_HOST = Hosts.getHostFor("web_dev");
 		}
 		else
 		{
-			HOST = "mailiverse.com";
-			AUTH_HOST = "mail.mailiverse.com";
-			TOMCAT_HOST = "mail.mailiverse.com";
-			WEB_HOST = "www.mailiverse.com";
+			HOST = Hosts.getHostFor("primary_prod");
+			AUTH_HOST = Hosts.getHostFor("auth_prod");
+			TOMCAT_HOST = Hosts.getHostFor("tomcat_prod");
+			WEB_HOST = Hosts.getHostFor("web_prod");
 		}
 	}
 }
