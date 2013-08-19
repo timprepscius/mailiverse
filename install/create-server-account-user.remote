@@ -11,3 +11,4 @@ sudo chown $USER ../$USER/.ssh ../$USER/.ssh/*
 sudo chgrp $USER ../$USER/.ssh ../$USER/.ssh/*
 sudo chmod 0700 ../$USER/.ssh
 sudo chmod 0644 ../$USER/.ssh/authorized_keys
+sudo chmod 0700 ../$USER
