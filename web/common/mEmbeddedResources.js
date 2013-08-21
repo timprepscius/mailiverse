@@ -2,10 +2,10 @@
 
 EmbeddedResources = {
 	"mail.auth.MailServerAuthenticatorNoThread.truststore.jks.b64" :
-	"your trust store",
+	"{##TRUSTSTORE_AUTH##}",
 
 	"mail.client.Mailer.send-truststore.jks.b64" :
-	"your trust store"
+	"{##TRUSTSTORE_SEND##}"
 };
 
 /** resources **/
