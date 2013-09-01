@@ -2,13 +2,20 @@ set -x
 
 USER=$1
 
-sudo useradd -m $USER
-sudo usermod -s /bin/bash $USER
-sudo mkdir ../$USER/.ssh
-cat authorized_keys | sudo tee -a ../$USER/.ssh/authorized_keys
+if [ "$USER" == "root" ]
+then
+	USER_DIR='.'
+else
+	USER_DIR="/home/$USER"
+	sudo useradd -m $USER
+	sudo usermod -s /bin/bash $USER
+fi
 
-sudo chown $USER ../$USER/.ssh ../$USER/.ssh/*
-sudo chgrp $USER ../$USER/.ssh ../$USER/.ssh/*
-sudo chmod 0700 ../$USER/.ssh
-sudo chmod 0644 ../$USER/.ssh/authorized_keys
-sudo chmod 0700 ../$USER
+sudo mkdir $USER_DIR/.ssh
+cat authorized_keys | sudo tee -a $USER_DIR/.ssh/authorized_keys
+
+sudo chown $USER $USER_DIR/.ssh $USER_DIR/.ssh/*
+sudo chgrp $USER $USER_DIR/.ssh $USER_DIR/.ssh/*
+sudo chmod 0700 $USER_DIR/.ssh
+sudo chmod 0644 $USER_DIR/.ssh/authorized_keys
+sudo chmod 0700 $USER_DIR

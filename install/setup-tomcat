@@ -1,0 +1,8 @@
+set -x
+
+M_HOST=$1
+
+scp ../ext/apache-tomcat.tar.gz tomcat@$M_HOST:
+scp setup-tomcat.remote tomcat@$M_HOST:
+
+ssh tomcat@$M_HOST ./setup-tomcat.remote

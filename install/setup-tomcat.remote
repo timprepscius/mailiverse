@@ -1,0 +1,10 @@
+set -x
+
+tar -xzvf apache-tomcat.tar.gz
+ln -s apache-tomcat-* tomcat
+
+ln -s tomcat/logs/catalina.out run.log
+mv tomcat/webapps tomcat/webapps.original
+mkdir tomcat/webapps
+
+cd tomcat/webapps && ln -s ../../deploy/WebServer.war Mailiverse.war

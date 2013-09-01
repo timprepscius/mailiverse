@@ -1,5 +1,6 @@
 set -x
 
+./create-server-account-user.remote web
 ./create-server-account-user.remote james
 ./create-server-account-user.remote mail-user
 ./create-server-account-user.remote mail-key

@@ -1,0 +1,8 @@
+./setup
+
+echo "----------------------------------------------" >> ../run.log
+date >> ../run.log
+echo "----------------------------------------------" >> ../run.log
+
+/usr/bin/nginx -t -c ~/resources/nginx.conf
+
