@@ -1,6 +1,6 @@
 set -x
 
-sudo apt-get install nginx --yes
+apt-get install nginx --yes
 cp sudoers.d-web /etc/sudoers.d/web
 chmod 0440 /etc/sudoers.d/web
 
