@@ -1,0 +1,8 @@
+if [ -z "$1" ]; then echo "Must supply name"; exit 0; fi
+
+set -x
+M_ROOT=`cat requirements/server_root_account`
+M_HOST=$1
+
+scp enable-rsync.remote $M_ROOT@$M_HOST:
+ssh $M_ROOT@$M_HOST ./enable-rsync.remote

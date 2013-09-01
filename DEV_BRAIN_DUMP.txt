@@ -1,0 +1,96 @@
+This is the document to read if you are going to further the development of Mailiverse.
+This is *NOT* the document to read if you just want to install it somewhere.
+
+For the time being I'm going to just write down anything that pops into my head.
+
+
+
+* Why is the BouncyCastle package name changed to org.bc?
+
+I don't trust google.  Google puts the BouncyCastle package in the system loader of android phones.
+This makes it impossible to override.  Google may very well have modified the BouncyCastle
+package to do the bidding of the NSA.
+
+Hence, I use BouncyCastle from the original source.  However I used Eclipse to modify the package name from org.bouncycastle to org.bc.
+
+
+
+
+* What is the fucking deal with the Callbacks, it makes Mailiverse's java code super sucky.
+
+Unfortunately this is because Javascript is super sucky.  Javascript, at the time of Mailiverse's coding does not have threads.  The Java is cross compiled to Javascript for the web code.
+
+So.
+
+I came up with strings of callbacks.
+Let's say you are going to do a set of operations A -> B -> C -> D -> E -> F -> G.
+C and F happen to be computationally expensive.
+
+Basically, a chain of callbacks is created, and the C callback is offloaded to a worker frame.
+C's result is sent back to the original browser frame and the callbacks continue.  Eventually F is offloaded, etc etc.
+
+You may say, well, why didn't you off load *everything* to the worker frame?
+Well, because it makes it a pain in the ass to reference objects.  You get all of these copies of everything, things still suck.  Maybe I should have, I don't know.
+
+
+
+So, things still suck.  Don't blame me.  Blame Sun, Firefox and Google.
+
+The web could have been a beautiful place in which true games/environments run at native c++ compiled speed within a browser.  I could write in the language of my choice -- and not compile to fucking javascript.  Instead we have stupid people selling stupid shit to other stupid people.
+
+
+
+
+* Ok, so tell me what these projects are, why did you do all this soft linking (ln -s) ?
+
+So, I'm writing for Java & Web & Android.  Each one has different screw ups and each one has low level intricacies.
+
+So for instance logging is different on Web and Java.
+PBE operations are different from Android to Java to Web.
+Accessing web resources is different on Web and Java and Android.
+
+Instead of creating umpteen billion factories, I create a core set of files, Mailiverse.Core, and soft link what I need for each platform.
+
+Mailiverse-GWT references almost all of the Mailiverse.Core.  It leaves out things for the server and it redoes some of the encryption routines and logging, etc.
+
+Mailiverse.Mail-WebServer is the apache tomcat server.  It references only the things needed to run the server from Mailiverse.Core.
+
+Mailiverse.Web houses the static web files.
+
+
+
+
+
+* Why did you use Dropbox and S3 to store received mail?  Why not from the mail server?
+
+Well, *you* can add the key store if you'd like.  It's not that hard to do.
+For my particular situation, I wanted to keep the mail server running in my physical proximity.
+I wanted the ability to walk over and root the box through shear presence.
+
+But, bandwidth out of my apartment is incredibly low.  Wat do?
+
+I worked out a solution where bandwidth to the box is spent authenticating (very very small amount) and handling incoming/outgoing mail (where things can be queued and slower than light speed).
+
+Then files which you need to go light speed are stored on providers (S3/Dropbox) which can handle light speed.
+
+
+
+
+* What sort of costs in S3 am I going to have.
+
+Probably about $0.02 a month per user. 
+
+
+
+
+
+* What happens if mysql crashes and I lose all the backups of logins?
+
+You are screwed.  Totally screwed.  Make backups to a safe place of the mysql server.
+
+
+
+
+
+
+

@@ -3,5 +3,6 @@ set -x
 M_ROOT=`cat requirements/server_root_account`
 M_HOST=$1
 
+scp sudoers.d-web $M_ROOT@$M_HOST:
 scp setup-web.remote $M_ROOT@$M_HOST:
 ssh $M_ROOT@$M_HOST ./setup-web.remote

@@ -1,0 +1,1 @@
+web ALL = (root) NOPASSWD :/etc/init.d/nginx start,/etc/init.d/nginx stop

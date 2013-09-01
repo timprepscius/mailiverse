@@ -1,0 +1,2 @@
+rm mail_servers.*
+rm final/mail_servers.*

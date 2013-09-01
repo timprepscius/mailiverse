@@ -1,3 +1,18 @@
 set -x
 
 sudo apt-get install nginx --yes
+cp sudoers.d-web /etc/sudoers.d/web
+chmod 0440 /etc/sudoers.d/web
+
+cd /etc/nginx
+ln -s /home/web/resources/nginx-ssl.crt
+ln -s /home/web/resources/nginx-ssl.key
+
+cd conf.d
+ln -s /home/web/resources/nginx.conf
+
+cd /var/local
+mkdir www
+chown web www
+
+

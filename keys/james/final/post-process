@@ -1,4 +1,4 @@
-cp ../mail_mailiverse_com.jks .
-#keytool -import -trustcacerts -alias root -file ../mail_mailiverse_com/AddTrustExternalCARoot.crt -keystore mail_mailiverse_com.jks
-keytool -import -trustcacerts -alias POSITIVESSL -file ../mail_mailiverse_com/PositiveSSLCA2.crt -keystore mail_mailiverse_com.jks
-keytool -import -trustcacerts -alias james -file ../mail_mailiverse_com/mail_mailiverse_com.crt -keystore mail_mailiverse_com.jks
+cp ../mail_servers.jks .
+#keytool -import -trustcacerts -alias root -file ../mail_servers/AddTrustExternalCARoot.crt -keystore mail_servers.jks
+keytool -import -trustcacerts -alias POSITIVESSL -file ../mail_servers/PositiveSSLCA2.crt -keystore mail_servers.jks
+keytool -import -trustcacerts -alias james -file ../mail_servers/mail_servers.crt -keystore mail_servers.jks

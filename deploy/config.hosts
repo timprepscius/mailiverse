@@ -1,2 +1,2 @@
-M_HOST_PROD=`cat config/hosts/prod`
-M_HOST_DEV=`cat config/hosts/dev`
+M_HOST_PROD=`cat config/hosts/web_prod`
+M_HOST_DEV=`cat config/hosts/web_dev`

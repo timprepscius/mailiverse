@@ -1,1 +1,1 @@
-/usr/bin/nginx -c ~/resources/nginx.conf -s stop
+sudo /etc/init.d/nginx stop

@@ -1,3 +1,6 @@
 cd ~
+ln -fs deploy/www
 ln -fs deploy/resources
+ln -fs /var/log/nginx/error.log run.log
 
+rsync -avz --delete www/ /var/local/www/

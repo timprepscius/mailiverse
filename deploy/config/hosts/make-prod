@@ -4,7 +4,7 @@ prod=$1
 
 echo $prod > prod
 echo $prod > primary_prod
-echo $prod > web_prod
+echo mail.$prod > web_prod
 echo mail.$prod > tomcat_prod
 echo mail.$prod > auth_prod
 echo mail.$prod > local_mail_prod

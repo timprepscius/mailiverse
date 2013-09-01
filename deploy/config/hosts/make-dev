@@ -3,8 +3,8 @@ if [ -z "$1" ]; then echo "Must supply server name as argument"; exit 0; fi
 dev=$1
 
 echo $dev > primary_dev
-echo $dev:8080 > tomcat_dev
-echo $dev:8000 > web_dev
+echo mail.$dev > tomcat_dev
+echo mail.$dev > web_dev
 echo $dev > auth_dev
 echo $dev > dev
 

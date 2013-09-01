@@ -1,0 +1,6 @@
+if [ -z "$1" ]; then echo "Must supply directory name of result"; exit 0; fi
+
+rm -rf mail_servers
+mkdir mail_servers
+cp $1/* mail_servers/
+mv mail_servers/mail_* mail_servers/mail_servers.crt

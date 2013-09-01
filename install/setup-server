@@ -10,4 +10,4 @@ M_HOST=$1
 ./setup-mysql $M_HOST
 ./setup-tomcat $M_HOST
 ./setup-web $M_HOST
-
+./enable-rsync $M_HOST
