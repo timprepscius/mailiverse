@@ -5,4 +5,5 @@ M_HOST=$1
 
 scp sudoers.d-web $M_ROOT@$M_HOST:
 scp setup-web.remote $M_ROOT@$M_HOST:
+scp setup-nginx.remote $M_ROOT@$M_HOST:
 ssh $M_ROOT@$M_HOST sudo ./setup-web.remote
