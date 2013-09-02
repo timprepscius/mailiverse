@@ -2,6 +2,8 @@
 
 V=`date "+%Y%m%d_%H%M%S"`
 
+rsync -avL --exclude="WEB-INF" --delete ../gwt/war/ www-dev/
+
 ./compile-web-html $V dev
 ./compile-web-js $V dev
 

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 
 V=$1
 M=$2
@@ -8,9 +9,9 @@ HOST_PRIMARY=`cat ../deploy/config/hosts/$M`
 HOST_AUTH=`cat ../deploy/config/hosts/auth_$M`
 HOST_TOMCAT=`cat ../deploy/config/hosts/tomcat_$M`
 HOST_WEB=`cat ../deploy/config/hosts/web_$M`
-`
 
-dst=../gwt/war
+
+dst=www-$2
 cmn_src=../web/common
 client_src=../web/client
 signup_src=../web/signup

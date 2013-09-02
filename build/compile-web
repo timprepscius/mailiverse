@@ -2,6 +2,9 @@
 
 V=`date "+%Y%m%d_%H%M%S"`
 
+rsync -avL --delete ../web/WebContent/ www-prod/
+rsync -avL --delete ../gwt/war/mailiverse_gwt www-prod/mailiverse_gwt
+
 ./compile-web-html $V prod
 ./compile-web-js $V prod
 

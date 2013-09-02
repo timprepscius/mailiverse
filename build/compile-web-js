@@ -2,7 +2,7 @@
 
 V=$1
 M=$2
-dst=../gwt/war
+dst=www-$M
 
 function replaceStrings() {
 	sed -i '' -f replace_js_$M.sed $1

@@ -44,6 +44,7 @@ public class ConstantsServer
 	
 	public static final String MAIL_AUTH_HOST = KEY_SERVER;
 	public static final int MAIL_AUTH_PORT = 7001;
+	
 	public static final int MAXIMUM_MAIL_SIZE = 1024 * 1024 * 1;
 
 	public static final int AUTH_TIMEOUT = 45;
