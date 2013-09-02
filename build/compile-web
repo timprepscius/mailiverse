@@ -6,7 +6,7 @@ V=`date "+%Y%m%d_%H%M%S"`
 M=$1
 
 rsync -avL --delete ../web/WebContent/ www/
-rsync -avL --delete ../gwt/war/mailiverse_gwt www/mailiverse_gwt
+rsync -avL --delete ../gwt/war/mailiverse_gwt/ www/mailiverse_gwt/
 
 ./compile-web-html $V $M
 ./compile-web-js $V $M

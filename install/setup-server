@@ -11,5 +11,5 @@ M_HOST=$1
 ./setup-tomcat $M_HOST
 ./setup-web $M_HOST
 
-echo You may need to run: ./enable-rsync $M_HOST
-echo If your debian is super minimal (no rsync)
+echo "You may need to run: ./enable-rsync $M_HOST"
+echo "If your debian is super minimal (no rsync)"
