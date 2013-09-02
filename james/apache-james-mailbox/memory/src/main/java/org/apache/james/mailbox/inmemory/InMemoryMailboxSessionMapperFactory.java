@@ -30,7 +30,6 @@ import org.apache.james.mailbox.store.MailboxSessionMapperFactory;
 import org.apache.james.mailbox.store.mail.MailboxMapper;
 import org.apache.james.mailbox.store.mail.MessageMapper;
 import org.apache.james.mailbox.store.user.SubscriptionMapper;
-import org.apache.mailet.MailetContext;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,24 +42,23 @@ import java.net.InetSocketAddress;
 
 public class InMemoryMailboxSessionMapperFactory extends MailboxSessionMapperFactory<Long> {
 
-	private MailetContext mailetContext;
     private MailboxMapper<Long> mailboxMapper;
     private MessageMapper<Long> messageMapper;
     private SubscriptionMapper subscriptionMapper;
 
-	static Logger log = LoggerFactory.getLogger(InMemoryMailboxSessionMapperFactory.class);
+    static Logger log = LoggerFactory.getLogger(InMemoryMailboxSessionMapperFactory.class);
     
     public InMemoryMailboxSessionMapperFactory() throws MailboxException
     {
-		log.info("Installing proxy");
-		ProxySelectorRegex proxySelector = new ProxySelectorRegex();
-		proxySelector.excludeHosts(ProxySelectorRegex.DEFAULT_EXCLUDED_HOSTS);
-		proxySelector.addProxy ("socket", new Proxy(Proxy.Type.SOCKS, new InetSocketAddress("127.0.0.1", 23232)));
-		proxySelector.install();
-		log.info("Finished Installing proxy");
+        log.info("Installing proxy");
+        ProxySelectorRegex proxySelector = new ProxySelectorRegex();
+        proxySelector.excludeHosts(ProxySelectorRegex.DEFAULT_EXCLUDED_HOSTS);
+        proxySelector.addProxy ("socket", new Proxy(Proxy.Type.SOCKS, new InetSocketAddress("127.0.0.1", 23232)));
+        proxySelector.install();
+        log.info("Finished Installing proxy");
 	
-        mailboxMapper = new InMemoryMailboxMapper(mailetContext);
-        messageMapper = new InMemoryMessageMapper(mailetContext, null, new InMemoryUidProvider(), new InMemoryModSeqProvider());
+        mailboxMapper = new InMemoryMailboxMapper();
+        messageMapper = new InMemoryMessageMapper(null, new InMemoryUidProvider(), new InMemoryModSeqProvider());
         subscriptionMapper = new InMemorySubscriptionMapper();
     }
     

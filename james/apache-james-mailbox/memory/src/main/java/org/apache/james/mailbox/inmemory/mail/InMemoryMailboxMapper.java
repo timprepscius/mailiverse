@@ -30,15 +30,10 @@ import org.apache.james.mailbox.model.MailboxPath;
 import org.apache.james.mailbox.store.mail.MailboxMapper;
 import org.apache.james.mailbox.store.mail.model.Mailbox;
 import org.apache.james.mailbox.store.mail.model.impl.SimpleMailbox;
-import org.apache.mailet.MailetContext;
 
 public class InMemoryMailboxMapper implements MailboxMapper<Long> {
 
-	MailetContext mailetContext;
-	
-    public InMemoryMailboxMapper(MailetContext mailetContext) 
-    {
-    	this.mailetContext = mailetContext;
+    public InMemoryMailboxMapper() {
     }
 
     /**
