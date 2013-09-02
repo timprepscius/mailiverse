@@ -5,13 +5,8 @@ V=$1
 M=$2
 
 APP_TITLE=`cat ../deploy/config/title`
-HOST_PRIMARY=`cat ../deploy/config/hosts/$M`
-HOST_AUTH=`cat ../deploy/config/hosts/auth_$M`
-HOST_TOMCAT=`cat ../deploy/config/hosts/tomcat_$M`
-HOST_WEB=`cat ../deploy/config/hosts/web_$M`
 
-
-dst=www-$2
+dst=www
 cmn_src=../web/common
 client_src=../web/client
 signup_src=../web/signup
@@ -29,10 +24,6 @@ function replaceStrings() {
 	sed -i '' -e s/__THIS_YEAR__/2013/g $1
 
 	sed -i '' -e s/{##TITLE##}/$APP_TITLE/g $1
-	sed -i '' -e s/{##HOST_PRIMARY##}/$HOST_PRIMARY/g $1
-	sed -i '' -e s/{##HOST_AUTH##}/$HOST_AUTH/g $1
-	sed -i '' -e s/{##HOST_TOMCAT##}/$HOST_TOMCAT/g $1
-	sed -i '' -e s/{##HOST_WEB##}/$HOST_WEB/g $1
 }
 
 echo Compiling CSS/JS

@@ -2,12 +2,22 @@
 
 V=$1
 M=$2
-dst=www-$M
+dst=www
+
+HOST_PRIMARY=`cat ../deploy/config/hosts/$M`
+HOST_AUTH=`cat ../deploy/config/hosts/auth_$M`
+HOST_TOMCAT=`cat ../deploy/config/hosts/tomcat_$M`
+HOST_WEB=`cat ../deploy/config/hosts/web_$M`
 
 function replaceStrings() {
 	sed -i '' -f replace_js_$M.sed $1
 	sed -i '' -e s/__VERSION__/$V/g $1
 	sed -i '' -e s/__THIS_YEAR__/2013/g $1
+
+        sed -i '' -e s/{##HOST_PRIMARY##}/$HOST_PRIMARY/g $1
+        sed -i '' -e s/{##HOST_AUTH##}/$HOST_AUTH/g $1
+        sed -i '' -e s/{##HOST_TOMCAT##}/$HOST_TOMCAT/g $1
+        sed -i '' -e s/{##HOST_WEB##}/$HOST_WEB/g $1
 }
 
 echo Replacing Strings

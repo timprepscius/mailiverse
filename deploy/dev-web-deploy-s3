@@ -1,7 +1,7 @@
 ./web-deploy
-s3cmd sync www/ s3://www.mailiverse.com/beta/ --acl-public --delete-removed
+s3cmd sync ../build/www-dev/ s3://www.mailiverse.com/beta/ --acl-public --delete-removed
 
 echo putting files with cache control headers
-s3cmd put www/index.html s3://www.mailiverse.com/beta/ --acl-public --add-header "Cache-Control: max-age:3600"
-s3cmd put www/mailiverse_gwt/mailiverse_gwt.nocache.js s3://www.mailiverse.com/beta/mailiverse_gwt/ --acl-public --add-header "Cache-Control: no-cache"
+s3cmd put ../build/www-dev/index.html s3://www.mailiverse.com/beta/ --acl-public --add-header "Cache-Control: max-age:3600"
+s3cmd put ../build/www-dev/mailiverse_gwt/mailiverse_gwt.nocache.js s3://www.mailiverse.com/beta/mailiverse_gwt/ --acl-public --add-header "Cache-Control: no-cache"
 echo done
