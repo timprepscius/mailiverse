@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/asf/!svn/ver/1418609/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/mail
+END
+JCRMailboxMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/mail/JCRMailboxMapper.java
+END
+JCRModSeqProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/mail/JCRModSeqProvider.java
+END
+JCRMessageMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1418609/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/mail/JCRMessageMapper.java
+END
+JCRUidProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/mail/JCRUidProvider.java
+END

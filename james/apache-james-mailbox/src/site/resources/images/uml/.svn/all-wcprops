@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/asf/!svn/ver/1127486/james/mailbox/trunk/src/site/resources/images/uml
+END
+org-apache-james-mailbox-memory-managers.png
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1127050/james/mailbox/trunk/src/site/resources/images/uml/org-apache-james-mailbox-memory-managers.png
+END
+org-apache-james-mailbox-jpa-managers.png
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1127050/james/mailbox/trunk/src/site/resources/images/uml/org-apache-james-mailbox-jpa-managers.png
+END
+org-apache-james-mailbox-api-mailboxsession.png
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1127050/james/mailbox/trunk/src/site/resources/images/uml/org-apache-james-mailbox-api-mailboxsession.png
+END
+org-apache-james-mailbox-api-messagemanager.png
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1127050/james/mailbox/trunk/src/site/resources/images/uml/org-apache-james-mailbox-api-messagemanager.png
+END
+org-apache-james-mailbox-api-subscriptionmanager.png
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1127050/james/mailbox/trunk/src/site/resources/images/uml/org-apache-james-mailbox-api-subscriptionmanager.png
+END
+org-apache-james-mailbox-api-msc.png
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1127486/james/mailbox/trunk/src/site/resources/images/uml/org-apache-james-mailbox-api-msc.png
+END
+org-apache-james-mailbox-store-messagemanager.png
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1127050/james/mailbox/trunk/src/site/resources/images/uml/org-apache-james-mailbox-store-messagemanager.png
+END
+org-apache-james-mailbox-store-subscriptionmanager.png
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1127050/james/mailbox/trunk/src/site/resources/images/uml/org-apache-james-mailbox-store-subscriptionmanager.png
+END
+org-apache-james-mailbox-store-model.png
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1127050/james/mailbox/trunk/src/site/resources/images/uml/org-apache-james-mailbox-store-model.png
+END
+org-apache-james-mailbox-package.png
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1127050/james/mailbox/trunk/src/site/resources/images/uml/org-apache-james-mailbox-package.png
+END
+org-apache-james-mailbox-maildir-managers.png
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1127050/james/mailbox/trunk/src/site/resources/images/uml/org-apache-james-mailbox-maildir-managers.png
+END
+org-apache-james-mailbox-api-mailboxmanager.png
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1127050/james/mailbox/trunk/src/site/resources/images/uml/org-apache-james-mailbox-api-mailboxmanager.png
+END
+org-apache-james-mailbox-store-mailboxmanager.png
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1127050/james/mailbox/trunk/src/site/resources/images/uml/org-apache-james-mailbox-store-mailboxmanager.png
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox
+END
+MessageRangeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/MessageRangeTest.java
+END
+AbstractSubscriptionManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1051400/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/AbstractSubscriptionManagerTest.java
+END
+AbstractStressTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/AbstractStressTest.java
+END
+AbstractMailboxManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/AbstractMailboxManagerTest.java
+END
+MailboxExceptionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/MailboxExceptionTest.java
+END
+MailboxExpressionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/MailboxExpressionTest.java
+END

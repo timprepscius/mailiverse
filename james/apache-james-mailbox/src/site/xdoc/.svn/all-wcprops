@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/asf/!svn/ver/1326982/james/mailbox/trunk/src/site/xdoc
+END
+mailbox-memory.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/asf/!svn/ver/1326982/james/mailbox/trunk/src/site/xdoc/mailbox-memory.xml
+END
+mailbox-api.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/asf/!svn/ver/1326982/james/mailbox/trunk/src/site/xdoc/mailbox-api.xml
+END
+mailbox-jpa.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/asf/!svn/ver/1326982/james/mailbox/trunk/src/site/xdoc/mailbox-jpa.xml
+END
+mailbox-guice.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/asf/!svn/ver/1326982/james/mailbox/trunk/src/site/xdoc/mailbox-guice.xml
+END
+mailbox-store.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/asf/!svn/ver/1165827/james/mailbox/trunk/src/site/xdoc/mailbox-store.xml
+END
+mailbox-tool.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/asf/!svn/ver/1165827/james/mailbox/trunk/src/site/xdoc/mailbox-tool.xml
+END
+index.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/asf/!svn/ver/1326982/james/mailbox/trunk/src/site/xdoc/index.xml
+END
+mailbox-jcr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/asf/!svn/ver/1326982/james/mailbox/trunk/src/site/xdoc/mailbox-jcr.xml
+END
+source-code.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/asf/!svn/ver/1147424/james/mailbox/trunk/src/site/xdoc/source-code.xml
+END
+mailbox-maildir.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/asf/!svn/ver/1326982/james/mailbox/trunk/src/site/xdoc/mailbox-maildir.xml
+END
+mailbox-hbase.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/asf/!svn/ver/1326982/james/mailbox/trunk/src/site/xdoc/mailbox-hbase.xml
+END
+mailbox-spring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/asf/!svn/ver/1180347/james/mailbox/trunk/src/site/xdoc/mailbox-spring.xml
+END

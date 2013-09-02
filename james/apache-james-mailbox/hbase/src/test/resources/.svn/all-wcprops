@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/asf/!svn/ver/1240009/james/mailbox/trunk/hbase/src/test/resources
+END
+hdfs-site.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/asf/!svn/ver/1240009/james/mailbox/trunk/hbase/src/test/resources/hdfs-site.xml
+END
+hadoop-metrics2.properties
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/asf/!svn/ver/1181805/james/mailbox/trunk/hbase/src/test/resources/hadoop-metrics2.properties
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/asf/!svn/ver/1418609/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr
+END
+GlobalMailboxSessionJCRRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1041808/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/GlobalMailboxSessionJCRRepository.java
+END
+JCRUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1291197/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/JCRUtils.java
+END
+Persistent.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1179563/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/Persistent.java
+END
+JCRImapConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1041808/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/JCRImapConstants.java
+END
+JCRMailboxManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/JCRMailboxManager.java
+END
+AbstractJCRScalingMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/AbstractJCRScalingMapper.java
+END
+JCRRepositoryAuthenticator.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1041808/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/JCRRepositoryAuthenticator.java
+END
+JCRMailboxSessionMapperFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/JCRMailboxSessionMapperFactory.java
+END
+JCRMessageManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/JCRMessageManager.java
+END
+JCRSubscriptionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1075221/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/JCRSubscriptionManager.java
+END
+MailboxSessionJCRRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1041808/james/mailbox/trunk/jcr/src/main/java/org/apache/james/mailbox/jcr/MailboxSessionJCRRepository.java
+END

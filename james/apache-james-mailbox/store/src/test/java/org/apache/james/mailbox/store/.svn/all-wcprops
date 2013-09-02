@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store
+END
+SearchUtilsMultipartMixedTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store/SearchUtilsMultipartMixedTest.java
+END
+MailboxEventDispatcherFlagsTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store/MailboxEventDispatcherFlagsTest.java
+END
+SimpleMailboxMembership.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1179640/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store/SimpleMailboxMembership.java
+END
+PartContentBuilderComplexMultipartTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store/PartContentBuilderComplexMultipartTest.java
+END
+MockAuthenticator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1056505/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store/MockAuthenticator.java
+END
+MessageResultImplTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1176953/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store/MessageResultImplTest.java
+END
+SearchUtilsTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store/SearchUtilsTest.java
+END
+StringBuilderChannel.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1041812/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store/StringBuilderChannel.java
+END
+PartContentBuilderMultipartAlternativeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store/PartContentBuilderMultipartAlternativeTest.java
+END
+StoreMessageResultIteratorTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1418609/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store/StoreMessageResultIteratorTest.java
+END
+MessageBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store/MessageBuilder.java
+END
+SearchUtilsRFC822Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store/SearchUtilsRFC822Test.java
+END
+SimpleProperty.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1041812/james/mailbox/trunk/store/src/test/java/org/apache/james/mailbox/store/SimpleProperty.java
+END

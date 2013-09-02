@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/asf/!svn/ver/1476170/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa
+END
+JPAMailboxManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/JPAMailboxManager.java
+END
+JPATransactionalMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/JPATransactionalMapper.java
+END
+JPAMailboxSessionMapperFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1139535/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/JPAMailboxSessionMapperFactory.java
+END
+JPAMessageManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/JPAMessageManager.java
+END
+JPASubscriptionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1179568/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/JPASubscriptionManager.java
+END

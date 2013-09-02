@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/jcr/src/test/java/org/apache/james/mailbox/jcr
+END
+JCRStressTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/jcr/src/test/java/org/apache/james/mailbox/jcr/JCRStressTest.java
+END
+JCRMailboxManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1429793/james/mailbox/trunk/jcr/src/test/java/org/apache/james/mailbox/jcr/JCRMailboxManagerTest.java
+END
+JCRSubscriptionManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1429793/james/mailbox/trunk/jcr/src/test/java/org/apache/james/mailbox/jcr/JCRSubscriptionManagerTest.java
+END

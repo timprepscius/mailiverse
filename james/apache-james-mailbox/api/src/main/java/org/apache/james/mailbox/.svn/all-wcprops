@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/asf/!svn/ver/1469272/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox
+END
+MailboxSession.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/MailboxSession.java
+END
+MessageManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/MessageManager.java
+END
+SubscriptionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/SubscriptionManager.java
+END
+MailboxListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/MailboxListener.java
+END
+MailboxSessionIdGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1179215/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/MailboxSessionIdGenerator.java
+END
+QuotaManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/QuotaManager.java
+END
+StandardMailboxMetaDataComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/StandardMailboxMetaDataComparator.java
+END
+MailboxManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/MailboxManager.java
+END
+MailboxPathLocker.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/MailboxPathLocker.java
+END
+RequestAware.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1091296/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/RequestAware.java
+END
+MailboxListenerSupport.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/MailboxListenerSupport.java
+END

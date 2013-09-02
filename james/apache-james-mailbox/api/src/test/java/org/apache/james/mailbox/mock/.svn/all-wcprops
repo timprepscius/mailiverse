@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/mock
+END
+MockMailboxManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/mock/MockMailboxManager.java
+END
+MockMailboxSession.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1127594/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/mock/MockMailboxSession.java
+END
+MockMail.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1051407/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/mock/MockMail.java
+END

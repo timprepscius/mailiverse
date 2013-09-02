@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/maildir/src/test/java/org/apache/james/mailbox/maildir
+END
+MaildirSubscriptionManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1137510/james/mailbox/trunk/maildir/src/test/java/org/apache/james/mailbox/maildir/MaildirSubscriptionManagerTest.java
+END
+MailderMessageNameTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1428384/james/mailbox/trunk/maildir/src/test/java/org/apache/james/mailbox/maildir/MailderMessageNameTest.java
+END
+MaildirStressTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/maildir/src/test/java/org/apache/james/mailbox/maildir/MaildirStressTest.java
+END
+MaildirMailboxManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/maildir/src/test/java/org/apache/james/mailbox/maildir/MaildirMailboxManagerTest.java
+END
+OsDetector.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1056661/james/mailbox/trunk/maildir/src/test/java/org/apache/james/mailbox/maildir/OsDetector.java
+END

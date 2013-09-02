@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/transaction
+END
+NonTransactionalMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/transaction/NonTransactionalMapper.java
+END
+Mapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/transaction/Mapper.java
+END
+TransactionalMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/transaction/TransactionalMapper.java
+END

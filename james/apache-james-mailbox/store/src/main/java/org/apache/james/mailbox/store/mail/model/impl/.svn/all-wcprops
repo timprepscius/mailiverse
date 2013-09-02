@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1347537/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/model/impl
+END
+SimpleMailbox.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/model/impl/SimpleMailbox.java
+END
+PropertyBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1179640/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/model/impl/PropertyBuilder.java
+END
+SimpleMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1347537/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/model/impl/SimpleMessage.java
+END
+SimpleProperty.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1179640/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/model/impl/SimpleProperty.java
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/asf/!svn/ver/1509309/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search
+END
+ListeningMessageSearchIndex.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/ListeningMessageSearchIndex.java
+END
+MessageSearcher.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/MessageSearcher.java
+END
+LazyMessageSearchIndex.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/LazyMessageSearchIndex.java
+END
+MessageSearchIndex.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/MessageSearchIndex.java
+END
+MessageSearches.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/MessageSearches.java
+END
+SearchUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1179640/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/SearchUtil.java
+END
+SimpleMessageSearchIndex.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1509309/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/SimpleMessageSearchIndex.java
+END

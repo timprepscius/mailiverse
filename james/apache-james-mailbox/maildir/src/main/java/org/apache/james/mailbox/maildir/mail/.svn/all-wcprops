@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/asf/!svn/ver/1428384/james/mailbox/trunk/maildir/src/main/java/org/apache/james/mailbox/maildir/mail
+END
+MaildirMailboxMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/maildir/src/main/java/org/apache/james/mailbox/maildir/mail/MaildirMailboxMapper.java
+END
+MaildirMessageMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1418609/james/mailbox/trunk/maildir/src/main/java/org/apache/james/mailbox/maildir/mail/MaildirMessageMapper.java
+END

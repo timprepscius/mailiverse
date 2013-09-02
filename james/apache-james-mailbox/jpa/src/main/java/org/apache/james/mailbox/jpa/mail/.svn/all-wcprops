@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/asf/!svn/ver/1476170/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail
+END
+JPAMessageMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/JPAMessageMapper.java
+END
+JPAUidProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/JPAUidProvider.java
+END
+JPAMailboxMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/JPAMailboxMapper.java
+END
+JPAModSeqProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/JPAModSeqProvider.java
+END

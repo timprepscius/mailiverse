@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1476170/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/model/openjpa
+END
+EncryptDecryptHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/asf/!svn/ver/1145691/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/model/openjpa/EncryptDecryptHelper.java
+END
+JPAMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1476170/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/model/openjpa/JPAMessage.java
+END
+AbstractJPAMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/model/openjpa/AbstractJPAMessage.java
+END
+JPAStreamingMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/model/openjpa/JPAStreamingMessage.java
+END
+JPAEncryptedMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/model/openjpa/JPAEncryptedMessage.java
+END

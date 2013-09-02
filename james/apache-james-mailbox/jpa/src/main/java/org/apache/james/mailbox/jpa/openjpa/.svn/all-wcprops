@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/openjpa
+END
+OpenJPAMailboxManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/openjpa/OpenJPAMailboxManager.java
+END
+OpenJPAMessageManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/openjpa/OpenJPAMessageManager.java
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/asf/!svn/ver/1478947/james/mailbox/trunk/caching/src/main/java/org/apache/mailbox/caching/guava
+END
+GuavaMailboxMetadataCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1478947/james/mailbox/trunk/caching/src/main/java/org/apache/mailbox/caching/guava/GuavaMailboxMetadataCache.java
+END
+GuavaCacheWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1476501/james/mailbox/trunk/caching/src/main/java/org/apache/mailbox/caching/guava/GuavaCacheWrapper.java
+END
+AbstractGuavaCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1476501/james/mailbox/trunk/caching/src/main/java/org/apache/mailbox/caching/guava/AbstractGuavaCache.java
+END
+GuavaMailboxByPathCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1478947/james/mailbox/trunk/caching/src/main/java/org/apache/mailbox/caching/guava/GuavaMailboxByPathCache.java
+END

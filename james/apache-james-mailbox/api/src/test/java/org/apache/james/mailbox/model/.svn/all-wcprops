@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/asf/!svn/ver/1292019/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/model
+END
+SimpleMailboxACLEntryKeyTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1292019/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/model/SimpleMailboxACLEntryKeyTest.java
+END
+SimpleMailboxACLTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1292019/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/model/SimpleMailboxACLTest.java
+END
+Rfc4314RightsTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1292019/james/mailbox/trunk/api/src/test/java/org/apache/james/mailbox/model/Rfc4314RightsTest.java
+END

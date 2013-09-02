@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/asf/!svn/ver/1478947/james/mailbox/trunk/caching/src/main/java/org/apache/mailbox/caching
+END
+CacheInvalidatingMailboxListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1478947/james/mailbox/trunk/caching/src/main/java/org/apache/mailbox/caching/CacheInvalidatingMailboxListener.java
+END
+CacheLoaderFromUnderlying.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1476501/james/mailbox/trunk/caching/src/main/java/org/apache/mailbox/caching/CacheLoaderFromUnderlying.java
+END
+MailboxMetadataCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1478947/james/mailbox/trunk/caching/src/main/java/org/apache/mailbox/caching/MailboxMetadataCache.java
+END
+CachingMessageMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1478947/james/mailbox/trunk/caching/src/main/java/org/apache/mailbox/caching/CachingMessageMapper.java
+END
+MailboxByPathCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1478947/james/mailbox/trunk/caching/src/main/java/org/apache/mailbox/caching/MailboxByPathCache.java
+END
+CachingMailboxSessionMapperFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1478947/james/mailbox/trunk/caching/src/main/java/org/apache/mailbox/caching/CachingMailboxSessionMapperFactory.java
+END
+CachingMailboxMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1478947/james/mailbox/trunk/caching/src/main/java/org/apache/mailbox/caching/CachingMailboxMapper.java
+END

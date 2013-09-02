@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/lucene/src/main/java/org/apache/james/mailbox/lucene/search
+END
+LenientImapSearchAnalyzer.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1134921/james/mailbox/trunk/lucene/src/main/java/org/apache/james/mailbox/lucene/search/LenientImapSearchAnalyzer.java
+END
+StrictImapSearchAnalyzer.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1179570/james/mailbox/trunk/lucene/src/main/java/org/apache/james/mailbox/lucene/search/StrictImapSearchAnalyzer.java
+END
+UpperCaseFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1134921/james/mailbox/trunk/lucene/src/main/java/org/apache/james/mailbox/lucene/search/UpperCaseFilter.java
+END
+LuceneMessageSearchIndex.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/lucene/src/main/java/org/apache/james/mailbox/lucene/search/LuceneMessageSearchIndex.java
+END

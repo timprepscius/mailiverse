@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/asf/!svn/ver/1476790/james/mailbox/trunk/spring/src/main/resources/META-INF/spring
+END
+mailbox-authenticator-osgi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1452787/james/mailbox/trunk/spring/src/main/resources/META-INF/spring/mailbox-authenticator-osgi.xml
+END
+mailbox-locker-osgi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1452787/james/mailbox/trunk/spring/src/main/resources/META-INF/spring/mailbox-locker-osgi.xml
+END
+mailbox-locker.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1452787/james/mailbox/trunk/spring/src/main/resources/META-INF/spring/mailbox-locker.xml
+END
+mailbox-authenticator-anonymous.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1476790/james/mailbox/trunk/spring/src/main/resources/META-INF/spring/mailbox-authenticator-anonymous.xml
+END
+spring-mailbox.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1476790/james/mailbox/trunk/spring/src/main/resources/META-INF/spring/spring-mailbox.xml
+END

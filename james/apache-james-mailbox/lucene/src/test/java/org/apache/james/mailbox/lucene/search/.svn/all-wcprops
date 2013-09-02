@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/lucene/src/test/java/org/apache/james/mailbox/lucene/search
+END
+StrictLuceneMessageSearchIndexText.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/repos/asf/!svn/ver/1134921/james/mailbox/trunk/lucene/src/test/java/org/apache/james/mailbox/lucene/search/StrictLuceneMessageSearchIndexText.java
+END
+LuceneMessageSearchIndexTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/lucene/src/test/java/org/apache/james/mailbox/lucene/search/LuceneMessageSearchIndexTest.java
+END

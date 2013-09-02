@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/jpa/src/test/java/org/apache/james/mailbox/jpa
+END
+JPAMailboxManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/jpa/src/test/java/org/apache/james/mailbox/jpa/JPAMailboxManagerTest.java
+END
+JPASubscriptionManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1139535/james/mailbox/trunk/jpa/src/test/java/org/apache/james/mailbox/jpa/JPASubscriptionManagerTest.java
+END
+JPAStressTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/jpa/src/test/java/org/apache/james/mailbox/jpa/JPAStressTest.java
+END

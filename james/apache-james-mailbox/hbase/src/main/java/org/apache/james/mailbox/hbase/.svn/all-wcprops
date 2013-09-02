@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/asf/!svn/ver/1476176/james/mailbox/trunk/hbase/src/main/java/org/apache/james/mailbox/hbase
+END
+HBaseMailboxSessionMapperFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1476176/james/mailbox/trunk/hbase/src/main/java/org/apache/james/mailbox/hbase/HBaseMailboxSessionMapperFactory.java
+END
+HBaseMessageManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/hbase/src/main/java/org/apache/james/mailbox/hbase/HBaseMessageManager.java
+END
+HBaseUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/hbase/src/main/java/org/apache/james/mailbox/hbase/HBaseUtils.java
+END
+HBaseNonTransactionalMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1164981/james/mailbox/trunk/hbase/src/main/java/org/apache/james/mailbox/hbase/HBaseNonTransactionalMapper.java
+END
+HBaseNames.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1302061/james/mailbox/trunk/hbase/src/main/java/org/apache/james/mailbox/hbase/HBaseNames.java
+END
+PropertyConvertor.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1179554/james/mailbox/trunk/hbase/src/main/java/org/apache/james/mailbox/hbase/PropertyConvertor.java
+END
+HBaseMailboxManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/hbase/src/main/java/org/apache/james/mailbox/hbase/HBaseMailboxManager.java
+END
+FlagConvertor.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1164981/james/mailbox/trunk/hbase/src/main/java/org/apache/james/mailbox/hbase/FlagConvertor.java
+END

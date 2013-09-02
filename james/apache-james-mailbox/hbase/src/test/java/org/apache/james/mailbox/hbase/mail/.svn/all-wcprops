@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/asf/!svn/ver/1302061/james/mailbox/trunk/hbase/src/test/java/org/apache/james/mailbox/hbase/mail
+END
+HBaseMailboxMapperTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1302061/james/mailbox/trunk/hbase/src/test/java/org/apache/james/mailbox/hbase/mail/HBaseMailboxMapperTest.java
+END
+HBaseUidAndModSeqProviderTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1302061/james/mailbox/trunk/hbase/src/test/java/org/apache/james/mailbox/hbase/mail/HBaseUidAndModSeqProviderTest.java
+END
+HBaseMessageMapperTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1302061/james/mailbox/trunk/hbase/src/test/java/org/apache/james/mailbox/hbase/mail/HBaseMessageMapperTest.java
+END

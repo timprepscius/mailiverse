@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/asf/!svn/ver/1469272/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model
+END
+MessageRange.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/MessageRange.java
+END
+UpdatedFlags.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/UpdatedFlags.java
+END
+InputStreamContent.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/InputStreamContent.java
+END
+MailboxPath.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/MailboxPath.java
+END
+Content.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/Content.java
+END
+MailboxACL.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1292019/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/MailboxACL.java
+END
+Headers.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/Headers.java
+END
+MailboxQuery.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/MailboxQuery.java
+END
+PartContentDescriptorImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/PartContentDescriptorImpl.java
+END
+MessageResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/MessageResult.java
+END
+MessageMetaData.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/MessageMetaData.java
+END
+SimpleMailboxACL.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1292019/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/SimpleMailboxACL.java
+END
+MimeDescriptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/MimeDescriptor.java
+END
+MailboxConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/MailboxConstants.java
+END
+FetchGroupImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/FetchGroupImpl.java
+END
+Quota.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/Quota.java
+END
+SearchQuery.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1469272/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/SearchQuery.java
+END
+MailboxMetaData.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/MailboxMetaData.java
+END
+MessageResultIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/api/src/main/java/org/apache/james/mailbox/model/MessageResultIterator.java
+END

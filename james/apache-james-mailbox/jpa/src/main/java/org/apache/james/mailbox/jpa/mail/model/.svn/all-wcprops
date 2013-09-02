@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/asf/!svn/ver/1476170/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/model
+END
+JPAProperty.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1413343/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/model/JPAProperty.java
+END
+JPAUserFlag.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1179568/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/model/JPAUserFlag.java
+END
+JPAMailbox.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/jpa/src/main/java/org/apache/james/mailbox/jpa/mail/model/JPAMailbox.java
+END

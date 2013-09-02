@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1179588/james/mailbox/trunk/tool/src/main/java/org/apache/james/mailbox/jpa/migrator/command
+END
+IMAP180JpaMigrateCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1179588/james/mailbox/trunk/tool/src/main/java/org/apache/james/mailbox/jpa/migrator/command/IMAP180JpaMigrateCommand.java
+END
+JpaMigrateCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1060363/james/mailbox/trunk/tool/src/main/java/org/apache/james/mailbox/jpa/migrator/command/JpaMigrateCommand.java
+END
+IMAP172JpaMigrateCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1179588/james/mailbox/trunk/tool/src/main/java/org/apache/james/mailbox/jpa/migrator/command/IMAP172JpaMigrateCommand.java
+END
+IMAP165JpaMigrateCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1179588/james/mailbox/trunk/tool/src/main/java/org/apache/james/mailbox/jpa/migrator/command/IMAP165JpaMigrateCommand.java
+END
+IMAP184JpaMigrateCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1179588/james/mailbox/trunk/tool/src/main/java/org/apache/james/mailbox/jpa/migrator/command/IMAP184JpaMigrateCommand.java
+END
+IMAP176JpaMigrateCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1179588/james/mailbox/trunk/tool/src/main/java/org/apache/james/mailbox/jpa/migrator/command/IMAP176JpaMigrateCommand.java
+END
+IMAP168JpaMigrateCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1179588/james/mailbox/trunk/tool/src/main/java/org/apache/james/mailbox/jpa/migrator/command/IMAP168JpaMigrateCommand.java
+END
+JpaMigrateQuery.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1060363/james/mailbox/trunk/tool/src/main/java/org/apache/james/mailbox/jpa/migrator/command/JpaMigrateQuery.java
+END

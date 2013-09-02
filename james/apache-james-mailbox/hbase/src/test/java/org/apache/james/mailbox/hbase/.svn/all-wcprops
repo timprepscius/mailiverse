@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/asf/!svn/ver/1372348/james/mailbox/trunk/hbase/src/test/java/org/apache/james/mailbox/hbase
+END
+HBaseMailboxSessionMapperFactoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1302061/james/mailbox/trunk/hbase/src/test/java/org/apache/james/mailbox/hbase/HBaseMailboxSessionMapperFactoryTest.java
+END
+HBaseUtilsTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1302061/james/mailbox/trunk/hbase/src/test/java/org/apache/james/mailbox/hbase/HBaseUtilsTest.java
+END
+HBaseClusterSingleton.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1372348/james/mailbox/trunk/hbase/src/test/java/org/apache/james/mailbox/hbase/HBaseClusterSingleton.java
+END
+HBaseMailboxManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1302061/james/mailbox/trunk/hbase/src/test/java/org/apache/james/mailbox/hbase/HBaseMailboxManagerTest.java
+END

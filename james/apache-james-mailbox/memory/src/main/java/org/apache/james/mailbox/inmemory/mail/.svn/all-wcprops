@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/asf/!svn/ver/1418609/james/mailbox/trunk/memory/src/main/java/org/apache/james/mailbox/inmemory/mail
+END
+InMemoryMailboxMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/memory/src/main/java/org/apache/james/mailbox/inmemory/mail/InMemoryMailboxMapper.java
+END
+InMemoryModSeqProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/memory/src/main/java/org/apache/james/mailbox/inmemory/mail/InMemoryModSeqProvider.java
+END
+InMemoryMessageMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1418609/james/mailbox/trunk/memory/src/main/java/org/apache/james/mailbox/inmemory/mail/InMemoryMessageMapper.java
+END
+InMemoryUidProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/memory/src/main/java/org/apache/james/mailbox/inmemory/mail/InMemoryUidProvider.java
+END

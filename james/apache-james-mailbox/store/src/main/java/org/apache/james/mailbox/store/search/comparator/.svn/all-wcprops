@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/comparator
+END
+SentDateComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1151980/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/comparator/SentDateComparator.java
+END
+BaseSubjectComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/asf/!svn/ver/1132468/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/comparator/BaseSubjectComparator.java
+END
+InternalDateComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/repos/asf/!svn/ver/1131138/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/comparator/InternalDateComparator.java
+END
+SizeComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1131145/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/comparator/SizeComparator.java
+END
+ReverseComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/asf/!svn/ver/1131138/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/comparator/ReverseComparator.java
+END
+AbstractHeaderComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/comparator/AbstractHeaderComparator.java
+END
+HeaderDisplayComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/repos/asf/!svn/ver/1133447/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/comparator/HeaderDisplayComparator.java
+END
+CombinedComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/comparator/CombinedComparator.java
+END
+UidComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1131138/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/comparator/UidComparator.java
+END
+HeaderMailboxComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/repos/asf/!svn/ver/1133447/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/search/comparator/HeaderMailboxComparator.java
+END

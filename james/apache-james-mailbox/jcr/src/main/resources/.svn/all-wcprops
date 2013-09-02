@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/asf/!svn/ver/1452487/james/mailbox/trunk/jcr/src/main/resources
+END
+jcr-repository.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/asf/!svn/ver/1291207/james/mailbox/trunk/jcr/src/main/resources/jcr-repository.xml
+END
+mailbox-jcr.cnd
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/asf/!svn/ver/1291197/james/mailbox/trunk/jcr/src/main/resources/mailbox-jcr.cnd
+END

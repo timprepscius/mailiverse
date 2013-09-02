@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/streaming
+END
+BodyOffsetInputStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1179640/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/streaming/BodyOffsetInputStream.java
+END
+FullByteContent.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/streaming/FullByteContent.java
+END
+CountingInputStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1179640/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/streaming/CountingInputStream.java
+END
+InputStreamContent.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/streaming/InputStreamContent.java
+END
+LimitingFileInputStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1161215/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/streaming/LimitingFileInputStream.java
+END
+PartContentBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/streaming/PartContentBuilder.java
+END
+ByteContent.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/streaming/ByteContent.java
+END

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/asf/!svn/ver/1509308/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail
+END
+MailboxMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/MailboxMapper.java
+END
+MessageMapperFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/MessageMapperFactory.java
+END
+ModSeqProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/ModSeqProvider.java
+END
+AbstractLockingUidProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/AbstractLockingUidProvider.java
+END
+MailboxMapperFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/MailboxMapperFactory.java
+END
+MessageMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1452807/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/MessageMapper.java
+END
+UidProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/UidProvider.java
+END
+AbstractMessageMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1509308/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/AbstractMessageMapper.java
+END
+AbstractLockingModSeqProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1242288/james/mailbox/trunk/store/src/main/java/org/apache/james/mailbox/store/mail/AbstractLockingModSeqProvider.java
+END

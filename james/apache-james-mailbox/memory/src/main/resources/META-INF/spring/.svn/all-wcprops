@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/asf/!svn/ver/1452787/james/mailbox/trunk/memory/src/main/resources/META-INF/spring
+END
+mailbox-memory-osgi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1452787/james/mailbox/trunk/memory/src/main/resources/META-INF/spring/mailbox-memory-osgi.xml
+END
+mailbox-memory.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1452787/james/mailbox/trunk/memory/src/main/resources/META-INF/spring/mailbox-memory.xml
+END

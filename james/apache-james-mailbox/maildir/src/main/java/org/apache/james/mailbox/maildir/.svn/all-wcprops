@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/asf/!svn/ver/1476176/james/mailbox/trunk/maildir/src/main/java/org/apache/james/mailbox/maildir
+END
+UidConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1041810/james/mailbox/trunk/maildir/src/main/java/org/apache/james/mailbox/maildir/UidConstraint.java
+END
+MaildirMessageName.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1428384/james/mailbox/trunk/maildir/src/main/java/org/apache/james/mailbox/maildir/MaildirMessageName.java
+END
+MaildirFolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1428384/james/mailbox/trunk/maildir/src/main/java/org/apache/james/mailbox/maildir/MaildirFolder.java
+END
+MaildirMailboxSessionMapperFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1476176/james/mailbox/trunk/maildir/src/main/java/org/apache/james/mailbox/maildir/MaildirMailboxSessionMapperFactory.java
+END
+MaildirStore.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1428384/james/mailbox/trunk/maildir/src/main/java/org/apache/james/mailbox/maildir/MaildirStore.java
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/asf/!svn/ver/1476790/james/mailbox/trunk/spring/src/main/resources
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/asf/!svn/ver/1158687/james/mailbox/trunk/spring/src/main/resources/log4j.properties
+END
+mailbox-jcr.cnd
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/asf/!svn/ver/1291197/james/mailbox/trunk/spring/src/main/resources/mailbox-jcr.cnd
+END
