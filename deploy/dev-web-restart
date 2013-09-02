@@ -1,5 +1,0 @@
-source ./config.hosts
-server=$M_HOST_DEV 
-
-scp dev-web-restart.remote www@$server:
-ssh www@$server ./dev-web-restart.remote

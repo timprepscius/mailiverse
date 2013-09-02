@@ -1,2 +1,0 @@
-rsync -avL --exclude="WEB-INF" --delete ../gwt/war/ ./www/
-

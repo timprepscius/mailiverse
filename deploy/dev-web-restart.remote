@@ -1,2 +1,0 @@
-killall -u www python
-python -m SimpleHTTPServer > http.log 2>&1 &

@@ -1,5 +1,0 @@
-source ./config.hosts
-server=$M_HOST_DEV
-
-rsync -avL --exclude="WEB-INF" --delete ../gwt/war/ www@$server:
-
