@@ -1,0 +1,5 @@
+(cd mail && ./clean)
+(cd localrelay && ./clean)
+(cd key && ./clean)
+(cd client && ./clean)
+(cd push && ./clean)

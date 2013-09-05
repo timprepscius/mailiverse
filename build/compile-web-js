@@ -4,10 +4,10 @@ V=$1
 M=$2
 dst=www
 
-HOST_PRIMARY=`cat ../deploy/config/hosts/$M`
-HOST_AUTH=`cat ../deploy/config/hosts/auth_$M`
-HOST_TOMCAT=`cat ../deploy/config/hosts/tomcat_$M`
-HOST_WEB=`cat ../deploy/config/hosts/web_$M`
+HOST_PRIMARY=`cat ../config/hosts/$M`
+HOST_AUTH=`cat ../config/hosts/auth_$M`
+HOST_TOMCAT=`cat ../config/hosts/tomcat_$M`
+HOST_WEB=`cat ../config/hosts/web_$M`
 
 function replaceStrings() {
 	sed -i '' -f replace_js_$M.sed $1

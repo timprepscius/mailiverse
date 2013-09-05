@@ -3,13 +3,15 @@ set -x
 sudo ./setup-nginx.remote
 
 sudo mkdir -p /var/log/nginx
+chdown nginx /var/log/nginx
+
 cp sudoers.d-web /etc/sudoers.d/web
 chmod 0440 /etc/sudoers.d/web
 
 cd /opt/nginx/conf
-ln -s /home/web/resources/nginx-ssl.crt
-ln -s /home/web/resources/nginx-ssl.key
-ln -s /home/web/resources/nginx.conf
+ln -fs /home/web/resources/nginx-ssl.crt
+ln -fs /home/web/resources/nginx-ssl.key
+ln -fs /home/web/resources/nginx.conf
 
 cd /var/local
 mkdir www

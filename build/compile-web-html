@@ -4,7 +4,7 @@ set -x
 V=$1
 M=$2
 
-APP_TITLE=`cat ../deploy/config/title`
+APP_TITLE=`cat ../config/title`
 
 dst=www
 cmn_src=../web/common
