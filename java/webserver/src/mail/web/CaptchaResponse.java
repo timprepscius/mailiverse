@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import core.constants.ConstantsServer;
 import core.server.captcha.Captcha;
+import core.util.ExternalResource;
 import core.util.LogNull;
 import core.util.LogOut;
 
@@ -68,30 +69,37 @@ public class CaptchaResponse extends HttpServlet {
 		doCors(response);
 		response.setContentType("application/json");
         
-        String remoteAddr = request.getRemoteAddr();
-        ReCaptchaImpl reCaptcha = new ReCaptchaImpl();
-        reCaptcha.setPrivateKey("YOUR_PRIVATE_KEY");
-
-        String challenge = request.getParameter("recaptcha_challenge_field");
-        String uresponse = request.getParameter("recaptcha_response_field");
-        ReCaptchaResponse reCaptchaResponse = reCaptcha.checkAnswer(remoteAddr, challenge, uresponse);
-
-        if (reCaptchaResponse.isValid()) 
-        {
-        	try
-        	{
-	        	String token = captcha.captchaSucceeded();
-	        	response.getWriter().write(("{'succeeded':true,'token':'" + token + "'}").replaceAll("'", "\""));
-        	}
-        	catch (Exception e)
-        	{
-        		response.getWriter().write("{'succeeded':false,'reason':'System error'}".replaceAll("'", "\""));
-        	}
-        } 
-        else 
-        {
-        	response.getWriter().write("{'succeeded':false,'reason':'User error'}".replaceAll("'", "\""));
-        }
+		try
+		{
+	        String remoteAddr = request.getRemoteAddr();
+	        ReCaptchaImpl reCaptcha = new ReCaptchaImpl();
+	        reCaptcha.setPrivateKey(ExternalResource.getTrimmedString("captcha_private_key"));
+	
+	        String challenge = request.getParameter("recaptcha_challenge_field");
+	        String uresponse = request.getParameter("recaptcha_response_field");
+	        ReCaptchaResponse reCaptchaResponse = reCaptcha.checkAnswer(remoteAddr, challenge, uresponse);
+	
+	        if (reCaptchaResponse.isValid()) 
+	        {
+	        	try
+	        	{
+		        	String token = captcha.captchaSucceeded();
+		        	response.getWriter().write(("{'succeeded':true,'token':'" + token + "'}").replaceAll("'", "\""));
+	        	}
+	        	catch (Exception e)
+	        	{
+	        		response.getWriter().write("{'succeeded':false,'reason':'System error'}".replaceAll("'", "\""));
+	        	}
+	        } 
+	        else 
+	        {
+	        	response.getWriter().write("{'succeeded':false,'reason':'User error'}".replaceAll("'", "\""));
+	        }
+		}
+		catch (Exception e)
+		{
+    		response.getWriter().write("{'succeeded':false,'reason':'System error, captcha private key not set'}".replaceAll("'", "\""));
+		}
 	}
 	
 	@Override

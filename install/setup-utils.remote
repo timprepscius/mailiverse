@@ -1,0 +1,5 @@
+sudo apt-get install subversion
+
+sudo apt-get install maven
+sudo dpkg -i --force-all /var/cache/apt/archives/libwagon2-java_2.2-3+nmu1_all.deb
+sudo apt-get install maven

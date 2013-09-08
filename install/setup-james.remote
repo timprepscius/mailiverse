@@ -1,11 +1,23 @@
 set -x
 
-wget http://apache.mirrors.pair.com//james/apache-james/3.0beta4/apache-james-3.0-beta4-app.tar.gz
-tar xzvf apache-james-3.0-beta4-app.tar.gz
 
-ln -s apache-james-3.0-beta4 apache-james
+#mkdir build
+#cd build
+#svn checkout http://svn.apache.org/repos/asf/james/current/ james
+#cd james
+#mvn clean
+#mvn package -Pwith-assembly -DskipTests=true
+
+
+
+tar xzf apache-james-3.0-beta5*.tar.gz
+ln -fs apache-james-3.0-beta5*/ apache-james
 cd apache-james
+
 mv conf conf-original
 ln -s ../apache-james-conf conf
+
+cd lib
+ln -fs ~/deploy/apache-james-mailbox-memory.jar apache-james-mailbox-memory*.jar
 
 echo The final pieces will be installed during deploy

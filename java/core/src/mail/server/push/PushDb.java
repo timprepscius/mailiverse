@@ -30,6 +30,7 @@ public class PushDb
 		{
 			cryptor = new CryptorRSAAES(new CryptorRSAJCE(ExternalResource.getResourceAsStream(getClass(), "keystore.jks"), null));
 			mailExtra = new MailExtraDb();
+			mailExtra.ensureTables();
 		}
 		catch (Exception e)
 		{

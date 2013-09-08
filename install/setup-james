@@ -2,6 +2,7 @@ set -x
 
 M_HOST=$1
 
+scp apache-james-3.0*.tar.gz james@$M_HOST:
 scp setup-james.remote james@$M_HOST:
 ssh james@$M_HOST ./setup-james.remote
 

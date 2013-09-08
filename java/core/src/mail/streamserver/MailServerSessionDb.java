@@ -4,7 +4,9 @@
  */
 package mail.streamserver;
 
+import java.io.IOException;
 import java.math.BigInteger;
+import java.sql.SQLException;
 import java.util.Random;
 
 import mail.server.db.MailUserDb;
@@ -35,11 +37,12 @@ public class MailServerSessionDb implements SRPServerUserSessionDb
 	MailExtraDb payment;
 	Captcha captcha;
 	
-	public MailServerSessionDb (MailUserDb db)
+	public MailServerSessionDb (MailUserDb db) throws SQLException, IOException
 	{
 		this.db = db;
 		this.captcha = new Captcha();
 		this.payment = new MailExtraDb();
+		payment.ensureTables();
 	}
 
 	public void setBlock (String userName, byte[] block) throws Exception

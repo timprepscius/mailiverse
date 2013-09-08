@@ -3,4 +3,5 @@
 ./dev-server-deploy mail-user
 ./dev-server-deploy mail-key
 ./dev-server-deploy tools
-
+./dev-server-deploy web
+./dev-tomcat-restart

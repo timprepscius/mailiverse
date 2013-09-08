@@ -4,3 +4,6 @@ ln -fs deploy/apache-james-conf
 ln -fs deploy/apache-james-mailbox-memory.jar
 ln -fs deploy/apache-james-server-mailets.jar
 
+M_PRIMARY=`cat resources/hosts/prod`
+cd apache-james/bin
+./james-cli.sh adddomain $M_PRIMARY -h localhost
