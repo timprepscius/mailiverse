@@ -1,0 +1,6 @@
+if [ -z "$1" ]; then echo "Must supply directory name of result"; exit 0; fi
+
+rm -rf authority-response
+mkdir authority-response
+cp $1/* authority-response/
+mv authority-response/mail_*.crt authority-response/server.crt

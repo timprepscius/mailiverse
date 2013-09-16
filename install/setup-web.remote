@@ -1,8 +1,8 @@
 set -x
 
-sudo ./setup-nginx.remote
+./setup-nginx.remote
 
-sudo mkdir -p /var/log/nginx
+mkdir -p /var/log/nginx
 chdown nginx /var/log/nginx
 
 cp sudoers.d-web /etc/sudoers.d/web

@@ -1,0 +1,11 @@
+set -x
+
+JKSSTORE=server.jks
+cp $JKSSTORE store.jks
+
+keytool -importkeystore -srckeystore store.jks -srcstoretype JKS -deststoretype PKCS12 -destkeystore store.p12
+openssl pkcs12 -in store.p12 -nocerts -out store.key
+openssl rsa -in store.key -out final.key
+
+rm final.crt
+cat selfsignedcert.cer >> final.crt

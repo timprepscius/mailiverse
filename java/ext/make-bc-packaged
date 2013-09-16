@@ -1,0 +1,29 @@
+set -x
+rm -rf bc-packaged
+tar -hczf bc-project.tar.gz bc-project/
+
+mkdir t
+cd t
+tar xzf ../bc-project.tar.gz
+rm ../bc-project.tar.gz
+
+cd bc-project
+find . -type f -name "*.java" -print0 | xargs -0 sed -i '' 's/org.bouncycastle/org.bc/g'
+
+for DIR in $(find . -type d -name "bouncycastle")
+do
+   pushd $DIR
+   cd ..
+   mv bouncycastle bc
+   popd
+done
+
+cd ..
+
+mv bc-project ../bc-packaged
+cd ..
+
+rmdir t
+cp bc-packaged-template/.* bc-packaged
+cp bc-packaged-template/* bc-packaged
+

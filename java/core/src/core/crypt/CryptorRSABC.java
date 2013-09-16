@@ -32,8 +32,8 @@ public class CryptorRSABC extends CryptorRSA
 	
 	public final int MAX_RSA_BLOCK_SIZE = 117;
 	
-	RSAPublicKey publicKey;
-	RSAPrivateKey privateKey;
+	public RSAPublicKey publicKey;
+	public RSAPrivateKey privateKey;
 	
     public static final byte[] iv = Arrays.generate(16, 0);
     

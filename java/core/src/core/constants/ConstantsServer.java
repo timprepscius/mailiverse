@@ -9,6 +9,7 @@ public class ConstantsServer
 	public static final String LOCAL_MAIL_SERVER, DBCONNECTION_PREFIX;
 	public static final String KEY_SERVER;
 	public static final String LOCAL_SMTP_HOST;
+	public static final String AT_HOST;
 	
 	static 
 	{
@@ -20,6 +21,7 @@ public class ConstantsServer
 			DBCONNECTION_PREFIX = "jdbc:mysql://" + Hosts.getHostFor("local_db_dev") + "/";
 			KEY_SERVER = Hosts.getHostFor("local_key_dev");
 			LOCAL_SMTP_HOST = Hosts.getHostFor("local_smtp_dev");
+			AT_HOST = "@" + Hosts.getHostFor("dev");
 		}
 		else
 		{
@@ -31,6 +33,7 @@ public class ConstantsServer
 			LOCAL_MAIL_SERVER = Hosts.getHostFor("local_mail_prod");
 			DBCONNECTION_PREFIX = "jdbc:mysql://" + Hosts.getHostFor("local_db_prod") + "/";
 			LOCAL_SMTP_HOST = Hosts.getHostFor("local_smtp_prod");
+			AT_HOST = "@" + Hosts.getHostFor("prod");
 		}
 	}
 	

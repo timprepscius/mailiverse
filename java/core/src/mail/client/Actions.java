@@ -10,6 +10,7 @@ import mail.client.model.Attachments;
 import mail.client.model.Body;
 import mail.client.model.Conversation;
 import mail.client.model.Header;
+import mail.client.model.Identity;
 import mail.client.model.Mail;
 import mail.client.model.Recipients;
 import mail.client.model.TransportState;
@@ -166,5 +167,10 @@ public class Actions extends Servent<Master>
 		master.getIndexer().replyMail(conversation, reply);
 
 		return reply;
+	}
+	
+	public void lookUpPGPKeyFor (Identity identity)
+	{
+		master.getMailer().lookUpPGPFor (identity);
 	}
 }

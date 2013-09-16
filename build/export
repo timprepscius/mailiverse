@@ -6,3 +6,6 @@ ant -buildfile exportScripts/MailStreamServer.xml
 
 rm exported/Tools.jar
 ant -buildfile exportScripts/Tools.xml
+
+rm exported/PostFixMailReceiver.jar
+ant -buildfile exportScripts/PostFixMailReceiver.xml

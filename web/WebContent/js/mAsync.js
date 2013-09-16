@@ -1,6 +1,10 @@
 
 mAsync = {
 	
+	pgp_genKeyPair: function(callback) { mDispatch.dispatch('pgp_genKeyPair', arguments); },
+	pgp_getPrivateKey: function(callback) { mDispatch.dispatch('pgp_getPrivateKey', arguments); },
+	pgp_getPublicKey: function(callback) { mDispatch.dispatch('pgp_getPublicKey', arguments); },
+	
 	rsa_genKeyPair: function(callback) { mDispatch.dispatch('rsa_genKeyPair', arguments); },
 	rsa_getPrivateKey: function(callback) { mDispatch.dispatch('rsa_getPrivateKey', arguments); },
 	rsa_getPublicKey: function(callback) { mDispatch.dispatch('rsa_getPrivateKey', arguments); },
@@ -25,6 +29,14 @@ mAsync = {
 			mDispatch.dispatch('rsa_decrypt_serialized_key', [callback, hex2b64(key.genPKCS1()), bytes64]); 
 		else
 			mDispatch.dispatch('rsa_decrypt_serialized_key', [callback, key.serialize(), bytes64]); 
+	},
+	
+	pgp_encrypt: function(callback, key, bytes64) { 
+		mDispatch.dispatch('pgp_encrypt_serialized_key', [callback, key.serialize(), bytes64]); 
+	},
+
+	pgp_decrypt: function(callback, key, bytes64) { 
+		mDispatch.dispatch('pgp_decrypt_serialized_key', [callback, key.serialize(), bytes64]); 
 	},
 	
 	srp_dispatch: function(cmd, callback, state, arg) {

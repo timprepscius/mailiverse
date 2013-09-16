@@ -1,0 +1,1 @@
+../../../../bc-java/core/src/main/java/org/bouncycastle/LICENSE.java

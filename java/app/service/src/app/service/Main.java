@@ -38,7 +38,7 @@ public class Main extends JSApplet implements Exportable, SRPClientListener
 
 	static String VERSION_STRING = "M";
 	
-	Object delegate;
+	public static Object delegate;
     JSEventPropagator eventPropagator;
 
     public Main ()

@@ -1,0 +1,6 @@
+cd ~
+ln -fs deploy/PostfixMailReceiver.jar
+ln -fs deploy/config
+ln -fs deploy/resources
+
+cp resources/hosts/prod config/virtual_domains

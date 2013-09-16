@@ -125,7 +125,7 @@ public class Zip
 	{
 		try
 		{
-			return new CallbackSync<byte[]>(inflate_()).export();
+			return new CallbackSync(inflate_()).<byte[]>export();
 		}
 		catch(Exception e)
 		{

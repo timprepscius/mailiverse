@@ -9,6 +9,8 @@ import java.math.BigInteger;
 import java.sql.SQLException;
 import java.util.Random;
 
+import mail.server.db.ExternalData;
+import mail.server.db.ExternalDataFactory;
 import mail.server.db.MailUserDb;
 
 import org.apache.james.cli.probe.impl.JmxServerProbe;
@@ -47,15 +49,14 @@ public class MailServerSessionDb implements SRPServerUserSessionDb
 
 	public void setBlock (String userName, byte[] block) throws Exception
 	{
+		ExternalData externalData = ExternalDataFactory.createInstance();
+
 		log.debug("setBlock", userName, Strings.toString(block));
 		Environment e = JSONSerializer.deserialize(block);
 		
 		String newPassword = e.get(ConstantsEnvironmentKeys.SMTP_PASSWORD);
 
-		JmxServerProbe jamesConnection = new JmxServerProbe("localhost");	
-		if (newPassword != null)
-			jamesConnection.setPassword(userName, newPassword);
-		
+		externalData.setUserPassword(userName, newPassword);
 		db.setBlock(userName, block);
 	}
 
@@ -77,7 +78,7 @@ public class MailServerSessionDb implements SRPServerUserSessionDb
 		log.debug("createUser", version, userName);
 		try
 		{
-			JmxServerProbe jamesConnection = new JmxServerProbe("localhost");	
+			ExternalData externalData = ExternalDataFactory.createInstance();
 
 			if (USE_CAPTCHA)
 			{
@@ -93,7 +94,7 @@ public class MailServerSessionDb implements SRPServerUserSessionDb
 			Random random = new Random();
 			String randomLong = BigInteger.valueOf(Math.abs(random.nextLong())).toString(32);
 			
-			jamesConnection.addUser(userName, randomLong);
+			externalData.addUser(userName, randomLong);
 		}
 		catch (PublicMessageException e)
 		{
@@ -112,10 +113,10 @@ public class MailServerSessionDb implements SRPServerUserSessionDb
 		log.debug("deleteUser", userName);
 		try
 		{
-			JmxServerProbe jamesConnection = new JmxServerProbe("localhost");	
+			ExternalData externalData = ExternalDataFactory.createInstance();
 
 			db.deleteUser(userName);
-			jamesConnection.removeUser(userName);
+			externalData.removeUser(userName);
 		}
 		catch (PublicMessageException e)
 		{

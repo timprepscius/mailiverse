@@ -1,0 +1,9 @@
+set -x
+
+M_HOST=$1
+M_ROOT=`cat requirements/server_root_account`
+
+scp sudoers.d-postfix-user $M_ROOT@$M_HOST:
+scp setup-postfix.remote $M_ROOT@$M_HOST:
+ssh $M_ROOT@$M_HOST sudo ./setup-postfix.remote
+

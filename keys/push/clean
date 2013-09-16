@@ -1,3 +1,1 @@
-rm *.jks
-rm *.cer
-rm *.b64
+../clean-key

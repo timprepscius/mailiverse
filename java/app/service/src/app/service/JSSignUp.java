@@ -28,6 +28,7 @@ import core.constants.ConstantsEnvironmentKeys;
 import core.constants.ConstantsClient;
 import core.constants.ConstantsStorage;
 import core.constants.ConstantsVersion;
+import core.crypt.CryptorPGPFactory;
 import core.crypt.CryptorRSAFactory;
 import core.crypt.KeyPairFromPassword;
 import core.io.IoChain;
@@ -145,8 +146,11 @@ public class JSSignUp implements Exportable, SRPClientListener
     	String awsReadWriteAccessKey, awsReadWriteSecretKey;
 
     	String smtpPassword;
-    	byte[] publicKey;
-    	byte[] privateKey;
+    	byte[] rsaPublicKey;
+    	byte[] rsaPrivateKey;
+    	
+    	byte[] pgpPublicKey;
+    	byte[] pgpPrivateKey;    	
     	
     	String stripeCardNumber, stripeCardExpMonth, stripeCardExpYear, stripeCardCVC;
     	String stripeTransactionID;
@@ -209,8 +213,25 @@ public class JSSignUp implements Exportable, SRPClientListener
 				public void onSuccess(Object... arguments) throws Exception {
 					Pair<byte[], byte[]> pair = (Pair<byte[], byte[]>)arguments[0];	
 
-					publicKey = pair.first;
-		    		privateKey = pair.second;
+					rsaPublicKey = pair.first;
+		    		rsaPrivateKey = pair.second;
+		    		
+		    		callback.invoke();
+				}
+			}.setReturn(callback)
+    		);
+    	}
+    	
+    	public void calculatePGP (Callback callback) throws NoSuchAlgorithmException
+    	{
+    		new CryptorPGPFactory().generate(2048, name, password, new CallbackDefault() {
+				
+				@Override
+				public void onSuccess(Object... arguments) throws Exception {
+					Pair<byte[], byte[]> pair = (Pair<byte[], byte[]>)arguments[0];	
+
+					pgpPublicKey = pair.first;
+		    		pgpPrivateKey = pair.second;
 		    		
 		    		callback.invoke();
 				}
@@ -234,7 +255,11 @@ public class JSSignUp implements Exportable, SRPClientListener
     		serverEnvironment.put(prefix + ConstantsDropbox.DropboxTokenSecret, dropboxUserSecret);
     		serverEnvironment.put(
     				ConstantsEnvironmentKeys.PUBLIC_ENCRYPTION_KEY, 
-    				Base64.encode(publicKey)
+    				Base64.encode(rsaPublicKey)
+    			);
+    		serverEnvironment.put(
+    				ConstantsEnvironmentKeys.PGP_PUBLIC_KEY, 
+    				Base64.encode(pgpPublicKey)
     			);
 
     		clientEnvironment = new Environment();
@@ -248,12 +273,20 @@ public class JSSignUp implements Exportable, SRPClientListener
     		clientEnvironment.put(prefix + ConstantsDropbox.DropboxTokenSecret, dropboxUserSecret);
     		clientEnvironment.put(
     				ConstantsEnvironmentKeys.PUBLIC_ENCRYPTION_KEY, 
-    				Base64.encode(publicKey)
+    				Base64.encode(rsaPublicKey)
     			);
     		clientEnvironment.put(
     				ConstantsEnvironmentKeys.PRIVATE_DECRYPTION_KEY, 
-    				Base64.encode(privateKey)
+    				Base64.encode(rsaPrivateKey)
     			);	
+    		clientEnvironment.put(
+    				ConstantsEnvironmentKeys.PGP_PUBLIC_KEY, 
+    				Base64.encode(pgpPublicKey)
+    			);
+    		clientEnvironment.put(
+    				ConstantsEnvironmentKeys.PGP_PRIVATE_KEY, 
+    				Base64.encode(pgpPrivateKey)
+    			);
     		
     		completeEnvironment = new Environment();
 			completeEnvironment.put(ConstantsEnvironmentKeys.CONFIGURATION_VERSION, ConstantsVersion.CONFIGURATION);
@@ -276,7 +309,11 @@ public class JSSignUp implements Exportable, SRPClientListener
     		serverEnvironment.put(prefix + ConstantsS3.AWSBucketRegion, awsBucketRegion);
     		serverEnvironment.put(
     				ConstantsEnvironmentKeys.PUBLIC_ENCRYPTION_KEY, 
-    				Base64.encode(publicKey)
+    				Base64.encode(rsaPublicKey)
+    			);
+    		serverEnvironment.put(
+    				ConstantsEnvironmentKeys.PGP_PUBLIC_KEY, 
+    				Base64.encode(pgpPublicKey)
     			);
 
     		clientEnvironment = new Environment();
@@ -289,12 +326,20 @@ public class JSSignUp implements Exportable, SRPClientListener
     		clientEnvironment.put(prefix + ConstantsS3.AWSBucketRegion, awsBucketRegion);
     		clientEnvironment.put(
     				ConstantsEnvironmentKeys.PUBLIC_ENCRYPTION_KEY, 
-    				Base64.encode(publicKey)
+    				Base64.encode(rsaPublicKey)
     			);
     		clientEnvironment.put(
     				ConstantsEnvironmentKeys.PRIVATE_DECRYPTION_KEY, 
-    				Base64.encode(privateKey)
+    				Base64.encode(rsaPrivateKey)
     			);	
+    		clientEnvironment.put(
+    				ConstantsEnvironmentKeys.PGP_PUBLIC_KEY, 
+    				Base64.encode(pgpPublicKey)
+    			);
+    		clientEnvironment.put(
+    				ConstantsEnvironmentKeys.PGP_PRIVATE_KEY, 
+    				Base64.encode(pgpPrivateKey)
+    			);
     		
     		completeEnvironment = new Environment();
 			completeEnvironment.put(ConstantsEnvironmentKeys.CONFIGURATION_VERSION, ConstantsVersion.CONFIGURATION);
@@ -345,6 +390,16 @@ public class JSSignUp implements Exportable, SRPClientListener
 			}
 		});
     	
+    	signUpChain.addCallback(new CallbackDefault(info) {
+			public void onSuccess(Object... arguments) throws Exception {
+		    	log.debug("signUp_step_createPGP");
+		    	
+				SignUpInfo info = (SignUpInfo)V(0);
+				JSInvoker.invoke(info.callback.getCallback(), "progress", new Object[] { "Creating PGP key pair." });
+				info.calculatePGP(callback);
+			}
+		});
+
     	signUpChain.addCallback(new CallbackDefault(info) {
 			public void onSuccess(Object... arguments) throws Exception {
 		    	log.debug("signUp_step_genKeyPair");

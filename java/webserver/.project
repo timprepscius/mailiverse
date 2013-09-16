@@ -3,9 +3,9 @@
 	<name>Mailiverse.Mail-WebServer</name>
 	<comment></comment>
 	<projects>
-		<project>Mailiverse.Ext.BouncyCastle</project>
 		<project>Mailiverse.Ext.JordanZimmerman</project>
 		<project>Mailiverse.Ext.Json</project>
+		<project>Mailiverse.Ext.BouncyCastle</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

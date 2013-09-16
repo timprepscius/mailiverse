@@ -7,7 +7,7 @@
 <project basedir="." default="build" name="Mailiverse.Mail-WebServer">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../../Desktop/eclipse"/>
-    <property name="Mailiverse.Ext.BouncyCastle.location" value="../ext/lcrypto-jdk15on-148"/>
+    <property name="Mailiverse.Ext.BouncyCastle.location" value="../ext/bouncycastle"/>
     <property name="Mailiverse.Ext.JordanZimmerman.location" value="../ext/jordanzimmerman"/>
     <property name="Mailiverse.Ext.Json.location" value="../ext/json"/>
     <property name="debuglevel" value="source,lines,vars"/>

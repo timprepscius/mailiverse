@@ -51,6 +51,34 @@ rsa_genKeyPair: function(bits)
 	return result;
 },
 
+pgp_genKeyPair : function(bits, userId, password)
+{
+	var result = openpgp.generate_key_pair(1, bits, userId, password);
+	return { publicKey: Base64.encode(Utf.toBytes(result.publicKeyArmored)), privateKey: Base64.encode(Utf.toBytes(result.privateKeyArmored)) };
+},
+
+pgp_encrypt: function(key, bytes64)
+{
+	return Base64.encode(openpgp.write_encrypted_message(key,Base64.decode(bytes64)));
+},
+
+pgp_encrypt_serialized_key: function(keyS, bytes64)
+{
+	var key = openpgp.read_publicKey(keyS);
+	return pgp_encrypt(key, bytes64);
+},
+
+pgp_decrypt: function(key, bytes64)
+{
+	return Base64.encode(openpgp.read_encrypted_message(key,Base64.decode(bytes64)));
+},
+
+pgp_decrypt_serialized_key: function(keyS, bytes64)
+{
+	var key = openpgp.read_privateKey(keyS);
+	return pgp_decrypt(key, bytes64);
+},
+
 rsa_encrypt: function(key, bytes64)
 {
 	var bytes = b64tohex(bytes64);

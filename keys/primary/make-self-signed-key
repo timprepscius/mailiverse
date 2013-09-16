@@ -1,0 +1,16 @@
+echo "password
+password
+Unknown
+Unknown
+Unknown
+Unknown
+Unknown
+Unknown
+yes
+password" | keytool -genkeypair -alias anonymous -keyalg RSA -keysize 2048 -keystore keystore.jks
+echo ""
+
+echo "password" | keytool -export -alias anonymous -keystore keystore.jks -rfc -file selfsignedcert.cer
+echo "password
+password
+yes" | keytool -import -alias anonymous -file selfsignedcert.cer -keystore truststore.jks

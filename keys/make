@@ -1,0 +1,5 @@
+(cd mail && ./make)
+(cd localrelay && ./make)
+(cd key && ./make)
+(cd client && ./make)
+(cd push && ./make)

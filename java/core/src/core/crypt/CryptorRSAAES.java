@@ -193,7 +193,7 @@ public class CryptorRSAAES extends Cryptor
 	{
 		try
 		{
-			return new CallbackSync<byte[]>(encrypt_()).invoke(bytes).export();
+			return new CallbackSync(encrypt_()).invoke(bytes).export();
 		}
 		catch (Exception e)
 		{
@@ -206,7 +206,7 @@ public class CryptorRSAAES extends Cryptor
 	{
 		try
 		{
-			return new CallbackSync<byte[]>(decrypt_()).invoke(bytes).export();
+			return new CallbackSync(decrypt_()).invoke(bytes).export();
 		}
 		catch (Exception e)
 		{

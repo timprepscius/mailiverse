@@ -1,5 +1,0 @@
-keytool -genkeypair -alias anonymous -keyalg RSA -keysize 2048 -keystore keystore.jks
-keytool -export -alias anonymous -keystore keystore.jks -rfc -file selfsignedcert.cer
-keytool -import -alias anonymous -file selfsignedcert.cer -keystore truststore.jks
-java -jar ../../build/exported/Tools.jar --export-pem file=truststore.jks
-

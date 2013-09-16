@@ -1,5 +1,0 @@
-(cd mail && ./make.auto)
-(cd localrelay && ./make.auto)
-(cd key && ./make.auto)
-(cd client && ./make.auto)
-(cd push && ./make.auto)

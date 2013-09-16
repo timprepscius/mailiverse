@@ -10,7 +10,7 @@ INSERT IGNORE INTO registry (k,v) VALUES ("max_users", "1000");
 CREATE TABLE IF NOT EXISTS user (
 	version VARCHAR(50),
 	id      INTEGER AUTO_INCREMENT,
-	name 	VARCHAR(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+	name 	VARCHAR(255) NOT NULL DEFAULT '',
 	v		TEXT,
 	s		TEXT,
 	mark	TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS failure (
 CREATE TABLE IF NOT EXISTS deleted_user (
 	version VARCHAR(50),
 	id      INTEGER AUTO_INCREMENT,
-	name 	VARCHAR(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+	name 	VARCHAR(255) NOT NULL DEFAULT '',
 	v		TEXT,
 	s		TEXT,
 	mark	TIMESTAMP NULL DEFAULT NULL,
@@ -51,5 +51,4 @@ CREATE TABLE IF NOT EXISTS deleted_user (
 
 CREATE TABLE IF NOT EXISTS deleted_mail_block LIKE mail_block;
 CREATE TABLE IF NOT EXISTS deleted_key_block LIKE key_block;
-DROP TABLE IF EXISTS metadata;
 	

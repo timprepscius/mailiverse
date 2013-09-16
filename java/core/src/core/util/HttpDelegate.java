@@ -27,7 +27,7 @@ public abstract class HttpDelegate
 				boolean binaryInput = (Boolean)V(3);
 				boolean binaryOutput = (Boolean)V(4);
 				
-				byte[] content = (byte[])arguments[0];
+				byte[] content = (arguments!=null && arguments.length > 0) ? (byte[])arguments[0] : null;
 				
 				execute(action, url, headers, binaryInput, binaryOutput, content, callback);
 			}

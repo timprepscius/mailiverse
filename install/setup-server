@@ -7,7 +7,8 @@ M_HOST=$1
 ./create-server-accounts $M_HOST
 
 ./setup-utils $M_HOST
-./setup-james $M_HOST
+#./setup-james $M_HOST
+./setup-postfix $M_HOST
 ./setup-java $M_HOST
 ./setup-mysql $M_HOST
 ./setup-tomcat $M_HOST

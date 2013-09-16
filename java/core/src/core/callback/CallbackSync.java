@@ -6,7 +6,7 @@
 package core.callback;
 
 
-public class CallbackSync<T> 
+public class CallbackSync 
 {
 	CallbackChain chain;
 	Object[] results;
@@ -16,7 +16,7 @@ public class CallbackSync<T>
 		chain = callback.addCallback(setResults_());
 	}
 	
-	public CallbackSync<T> invoke (Object...args)
+	public CallbackSync invoke (Object...args)
 	{
 		chain.invoke(args);
 		return this;
@@ -31,7 +31,7 @@ public class CallbackSync<T>
 		};
 	}
 	
-	public T exportNoException ()
+	public <T> T exportNoException ()
 	{
 		try
 		{
@@ -47,7 +47,7 @@ public class CallbackSync<T>
 		}
 	}
 	
-	public T export() throws Exception
+	public <T> T export() throws Exception
 	{
 		if (results != null && results.length > 0)
 		{
@@ -62,4 +62,21 @@ public class CallbackSync<T>
 		
 		return null;
 	}
+	
+	public <T> T export(int i) throws Exception
+	{
+		if (results != null && results.length > i)
+		{
+			if (results[0] instanceof Exception)
+			{
+				Exception e = (Exception)results[0];
+				throw e;
+			}
+			
+			return (T)results[i];
+		}
+		
+		return null;
+	}
+	
 }

@@ -1,0 +1,8 @@
+rm -rf final
+mkdir final
+cd final
+
+cp ../server.jks .
+#keytool -import -trustcacerts -alias root -file ../authority-response/AddTrustExternalCARoot.crt -keystore server.jks
+keytool -import -trustcacerts -alias POSITIVESSL -file ../authority-response/PositiveSSLCA2.crt -keystore server.jks
+keytool -import -trustcacerts -alias anonymous -file ../authority-response/server.crt -keystore server.jks

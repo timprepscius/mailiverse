@@ -1,0 +1,13 @@
+echo -----------------
+echo the default installation uses 'password' for password
+echo sorry about that, feel free to modify sources
+echo -----------------
+
+keytool -genkeypair -alias anonymous -keyalg RSA -keysize 2048 -keystore server.jks
+keytool -certreq -alias anonymous -keyalg RSA -file server.csr -keystore server.jks
+
+rm -rf authority-submission
+mkdir authority-submission
+cp server.jks authority-submission
+cp server.csr authority-submission
+

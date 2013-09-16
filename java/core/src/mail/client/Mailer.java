@@ -151,4 +151,8 @@ public class Mailer extends Servent<Master>
 		master.getIndexer().conversationChanged(conversation);
 		master.getEventPropagator().signal(Events.SendFailed, mail);
 	}
+
+	public void lookUpPGPFor(Identity identity) 
+	{
+	}
 }

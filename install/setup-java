@@ -4,5 +4,5 @@ M_ROOT=`cat requirements/server_root_account`
 M_HOST=$1
 
 scp setup-java.remote $M_ROOT@$M_HOST:
-ssh $M_ROOT@$M_HOST ./setup-java.remote
+ssh $M_ROOT@$M_HOST sudo ./setup-java.remote
 

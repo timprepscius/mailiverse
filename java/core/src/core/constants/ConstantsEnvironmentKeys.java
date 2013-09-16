@@ -13,4 +13,7 @@ public class ConstantsEnvironmentKeys
 	public static final String VERSION = "version";
 	public static final String CLIENT_ENVIRONMENT = "client";
 	public static final String SERVER_ENVIRONMENT = "server";
+	
+	public static final String PGP_PUBLIC_KEY = "PGP-PublicKey";
+	public static final String PGP_PRIVATE_KEY = "PGP-PrivateKey";
 }

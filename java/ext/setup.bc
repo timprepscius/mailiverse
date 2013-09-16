@@ -1,0 +1,7 @@
+set -x
+
+wget http://www.bouncycastle.org/download/lcrypto-jdk15on-149.tar.gz
+tar xzf lcrypto-jdk15on-*.tar.gz
+ln -fs lcrypto-jdk15on-* bc-project
+
+./make-bc-packaged

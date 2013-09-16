@@ -1,5 +1,7 @@
 
 importScripts(
+	'crypt/openpgp/openpgp.js',
+		
 	'Base64.js',
 	'Utf.js',
 	"crypt/sjcl.js",
