@@ -1,0 +1,36 @@
+pushd ext
+tar -xzf apache-tomcat.tar.gz
+popd
+
+pushd java/ext
+./setup-bc
+popd
+
+pushd build
+./compile-java
+popd
+
+pushd passwords
+./make
+popd
+
+pushd keys
+  ./make
+
+  pushd primary
+  ./make-self-signed-key
+  popd
+
+  pushd nginx
+  ./convert-selfsigned
+  popd 
+popd
+
+echo 'Enter the name of your site (example: joesmail.com):'
+read site
+
+pushd config/hosts
+./make-prod $site
+./make-dev $site
+popd
+
