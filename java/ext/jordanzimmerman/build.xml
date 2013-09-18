@@ -10,7 +10,7 @@
     <property name="Mailiverse.Core.location" value="../../core"/>
     <property name="Mailiverse.Mail-WebServer.location" value="../../webserver"/>
     <property name="ECLIPSE_HOME" value="../../../../../Desktop/eclipse"/>
-    <property name="Mailiverse.Ext.BouncyCastle.location" value="../lcrypto-jdk15on-148"/>
+    <property name="Mailiverse.Ext.BouncyCastle.location" value="../bouncycastle"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.6"/>
     <property name="source" value="1.6"/>
