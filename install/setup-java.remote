@@ -2,6 +2,7 @@
 # because icetea has errors.  After spending near 30 hours trying to negotiate icetea screw ups
 # I realized: why bother?
 
+apt-get install software-properties-common --yes
 add-apt-repository ppa:webupd8team/java --yes
 apt-get update
 
