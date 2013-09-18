@@ -6,10 +6,26 @@ cp $JKSSTORE store.jks
 echo "password
 password
 password" | keytool -importkeystore -srckeystore store.jks -srcstoretype JKS -deststoretype PKCS12 -destkeystore store.p12
-echo "password
-password
-password" | openssl pkcs12 -in store.p12 -nocerts -out store.key
-echo "password" | openssl rsa -in store.key -out final.key
+
+echo '
+*****************
+*****************
+** Enter: "password" 3 times
+*****************
+*****************
+'
+
+openssl pkcs12 -in store.p12 -nocerts -out store.key
+
+echo '
+*****************
+*****************
+** Enter: "password" 3 times
+*****************
+*****************
+'
+
+openssl rsa -in store.key -out final.key
 
 rm final.crt
 cat ../primary/selfsignedcert.cer >> final.crt

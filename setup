@@ -15,10 +15,18 @@ pushd passwords
 popd
 
 pushd keys
-./make
+  ./make
+
+  pushd primary
+  ./make-self-signed-key
+  popd
+
+  pushd nginx
+  ./convert-selfsigned
+  popd 
 popd
 
-echo Enter the name of your site (example: joesmail.com):
+echo 'Enter the name of your site (example: joesmail.com):'
 read site
 
 pushd config/hosts
