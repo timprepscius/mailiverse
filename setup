@@ -18,7 +18,7 @@ pushd keys
 ./make
 popd
 
-echo Enter the name of your site:
+echo Enter the name of your site (example: joesmail.com):
 read site
 
 pushd config/hosts

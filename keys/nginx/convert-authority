@@ -1,6 +1,6 @@
 set -x
 
-JKSSTORE=server.jks
+JKSSTORE=../primary/server.jks
 cp $JKSSTORE store.jks
 
 keytool -importkeystore -srckeystore store.jks -srcstoretype JKS -deststoretype PKCS12 -destkeystore store.p12
