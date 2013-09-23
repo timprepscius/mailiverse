@@ -10,6 +10,20 @@ import java.util.ArrayList;
 
 public class SqlCatalog
 {
+	static LogOut log = new LogOut(SqlCatalog.class);
+	public SqlCatalog ()
+	{
+		try
+		{
+	        Class.forName("com.mysql.jdbc.Driver");
+		}
+		catch (Exception e)
+		{
+			log.exception(e);
+			throw new RuntimeException(e);
+		}
+	}
+	
 	public String getSingle (String name) throws IOException 
 	{
 		return Streams.readFullyString(getClass().getResourceAsStream(name), "UTF-8");

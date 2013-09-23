@@ -36,6 +36,8 @@ import mail.client.model.Model;
 import mail.client.model.ModelFactory;
 import mail.client.model.Mail;
 import mail.client.model.ModelSerializer;
+import mail.client.model.PublicKey;
+import mail.client.model.PublicKeyRing;
 import mail.client.model.Settings;
 
 public class CacheManager extends Servent<Master>
@@ -46,6 +48,9 @@ public class CacheManager extends Servent<Master>
 	IndexedCache cacheMail;
 	IndexedCache cacheConversation;
 	IndexedCache cacheFolder;
+	IndexedCache cacheKeys;
+	
+	PublicKeyRing keyRing;
 	Settings settings;
 	
 	boolean isCaching = false;
@@ -84,6 +89,10 @@ public class CacheManager extends Servent<Master>
 		this.settings.setId(Constants.SETTINGS_ID);
 		this.masterCache.link(settings);
 		
+		this.keyRing = new PublicKeyRing(this);
+		this.keyRing.setId(Constants.KEYRING_ID);
+		this.masterCache.link(keyRing);
+		
 		ItemSerializer itemSerializer = new ModelSerializer(json);
 		
 		this.cacheMail = new IndexedCache(
@@ -104,11 +113,17 @@ public class CacheManager extends Servent<Master>
 		this.cacheFolder.setId(Constants.FOLDER_ID);
 		masterCache.link(cacheFolder);
 		
+		this.cacheKeys = new IndexedCache(
+			new ItemCacheFactory ("K", library, itemFactory, itemSerializer)
+		);
+		this.cacheKeys.setId(Constants.KEY_ID);
+		masterCache.link(cacheKeys);
+		
 		//-------------------------------------------------------------
 		
 		Callback countDown = 
 			new CountDown(
-				4,
+				5,
 				getMaster().getEventPropagator().signal_(Events.Initialize_IndexedCacheLoadComplete)
 			);
 			
@@ -117,6 +132,7 @@ public class CacheManager extends Servent<Master>
 		cacheMail.apply(new Split(countDown));
 		cacheConversation.apply(new Split(countDown));
 		cacheFolder.apply(new Split(countDown));
+		cacheKeys.apply(new Split(countDown));
 		
 		//-------------------------------------------------------------
 		
@@ -143,6 +159,7 @@ public class CacheManager extends Servent<Master>
 		cacheMail.markCreate();
 		cacheConversation.markCreate();
 		cacheFolder.markCreate();
+		cacheKeys.markCreate();
 		masterCache.markCreate();
 		
 		settings.markCreate();
@@ -259,6 +276,16 @@ public class CacheManager extends Servent<Master>
 	public void putFolder(Folder f)
 	{
 		cacheFolder.put(f);
+	}
+	
+	public void putKey(PublicKey k)
+	{
+		cacheKeys.put(k);
+	}
+	
+	public PublicKey getKey (ID id)
+	{
+		return (PublicKey)cacheKeys.getAndAcquire(Type.PublicKey, id);
 	}
 	
 	public boolean isFullyCached ()

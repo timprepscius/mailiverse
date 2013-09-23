@@ -24,7 +24,6 @@ public class Identity implements Serializable, Exportable
 	String name;
 	String email;
 	boolean isPrimary = false;
-	String publicKey;
 	
 	protected Identity ()
 	{
@@ -168,20 +167,5 @@ public class Identity implements Serializable, Exportable
 			if (this.email == null)
 				this.email = identity.email;
 		}
-	}
-	
-	public void setPublicKey (String publicKey)
-	{
-		this.publicKey = publicKey;
-	}
-
-	public boolean hasPublicKey() 
-	{
-		return publicKey != null;
-	}
-
-	public String getPublicKey() 
-	{
-		return publicKey;
 	}
 }

@@ -4,7 +4,8 @@ public class ConstantsStorage
 {
 	public final static String 
 		HANDLER_DROPBOX = "DB",
-		HANDLER_S3 = "S3";
+		HANDLER_S3 = "S3",
+		HANDLER_MV = "MV";
 	
 	public final static String 
 		IN = "In",
@@ -28,4 +29,5 @@ public class ConstantsStorage
 	
 	public static final int MAIL_CHECK_LOCK_TIME_SECONDS = 120;
 	public static final int MAIL_CHECK_LOCK_TIME_ALLOWED_BEFORE_RELOCK_SECONDS = 60;
+
 }

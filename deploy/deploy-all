@@ -1,7 +1,8 @@
 #./server-shutdown tunnel
+
 ./server-deploy tomcat
 #./server-deploy james
-./server-deploy postfix
+./server-deploy postfix-user
 ./server-deploy mail-user
 ./server-deploy mail-key
 ./server-deploy tools

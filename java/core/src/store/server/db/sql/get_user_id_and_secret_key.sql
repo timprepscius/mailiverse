@@ -1,0 +1,1 @@
+SELECT user_id, secret_key FROM key_pairs WHERE key_id = ?

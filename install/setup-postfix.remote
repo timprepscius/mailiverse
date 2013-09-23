@@ -1,6 +1,8 @@
 set -x
 
+apt-get update
 echo "1" | apt-get install postfix postfix-mysql postfix-pcre --yes
+apt-get install sasl2-bin --yes
 
 cp sudoers.d-postfix-user /etc/sudoers.d/postfix-user
 chmod 0440 /etc/sudoers.d/postfix-user
@@ -11,7 +13,6 @@ rm master.cf
 
 ln -fs /home/postfix-user/config/main.cf
 ln -fs /home/postfix-user/config/master.cf
-#ln -fs /home/postfix-user/config/virtual_domains.pcre
-ln -fs /home/postfix-user/config/virtual_domains
-ln -fs /home/postfix-user/config/virtual_mailbox_maps.cf
+ln -fs /home/postfix-user/config
+
 

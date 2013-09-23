@@ -23,6 +23,7 @@ import core.callback.Callback;
 import core.callback.CallbackChain;
 import core.callback.CallbackDefault;
 import core.callback.CallbackWithVariables;
+import core.constants.ConstantsMvStore;
 import core.constants.ConstantsS3;
 import core.constants.ConstantsEnvironmentKeys;
 import core.constants.ConstantsClient;
@@ -125,7 +126,7 @@ public class JSSignUp implements Exportable, SRPClientListener
     }
     
     static class SignUpInfo {
-    	public static enum Storage { Mailiverse, Dropbox };
+    	public static enum Storage { S3, Mailiverse, Dropbox };
     	
     	String name, password, captchaToken;
     	Environment serverEnvironment, clientEnvironment, completeEnvironment;
@@ -144,6 +145,8 @@ public class JSSignUp implements Exportable, SRPClientListener
     	String awsBucketName, awsBucketRegion;
     	String awsWriteAccessKey, awsWriteSecretKey;
     	String awsReadWriteAccessKey, awsReadWriteSecretKey;
+    	
+    	String mvAccessKey, mvSecretKey;
 
     	String smtpPassword;
     	byte[] rsaPublicKey;
@@ -180,10 +183,15 @@ public class JSSignUp implements Exportable, SRPClientListener
     		this.dropboxAuthSecret = authSecret;
 		}
     	
-    	void initializeStorageMailiverse (String storageRegion)
+    	void initializeStorageS3 (String storageRegion)
+    	{
+    		this.storage = Storage.S3;
+    		this.storageRegion = storageRegion;
+    	}
+    	
+    	void initializeStorageMailiverse ()
     	{
     		this.storage = Storage.Mailiverse;
-    		this.storageRegion = storageRegion;
     	}
     	
     	public void setDropboxInfo (String userToken, String userSecret)
@@ -205,6 +213,13 @@ public class JSSignUp implements Exportable, SRPClientListener
     		this.awsReadWriteSecretKey = awsReadWriteSecretKey;
     	}
 
+    	public void setMailiverseInfo (String mvAccessKey, String mvSecretKey)
+    	{
+    		this.mvAccessKey = mvAccessKey;
+    		this.mvSecretKey = mvSecretKey;
+    	}
+    	
+    	
     	public void calculateRSA (Callback callback) throws NoSuchAlgorithmException
     	{
     		new CryptorRSAFactory().generate(2048, new CallbackDefault() {
@@ -347,13 +362,65 @@ public class JSSignUp implements Exportable, SRPClientListener
 			completeEnvironment.addChildEnvironment(ConstantsEnvironmentKeys.CLIENT_ENVIRONMENT, clientEnvironment);
 		}
     	
+    	public void calculateEnvironmentMailiverse ()
+    	{
+    		String handler = ConstantsStorage.HANDLER_MV;
+    		String prefix = handler + "/";
+    		
+    		serverEnvironment = new Environment();
+			serverEnvironment.put(ConstantsEnvironmentKeys.CONFIGURATION_VERSION, ConstantsVersion.CONFIGURATION);
+    		serverEnvironment.put(ConstantsEnvironmentKeys.HANDLER, handler);
+    		serverEnvironment.put(ConstantsEnvironmentKeys.SMTP_PASSWORD, smtpPassword);
+    		serverEnvironment.put(prefix + ConstantsMvStore.AccessKeyId, mvAccessKey);
+    		serverEnvironment.put(prefix + ConstantsMvStore.SecretKey, mvSecretKey);
+    		serverEnvironment.put(
+    				ConstantsEnvironmentKeys.PUBLIC_ENCRYPTION_KEY, 
+    				Base64.encode(rsaPublicKey)
+    			);
+    		serverEnvironment.put(
+    				ConstantsEnvironmentKeys.PGP_PUBLIC_KEY, 
+    				Base64.encode(pgpPublicKey)
+    			);
+
+    		clientEnvironment = new Environment();
+			clientEnvironment.put(ConstantsEnvironmentKeys.CONFIGURATION_VERSION, ConstantsVersion.CONFIGURATION);
+    		clientEnvironment.put(ConstantsEnvironmentKeys.HANDLER, handler);
+    		clientEnvironment.put(ConstantsEnvironmentKeys.SMTP_PASSWORD, smtpPassword);
+    		clientEnvironment.put(prefix + ConstantsMvStore.AccessKeyId, mvAccessKey);
+    		clientEnvironment.put(prefix + ConstantsMvStore.SecretKey, mvSecretKey);
+    		clientEnvironment.put(
+    				ConstantsEnvironmentKeys.PUBLIC_ENCRYPTION_KEY, 
+    				Base64.encode(rsaPublicKey)
+    			);
+    		clientEnvironment.put(
+    				ConstantsEnvironmentKeys.PRIVATE_DECRYPTION_KEY, 
+    				Base64.encode(rsaPrivateKey)
+    			);	
+    		clientEnvironment.put(
+    				ConstantsEnvironmentKeys.PGP_PUBLIC_KEY, 
+    				Base64.encode(pgpPublicKey)
+    			);
+    		clientEnvironment.put(
+    				ConstantsEnvironmentKeys.PGP_PRIVATE_KEY, 
+    				Base64.encode(pgpPrivateKey)
+    			);
+    		
+    		completeEnvironment = new Environment();
+			completeEnvironment.put(ConstantsEnvironmentKeys.CONFIGURATION_VERSION, ConstantsVersion.CONFIGURATION);
+			completeEnvironment.addChildEnvironment(ConstantsEnvironmentKeys.SERVER_ENVIRONMENT, serverEnvironment);
+			completeEnvironment.addChildEnvironment(ConstantsEnvironmentKeys.CLIENT_ENVIRONMENT, clientEnvironment);
+		}
+
     	public void calculateEnvironment ()
     	{
     		if (storage == Storage.Dropbox)
     			calculateEnvironmentDropbox();
     		else
-    		if (storage == Storage.Mailiverse)
+    		if (storage == Storage.S3)
     			calculateEnvironmentAWS();
+    		else
+    		if (storage == Storage.Mailiverse)
+    			calculateEnvironmentMailiverse();
     		
     	}
     };
@@ -376,8 +443,11 @@ public class JSSignUp implements Exportable, SRPClientListener
     	if (storage.equals("dropbox"))
     		info.intializeStorageDropbox(ConstantsClient.DROPBOX_APPKEY, ConstantsClient.DROPBOX_APPSECRET, dropboxUserKey, dropboxUserSecret);
     	else
+    	if (storage.equals("s3"))
+    		info.initializeStorageS3(JSON_.getString(JSON_.parse(storageInfo), "region"));
+    	else
     	if (storage.equals("mailiverse"))
-    		info.initializeStorageMailiverse(JSON_.getString(JSON_.parse(storageInfo), "region"));
+    		info.initializeStorageMailiverse();
     	
     	CallbackChain signUpChain = new CallbackChain();
     	
@@ -489,6 +559,9 @@ public class JSSignUp implements Exportable, SRPClientListener
     
     protected void signUp_step_requestAccess (SignUpInfo info, Callback callback)
     {
+    	if (info.storage == SignUpInfo.Storage.S3)
+    		signUp_step_requestS3Bucket(info, callback);
+    	else
     	if (info.storage == SignUpInfo.Storage.Mailiverse)
     		signUp_step_requestMailiverseBucket(info, callback);
     	else
@@ -496,9 +569,9 @@ public class JSSignUp implements Exportable, SRPClientListener
     		signUp_step_requestDropboxAccessToken(info, callback);
     }
 
-	protected void signUp_step_requestMailiverseBucket (SignUpInfo info, Callback callback)
+	protected void signUp_step_requestS3Bucket (SignUpInfo info, Callback callback)
 	{
-    	log.debug("signUp_step_requestMailiverseBucket");
+    	log.debug("signUp_step_requestS3Bucket");
 
 		String url = 
 				ConstantsClient.WEB_SERVER_TOMCAT + "CreateBucket" +
@@ -509,7 +582,7 @@ public class JSSignUp implements Exportable, SRPClientListener
 			new CallbackDefault(info) {
 				public void onSuccess(Object... arguments)
 				{
-			    	log.debug("signUp_step_requestMailiverseBucket callback");
+			    	log.debug("signUp_step_requestS3Bucket callback");
 					SignUpInfo info = V(0);
 					String response = (String)arguments[0];
 					String awsBucketName=null, awsBucketRegion=null,
@@ -549,7 +622,46 @@ public class JSSignUp implements Exportable, SRPClientListener
 		);
 	}
     
-    protected void signUp_step_requestDropboxAccessToken (SignUpInfo info, Callback callback)
+	protected void signUp_step_requestMailiverseBucket (SignUpInfo info, Callback callback)
+	{
+    	log.debug("signUp_step_requestMailiverseBucket");
+
+		String url = 
+				ConstantsClient.WEB_SERVER_TOMCAT + "StoreEnable" +
+					"?email=" + info.name + "&captcha=" + info.captchaToken;
+				
+		JSHttpDelegate http = new JSHttpDelegate(main.delegate);
+		http.execute(HttpDelegate.GET, url, null, false, false, null, 
+			new CallbackDefault(info) {
+				public void onSuccess(Object... arguments)
+				{
+			    	log.debug("signUp_step_requestMailiverseBucket callback");
+					SignUpInfo info = V(0);
+					String response = (String)arguments[0];
+					String mvAccessKey=null, mvSecretKey=null;
+					
+					String[] parts = response.split("&");
+					for (String part : parts)
+					{
+						String[] keyValue = part.split("!");
+						String key = keyValue[0];
+						String value = keyValue[1];
+						
+						if (key.equalsIgnoreCase(ConstantsMvStore.AccessKeyId))
+							mvAccessKey = value;
+						else
+						if (key.equalsIgnoreCase(ConstantsMvStore.SecretKey))
+							mvSecretKey = value;
+					}
+					
+					info.setMailiverseInfo(mvAccessKey, mvSecretKey);
+					next();
+				}
+			}.setReturn(callback)
+		);
+	}
+
+	protected void signUp_step_requestDropboxAccessToken (SignUpInfo info, Callback callback)
 	{
     	log.debug("signUp_step_requestAccessToken");
 

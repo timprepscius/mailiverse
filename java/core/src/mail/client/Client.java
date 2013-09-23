@@ -13,6 +13,8 @@ import core.connector.async.AsyncStoreConnectorBase64;
 import core.connector.async.AsyncStoreConnectorEncrypted;
 import core.connector.dropbox.ClientInfoDropbox;
 import core.connector.dropbox.async.ConnectorDropbox;
+import core.connector.mv.ClientInfoMvStore;
+import core.connector.mv.async.ConnectorMvStore;
 import core.connector.s3.ClientInfoS3;
 import core.connector.s3.async.S3Connector;
 import core.constants.ConstantsEnvironmentKeys;
@@ -80,6 +82,13 @@ public class Client
 			Environment s3Environment = mailBoxEnvironment.childEnvironment(handler);
 			ClientInfoS3 clientInfo = new ClientInfoS3 (s3Environment);
 			connector = new S3Connector(clientInfo, httpDelegate);
+		}
+		else
+		if (handler.equals(ConstantsStorage.HANDLER_MV))
+		{
+			Environment mvEnvironment = mailBoxEnvironment.childEnvironment(handler);
+			ClientInfoMvStore clientInfo = new ClientInfoMvStore(mvEnvironment);
+			connector = new ConnectorMvStore(clientInfo, httpDelegate);
 		}
 		else
 		{

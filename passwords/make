@@ -4,5 +4,6 @@ echo `./make-single-password` > mail
 echo `./make-single-password` > mail-pbe
 echo `./make-single-password` > mail_extra
 echo `./make-single-password` > push-certificate
+echo `./make-single-password` > store
 
 

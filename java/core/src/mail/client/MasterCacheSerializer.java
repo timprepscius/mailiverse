@@ -28,7 +28,7 @@ public class MasterCacheSerializer implements ItemSerializer
 	{
 		if (item instanceof Settings)
 			return settingsSerializer.serialize_(item);
-		
+
 		return indexedCacheSerializer.serialize_(item);
 	}
 	@Override

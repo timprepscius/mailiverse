@@ -26,6 +26,8 @@ import mail.client.model.FolderSet;
 import mail.client.model.Header;
 import mail.client.model.Identity;
 import mail.client.model.Mail;
+import mail.client.model.PublicKey;
+import mail.client.model.PublicKeyRing;
 import mail.client.model.Recipients;
 import mail.client.model.Settings;
 import mail.client.model.TransportState;
@@ -573,4 +575,45 @@ public class JSON extends Servent<Master>
 		
 		return o;
 	}
+	
+	public void fromJSON(PublicKey item, Object parse) throws JSONException 
+	{
+		item.setEmail(JSON_.getString(parse, "email"));
+		item.setPublicKey(JSON_.getString(parse, "publicKey"));
+	}
+	
+	public Object toJSON(PublicKey item) throws JSONException
+	{
+		Object o = JSON_.newObject();
+		JSON_.put(o, "email", item.toString());
+		JSON_.put(o, "publicKey", item.getPublicKey());
+		
+		return o;
+	}	
+	
+	public void fromJSON(PublicKeyRing item, Object a) throws JSONException 
+	{
+		for (int i=0; i<JSON_.size(a); ++i)  // reverse it
+		{
+			Object iNs = JSON_.getObject(a, i);
+			item.addPublicKeyFromCache(
+				toID(JSON_.getString(iNs,"id")), 
+				toIdentity(JSON_.getString(iNs, "identity"))
+			);
+		}
+	}
+	
+	public Object toJSON(PublicKeyRing item) throws JSONException
+	{
+		Object a = JSON_.newArray();
+		for (Pair<ID,Identity> iNs : item.getPublicKeys())
+		{
+			Object o = JSON_.newObject();
+			JSON_.put(o, "id", toJSON(iNs.first));
+			JSON_.put(o, "identity", toJSON(iNs.second));
+		}
+		
+		return a;
+	}	
+
 }

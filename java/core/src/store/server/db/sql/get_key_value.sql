@@ -1,0 +1,1 @@
+SELECT version, v FROM key_values WHERE user_id = ? AND k = ?

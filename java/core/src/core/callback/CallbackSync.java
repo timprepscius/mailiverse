@@ -79,4 +79,16 @@ public class CallbackSync
 		return null;
 	}
 	
+	public void checkException () throws Exception
+	{
+		if (results != null && results.length > 0)
+		{
+			if (results[0] instanceof Exception)
+			{
+				Exception e = (Exception)results[0];
+				throw e;
+			}
+		}
+	}
+	
 }

@@ -1,0 +1,1 @@
+DELETE FROM key_value WHERE user_id = ? AND k = ?

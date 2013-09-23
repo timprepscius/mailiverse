@@ -92,5 +92,15 @@ You are screwed.  Totally screwed.  Make backups to a safe place of the mysql se
 
 
 
+* How should I have done the code to avoid all that nasty call back stuff
+
+I'm thinking that I should have done a master dispatcher.
+I should have done all http requests sync not async.
+And had like 20 threads to do request on and computation.
+
+Instead of creating all of these callback chains, I should have just dispatched to one of the workers.
 
 
+* The StoreEnable and CreateBucket should happen behind the scenes.
+The results should be encrypted with a user supplied key
+also, CreateBucket could be hacked.

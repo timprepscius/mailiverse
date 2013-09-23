@@ -20,7 +20,7 @@ mSignUp = {
 	
 	onStorageChange: function()
 	{
-		var possible = [ 'mailiverse', 'dropbox' ];
+		var possible = [ 's3', 'mailiverse', 'dropbox' ];
 		var value = $('input[name=storage]:checked').val();
 		$('#storage_' + value).show();
 
@@ -31,6 +31,11 @@ mSignUp = {
 		}
 		
 		if (value == 'mailiverse')
+		{
+			mSignUp.validate['storageAuthorized'] = true;
+		}
+		else
+		if (value == 's3')
 		{
 			mSignUp.validate['storageAuthorized'] = true;
 		}
@@ -296,8 +301,8 @@ mSignUp = {
 		$('#_mSignUpExecute').show();
 		
 		var storageInfo = {};
-		if (mSignUp.storage == "mailiverse")
-			storageInfo = { region: $('#storage_mailiverse_region').val() };
+		if (mSignUp.storage == "s3")
+			storageInfo = { region: $('#storage_s3_region').val() };
 		
 		var signUpDelegate = { 
 				progress: function(x) { 

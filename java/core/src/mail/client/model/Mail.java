@@ -124,7 +124,8 @@ public class Mail extends Model
 	{
 		this.attachments = attachments;
 	}
-
+	
+/*
 	public boolean isPresendEncryptable() 
 	{
 		for (Identity i : getHeader().getRecipients().getAll())
@@ -191,4 +192,5 @@ public class Mail extends Model
 			Base64.encode(aes.encrypt(Strings.toBytes(JSON_.asString(container))))
 		);
 	}
+*/
 }

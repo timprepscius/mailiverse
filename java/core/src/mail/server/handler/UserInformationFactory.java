@@ -50,6 +50,9 @@ public class UserInformationFactory
 		if (handlerName.equals(ConstantsStorage.HANDLER_DROPBOX))
 			mailetHandler = new MailetHandlerDropbox();
 		else
+		if (handlerName.equals(ConstantsStorage.HANDLER_MV))
+			mailetHandler = new MailetHandlerMvStore();
+		else
 			throw new Exception("Unknown handler");
 		
 		return new UserInformation (toAddress, environment, mailetHandler);

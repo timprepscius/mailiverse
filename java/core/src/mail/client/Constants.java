@@ -26,5 +26,7 @@ public class Constants
 		SETTINGS_ID = ID.fromLong(1),
 		MAIL_ID = ID.fromLong(2),
 		CONVERSATION_ID = ID.fromLong(3),
-		FOLDER_ID = ID.fromLong(4);
+		FOLDER_ID = ID.fromLong(4),
+		KEYRING_ID = ID.fromLong(5),
+		KEY_ID = ID.fromLong(6);
 }

@@ -1,0 +1,1 @@
+REPLACE INTO key_values (user_id,k,v,version) VALUES (?,?,?,?)

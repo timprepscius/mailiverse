@@ -103,7 +103,7 @@ var mDelegateCommon =
 	    		log("finishing url ", url, " ", this.status);
 
 	    		var getResponseHeadersHack = function(xhr) {
-	    			var headers = ['ETag','Content-Type', 'x-dropbox-metadata'];
+	    			var headers = ['ETag','Content-Type', 'x-dropbox-metadata', 'Version'];
 	    			var result = [];
 	    			for (var i=0; i<headers.length; ++i)
 	    			{

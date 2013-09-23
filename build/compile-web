@@ -1,9 +1,7 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then echo "Must supply prod or dev"; exit 0; fi
-
 V=`date "+%Y%m%d_%H%M%S"`
-M=$1
+M=prod
 
 rsync -avL --delete ../web/WebContent/ www/
 rsync -avL --delete ../gwt/war/mailiverse_gwt/ www/mailiverse_gwt/

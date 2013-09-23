@@ -8,4 +8,6 @@ openssl pkcs12 -in store.p12 -nocerts -out store.key
 openssl rsa -in store.key -out final.key
 
 rm final.crt
-cat authority-response/* >> final.crt
+cat authority-response/server.crt >> final.crt
+cat authority-response/PositiveSSLCA2.crt >> final.crt
+cat authority-response/AddTrustExternalCARoot.crt >> final.crt

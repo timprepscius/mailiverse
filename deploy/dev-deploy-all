@@ -1,6 +1,6 @@
 ./dev-server-deploy tomcat
 #./dev-server-deploy james
-./dev-server-deploy postfix
+./dev-server-deploy postfix-user
 ./dev-server-deploy mail-user
 ./dev-server-deploy mail-key
 ./dev-server-deploy tools

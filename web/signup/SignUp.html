@@ -172,25 +172,27 @@
 					<td class="right-side">
 						<div class="inner-td">
 							I want to use the storage provider:<br/>
-							<label class="checkbox inline"><input name="storage" type="radio" onchange="mSignUp.onStorageChange();" value="mailiverse" checked>Mailiverse</label>
-							<label class="checkbox inline"><input name="storage" type="radio" onchange="mSignUp.onStorageChange();" value="dropbox">Dropbox</label>
+							<br/>
+							<label class="checkbox inline"><input name="storage" type="radio" onchange="mSignUp.onStorageChange();" value="mailiverse" checked>Mailiverse</label><br/>
+							<label class="checkbox inline"><input name="storage" type="radio" onchange="mSignUp.onStorageChange();" value="s3">Mailiverse (S3 Backed)</label><br>
+							<label class="checkbox inline"><input name="storage" type="radio" onchange="mSignUp.onStorageChange();" value="dropbox">Dropbox</label><br/>
 						</div>
 					</td>
 				</tr>
 				
-				<tr id="storage_mailiverse" class="storage-option">
+				<tr id="storage_s3" class="storage-option" style="display:none">
 					<td class="left-side">
 						<div class="inner-td">
-							<h4>Mailiverse storage</h4>
+							<h4>Mailiverse S3 backed storage</h4>
 							We provide infinite mail storage.
 						</div>
 					</td>
 					<td class="right-side">
 						<div class="inner-td">
-							Mailiverse storage is simple, no hassle.  We take care of everything.<br/>
+							Mailiverse S3 backed storage is simple, no hassle.  We take care of everything.<br/>
 							<br/>
 							Pick the region you are closest to most of the time.<br/>
-							<select id="storage_mailiverse_region">
+							<select id="storage_s3_region">
 								<option value="US_Standard" selected="selected">US Standard</option>
 								<option value="US_West">US-West (Northern California)</option>
 								<option value="US_West_2">US-West-2 (Oregon)</option>
@@ -200,6 +202,20 @@
 								<option value="AP_Tokyo">Asia Pacific (Tokyo)</option>
 								<option value="SA_SaoPaulo">South America (Sao Paulo)</option>
 							</select>
+						</div>
+					</td>
+				</tr>
+
+				<tr id="storage_mailiverse" class="storage-option">
+					<td class="left-side">
+						<div class="inner-td">
+							<h4>Mailiverse storage</h4>
+							We provide infinite mail storage.  This storage is backed by our local db.
+						</div>
+					</td>
+					<td class="right-side">
+						<div class="inner-td">
+							Mailiverse storage is simple, no hassle.  We take care of everything.<br/>
 						</div>
 					</td>
 				</tr>

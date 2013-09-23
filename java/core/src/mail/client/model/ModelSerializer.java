@@ -40,6 +40,8 @@ public class ModelSerializer implements ItemSerializer
 			return Strings.toBytes(json.toJSON((Folder)item).toString());
 		if (item instanceof Settings)
 			return Strings.toBytes(json.toJSON((Settings)item).toString());
+		if (item instanceof PublicKey)
+			return Strings.toBytes(json.toJSON((PublicKey)item).toString());
 		
 		return null;
 	}
@@ -58,6 +60,8 @@ public class ModelSerializer implements ItemSerializer
 			json.fromJSON((Folder)item, JSON_.parse(Strings.toString(bytes)));
 		if (item instanceof Settings)
 			json.fromJSON((Settings)item, JSON_.parse(Strings.toString(bytes)));
+		if (item instanceof PublicKey)
+			json.fromJSON((PublicKey)item, JSON_.parse(Strings.toString(bytes)));
 	}
 	
 	@Override

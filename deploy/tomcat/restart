@@ -1,3 +1,7 @@
+pushd ~/tomcat/webapps
+rm -rf Mailiverse
+popd
+
 cd ~/tomcat/bin
 
 ./shutdown.sh

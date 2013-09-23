@@ -13,5 +13,7 @@ public enum Type {
 	FolderFilterSet,
 	FolderMaster,
 	Index,
-	Settings
+	Settings,
+	PublicKeyRing,
+	PublicKey,
 }
