@@ -34,9 +34,10 @@ echo 'OK, starting:'
 echo $rootuser > install/requirements/server_root_account
 (cd install/requirements && ./get_rsa_pub)
 
-echo '
+echo "
 I am now going to enable passwordless login on the $target INSTALL computer
-You will need to enter the password
+You will need to enter the password"
+echo '
 Press <return> to start
 ';
 read dummy

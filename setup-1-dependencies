@@ -1,0 +1,36 @@
+pushd ext
+./setup
+popd
+
+pushd java/ext
+./setup-bc
+popd
+
+pushd build
+./compile-java
+./exportTools
+popd
+
+pushd passwords
+./make
+popd
+
+pushd keys
+  ./make
+
+  pushd primary
+  ./make-self-signed-key
+  popd
+
+  pushd nginx
+  ./convert-selfsigned
+  popd 
+popd
+
+
+echo '
+*************
+ok please run setup 2
+*************
+'
+
