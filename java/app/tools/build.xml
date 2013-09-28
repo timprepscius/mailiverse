@@ -8,7 +8,7 @@
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../../../Desktop/eclipse"/>
     <property name="Mailiverse.Ext.Apache.location" value="../../ext/apache"/>
-    <property name="Mailiverse.Ext.BouncyCastle.location" value="../../ext/lcrypto-jdk15on-148"/>
+    <property name="Mailiverse.Ext.BouncyCastle.location" value="../../ext/bouncycastle"/>
     <property name="Mailiverse.Ext.JordanZimmerman.location" value="../../ext/jordanzimmerman"/>
     <property name="Mailiverse.Ext.Json.location" value="../../ext/json"/>
     <property name="Mailiverse.Core.location" value="../../core"/>
@@ -17,25 +17,25 @@
     <property name="source" value="1.6"/>
     <path id="EAR Libraries.libraryclasspath"/>
     <path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/annotations-api.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/catalina-ant.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/catalina-ha.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/catalina-tribes.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/catalina.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/ecj-4.2.1.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/el-api.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/jasper-el.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/jasper.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/jsp-api.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/servlet-api.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-api.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-coyote.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-dbcp.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-i18n-es.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-i18n-fr.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-i18n-ja.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-jdbc.jar"/>
-        <pathelement location="../../../ext/apache-tomcat-7.0.37/lib/tomcat-util.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/annotations-api.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/catalina-ant.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/catalina-ha.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/catalina-tribes.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/catalina.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/ecj-4.2.1.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/el-api.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/jasper-el.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/jasper.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/jsp-api.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/servlet-api.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/tomcat-api.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/tomcat-coyote.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/tomcat-dbcp.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/tomcat-i18n-es.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/tomcat-i18n-fr.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/tomcat-i18n-ja.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/tomcat-jdbc.jar"/>
+        <pathelement location="../../../ext/apache-tomcat/lib/tomcat-util.jar"/>
     </path>
     <path id="Mailiverse.Ext.BouncyCastle.classpath">
         <pathelement location="${Mailiverse.Ext.BouncyCastle.location}/bin"/>

@@ -11,25 +11,6 @@
             <fileset dir="../../java/app/tools/bin"/>
             <fileset dir="../../java/core/bin"/>
             <fileset dir="../../java/ext/bouncycastle/bin"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/annotations-api.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/catalina-ant.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/catalina-ha.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/catalina-tribes.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/catalina.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/ecj-4.2.1.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/el-api.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/jasper-el.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/jasper.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/jsp-api.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/servlet-api.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/tomcat-api.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/tomcat-coyote.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/tomcat-dbcp.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/tomcat-i18n-es.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/tomcat-i18n-fr.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/tomcat-i18n-ja.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/tomcat-jdbc.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="../../ext/apache-tomcat/lib/tomcat-util.jar"/>
             <fileset dir="../../java/ext/jordanzimmerman/bin"/>
             <fileset dir="../../java/ext/json/bin"/>
             <zipfileset excludes="META-INF/*.SF" src="../../java/core/lib/dropbox-java-sdk-1.3.jar"/>

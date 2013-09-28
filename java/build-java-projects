@@ -1,3 +1,7 @@
+pushd app/tools
+ant clean && ant
+popd
+
 pushd core
 ant clean && ant
 popd
