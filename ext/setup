@@ -1,0 +1,8 @@
+wget http://mirror.sdunix.com/apache/tomcat/tomcat-7/v7.0.42/bin/apache-tomcat-7.0.42.tar.gz
+tar -xzf apache-tomcat-7.0.42.tar.gz
+rm apache-tomcat
+ln -fs apache-tomcat-7.0.42 apache-tomcat
+
+wget --no-check-certificate https://google-web-toolkit.googlecode.com/files/gwt-2.5.1.zip
+unzip gwt-2.5.1.zip  -x */samples/* */doc/*
+ln -fs gwt-2.5.1 gwt

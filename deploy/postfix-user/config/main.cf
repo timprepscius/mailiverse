@@ -33,7 +33,7 @@ inet_interfaces = all
 inet_protocols = all
 
 javapipe_destination_recipient_limit = 1
-virtual_mailbox_domains = hash:/etc/postfix/config/virtual_domains
+virtual_mailbox_domains = /etc/postfix/config/virtual_domains
 virtual_mailbox_maps = mysql:/etc/postfix/config/virtual_mailbox_maps.cf
 virtual_transport = javapipe
 

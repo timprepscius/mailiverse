@@ -76,7 +76,6 @@ public class Mailer extends Servent<Master>
 		sendMap.put("cc", Strings.concat(mail.getHeader().getRecipients().getCc(), ","));
 		sendMap.put("bcc", Strings.concat(mail.getHeader().getRecipients().getBcc(), ","));
 		sendMap.put("replyTo", Strings.concat(mail.getHeader().getRecipients().getReplyTo(), ","));
-		sendMap.put("publicKey", Base64.encode(((CryptorRSA)getMaster().getCryptor()).getPublicKey()));
 		
 		/*
 		if (mail.isPresendEncryptable())

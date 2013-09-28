@@ -40,7 +40,7 @@ public class ConstantsServer
 	public static final String SMTP_HOST = LOCAL_MAIL_SERVER;
 	public static final int SMTP_PORT = 25;
 	
-	public static final String LOCAL_SMTP_PORT = "10025";
+	public static final String LOCAL_SMTP_PORT = "25";
 
 	public static final String KEY_AUTH_HOST = KEY_SERVER;
 	public static final int KEY_AUTH_PORT = 7000;
