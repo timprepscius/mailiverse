@@ -1,5 +1,5 @@
 pushd ext
-tar -xzf apache-tomcat.tar.gz
+./setup
 popd
 
 pushd java/ext
