@@ -1,0 +1,61 @@
+echo '
+****************
+Read this setup file before running it... It will make you feel better.
+****************
+
+
+'
+
+echo '
+You MUST have SSL keys, this script will copy the public key from .ssh/id_rsa.pub
+into install/requirements.
+
+You MUST modify your /etc/hosts to have an ip for mail.YOURSITE.xxx...
+'
+
+echo 'Press return when this is ready'
+read dummy
+
+echo 'Enter the name of your site (example: joesmail.com):'
+read site
+target = mail.$site
+
+echo 'configuring the hosts files which are used in deploy and compilation'
+pushd config/hosts
+./make-prod $site
+./make-dev $site
+popd
+
+echo 'Enter the name of the root user on the computer you are going to INSTALL on (probably root, maybe ubuntu):'
+read rootuser
+
+echo 'OK, starting:'
+
+echo $rootuser > install/requirements/server_root_account
+(cd install/requirements && ./get_rsa_pub)
+
+echo '
+I am now going to enable passwordless login on the $target INSTALL computer
+You will need to enter the password
+Press <return> to start
+';
+read dummy
+
+cd install
+
+./enable-passwordless-login $target
+
+echo '
+Hopefully that went well, if it didn't well, press control-c now
+I'm now going to setup the target machine.
+Press <return> to start
+';
+read dummy;
+
+./setup-server $target
+
+echo '
+Hopefully that went well.....
+
+Please run the next setup script
+'
