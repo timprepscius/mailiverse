@@ -75,6 +75,7 @@
       <classpath>
         <pathelement location="war/WEB-INF/classes"/>
         <pathelement location="src"/>
+        <pathelement location="jre-gwt"/>
         <path refid="Mailiverse-GWT.classpath"/>
       </classpath>
       <!-- add jvmarg -Xss16M or similar if you see a StackOverflowError -->
