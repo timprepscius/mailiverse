@@ -51,4 +51,6 @@ public class ConstantsServer
 	public static final int MAXIMUM_MAIL_SIZE = 1024 * 1024 * 1;
 
 	public static final int AUTH_TIMEOUT = 45;
+
+	public static final String RECAPTCHA_PRIVATE_KEY = "captcha_private_key";
 }

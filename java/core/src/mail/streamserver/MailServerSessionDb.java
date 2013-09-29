@@ -4,34 +4,33 @@
  */
 package mail.streamserver;
 
-import java.io.IOException;
 import java.math.BigInteger;
-import java.sql.SQLException;
 import java.util.Random;
 
 import mail.server.db.ExternalData;
 import mail.server.db.ExternalDataFactory;
 import mail.server.db.MailUserDb;
 
-import org.apache.james.cli.probe.impl.JmxServerProbe;
-
 import core.constants.ConstantsEnvironmentKeys;
+import core.constants.ConstantsServer;
 import core.exceptions.InternalException;
 import core.exceptions.PublicMessageException;
 import core.server.captcha.Captcha;
 import core.server.mailextra.MailExtraDb;
 import core.srp.server.SRPServerUserSessionDb;
 import core.util.Environment;
+import core.util.ExternalResource;
 import core.util.JSONSerializer;
 import core.util.LogOut;
 import core.util.SimpleSerializer;
 import core.util.Strings;
 import core.util.Triple;
 
-
 public class MailServerSessionDb implements SRPServerUserSessionDb
 {
-	static final boolean USE_CAPTCHA = true;
+	boolean USE_CAPTCHA = 
+		!ExternalResource.
+			getTrimmedString(ConstantsServer.RECAPTCHA_PRIVATE_KEY).equals("NONE");
 	
 	
 	static LogOut log = new LogOut(MailServerSessionDb.class);
@@ -39,7 +38,7 @@ public class MailServerSessionDb implements SRPServerUserSessionDb
 	MailExtraDb payment;
 	Captcha captcha;
 	
-	public MailServerSessionDb (MailUserDb db) throws SQLException, IOException
+	public MailServerSessionDb (MailUserDb db) throws Exception
 	{
 		this.db = db;
 		this.captcha = new Captcha();

@@ -73,7 +73,7 @@ public class CaptchaResponse extends HttpServlet {
 		{
 	        String remoteAddr = request.getRemoteAddr();
 	        ReCaptchaImpl reCaptcha = new ReCaptchaImpl();
-	        reCaptcha.setPrivateKey(ExternalResource.getTrimmedString("captcha_private_key"));
+	        reCaptcha.setPrivateKey(ExternalResource.getTrimmedString(ConstantsServer.RECAPTCHA_PRIVATE_KEY));
 	
 	        String challenge = request.getParameter("recaptcha_challenge_field");
 	        String uresponse = request.getParameter("recaptcha_response_field");
