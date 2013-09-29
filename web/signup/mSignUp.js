@@ -22,6 +22,7 @@ mSignUp = {
 		{
 			$('#_mSignUp_captcha_submit').text("Captcha key not present");
 			$('#_mSignUp_captcha_submit').attr("disabled", "disabled");
+			mSignUp.validate.captcha = true;
 		}
 	},
 	
