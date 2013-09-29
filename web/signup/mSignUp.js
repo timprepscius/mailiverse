@@ -3,6 +3,7 @@
 mSignUp = {
 
 	executeText: "",
+	useCaptcha: EmbeddedResources["mail.signup.SignUp.recaptcha-public-key"] != "NONE",
 		
 	service: null,
 	validate: { name: false, password: false, password_check:false, storageAuthorized:true, captcha:false, tos:false },
@@ -13,9 +14,15 @@ mSignUp = {
 	userToken: { key: null, secret : null },
 	dropboxAuthorizationCode: null,
 	captchaToken:null,
-	
+
 	initialize: function()
 	{
+		mSignUp.validate.captcha = mSignUp.useCaptcha;
+		if (!mSignUp.useCaptcha)
+		{
+			$('#_mSignUp_captcha_submit').text("Captcha key not present");
+			$('#_mSignUp_captcha_submit').attr("disabled", "disabled");
+		}
 	},
 	
 	onStorageChange: function()

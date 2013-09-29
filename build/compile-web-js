@@ -8,6 +8,7 @@ HOST_PRIMARY=`cat ../config/hosts/$M`
 HOST_AUTH=`cat ../config/hosts/auth_$M`
 HOST_TOMCAT=`cat ../config/hosts/tomcat_$M`
 HOST_WEB=`cat ../config/hosts/web_$M`
+RECAPTCHA_PUBLIC_KEY=`cat ../keys/recaptcha/public.key`
 
 function replaceStrings() {
 	sed -i '' -f replace_js_$M.sed $1
@@ -18,6 +19,7 @@ function replaceStrings() {
         sed -i '' -e s/{##HOST_AUTH##}/$HOST_AUTH/g $1
         sed -i '' -e s/{##HOST_TOMCAT##}/$HOST_TOMCAT/g $1
         sed -i '' -e s/{##HOST_WEB##}/$HOST_WEB/g $1
+        sed -i '' -e s/{##RECAPTCHA_PUBLIC_KEY##}/$RECAPTCHA_PUBLIC_KEY/g $1
 }
 
 echo Replacing Strings
