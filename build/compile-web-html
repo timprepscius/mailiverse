@@ -5,6 +5,7 @@ V=$1
 M=$2
 
 APP_TITLE=`cat ../config/title`
+COMPANY=`cat ../config/company`
 
 dst=www
 cmn_src=../web/common
@@ -23,7 +24,9 @@ function replaceStrings() {
 	sed -i '' -e s/__VERSION__/$V/g $1
 	sed -i '' -e s/__THIS_YEAR__/2013/g $1
 
+	echo $COMPANY
 	sed -i '' -e s/{##TITLE##}/$APP_TITLE/g $1
+	sed -i '' -e s/{##COMPANY##}/"$COMPANY"/g $1
 }
 
 echo Compiling CSS/JS
