@@ -28,11 +28,6 @@ import core.util.Triple;
 
 public class MailServerSessionDb implements SRPServerUserSessionDb
 {
-	boolean USE_CAPTCHA = 
-		!ExternalResource.
-			getTrimmedString(ConstantsServer.RECAPTCHA_PRIVATE_KEY).equals("NONE");
-	
-	
 	static LogOut log = new LogOut(MailServerSessionDb.class);
 	MailUserDb db;
 	MailExtraDb payment;
@@ -79,13 +74,8 @@ public class MailServerSessionDb implements SRPServerUserSessionDb
 		{
 			ExternalData externalData = ExternalDataFactory.createInstance();
 
-			if (USE_CAPTCHA)
-			{
-				String token = SimpleSerializer.deserialize(extra);
-				captcha.useToken(token, Captcha.SignUp);
-			}
-			else
-				System.out.println("Not checking captcha!");
+			String token = SimpleSerializer.deserialize(extra);
+			captcha.useToken(token, Captcha.SignUp);
 			
 			db.createUser(version, userName, v.toByteArray(), s.toByteArray());
 			payment.addDaysTo(userName,0);

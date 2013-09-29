@@ -16,18 +16,31 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Random;
 
+import core.constants.ConstantsServer;
 import core.server.captcha.sql.Catalog;
+import core.util.ExternalResource;
+import core.util.LogOut;
 import core.util.Passwords;
 
 
 public class Captcha 
 {
+	boolean USE_CAPTCHA = 
+		!ExternalResource.
+			getTrimmedString(ConstantsServer.RECAPTCHA_PRIVATE_KEY).equals("NONE");
+		
+	static LogOut log = new LogOut(Captcha.class);
 	Random random = new SecureRandom();
 	Catalog catalog = new Catalog();
 	
 	public static final String 
 		SignUp = "SignUp", 
 		CreateBucket = "CreateBucket";
+	
+	public Captcha () throws Exception
+	{
+		
+	}
 	
 	public void prune () throws SQLException, IOException
 	{
@@ -76,6 +89,12 @@ public class Captcha
 	{
 		prune();
 		
+		if (!USE_CAPTCHA)
+		{
+			log.debug("Not using captcha, because no private key present.");
+			return;
+		}
+
 		Connection connection = openConnection();
 
 		try
