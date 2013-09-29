@@ -173,8 +173,8 @@
 						<div class="inner-td">
 							I want to use the storage provider:<br/>
 							<br/>
-							<label class="checkbox inline"><input name="storage" type="radio" onchange="mSignUp.onStorageChange();" value="mailiverse" checked>Mailiverse</label><br/>
-							<label class="checkbox inline"><input name="storage" type="radio" onchange="mSignUp.onStorageChange();" value="s3">Mailiverse (S3 Backed)</label><br>
+							<label class="checkbox inline"><input name="storage" type="radio" onchange="mSignUp.onStorageChange();" value="mailiverse" checked>{##TITLE##}</label><br/>
+							<label class="checkbox inline"><input name="storage" type="radio" onchange="mSignUp.onStorageChange();" value="s3">{##TITLE##} (S3 Backed)</label><br>
 							<label class="checkbox inline"><input name="storage" type="radio" onchange="mSignUp.onStorageChange();" value="dropbox">Dropbox</label><br/>
 						</div>
 					</td>
@@ -183,13 +183,13 @@
 				<tr id="storage_s3" class="storage-option" style="display:none">
 					<td class="left-side">
 						<div class="inner-td">
-							<h4>Mailiverse S3 backed storage</h4>
+							<h4>{##TITLE##} S3 backed storage</h4>
 							We provide infinite mail storage.
 						</div>
 					</td>
 					<td class="right-side">
 						<div class="inner-td">
-							Mailiverse S3 backed storage is simple, no hassle.  We take care of everything.<br/>
+							{##TITLE##} S3 backed storage is simple, no hassle.  We take care of everything.<br/>
 							<br/>
 							Pick the region you are closest to most of the time.<br/>
 							<select id="storage_s3_region">
@@ -209,13 +209,13 @@
 				<tr id="storage_mailiverse" class="storage-option">
 					<td class="left-side">
 						<div class="inner-td">
-							<h4>Mailiverse storage</h4>
+							<h4>{##TITLE##} storage</h4>
 							We provide infinite mail storage.  This storage is backed by our local db.
 						</div>
 					</td>
 					<td class="right-side">
 						<div class="inner-td">
-							Mailiverse storage is simple, no hassle.  We take care of everything.<br/>
+							{##TITLE##} storage is simple, no hassle.  We take care of everything.<br/>
 						</div>
 					</td>
 				</tr>
@@ -226,7 +226,7 @@
 							<h4>Dropbox storage</h4>
 							
 							Store your mail on your own dropbox account.  
-							It's easy, just click on the button to open a new tab to link Mailiverse to Dropbox.<br/>
+							It's easy, just click on the button to open a new tab to link {##TITLE##} to Dropbox.<br/>
 							<br/>
 							Enter the authorization verification code recieved.
 							<br/>
@@ -297,7 +297,7 @@
 			</tbody></table>
 			</div>
 			<footer>
-				<p>&copy; Benith Inc. __THIS_YEAR__</p>
+				<p>&copy; {##COMPANY##} __THIS_YEAR__</p>
 			</footer>
 		</div>
 
