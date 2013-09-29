@@ -38,7 +38,7 @@ public class CaptchaResponse extends HttpServlet {
      * @throws SQLException 
      * @see HttpServlet#HttpServlet()
      */
-    public CaptchaResponse() throws ClassNotFoundException, SQLException, IOException 
+    public CaptchaResponse() throws Exception 
     {
         super();
 
