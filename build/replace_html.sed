@@ -24,8 +24,4 @@
   d
 }
 
-/{##COMPANY##}/ {
-  r ../config/company
-  d
-}
 
