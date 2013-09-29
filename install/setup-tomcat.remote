@@ -1,6 +1,7 @@
 set -x
 
 tar -xzvf apache-tomcat.tar.gz
+rm tomcat
 ln -s apache-tomcat-* tomcat
 
 ln -s tomcat/logs/catalina.out run.log

@@ -1,4 +1,5 @@
 wget http://mirror.sdunix.com/apache/tomcat/tomcat-7/v7.0.42/bin/apache-tomcat-7.0.42.tar.gz
+ln -s apache-tomcat-7.0.42.tar.gz apache-tomcat.tar.gz
 tar -xzf apache-tomcat-7.0.42.tar.gz
 rm apache-tomcat
 ln -fs apache-tomcat-7.0.42 apache-tomcat

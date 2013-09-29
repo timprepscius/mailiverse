@@ -6,6 +6,6 @@
 ./server-deploy mail-user
 ./server-deploy mail-key
 ./server-deploy tools
-./web-deploy
+./server-deploy web
 
 #./server-deploy tunnel

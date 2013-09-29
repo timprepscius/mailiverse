@@ -1,2 +1,2 @@
 cd deploy
-./server-deploy-all
+./deploy-all

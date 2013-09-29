@@ -7,8 +7,8 @@
 <project basedir="." default="gwtc" name="Mailiverse-GWT">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../Desktop/eclipse"/>
-    <property name="GWT_PLUGIN" value="ls ../ext/gwt"/>
-    <property name="gwt.args" value="-logLevel INFO"/>
+    <property name="GWT_PLUGIN" value="../ext/gwt"/>
+    <property name="gwt.args" value="-logLevel ALL -style PRETTY"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.7"/>
     <property name="source" value="1.7"/>

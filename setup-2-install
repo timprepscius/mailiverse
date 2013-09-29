@@ -18,7 +18,10 @@ read dummy
 
 echo 'Enter the name of your site (example: joesmail.com):'
 read site
-target = mail.$site
+target=mail.$site
+
+echo "Site name will be: $site, the target machine will be $target"
+echo "";
 
 echo 'configuring the hosts files which are used in deploy and compilation'
 pushd config/hosts
@@ -32,26 +35,29 @@ read rootuser
 echo 'OK, starting:'
 
 echo $rootuser > install/requirements/server_root_account
-(cd install/requirements && ./get_rsa_pub)
+pushd install/requirements
+./get_rsa_pub
+popd
 
 echo "
 I am now going to enable passwordless login on the $target INSTALL computer
-You will need to enter the password"
+You will need to enter the password a few times...
+"
 echo '
 Press <return> to start
-';
-read dummy
+'
+read dummy1
 
-cd install
 
+pushd install
 ./enable-passwordless-login $target
 
 echo '
-Hopefully that went well, if it didn't well, press control-c now
-I'm now going to setup the target machine.
+Hopefully that went well, if it didn-t well, press control-c now
+I am now going to setup the target machine.
 Press <return> to start
-';
-read dummy;
+'
+read dummy2
 
 ./setup-server $target
 
@@ -60,3 +66,6 @@ Hopefully that went well.....
 
 Please run the next setup script
 '
+
+popd
+
