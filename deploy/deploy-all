@@ -7,5 +7,6 @@
 ./server-deploy mail-key
 ./server-deploy tools
 ./server-deploy web
+./tomcat-restart
 
 #./server-deploy tunnel
