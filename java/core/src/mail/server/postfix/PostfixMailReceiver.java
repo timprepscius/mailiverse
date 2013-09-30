@@ -24,14 +24,13 @@ public class PostfixMailReceiver
 	{
 		File me = new File(args[0]);
 		File logFile = new File(me.getParent(), "run.log");
+		log.debug("Running with log file as ",logFile);
 		
 		System.setOut(new PrintStream(new FileOutputStream(logFile)));
 		System.setErr(System.out);
 		
 		try
 		{
-			log.debug("Running with log file as ",logFile);
-			
 			Class.forName("com.mysql.jdbc.Driver");
 			String toAddress = args[1];
 			byte[] bytes = Streams.readFullyBytes(System.in);

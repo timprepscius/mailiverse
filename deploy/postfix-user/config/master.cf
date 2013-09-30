@@ -61,5 +61,5 @@ anvil     unix  -       -       -       -       1       anvil
 scache    unix  -       -       -       -       1       scache
 
 javapipe  unix  -       n       n       -       -       pipe
-  user=postfix-user flags=DRhuX argv=java -jar /home/postfix-user/PostfixMailReceiver.jar -args $recipient
+  directory=/home/postfix-user user=postfix-user flags=DRhuX argv=java -jar /home/postfix-user/PostfixMailReceiver.jar -args $recipient
 
