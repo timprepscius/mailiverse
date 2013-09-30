@@ -21,13 +21,13 @@ import core.util.HttpDelegate;
 import core.util.JSON_;
 import core.util.LogNull;
 import core.util.Strings;
-import core.util.XML;
 
 public class ConnectorMvStore extends AsyncStoreConnectorHelper 
 {
 	static LogNull log = new LogNull(S3Connector.class);
 	final int LOCK_INTERVAL = 10 * 1000;	
-	
+
+	String endpointOverride = null;
 	ClientInfoMvStore info;
 	HttpDelegate httpDelegate;
 	
@@ -36,6 +36,9 @@ public class ConnectorMvStore extends AsyncStoreConnectorHelper
 	
 	protected String createUrlPrefix ()
 	{
+		if (endpointOverride != null)
+			return endpointOverride;
+		
 		return "https://" + info.getBucketEndpoint() + "/";
 	}
 	
@@ -110,6 +113,11 @@ public class ConnectorMvStore extends AsyncStoreConnectorHelper
 		this.httpDelegate = httpDelegate;
 		
 		setKey (info.getSecretKey());
+	}
+	
+	public void setEndpointOverride(String endpoint) 
+	{
+		this.endpointOverride = endpoint;
 	}
 	
 	long toVersionFromString (String s) throws Exception

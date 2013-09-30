@@ -11,7 +11,8 @@ public class ConstantsClient
 	public static final String ATHOST = "@" + HOST;
 	public static final String WEB_SERVER_URL = "https://" + WEB_HOST;
 	
-	public static final String SERVER_TOMCAT = TOMCAT_HOST + "/Mailiverse/";
+	public static final String TOMCAT_URL_PORTION = "/Mailiverse/";
+	public static final String SERVER_TOMCAT = TOMCAT_HOST + TOMCAT_URL_PORTION;
 	public static final String WEB_SERVER_TOMCAT = "https://" + SERVER_TOMCAT;
 	
 	public static final String KEY_AUTH_HOST = AUTH_HOST;

@@ -134,4 +134,9 @@ public class ConnectorMvStore implements StoreConnector
 		CallbackSync sync = new CallbackSync(connector.ensureDirectories_(folders)).invoke();
 		return sync.<Boolean>exportNoException();
 	}
+
+	public void setEndpointOverride(String endpoint) 
+	{
+		connector.setEndpointOverride(endpoint);
+	}
 }
