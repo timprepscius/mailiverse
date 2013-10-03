@@ -19,14 +19,14 @@ learnmore=../web/learnmore
 
 function replaceStrings() {
 	echo $1 $M
-	sed -i '' -f replace_html.sed $1
-	sed -i '' -f replace_html_$M.sed $1
-	sed -i '' -e s/__VERSION__/$V/g $1
-	sed -i '' -e s/__THIS_YEAR__/2013/g $1
+	./seds -f replace_html.sed $1
+	./seds -f replace_html_$M.sed $1
+	./seds -e s/__VERSION__/$V/g $1
+	./seds -e s/__THIS_YEAR__/2013/g $1
 
 	echo $COMPANY
-	sed -i '' -e s/{##TITLE##}/$APP_TITLE/g $1
-	sed -i '' -e s/{##COMPANY##}/"$COMPANY"/g $1
+	./seds -e s/{##TITLE##}/$APP_TITLE/g $1
+	./seds -e s/{##COMPANY##}/"$COMPANY"/g $1
 }
 
 echo Compiling CSS/JS

@@ -3,6 +3,7 @@
 # I realized: why bother?
 
 apt-get install software-properties-common --yes
+apt-get install python-software-properties --yes
 add-apt-repository ppa:webupd8team/java --yes
 apt-get update
 
