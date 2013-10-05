@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.http.HttpConnection;
 import org.json.JSONObject;
 
-import com.sun.org.apache.xml.internal.security.utils.Base64;
+import core.util.Base64;
 
 import core.constants.ConstantsServer;
 import core.crypt.CryptorRSA;
