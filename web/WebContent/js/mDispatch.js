@@ -154,4 +154,4 @@ mDispatch = {
 	},
 };
 
-// $(document).ready(setTimeout(function() { mDispatch.startWorker(); }, 250));
+$(document).ready(setTimeout(function() { mDispatch.startWorker(); }, 250));
