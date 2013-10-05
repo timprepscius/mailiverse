@@ -51,6 +51,7 @@ read dummy1
 
 pushd install
 ./enable-passwordless-login $target
+./enable-passwordless-sudo $target
 
 echo '
 Hopefully that went well, if it didn-t well, press control-c now
