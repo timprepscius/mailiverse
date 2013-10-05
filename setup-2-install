@@ -64,7 +64,13 @@ read dummy2
 
 echo '
 
-Setup part 2 has finished, please run setup part 3.
+Setup part 2 has finished.
+
+The MYSQL root password on the target machine is BLANK.  
+You should change the root password to be whatever you want.  
+Mailiverse doesn't need it anymore.
+
+Please run setup part 3.
 
 '
 
