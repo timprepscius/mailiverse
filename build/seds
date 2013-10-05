@@ -1,7 +1,8 @@
+
 platform='unknown'
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
-	sed -i $*
+	sed="sed -i"
 elif [[ "$unamestr" == 'Darwin' ]]; then
-	sed -i '' $*
+	sed="sed -i ''"
 fi
