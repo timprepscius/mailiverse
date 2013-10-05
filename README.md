@@ -7,14 +7,14 @@ This documents talks about installing mailiverse from an origin to a target.
 
 To install from and build mailiverse from the origin, the origin must:
 
-1. Have git installed
+1. Have ssh keys
+ssh-keygen -t rsa -b 4096
+
+2. Have git installed
 sudo apt-get install git --yes
 
-2. Have unzip installed
+3. Have unzip installed
 sudo apt-get install unzip --yes
-
-3. Have ant installed
-sudo apt-get install ant --yes
 
 4. Clone the mailiverse:
 git clone https://github.com/timprepscius/mailiverse.git
@@ -22,7 +22,10 @@ git clone https://github.com/timprepscius/mailiverse.git
 5. Have oracle java installed
 cd mailiverse/install && sudo ./setup-java.remote
 
-6.  Add lines to the hosts file for the target machine
+6. Have ant installed
+sudo apt-get install ant --yes
+
+7.  Add lines to the hosts file for the target machine
 sudo nano /etc/hosts
 add the lines:
 SOME-IP-ADDRESS mail.whateverthenameofyourdomainis
@@ -39,29 +42,25 @@ After these steps have been taken you are ready to set up.
 
 --------- Setting up -------------
 
-First run:
-./setup-1-dependencies
+1. ./setup-1-dependencies
 
 This will build enough stuff to generate keys for things.
 It will will generate default keys, default passwords, etc.
 You will at some point need to type in "password" a bunch of times, to export a particular
 key so it can be used with nginx.
 
-Then run:
-./setup-2-install
+2. ./setup-2-install
 
 This will install the mailiverse system onto the target.
 This means it will create user directories, install software, etc.
 
 
-Then run:
-./setup-3-compile
+3. ./setup-3-compile
 
 This will compile all the sources, jar them up, war them up, etc.
 
 
-Then run:
-./setup-4-deploy
+4. ./setup-4-deploy
 
 This will deploy mailiverse onto the target machine.
 
