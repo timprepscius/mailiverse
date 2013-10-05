@@ -30,7 +30,9 @@ popd
 
 echo '
 *************
-ok please run setup 2
+
+setup part 1 has finished, please run setup part 2.
+
 *************
 '
 

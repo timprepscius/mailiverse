@@ -1,2 +1,11 @@
 cd deploy
 ./deploy-all
+
+echo '
+
+Setup part 4 has finished.  The target machine should now have a functioning system.
+
+please https://mail.yourmachine/ to check.
+
+'
+

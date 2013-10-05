@@ -1,3 +1,8 @@
 cd build
 ./compile-all
 
+echo '
+
+setup part 3 has finished, please run setup part 4.
+
+'

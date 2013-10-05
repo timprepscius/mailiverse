@@ -63,9 +63,9 @@ read dummy2
 ./setup-server $target
 
 echo '
-Hopefully that went well.....
 
-Please run the next setup script
+Setup part 2 has finished, please run setup part 3.
+
 '
 
 popd

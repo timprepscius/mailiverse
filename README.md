@@ -20,7 +20,7 @@ sudo apt-get install unzip --yes
 git clone https://github.com/timprepscius/mailiverse.git
 
 5. Have oracle java installed:
-cd mailiverse/install && sudo ./setup-java.remote
+(cd mailiverse/install && sudo ./setup-java.remote)
 
 6. Have ant installed:
 sudo apt-get install ant --yes
@@ -31,7 +31,8 @@ So let's say your target machine was named: joesmail.com
 And it's IP was: 192.168.1.243
 
 sudo nano /etc/hosts
-add the lines:
+add the line:
+
 192.168.1.243 mail.joesmail.com
 
 This could also be done on a DNS server, if you control one..
