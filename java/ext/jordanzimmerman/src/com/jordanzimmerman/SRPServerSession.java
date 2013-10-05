@@ -79,7 +79,6 @@ public class SRPServerSession
 			throw new IllegalStateException("setClientPublicKey_A() has not been called yet.");
 		}
 
-		// S = (A · v^u)^b
 		fCommonValue_S = fPublicKey_A.multiply(fVerifier.verifier_v.modPow(fSRP6_u, fConstants.largePrime_N)).modPow(fRandom_b, fConstants.largePrime_N);
 		fEvidenceValue_M1 = SRPUtils.calcM1(fPublicKey_A, fPublicKey_B, fCommonValue_S);
 
