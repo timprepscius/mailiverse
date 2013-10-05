@@ -9,9 +9,16 @@ To install from and build mailiverse from the origin, the origin must
 have "git", "ant", "rsync" and "oracle java" installed.  (Other javas might work, but I have
 not tested them.)  Also, your hosts file must point to mail.target and target.
 
+I have always used Ubuntu 12.04 or 13 as my target machine.
+The build works on Ubuntu 12.04 and also OSX (with dev tools).
+
 
 To install git:
 sudo apt-get install git --yes
+
+
+To install zip:
+sudo apt-get install unzip --yes
 
 
 To install ant:

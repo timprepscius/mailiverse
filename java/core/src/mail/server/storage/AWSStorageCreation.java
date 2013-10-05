@@ -26,7 +26,6 @@ import com.amazonaws.services.s3.model.BucketCrossOriginConfiguration;
 import com.amazonaws.services.s3.model.BucketWebsiteConfiguration;
 import com.amazonaws.services.s3.model.CORSRule;
 import com.amazonaws.services.s3.model.Region;
-import com.sun.org.apache.xml.internal.security.utils.Base64;
 
 import core.connector.s3.sync.SimpleAWSCredentials;
 import core.util.LogOut;
@@ -34,6 +33,7 @@ import core.util.Maps;
 import core.util.Pair;
 import core.util.Passwords;
 import core.util.Strings;
+import core.util.Base64;
 
 public class AWSStorageCreation extends AWSStorageCommon
 {
