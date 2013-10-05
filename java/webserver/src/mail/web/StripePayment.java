@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sun.org.apache.xml.internal.security.utils.Base64;
+import core.util.Base64;
 
 import core.crypt.CryptorRSA;
 import core.crypt.CryptorRSAJCE;
