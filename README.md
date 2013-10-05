@@ -25,11 +25,14 @@ cd mailiverse/install && sudo ./setup-java.remote
 6. Have ant installed:
 sudo apt-get install ant --yes
 
-7.  Add lines to the hosts file for the target machine:
+7.  Add the line to the hosts file for the target machine:
+
+So let's say your target machine was named: joesmail.com
+And it's IP was: 192.168.1.243
+
 sudo nano /etc/hosts
 add the lines:
-SOME-IP-ADDRESS mail.whateverthenameofyourdomainis
-SOME-IP-ADDRESS whateverthenameofyourdomainis
+192.168.1.243 mail.joesmail.com
 
 This could also be done on a DNS server, if you control one..
 

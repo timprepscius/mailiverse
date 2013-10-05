@@ -64,6 +64,9 @@ mDispatch = {
 		if (mode == 'worker' && startsWith(cmd,'srp'))
 			mode = 'async';
 		
+		if (startsWith(cmd, 'pgp'))
+			mode = 'sync';
+		
 		if (mode == 'sync')
 		{
 			try

@@ -1520,6 +1520,7 @@ BigInteger.prototype.square = bnSquare;
 //
 // RSA implementation
 
+/*
 function SecureRandom(){
     function nextBytes(byteArray){
         for(var n = 0; n < byteArray.length;n++){
@@ -1528,6 +1529,7 @@ function SecureRandom(){
     }
     this.nextBytes = nextBytes;
 }
+*/
 
 function RSA() {
 	/**
