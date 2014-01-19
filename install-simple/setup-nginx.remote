@@ -1,0 +1,22 @@
+apt-get update
+apt-get install libpcre3-dev build-essential libssl-dev --yes
+
+## get it
+cd /opt/
+wget http://nginx.org/download/nginx-1.4.1.tar.gz
+tar -zxvf nginx*
+cd /opt/nginx*/
+
+## make it
+./configure --prefix=/opt/nginx --user=nginx --group=nginx --with-http_ssl_module
+make
+make install
+
+## create the nginx user
+adduser --system --no-create-home --disabled-login --disabled-password --group nginx
+
+## create the nginx init script
+wget -O init-deb.sh http://library.linode.com/assets/1139-init-deb.sh
+mv init-deb.sh /etc/init.d/nginx
+chmod +x /etc/init.d/nginx
+/usr/sbin/update-rc.d -f nginx defaults

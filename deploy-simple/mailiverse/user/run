@@ -1,0 +1,7 @@
+./setup
+
+echo ---------------------------------------- >> ../run.log 
+date >> ~/run-user.log
+echo ---------------------------------------- >> ../run.log 
+
+nohup java -jar MailStreamServer.jar >> ~/run-user.log 2>&1 &

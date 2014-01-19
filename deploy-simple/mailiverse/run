@@ -1,0 +1,6 @@
+./setup
+
+(cd key && ./run)
+(cd user && ./run)
+(cd postfix && ./run)
+(cd web && ./run)

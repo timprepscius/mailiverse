@@ -1,0 +1,4 @@
+AMI: debian-6.0-squeeze-base-i386-20110417 
+
+you will need to run: ./enable-sudo ADDRESSOFYOURMACHINE
+

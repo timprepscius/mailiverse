@@ -16,8 +16,8 @@ public class ExternalResource
 	
 	static {
 		prefix = 
-			(System.getProperty("mailiverse.resources") != null) ?
-				System.getProperty("mailiverse.resources") :
+			(System.getenv("mailiverse_resources") != null) ?
+				System.getenv("mailiverse_resources") :
 				System.getProperty("user.home") + "/resources/";
 	}
 	

@@ -7,6 +7,7 @@ M=$2
 APP_TITLE=`cat ../config/title`
 COMPANY=`cat ../config/company`
 
+echo COMPANY = $COMPANY
 source ./seds
 
 dst=www
@@ -21,14 +22,14 @@ learnmore=../web/learnmore
 
 function replaceStrings() {
 	echo $1 $M
-	$sed -f replace_html.sed $1
-	$sed -f replace_html_$M.sed $1
-	$sed -e s/__VERSION__/$V/g $1
-	$sed -e s/__THIS_YEAR__/2013/g $1
+	dosed -f replace_html.sed $1
+	dosed -f replace_html_$M.sed $1
+	dosed -e s/__VERSION__/$V/g $1
+	dosed -e s/__THIS_YEAR__/2013/g $1
 
 	echo $COMPANY
-	$sed -e s/{##TITLE##}/$APP_TITLE/g $1
-	$sed -e s/{##COMPANY##}/"$COMPANY"/g $1
+	dosed -e s/{##TITLE##}/$APP_TITLE/g $1
+	dosed -e s/{##COMPANY##}/$COMPANY/g $1
 }
 
 echo Compiling CSS/JS

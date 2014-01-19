@@ -1,0 +1,3 @@
+cd ~
+ln -fs deploy/resources
+

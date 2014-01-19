@@ -1,0 +1,1 @@
+cp ~/resources/hosts/prod config/virtual_domains

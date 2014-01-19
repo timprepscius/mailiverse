@@ -1,0 +1,18 @@
+# why oracle java?
+# because icetea has errors.  After spending near 30 hours trying to negotiate icetea screw ups
+# I realized: why bother?
+
+apt-get install software-properties-common --yes
+apt-get install python-software-properties --yes
+add-apt-repository ppa:webupd8team/java --yes
+apt-get update
+
+echo "yes
+yes" | apt-get install oracle-java7-installer --yes
+
+#echo "yes
+#yes" | apt-get install oracle-java6-installer --yes
+
+echo "Check the version after running this script, if it is not sun java then"
+echo "read this: http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html"
+echo "and do what it says."

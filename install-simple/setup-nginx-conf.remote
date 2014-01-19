@@ -1,0 +1,16 @@
+set -x
+
+mkdir -p /var/log/nginx
+chown nginx /var/log/nginx
+
+cp sudoers.d-nginx /etc/sudoers.d/nginx
+chmod 0440 /etc/sudoers.d/nginx
+
+cp default-mailiverse-nginx.conf /opt/nginx/conf
+
+cd /var/local
+mkdir www
+mkdir www/mailiverse
+chown mailiverse www/mailiverse
+
+

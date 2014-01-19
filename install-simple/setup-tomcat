@@ -1,0 +1,13 @@
+set -x
+
+M_ROOT=`cat requirements/server_root_account`
+M_HOST=$1
+
+scp create-server-account-user.remote $M_ROOT@$M_HOST:
+scp requirements/id_rsa.pub $M_ROOT@$M_HOST:authorized_keys
+ssh $M_ROOT@$M_HOST ./create-server-account-user.remote tomcat
+
+#scp ../ext/apache-tomcat.tar.gz tomcat@$M_HOST:
+scp setup-tomcat.remote tomcat@$M_HOST:
+
+ssh tomcat@$M_HOST ./setup-tomcat.remote

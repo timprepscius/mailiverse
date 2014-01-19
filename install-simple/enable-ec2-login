@@ -1,0 +1,9 @@
+if [ -z "$1" ]; then echo "Must supply name"; exit 0; fi
+
+set -x
+M_ROOT=`cat requirements/server_root_account`
+M_HOST=$1
+
+scp -i requirements/ec2-key.pem requirements/id_rsa.pub $M_ROOT@$M_HOST:authorized_keys
+scp -i requirements/ec2-key.pem create-server-account-user.remote $M_ROOT@$M_HOST:
+ssh -i requirements/ec2-key.pem $M_ROOT@$M_HOST ./create-server-account-user.remote $M_ROOT

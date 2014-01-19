@@ -1,0 +1,54 @@
+Things you must do for this to work out of the box:
+
+
+1.  You must have .ssh keys for this account..
+
+If you don't have them, generate them by googling "generate .ssh keys" and doing whatever it says.
+
+
+
+
+
+2.  You must go into the requirements directory and run "./get_rsa_pub"
+
+This will get the .ssh public key and put it in this directory so it can be easily transfered
+to the target machine.
+
+
+3.  You must go into the requirements directory and modify "server_root_account" to have whatever the root account
+(which must have sudo priviledges) name is.
+
+
+4.  If you are going to use EC2 to test this install you must
+
+   a.  copy the server key.pem file into the requirements directory and soft link ec2-key.pem to it via
+         ln -fs your-key-file.pem ec2-key.pem
+
+   b.  go back to the install directory and run "./enable_ec2_login THE_SERVER_IP"
+
+
+5.  If you are NOT going to use EC2, you MUST make the root account publickey accessible from the machine you are
+installing off of.  Take a look at "enable_ec2_login" for what this means.
+
+
+6.  You MUST have your passwords setup, if you are just running this as a test it is easiest to run
+	"make" from within the mailiverse/passwords directory.  This will create passwords using /dev/urandom
+
+---
+
+Ok now you are ready to go.
+
+from the install directory type in
+
+./setup-server YOUR-SERVER-IP-NAME-WHATEVER
+
+and it should 
+
+1. create the various accounts for the system and enable ssh publickey access to them 
+from the computer/account you are running on now
+
+2. it should download apache james
+
+4. it should download and install java (oracle, don't use others with apache james, they crash)
+
+3. it should download and install mysql and set up the users and databases.

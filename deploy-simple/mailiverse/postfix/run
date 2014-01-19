@@ -1,0 +1,8 @@
+./setup
+
+echo "----------------------------------------------" >> ../run.log
+date >> ~/run-postfix.log
+echo "----------------------------------------------" >> ../run.log
+
+sudo /etc/init.d/postfix start > ~/run-postfix.log 2>&1
+

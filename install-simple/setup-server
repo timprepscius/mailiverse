@@ -1,0 +1,15 @@
+if [ -z "$1" ]; then echo "Must supply name"; exit 0; fi
+
+set -x
+
+M_HOST=$1
+
+./setup-mailiverse $M_HOST
+./setup-mysql $M_HOST
+./setup-postfix $M_HOST
+./setup-java $M_HOST
+./setup-tomcat $M_HOST
+./setup-nginx $M_HOST
+
+echo "You may need to run: ./enable-rsync $M_HOST"
+echo "If your debian is super minimal (no rsync)"

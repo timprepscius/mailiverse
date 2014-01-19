@@ -1,0 +1,12 @@
+set -x
+
+M_ROOT=`cat requirements/server_root_account`
+M_HOST=$1
+
+scp sudoers.d-nginx $M_ROOT@$M_HOST:
+scp setup-nginx.remote $M_ROOT@$M_HOST:
+scp setup-nginx-conf.remote $M_ROOT@$M_HOST:
+scp default-mailiverse-nginx.conf $M_ROOT@$M_HOST:
+
+ssh $M_ROOT@$M_HOST sudo ./setup-nginx.remote
+ssh $M_ROOT@$M_HOST sudo ./setup-nginx-conf.remote

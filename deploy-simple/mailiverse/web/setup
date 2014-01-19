@@ -1,0 +1,1 @@
+rsync -avz --delete www/ /var/local/www/mailiverse/

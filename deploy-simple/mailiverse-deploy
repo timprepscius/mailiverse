@@ -1,0 +1,23 @@
+source ./config.hosts
+server=$M_HOST_PROD
+host=mailiverse
+
+echo going to deploy [$host] on [$server]
+
+echo stopping...
+ssh $host@$server "cd deploy && ./shutdown"
+
+echo transfering
+rsync -avzL --delete $host/ $host@$server:deploy
+
+echo cataloging
+ssh $host@$server "cd deploy && ./catalog"
+
+echo starting...
+ssh $host@$server "cd deploy && ./run"
+
+echo tailing...
+sleep 2
+ssh $host@$server "tail run-*.log"
+
+

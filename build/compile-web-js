@@ -13,15 +13,15 @@ HOST_WEB=`cat ../config/hosts/web_$M`
 RECAPTCHA_PUBLIC_KEY=`cat ../keys/recaptcha/public.key`
 
 function replaceStrings() {
-	$sed -f replace_js_$M.sed $1
-	$sed -e s/__VERSION__/$V/g $1
-	$sed -e s/__THIS_YEAR__/2013/g $1
+	dosed -f replace_js_$M.sed $1
+	dosed -e s/__VERSION__/$V/g $1
+	dosed -e s/__THIS_YEAR__/2013/g $1
 
-        $sed -e s/{##HOST_PRIMARY##}/$HOST_PRIMARY/g $1
-        $sed -e s/{##HOST_AUTH##}/$HOST_AUTH/g $1
-        $sed -e s/{##HOST_TOMCAT##}/$HOST_TOMCAT/g $1
-        $sed -e s/{##HOST_WEB##}/$HOST_WEB/g $1
-        $sed -e s/{##RECAPTCHA_PUBLIC_KEY##}/$RECAPTCHA_PUBLIC_KEY/g $1
+        dosed -e s/{##HOST_PRIMARY##}/$HOST_PRIMARY/g $1
+        dosed -e s/{##HOST_AUTH##}/$HOST_AUTH/g $1
+        dosed -e s/{##HOST_TOMCAT##}/$HOST_TOMCAT/g $1
+        dosed -e s/{##HOST_WEB##}/$HOST_WEB/g $1
+        dosed -e s/{##RECAPTCHA_PUBLIC_KEY##}/$RECAPTCHA_PUBLIC_KEY/g $1
 }
 
 echo Replacing Strings

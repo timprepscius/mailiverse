@@ -1,0 +1,5 @@
+cd ~
+ln -s mailiverse/restart-tomcat > /dev/null 2>&1
+
+cd ~/tomcat/webapps
+ln -fs ../../mailiverse/WebServer.war Mailiverse.war

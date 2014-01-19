@@ -1,0 +1,6 @@
+
+source ./config.hosts
+server=$M_HOST_PROD
+
+echo restarting...
+ssh tomcat@$server "cd mailiverse && ./restart"

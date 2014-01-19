@@ -1,0 +1,17 @@
+source ./config.hosts
+
+host=tomcat
+server=$M_HOST_PROD
+
+echo going to deploy [$host] on [$server]
+
+echo stopping...
+ssh $host@$server "cd mailiverse && ./shutdown"
+
+echo transfering
+rsync -avzL --delete tomcat/ $host@$server:mailiverse/
+
+echo starting...
+ssh $host@$server "cd mailiverse && ./run"
+
+

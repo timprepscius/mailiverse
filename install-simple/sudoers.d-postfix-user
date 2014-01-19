@@ -1,0 +1,1 @@
+mailiverse ALL = (root) NOPASSWD :/etc/init.d/postfix stop,/etc/init.d/postfix start

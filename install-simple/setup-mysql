@@ -1,0 +1,25 @@
+set -x
+
+M_ROOT=`cat requirements/server_root_account`
+
+MAIL_PASSWORD=`cat ../passwords/mail`
+MAIL_EXTRA_PASSWORD=`cat ../passwords/mail_extra`
+JAMES_PASSWORD=`cat ../passwords/james`
+CAPTCHA_PASSWORD=`cat ../passwords/captcha`
+STORE_PASSWORD=`cat ../passwords/store`
+
+M_HOST=$1
+
+`\
+sed \
+	-e ''s/MAIL_PASSWORD/$MAIL_PASSWORD/'' \
+	-e ''s/MAIL_EXTRA_PASSWORD/$MAIL_EXTRA_PASSWORD/'' \
+	-e ''s/JAMES_PASSWORD/$JAMES_PASSWORD/'' \
+	-e ''s/CAPTCHA_PASSWORD/$CAPTCHA_PASSWORD/'' \
+	-e ''s/STORE_PASSWORD/$STORE_PASSWORD/'' \
+	setup-mysql.sql.template > setup-mysql.sql \
+`
+
+scp setup-mysql.remote $M_ROOT@$M_HOST:
+scp setup-mysql.sql $M_ROOT@$M_HOST:
+ssh $M_ROOT@$M_HOST ./setup-mysql.remote

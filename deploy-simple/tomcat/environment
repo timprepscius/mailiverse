@@ -1,0 +1,2 @@
+mailiverse_resources=/home/tomcat/mailiverse/resources
+export mailiverse_resources

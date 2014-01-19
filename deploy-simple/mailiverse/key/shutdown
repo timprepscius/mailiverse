@@ -1,0 +1,1 @@
+pkill -u mailiverse -f KeyStreamServer
