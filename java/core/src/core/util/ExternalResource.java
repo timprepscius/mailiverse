@@ -15,7 +15,10 @@ public class ExternalResource
 	static protected String prefix;
 	
 	static {
-		prefix = System.getProperty("user.home") + "/resources/";
+		prefix = 
+			(System.getProperty("mailiverse.resources") != null) ?
+				System.getProperty("mailiverse.resources") :
+				System.getProperty("user.home") + "/resources/";
 	}
 	
 	public static byte[] get(String key) throws Exception
